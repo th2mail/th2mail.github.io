@@ -1,5 +1,193 @@
-<!doctype html>
-<html>
-	<head></head>
-	<body>hello</body>
+<!-- 
+	파일명 : index.html
+	설 명 : Time Series Sensor Data Forecasting UI	
+	최초 생성일 : 21.09.29
+
+	수정일			수정내역 
+	---------		-----------------------------------------------------------------
+	21.09.29		최초 개발
+	21.09.29		"Time Series Sensor Data Forecasting UI" 전체적인 윤곽 CSS작업
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>Time Series Sensor Data Forecasting UI</title>
+	<link rel="stylesheet"
+		href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<!-- sidebar -->
+	<div class="sidebar">
+
+		<!-- sidebar-brand -->
+		<div class="sidebar-brand">
+			<!-- <h1><span class="lab la-accusoft"></span> Accusoft</h1> -->
+			<h1><span class="las la-eye"></span> Alian</h1>
+		</div>
+		<!--// sidebar-brand  -->
+
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<ul>
+				<li>
+					<a href="">
+						<span class="las la-igloo"></span>
+						<span>Dashboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>센서 데이터 현황</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>센서 데이터 선택</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>시계열 데이터 탐험(Pandas Profiler)</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>시계열 데이터 탐험(SweetViz)</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>센서 데이터 로딩&프리뷰</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>센서 데이터 상관관계 그래프</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>결측치 시각화 및 처리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>이상치 시각화 및 처리</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>리셈플링 및 정규화</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>시계열 데이터 분해</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>시계열 정상성 검사 및 변환</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>시계열 예측 with 단일 변수</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>시계열 예측 with 다중 변수</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="las la-clipboard-list"></span>
+						<span>시계열 예측 결과 분선</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--// sidebar-menu -->
+
+	</div>
+	<!--// sidebar  -->
+
+	<!-- main-content -->
+	<div class="main-content">
+
+		<!-- header -->
+		<header>
+
+			<!-- menubar -->
+			<h1>
+				<label for="">
+					<span class="las la-bars"></span>
+				</label>
+
+				Dashboard
+			</h1>
+			<!--// menubar -->
+
+			<!-- searchbar -->
+			<div class="search-wrapper">
+				<span class="las la-search"></span>
+				<input type="search" placeholder="Search here" />
+			</div>
+			<!--// searchbar -->
+
+			<!-- imgbar -->
+			<div class="user-wrapper">
+				<img src="img/profile.jpg" width="40px" height="40px" alt="">
+				<h4>관리자</h4>
+				<small>Super admin</small>
+			</div>
+			<!--// imgbar -->
+
+		</header>
+		<!--// header -->
+
+		<!-- main -->
+		<main>
+
+			<section id="dashboard">
+				대쉬보드
+			</section>
+
+			<section id="sensor-data-status">
+				센서 데이터 현황
+			</section>
+
+			<section id="sensor-data-selection">
+				센서 데이터 선택
+			</section>
+
+		</main>
+		<!--// main  -->
+
+	</div>
+	<!--// main-content -->
+
+</body>
+
 </html>
