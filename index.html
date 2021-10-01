@@ -10,6 +10,11 @@
 	21.09.30		Sidenav 영역 css 작업
 					Header 영역 css 작업
 					main 영역 css 작업
+	21.10.01		Dashboard 개발하기 전에 각 화면이 들어갈 Section 영역을 나누는 작업을 하였습니다.
+						.main 영역 layout 작업을 함
+						.main 영역 scrolling 되도록 함
+					Dashboard 화면 개발
+						각 화면의 영역을 나누고, Dashboard 화면 개발에 들어갔습니다.
  -->
  <!DOCTYPE html>
  <html lang="en">
@@ -168,92 +173,334 @@
 		 <main>
  
 			 <!-- dashboard -->
-			 <section id="dashboard">
+			 <div class="section_container">
+				 <section id="dashboard">
  
-			 </section>
-			 <!--// dashboard  -->
+					 <!-- cards -->
+					 <div class="cards">
+ 
+						 <!-- card (1) -->
+						 <div class="card">
+							 <div>
+								 <h1>1</h1>
+								 <span>센서 데이터 현황</span>
+							 </div>
+							 <div>
+								 <span class="las la-clipboard-list"></span>
+							 </div>
+						 </div>
+						 <!--// card (1) -->
+ 
+						 <!-- card (2) -->
+						 <div class="card">
+							 <div>
+								 <h1>2</h1>
+								 <span>센서 데이터 선택</span>
+							 </div>
+							 <div>
+								 <span class="las la-check-circle"></span>
+							 </div>
+						 </div>
+						 <!--// card (2) -->
+ 
+						 <!-- card (3) -->
+						 <div class="card">
+							 <div>
+								 <h1>3</h1>
+								 <span>시계열 데이터 탐험<br />Pandas Profiler</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (3) -->
+ 
+						 <!-- card (4) -->
+						 <div class="card">
+							 <div>
+								 <h1>4</h1>
+								 <span>시계열 데이터 탐험<br />Sweetviz</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (4) -->
+ 
+						 <!-- card (5) -->
+						 <div class="card">
+							 <div>
+								 <h1>5</h1>
+								 <span>센서 데이터 로딩 & 프리뷰</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (5) -->
+ 
+						 <!-- card (6) -->
+						 <div class="card">
+							 <div>
+								 <h1>6</h1>
+								 <span>센서 데이터 상관관계 그래프</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (6) -->
+ 
+						 <!-- card (7) -->
+						 <div class="card">
+							 <div>
+								 <h1>7</h1>
+								 <span>결측치 시각화 및 처리</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (7) -->
+ 
+						 <!-- card (8) -->
+						 <div class="card">
+							 <div>
+								 <h1>8</h1>
+								 <span>이상치 시각화 및 처리</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (8) -->
+ 
+						 <!-- card (9) -->
+						 <div class="card">
+							 <div>
+								 <h1>9</h1>
+								 <span>리셈플링 및 정규화</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (9) -->
+ 
+						 <!-- card (10) -->
+						 <div class="card">
+							 <div>
+								 <h1>10</h1>
+								 <span>시계열 데이터 분해</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (10) -->
+ 
+						 <!-- card (11) -->
+						 <div class="card">
+							 <div>
+								 <h1>11</h1>
+								 <span>시계열 정상성 검사 및 변환</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (11) -->
+ 
+						 <!-- card (12) -->
+						 <div class="card">
+							 <div>
+								 <h1>12</h1>
+								 <span>시계열 예측 with 단일 변수</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (12) -->
+ 
+						 <!-- card (13) -->
+						 <div class="card">
+							 <div>
+								 <h1>13</h1>
+								 <span>시계열 예측 with 다중 변수</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (13) -->
+ 
+						 <!-- card (14) -->
+						 <div class="card">
+							 <div>
+								 <h1>14</h1>
+								 <span>시계열 예측 결과 분석</span>
+							 </div>
+							 <div>
+								 <span class="las la-wifi"></span>
+							 </div>
+						 </div>
+						 <!--// card (14) -->
+ 
+					 </div>
+					 <!--// cards -->
+ 
+				 </section>
+				 <!--// dashboard  -->
+			 </div>
  
 			 <!-- 센서 데이터 현황 -->
 			 <section id="sensor-data-status">
-				 센서 데이터 현황
+ 
+				 <h1>센서 데이터 현황</h1>
+				 <p>센서 데이터 현황 화면에 대한 간략한 설명</p>
+ 
 			 </section>
 			 <!--// 센서 데이터 현황  -->
  
 			 <!-- 센서 데이터 선택 -->
 			 <section id="select-sensor-data">
-				 센서 데이터 선택
+				 <h1>센서 데이터 선택</h1>
+				 <p>센서 데이터 선택 화면에 대한 간략한 설명</p>
 			 </section>
 			 <!--// 센서 데이터 선택  -->
  
 			 <!-- 시계열 데이터 탐험 - Pandas Profiler -->
 			 <section id="time-series-data-exploration-pandas-profiler">
-				 시계열 데이터 탐험 - Pandas Profiler
+				 <h1>시계열 데이터 탐험</h1>
+				 <h2>Pandas Profiler</h2>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nulla quidem accusantium dolore, et laudantium
+					 dicta laborum assumenda. Error inventore aut soluta, necessitatibus dolore non doloremque! Asperiores quae
+					 quaerat itaque!
+				 </p>
 			 </section>
 			 <!--// 시계열 데이터 탐험 - Pandas Profiler -->
  
 			 <!-- 시계열 데이터 탐험 - Sweetviz -->
 			 <section id="time-series-data-exploration-sweetviz">
-				 시계열 데이터 탐험 - Sweetviz
+				 <h1>시계열 데이터 탐험</h1>
+				 <h2>Sweetviz</h2>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi optio explicabo vel at recusandae
+					 voluptate voluptatum error fugit, quam ipsam eaque, accusantium eum necessitatibus dolorum! Dolorem rerum
+					 labore minima.
+				 </p>
 			 </section>
 			 <!--// 시계열 데이터 탐험 - Sweetviz --> 
  
 			 <!-- 센서 데이터 로딩 & 프리뷰 -->
 			 <section id="sensor-data-loading-and-preview">
-				 센서 데이터 로딩 & 프리뷰
+				 <h1>센서 데이터 로딩 & 프리뷰</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 센서 데이터 로딩 & 프리뷰 -->
  
 			 <!-- 센서 데이터 상관관계 그래프 -->
 			 <section id="sensor-data-correlation-graph">
-				 센서 데이터 상관관계 그래프
+				 <h1>센서 데이터 상관관계 그래프</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 센서 데이터 상관관계 그래프 -->
  
 			 <!-- 결측치 시각화 및 처리 -->
 			 <section id="missing-value-visualization-and-treatment">
-				 결측치 시각화 및 처리
+				 <h1>결측치 시각화 및 처리</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 결측치 시각화 및 처리 -->
  
 			 <!-- 이상치 시각화 및 처리 -->
 			 <section id="outlier-visualization-and-processing">
-				 이상치 시각화 및 처리
+				 <h1>이상치 시각화 및 처리</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 이상치 시각화 및 처리 -->
  
 			 <!-- 리셈플링 및 정규화 -->
 			 <section id="resampling-and-normalization">
-				 리셈플링 및 정규화
+				 <h1>리셈플링 및 정규화</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 리셈플링 및 정규화 -->
  
 			 <!-- 시계열 데이터 분해 -->
 			 <section id="time-series-data-decomposition">
-				 시계열 데이터 분해
+				 <h1>시계열 데이터 분해</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 시계열 데이터 분해 -->
  
 			 <!-- 시계열 정상성 검사 및 변환 -->
 			 <section id="time-series-sanity-check-and-transformation">
-				 시계열 정상성 검사 및 변환
+				 <h1>시계열 정상성 검사 및 변환</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 시계열 정상성 검사 및 변환 -->
  
 			 <!-- 시계열 예측 with 단일 변수 -->
 			 <section id="time-series-prediction-with-single-variable">
-				 시계열 예측 with 단일 변수
+				 <h1>시계열 예측 with 단일 변수</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 시계열 예측 with 단일 변수 -->
  
 			 <!-- 시계열 예측 with 다중 변수 -->
 			 <section id="time-series-prediction-with-multiple-variables">
-				 시계열 예측 with 다중 변수
+				 <h1>시계열 예측 with 다중 변수</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 시계열 예측 with 다중 변수 -->
  
 			 <!-- 시계열 예측 결과 분석 -->
 			 <section id="analysis-of-time-series-prediction-results">
-				 시계열 예측 결과 분석
+				 <h1>시계열 예측 결과 분석</h1>
+				 <p class="left">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					 aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					 quisquam.
+				 </p>
 			 </section>
 			 <!--// 시계열 예측 결과 분석 -->
  
