@@ -121,6 +121,7 @@ section:nth-child(even) {
   top: 0;
   height: 100%;
   background-color: var(--color-main);  
+  transition: all 300ms;
 }
 
 /*=============== .sidebar-brand ===============*/
@@ -171,12 +172,54 @@ section:nth-child(even) {
   padding-right: 1rem;
 }
 
+/*=============== #nav-toggle ===============*/
+/* 
+    + 연산자 
+
+      예) A + B
+      뜻) A 태그 옆에 있는 B 태그를 선택하라는 선택자이다.
+
+      기능 설명 : 
+        아이디가 nav-toggle인 체크박스가 check 되면,
+        nav-toggle 과 같은 레벨에 있는 
+        클래스 이름이 sidebar 인 태그에 아래 속성과 값을 적용해라!!!
+ */
+#nav-toggle:checked+.sidebar {
+  width: 70px;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand,
+#nav-toggle:checked+.sidebar li {
+  /* padding-left: 1rem; */
+  padding-left: .7rem;
+  text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li a {
+  padding-left: 0rem;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked+.sidebar li a span:last-child {
+  display: none;
+}
+
+#nav-toggle:checked~.main-content {
+  margin-left: 70px;
+}
+
+#nav-toggle:checked~.main-content header {
+  width: calc(100% - 70px);
+  /* left: 70px; */
+}
+
 /*======================================================================================================
 
                                         .main-content
 
 ======================================================================================================*/
 .main-content {
+  transition: all 300ms;
   margin-left: 345px;
 }
 
@@ -189,6 +232,11 @@ header {
   position: fixed;
   width: calc(100% - 345px);
   top: 0;
+  transition: all 300ms;
+}
+
+#nav-toggle {
+  display: none;
 }
 
 header h2 {
@@ -282,56 +330,174 @@ section > p.left {
                                         Dashboard
 
 ======================================================================================================*/
-#dashboard {
-  
-}
-
-.cards {
+#dash01 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
 }
 
-.card {
+#dash01 .card {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--color-white);
   padding: 2rem;
-  border-radius: var(--size-border-radius);  
+  border-radius: 15px;
 }
 
-.card div:last-child span {
+#dash01 .card div:last-child span {
   font-size: 3rem;
   color: var(--color-main);
 }
 
-.card div:first-child span {
+#dash01 .card div:first-child span {
   color: var(--color-grey);
 }
 
-.card:first-child {
+#dash01 .card:first-child {
   background: var(--color-main);
 }
 
-.card:first-child h1,
-.card:first-child div:first-child span,
-.card:first-child div:last-child span {
+#dash01 .card:first-child h1,
+#dash01 .card:first-child div:first-child span,
+#dash01 .card:first-child div:last-child span {
   color: var(--color-white);
 }
 
-.card div:last-child span {
-  transition: all 350ms ease-in-out;
+#dash01 .card div:last-child span {
+  transition: all 300ms ease-in-out;
 }
 
-.card:hover {
+#dash01 .card:hover {
   background: var(--color-main);
   color: var(--color-white);
+  font-weight: 700;
 }
 
-.card:hover div:first-child span,
-.card:hover div:last-child span{
+#dash01 .card:hover div:first-child span,
+#dash01 .card:hover div:last-child span {
   color: var(--color-white);
   transform: scale(1.5);
+}
+
+#dashboard-02 {
+  background: var(--color-background);
+}
+
+#dash02 .cards {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#dash02 .card {
+  background: var(--color-white);
+  border-radius: 20px;  
+}
+
+#dash02 .card-header,
+#dash02 .card-body {
+  padding: 1rem;  
+}
+
+#dash02 .card-header {
+  text-align: center;
+  /* .card-header와 .card-body의 구분선 */
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#dash02 .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem .7rem;
+  margin-bottom: 10px;
+}
+
+#dash02 .info {
+  display: flex;
+  align-items: center;
+}
+
+#dash02 .info img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+#dash02 .info h4 {
+  font-size: .8rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* #dash02 .info h4:hover {
+  color: var(--color-main);  
+} */
+
+#dash02 .menu {
+  border-radius: 20px;
+  transition: all 300ms ease-in;
+}
+#dash02 .menu:hover {
+  background: var(--color-main);    
+}
+#dash02 .menu:hover .order,
+#dash02 .menu:hover h4,
+#dash02 .menu:hover small,
+#dash02 .menu:hover .contact span {
+  color: var(--color-white);
+  border: none;
+  box-shadow: none;
+}
+
+#dash02 .info small {
+  font-weight: 600;
+  color: var(--color-grey);
+}
+
+#dash02 .info span {
+  color: rgb(27, 165, 165);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid rgb(27, 165, 165);
+  border-radius: 50%;
+  margin-right: 1rem;
+  box-shadow: 1px 1px 1px 1px;
+  font-weight: 400;
+}
+
+#dash02 .contact span {
+  font-size: 1.2rem;
+  margin-left: .5rem;
+  color: var(--color-main);
+  transition: all 300ms ease-in;
+}
+
+#dash02 .contact span.la-comment:hover,
+#dash02 .contact span.la-car-side:hover {
+  transform: scale(1.5);
+}
+
+#dash03 table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#dash03 table .cards.first {
+  border-top: 5px solid var(--color-main);
+  border-right: 5px solid var(--color-main);
+  border-top-right-radius: 30px;
+  
+}
+
+#dash03 table .cards.second {
+  border-left: 5px solid var(--color-main);
+  border-bottom: 5px solid var(--color-main);
+  border-bottom-left-radius: 30px;
 }
 
 /*======================================================================================================
