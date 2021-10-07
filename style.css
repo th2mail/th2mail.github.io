@@ -39,16 +39,18 @@
   --color-dark: #1D2231;
     
   /* Font size */
-  --font-large: 48px;
+  --font-large: 38px;
   --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 16px;
-  --font-micro: 14px;
+  --font-regular: 20px;
+  --font-small: 14px;
+  --font-micro: 8px;
 
   /* Font weight */
   --weight-bold: 700;
   --weight-semi-bold: 600;
-  --weight-regular: 400;
+  --weight-regular: 500;
+  --weight-semi-regular: 400;
+  --weight-thin: 300;
 
   /* Size */
   --size-border-radius: 4px;
@@ -103,8 +105,8 @@ section > h3 {
 }
 
 section > p {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-regular);
   color: var(--color-black);
   margin: 2rem 0;
 }
@@ -740,6 +742,34 @@ event-description -> description
 }
 
 @media only screen and (max-width: 960px) {
+  /* Typograph */
+  section>h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: .5rem 0;
+  }
+
+  section>h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+  }
+
+  section>h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 1.5rem 0;
+  }
+
+  section>p {
+    font-size: var(--font-small);
+    font-weight: var(--weight-semi-regular);
+    color: var(--color-black);
+    margin: 2rem 0;
+  }
+
   #dash01 .cards {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -750,6 +780,41 @@ event-description -> description
 }
 
 @media only screen and (max-width: 768px) {
+  /* Typograph */
+  section>h1 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: .5rem 0;
+  }
+
+  section>h2 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+  }
+
+  section>h3 {
+    font-size: var(--font-small);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 1.5rem 0;
+  }
+
+  section>p {
+    font-size: var(--font-thin);
+    font-weight: var(--weight-semi-regular);
+    color: var(--color-black);
+    margin: 2rem 0;
+  }
+
+  section>p {
+    font-size: var(--font-small);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 2rem 0;
+  }
+
   #dash01 .cards {
     grid-template-columns: repeat(2, 1fr);
   }
