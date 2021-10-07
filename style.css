@@ -625,3 +625,59 @@ section > p.left {
 #analysis-of-time-series-prediction-results {
 
 }
+
+/*======================================================================================================
+
+                                        @media
+
+======================================================================================================*/
+@media only screen and (max-width: 1200px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  .sidebar .sidebar-brand,
+  .sidebar li {
+    /* padding-left: 1rem; */
+    padding-left: .7rem;
+    text-align: center;
+  }
+  
+  .sidebar li a {
+    padding-left: 0rem;
+  }
+  
+  .sidebar .sidebar-brand h2 span:last-child,
+  .sidebar li a span:last-child {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 70px;
+  }
+  
+  .main-content header {
+    width: calc(100% - 70px);
+    /* left: 70px; */
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #dash01 .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #dash02 .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #dash01 .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #dash02 .cards {
+    grid-template-columns: 100%;
+  }
+}
