@@ -199,7 +199,7 @@ section:nth-child(even) {
   padding-left: 0rem;
 }
 
-#nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked+.sidebar .sidebar-brand span:last-child,
 #nav-toggle:checked+.sidebar li a span:last-child {
   display: none;
 }
@@ -431,10 +431,6 @@ section > p.left {
   color: #222;
 }
 
-/* #dash02 .info h4:hover {
-  color: var(--color-main);  
-} */
-
 #dash02 .menu {
   border-radius: 20px;
   transition: all 300ms ease-in;
@@ -638,7 +634,6 @@ section > p.left {
   
   .sidebar .sidebar-brand,
   .sidebar li {
-    /* padding-left: 1rem; */
     padding-left: .7rem;
     text-align: center;
   }
@@ -647,7 +642,7 @@ section > p.left {
     padding-left: 0rem;
   }
   
-  .sidebar .sidebar-brand h2 span:last-child,
+  .sidebar .sidebar-brand span:last-child,
   .sidebar li a span:last-child {
     display: none;
   }
@@ -658,7 +653,38 @@ section > p.left {
   
   .main-content header {
     width: calc(100% - 70px);
-    /* left: 70px; */
+  }
+
+  #nav-toggle:checked+.sidebar {
+    left: 0;
+    width: 345px;
+  }
+
+  #nav-toggle:checked+.sidebar .sidebar-brand {
+    background: var(--color-white);
+  }
+
+  #nav-toggle:checked+.sidebar .sidebar-brand,
+  #nav-toggle:checked+.sidebar li {
+    padding-left: 2rem;
+    text-align: left;
+  }
+
+  #nav-toggle:checked+.sidebar li a {
+    padding-left: 1rem;
+  }
+
+  #nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
+  #nav-toggle:checked+.sidebar li a span:last-child {
+    display: inline;
+  }
+
+  #nav-toggle:checked~.main-content {
+    margin-left: 0rem;
+  }
+
+  #nav-toggle:checked~.main-content header {
+    width: 100%;
   }
 }
 
@@ -679,6 +705,47 @@ section > p.left {
 
   #dash02 .cards {
     grid-template-columns: 100%;
+  }
+
+  .search-wrapper {
+    display: none;
+  }
+
+  .sidebar {
+    left: -100%;
+  }
+
+  header h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+
+  header h2 label {
+    display: inline-block;
+    background: var(--color-main);
+    margin-right: 1rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header h2 span {
+    padding-right: 0rem;
+  }
+
+  .main-content {
+    /* width: 100%; */
+    margin-left: 0rem;
+  }
+
+  .main-content header {
+    width: 100%;
   }
 }
 
