@@ -653,6 +653,142 @@ dash-description -> description
 
 /*======================================================================================================
 
+                                        Dashboard-04
+
+======================================================================================================*/
+#dashboard-04 {  
+  width: 98%;
+  height: 100%;
+  margin: 0;
+
+  background: rgb(34, 36, 41);
+  color: rgb(224, 228, 228);
+
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+}
+
+#dashboard-04 .header,.footer {
+  color: rgb(65, 199, 199);
+  font-size: 19.89px;
+  font-weight: 800;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#dashboard-04 .header {
+  margin-bottom: 30px;
+}
+
+#dashboard-04 .footer {
+  margin-top: 30px;
+}
+
+#dashboard-04 .centent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   
+  height: 85%;  
+}
+
+#dashboard-04 .cards {
+  display: grid;  
+}
+
+#dashboard-04 .centent .card {  
+  /* margin: 5px; */
+  /* padding: 10px; */
+  /* padding-top: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem; */
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  /* grid-gap: 1rem; */
+  justify-items: center;
+  align-items: center;  
+}
+
+#dashboard-04 .cards.time-series-preparation {
+  display: grid;
+  grid-template-rows: 2fr 8fr;
+}
+
+/* #dashboard-04 .centent .card div:first-child { */
+  /* border: 1px dashed rgb(92, 96, 105); */
+  /* border: none; */
+  /* border-radius: 30px 30px 30px 30px; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center;   */
+  /* margin-left: 5px; */
+/* } */
+
+/* #dashboard-04 .centent .card div:last-child { */
+#dashboard-04 .centent .cards .card .item {
+ border: 1px dashed rgb(92, 96, 105);
+ width: 100%;
+ height: 100%; 
+ border-radius: 10px;
+ display: grid;
+ justify-items: center;
+ align-items: center;
+ /* display: flex; */
+ /* flex-direction: column; */
+ /* justify-content: center; */
+ /* align-items: center;  */
+  font-size :1rem;
+
+}
+
+#dashboard-04 .centent .cards .card .item div:last-child {
+  font-size: 1rem;
+}
+
+#dashboard-04 .centent .cards .card .item .sub-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#dashboard-04 .centent .cards .card {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+#dashboard-04 .centent .cards:nth-child(odd) .card:first-child {
+  margin-top: 1rem;
+}
+
+#dashboard-04 .centent .cards:nth-child(even) .card:first-child {
+  margin-bottom: 1rem;
+}
+
+
+
+#dashboard-04 .cards.data-preparation {
+  border-top: 1px solid rgb(92,96,105);
+  border-right: 1px solid rgb(92, 96, 105);
+}
+
+#dashboard-04 .cards.time-series-preparation {
+  border-bottom: 1px solid rgb(92, 96, 105);
+  border-right: 1px solid rgb(92, 96, 105);
+}
+
+#dashboard-04 .time-series-forecasting {
+  border-top: 1px solid rgb(92, 96, 105);
+  border-right: 1px solid rgb(92, 96, 105);
+}
+
+#dashboard-04 .performance-analysis {
+  border-bottom: 1px solid rgb(92, 96, 105);
+}
+
+/*======================================================================================================
+
                                         센서 데이터 현황
 
 ======================================================================================================*/
