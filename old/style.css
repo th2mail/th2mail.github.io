@@ -257,6 +257,58 @@ section > p {
   opacity: 1;  
 }
 
+/************************************************************************************/
+
+.sidebar-menu a {
+  position: relative;
+}
+
+.sidebar-menu li a .svg-wrapper div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* top: 0; */
+  top: -7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* z-index: 1000; */
+  /* left: -10px; */
+  left: 15px;
+}
+
+.sidebar-menu .svg-wrapper {
+  position: relative;
+  /* top: 20%; */
+  /* transform: translateX(-100%); */
+  /* transform: translateY(-30%); */
+  margin: 0 auto;
+  width: 40px;
+  /* right: 0; */
+  margin-right: 25px;
+}
+
+.sidebar-menu li a .svg-wrapper .shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -510;
+  stroke-width: 0;
+  fill: transparent;
+  stroke: #19f6e8;
+  border-bottom: 5px solid black;
+  transition: stroke-width 300ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
+}
+
+.sidebar-menu .svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+.sidebar-menu li a .svg-wrapper svg div {
+  position: relative;
+  top: -5px;
+}
+
 /*=============== #nav-toggle ===============*/
 /* 
     + 연산자 
@@ -360,6 +412,64 @@ section > p {
   position: relative;
   top: -5px;
 }
+
+/*=============== #nav-toggle ===============*/
+/* 
+    + 연산자 
+
+      예) A + B
+      뜻) A 태그 옆에 있는 B 태그를 선택하라는 선택자이다.
+
+      기능 설명 : 
+        아이디가 nav-toggle인 체크박스가 check 되면,
+        nav-toggle 과 같은 레벨에 있는 
+        클래스 이름이 sidebar 인 태그에 아래 속성과 값을 적용해라!!!
+ */
+#nav-toggle:checked+.sidebar {
+  width: 70px;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand,
+#nav-toggle:checked+.sidebar li {
+  /* padding-left: 1rem; */
+  padding-left: .7rem;
+  text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li a {
+  padding-left: 0rem;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand span:last-child,
+#nav-toggle:checked+.sidebar li a span:last-child
+
+/* #nav-toggle:checked+.sidebar .sidebar-menu a span:first-child { */
+  {
+  display: none;
+}
+
+
+#nav-toggle:checked+.sidebar .sidebar-menu a span:first-child {
+  display: inline;
+}
+
+
+/* #nav-toggle:checked+.sidebar .sidebar-menu a span:nth-child(even) {
+  display: inline;
+} */
+
+/* #nav-toggle:checked~.main-content { */
+#nav-toggle:checked .main-content {
+  margin-left: 70px;
+}
+
+/* #nav-toggle:checked~.main-content header { */
+#nav-toggle:checked .main-content header {
+  width: calc(100% - 70px);
+  /* left: 70px; */
+}
+
+
 /*======================================================================================================
 
                                         .main-content
@@ -1389,14 +1499,13 @@ dash-description -> description
     margin: 2rem 0;
   }
 
-  /* #dash01 .cards  */
-  .cards {
+  #dashboard .cards {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  #dash02 .cards {
+  /* #dash02 .cards {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 
   #dashboard-03 .type-01 {
     display: none;
@@ -1444,7 +1553,7 @@ dash-description -> description
   }
 
   /* #dash01  */
-  .cards {
+  #dashboard .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
