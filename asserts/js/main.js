@@ -11,6 +11,7 @@ $("#dashboard-1").load("/WEB-INF/views/Dashboard/Dashboard-1.html");
 $("#dashboard-2").load("/WEB-INF/views/Dashboard/Dashboard-2.html");
 $("#dashboard-3").load("/WEB-INF/views/Dashboard/Dashboard-3.html");
 $("#dashboard-4").load("/WEB-INF/views/Dashboard/Dashboard-4.html");
+$("#dashboard-5").load("/WEB-INF/views/Dashboard/Dashboard-5.html");
 
 // 센서 데이터 현황
 $("#data-status").load("/WEB-INF/views/DataPreparation/DataStatus.html");
