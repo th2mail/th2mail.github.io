@@ -5,41 +5,6 @@
 ======================================================================================================*/
 #dashboard-4 {
   margin: 0;
-
-  padding: var(--space-small);
-  width: 100%;
-  height: 100%;  
-  background: var(--color-black);
-  color: var(--color-white);
-}
-
-#dashboard-4 .cards .card .item .sub-item-a a,
-#dashboard-4 .cards .card .item .sub-item-u a,
-#dashboard-4 .cards .card .item .sub-item-u li {
-  text-decoration: none;
-  color: var(--color-gunmetal);
-  font-size: var(--font-small);
-  font-weight: var(--weight-micro);
-  transition: all 200ms ease-out;
-}
-
-#dashboard-4 .cards .card .item .sub-item-a a:hover,
-#dashboard-4 .cards .card .item .sub-item-u a:hover,
-#dashboard-4 .cards .card .item .sub-item-u li:hover {
-  color: var(--color-turquoise);
-  transform: scaleY(1.1);
-  /* transform: scaleX(-1) scaleY(1); */
-  font-weight: var(--weight-bold);
-}
-
-#dashboard-4 .no {
-  font-size: var(--font-regular);
-  padding-right: var(--space-small);
-}
-
-/*======================================================================================================
-header, footer, arrow, arrow-line
-
   width: 98%;
   height: 100%;  
   color: rgb(224, 228, 228);
@@ -64,113 +29,54 @@ header, footer, arrow, arrow-line
 
 /*======================================================================================================
 header, footer, arrow
-
 ======================================================================================================*/
 #dashboard-4 .header,
 .footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
-  text-align: center;
-  color: var(--color-turquoise);
-
   font-size: 19.89px;
   font-weight: 700;
   text-align: center;
   color: rgb(65, 199, 199);
-
 }
 
 #dashboard-4 .header {
   position: relative;
-  margin-bottom: var(--space-medium);
-
   margin-bottom: 30px;
-
 }
 
 #dashboard-4 .footer {
   position: relative;
-
-  margin-top: var(--space-medium);
-
   margin-top: 30px;
-
 }
 
 #dashboard-4 .arrow {
   position: absolute;
   width: 50px;
   height: 50px;
-
   /* line-height: 50px; */
-
   border: 0px solid rgb(34, 36, 41);
   border-radius: 50%;
   font-size: 2rem;
   font-weight: 700;
   color: var(--color-white);
   background-color: var(--color-dark-grey);
-
-  z-index: 100;
-}
-
-#dashboard-4 .arrow-top {
-  top: 41px;
-
   /* z-index: 100; */
 }
 
 #dashboard-4 .arrow-top {
   top: 37px;
-
   transform: translateX(-155%);
 }
 
 #dashboard-4 .arrow-height {
   right: -25px;
-
-  transform: translateY(598%);
-}
-
-#dashboard-4 .arrow-bottom {
-  top: -59px;
-  transform: translateX(50%);
-}
-
-#dashboard-4 .data-preparation {
-  border-top: 1px solid rgb(92, 96, 105);
-  border-right: 1px solid rgb(92, 96, 105);
-  padding-right: 1rem;
-}
-
-#dashboard-4 .time-series-preparation {
-  border-bottom: 1px solid rgb(92, 96, 105);
-  border-right: 1px solid rgb(92, 96, 105);
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-#dashboard-4 .time-series-forecasting {
-  border-top: 1px solid rgb(92, 96, 105);
-  border-right: 1px solid rgb(92, 96, 105);
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-#dashboard-4 .performance-analysis {
-  border-bottom: 1px solid rgb(92, 96, 105);
-  padding-left: 1rem;
-
   transform: translateY(610%);
 }
 
 #dashboard-4 .arrow-bottom {
   top: -54px;
   transform: translateX(25%);
-
 }
 
 /*======================================================================================================
@@ -179,21 +85,15 @@ main
 #dashboard-4 .main {  
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  height: 82%;
+  height: 85%;
 }
 
-
-#dashboard-4 .main .cards {  
-
+#dashboard-4 .main .cards {
   position: relative;
   display: grid;
-  padding-right: 2.5rem;
 }
 
 #dashboard-4 .main .cards .card {
-
-  margin-bottom: var(--space-micro);
-
   display: grid;
   grid-template-columns: 1fr 9fr;
   justify-items: center;
@@ -201,12 +101,8 @@ main
 }
 
 
-#dashboard-4 .main .cards .card .item {
-  border: 1px dashed rgb(92, 96, 105);
 
 
-
-}
 
 
 /* #dashboard-4 .line {
@@ -249,21 +145,8 @@ main
 }
 
 #dashboard-4 .line .item {
-
-  width: 100%;
-  height: 95%;
-  border-radius: var(--size-border-radius);
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-
-#dashboard-4 .main .cards .card .item .sub-item-a {
   width: 100%;
   height: 100%;
-  grid-gap: .3rem;
-  text-align: center;  
-
   padding: 20px;
   position: absolute;
   top: 0;
@@ -288,150 +171,10 @@ main
   width: 100%;
   height: 95%;
   border-radius: 10px;
-
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-
-  grid-gap: 0;
 }
-
-#dashboard-4 .main .cards:nth-child(odd) .card:first-child {
-  margin-top: 2rem;
-}
-
-#dashboard-4 .main .cards:nth-child(even) .card:last-child {
-  margin-bottom: 2rem;
-}
-
-/*======================================================================================================
-시계열 준비
-======================================================================================================*/
-
-#dashboard-4 .main .cards.time-series-preparation .card:nth-child(even) {
-  margin-bottom: 2rem;
-}
-
-/* 시계열 정상성 검사 및 변환 */
-#dashboard-4 .main .cards.time-series-preparation .card .item {
-  width: 100%;
-  height: 100%;   
-}
-
-#dashboard-4 .main .cards.time-series-preparation .card .item .sub-item-a {
-  align-items: flex-start;
-}
-
-#dashboard-4 .main .cards.time-series-preparation .card .item .sub-item-u {
-  width: 100%;    
-}
-
-#dashboard-4 .main .cards.time-series-preparation .card .item .sub-item-u ul {  
-  padding-left: var(--space-small);
-  padding-bottom: var(--space-small);  
-}
-
-#dashboard-4 .main .cards.time-series-preparation .card .item .sub-item-u li {
-  padding-left: var(--space-large);
-  padding-top: var(--space-small);  
-}
-
-/*======================================================================================================
-시계열 예측
-======================================================================================================*/
-
-/* 다변수 예측 */
-#dashboard-4 .main .cards.time-series-forecasting .card:first-child {
-  margin-left: .7rem;
-}
-
-#dashboard-4 .main .cards.time-series-forecasting .card:first-child .item .sub-item-a a {
-  font-size: .7rem;
-}
-
-#dashboard-4 .main .cards.time-series-forecasting .card .item .sub-item-u {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);  
-}
-
-#dashboard-4 .cards .card .item .sub-item-u ul:nth-child(odd) {
-  margin-left: .5rem;
-}
-
-#dashboard-4 .main .cards.time-series-forecasting .card .item .sub-item-u ul {
-  padding-left: var(--space-micro);
-}
-
-#dashboard-4 .main .cards.time-series-forecasting .card .item .sub-item-u ul li {
-  padding-left: var(--space-regular);
-}
-
-#dashboard-4 .main .cards.time-series-forecasting .card .item .sub-item-u span {
-  font-size: .7rem;
-}
-
-#dashboard-4 .main .cards.time-series-forecasting .card .item .sub-item-u ul:last-child {
-  grid-column: 1 / -1;
-}
-
-/*======================================================================================================
-draw line
-======================================================================================================*/
-/* #dashboard-4 .line {
-  position: relative;
-  width: 100%;
-  height: 100px;
-}
-
-#dashboard-4 .line .svg-wrapper {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0 auto;
-  width: 320px;
-}
-
-#dashboard-4 .line .svg-wrapper .shape {
-  stroke-dasharray: 140 540;
-  stroke-dashoffset: -510;
-  stroke-width: 0;
-  fill: transparent;
-  stroke: #19f6e8;
-  border-bottom: 5px solid black;
-  transition: stroke-width 300ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
-}
-
-#dashboard-4 .line .svg-wrapper:hover .shape {
-  stroke-width: 2px;
-  stroke-dashoffset: 0;
-  stroke-dasharray: 840;
-}
-
-#dashboard-4 .line .svg-wrapper:hover .item {
-  color: #41C7C7;
-  text-shadow: rgb(65 199 199 / 90%) 0px 2px 7px;
-}
-
-#dashboard-4 .line .svg-wrapper:hover .item .font {
-  font-size: 3rem;
-}
-
-#dashboard-4 .line .item {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 150ms ease-in 0s;
-} */
-
-
 
 #dashboard-4 .main .cards .card .item .sub-item {
   width: 100%;
@@ -582,3 +325,4 @@ draw line
   justify-content: center;
   align-items: center;
 }
+

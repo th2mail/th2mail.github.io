@@ -1,12 +1,14 @@
 #dashboard-5 {
-  padding-top: 70px;
+  background: white;
+  color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #dashboard-5 table {
   border-spacing: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #dashboard-5 td {
@@ -16,7 +18,7 @@
 #dashboard-5 td,
 #dashboard-5 td div {
   width: 230px;
-  height: 150px;
+  height: 140px;
 }
 
 #dashboard-5 tr:nth-child(3) td,
@@ -28,7 +30,7 @@
 #dashboard-5 tr:nth-child(4) td,
 #dashboard-5 tr:nth-child(4) td div {
   width: 230px;
-  height: 150px;
+  height: 100px;
 }
 
 #dashboard-5 td div span {
@@ -36,8 +38,8 @@
   place-items: center;
 }
 
-#dashboard-5 .one td div span:nth-child(1),
-#dashboard-5 .three td div span:nth-child(1) {
+#dashboard-5 .line-first td div span:nth-child(1),
+#dashboard-5 .line-third td div span:nth-child(1) {
   position: absolute;
   top: -80px;
   left: -50px;
@@ -45,8 +47,8 @@
   height: 50px;
 }
 
-#dashboard-5 .one td div span:nth-child(2),
-#dashboard-5 .three td div span:nth-child(2) {
+#dashboard-5 .line-first td div span:nth-child(2),
+#dashboard-5 .line-third td div span:nth-child(2) {
   position: absolute;
   top: -25px;
   width: 50px;
@@ -54,28 +56,28 @@
   border: 1px solid black;
   border-radius: 50%;
   background-color: var(--color-turquoise);
-  text-align: center;
-  line-height: 50px;
+  /* text-align: center;
+  line-height: 50px; */
 }
 
 /* ******************************************************************************************** 
-one
+line-one
 ******************************************************************************************** */
-#dashboard-5 .one td div {
+#dashboard-5 .line-first td div {
   border-top: 1px solid black;
   border-bottom: 1px solid black;  
 }
 
-#dashboard-5 .one td:first-child div {
+#dashboard-5 .line-first td:first-child div {
   border-bottom: 0;
 }
 
-#dashboard-5 .one td:last-child div {
+#dashboard-5 .line-first td:last-child div {
   border-right: 1px solid black;
   border-radius: 0 50% 50% 0;
 }
 
-#dashboard-5 .one td div span:nth-child(3)::before {
+#dashboard-5 .line-first td div span:nth-child(3)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -84,7 +86,7 @@ one
   top: -22%;
 }
 
-#dashboard-5 .one td div span:nth-child(3) {
+#dashboard-5 .line-first td div span:nth-child(3) {
   font-size: var(--font-small);
   position: absolute;
   top: 37px;
@@ -97,10 +99,14 @@ one
   padding: 10px;
 }
 
+#dashboard-5 .line-first td:nth-child(7) div {
+  width: 190px;
+}
+
 /* ******************************************************************************************** 
 two
 ******************************************************************************************** */
-#dashboard-5 .two td:first-child div {
+#dashboard-5 .line-second td:first-child div {
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
@@ -112,40 +118,38 @@ two
 /* ******************************************************************************************** 
 three
 ******************************************************************************************** */
-#dashboard-5 .three td div {
+#dashboard-5 .line-third td div {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   position: absolute;
   top: -2px;
 }
 
-#dashboard-5 .three td:first-child div {
+#dashboard-5 .line-third td:first-child div {
   border-top: 0;
   border-bottom: 0;
 }
 
-#dashboard-5 .three td:last-child div {
+#dashboard-5 .line-third td:last-child div {
   /* border-right: 1px solid black; */
-  /* border-radius: 0 50% 50% 0; */
+  /* border-radius: 0 50% 50% 0; */  
 }
 
-#dashboard-5 .three td:nth-child(4) div,
-#dashboard-5 .three td:nth-child(5) div,
-#dashboard-5 .three td:nth-child(6) div,
-#dashboard-5 .three td:nth-child(7) div  {
+#dashboard-5 .line-third td:nth-child(4) div,
+#dashboard-5 .line-third td:nth-child(5) div  {
   border-top: 0px;
 }
 
-#dashboard-5 .three td:first-child div span:nth-child(1) {
+#dashboard-5 .line-third td:first-child div span:nth-child(1) {
   left: 0px;
 }
 
-#dashboard-5 .three td:first-child div span:nth-child(2) {
+#dashboard-5 .line-third td:first-child div span:nth-child(2) {
   left: 50px;
 }
 
 /* 시계열 데이터 분해, 제목 */
-#dashboard-5 .three td:nth-child(2) div span:nth-child(1) {
+#dashboard-5 .line-third td:nth-child(2) div span:nth-child(1) {
   position: absolute;
   top: -80px;
   left: -70px;
@@ -154,21 +158,21 @@ three
 }
 
 /* 시계열 데이터 분해, 순번 */
-#dashboard-5 .three td:nth-child(2) div span:nth-child(2) {
+#dashboard-5 .line-third td:nth-child(2) div span:nth-child(2) {
   position: absolute;
-  top: -25px;
+  /* top: -25px; */
   left: -25px;
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  border-radius: 50%;
-  background-color: var(--color-turquoise);
-  text-align: center;
-  line-height: 50px;
+  /* width: 50px; */
+  /* height: 50px; */
+  /* border: 1px solid black; */
+  /* border-radius: 50%; */
+  /* background-color: var(--color-turquoise); */
+  /* text-align: center; */
+  /* line-height: 50px; */
 }
 
 /* 시계열 데이터 분해, 세로선 */
-#dashboard-5 .three td div span:nth-child(3)::before {
+#dashboard-5 .line-third td div span:nth-child(3)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -178,7 +182,7 @@ three
 }
 
 /* 시계열 데이터 분해, 내용 */
-#dashboard-5 .three td div span:nth-child(3) {
+#dashboard-5 .line-third td div span:nth-child(3) {
   font-size: var(--font-small);
   position: absolute;
   top: 37px;
@@ -192,44 +196,45 @@ three
 }
 
 /* 시계열 정상성 검사 및 변환, 제목 */
-#dashboard-5 .three td:nth-child(3) div span:nth-child(1) {
+#dashboard-5 .line-third td:nth-child(3) div span:nth-child(1) {
   position: absolute;
   top: -80px;
   left: -30px;
   width: 150px;
   height: 50px;
+  text-align: center;
 }
 
 /* 시계열 정상성 검사 및 변환, 순번 */
-#dashboard-5 .three td:nth-child(3) div span:nth-child(2) {
+#dashboard-5 .line-third td:nth-child(3) div span:nth-child(2) {
   position: absolute;
-  top: -25px;
+  /* top: -25px; */
   left: 20px;
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  border-radius: 50%;
-  background-color: var(--color-turquoise);
-  text-align: center;
-  line-height: 50px;
+  /* width: 50px; */
+  /* height: 50px; */
+  /* border: 1px solid black; */
+  /* border-radius: 50%; */
+  /* background-color: var(--color-turquoise); */
+  /* text-align: center; */
+  /* line-height: 50px; */
 }
 
 /* 시계열 정상성 검사 및 변환, 왼쪽 내용 */
-#dashboard-5 .three td:nth-child(3) div span:nth-child(3) {
+#dashboard-5 .line-third td:nth-child(3) div span:nth-child(3) {
   font-size: 12px;
-  position: absolute;
-  top: 37px;
+  /* position: absolute; */
+  /* top: 37px; */
   left: -150px;
   width: 190px;
-  height: 100px;
-  background-color: yellow;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
+  /* height: 100px; */
+  /* background-color: yellow; */
+  /* border: 1px solid black; */
+  /* border-radius: 10px; */
+  /* padding: 10px; */
 }
 
 /* 시계열 정상성 검사 및 변환, 오른쪽 내용 */
-#dashboard-5 .three td:nth-child(3) div span:nth-child(4) {
+#dashboard-5 .line-third td:nth-child(3) div span:nth-child(4) {
   font-size: 12px;
   position: absolute;
   top: 37px;
@@ -243,7 +248,7 @@ three
 }
 
 /* 시계열 정상성 검사 및 변환, 순번, 세로 선 */
-#dashboard-5 .three td:nth-child(3) div span:nth-child(2)::before {
+#dashboard-5 .line-third td:nth-child(3) div span:nth-child(2)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -253,7 +258,7 @@ three
 }
 
 /* 시계열 정상성 검사 및 변환, 순번, 가로 선 */
-#dashboard-5 .three td:nth-child(3) div span:nth-child(2)::after {
+#dashboard-5 .line-third td:nth-child(3) div span:nth-child(2)::after {
   content: "";
   background-color: black;
   position: absolute;
@@ -264,27 +269,29 @@ three
 }
 
 /* 시계열 정상성 검사 및 변환, 왼쪽 내용, 위에 선 */
-#dashboard-5 .three td:nth-child(3) div span:nth-child(3)::before {
+#dashboard-5 .line-third td:nth-child(3) div span:nth-child(3)::before {
   content: "";
   background-color: black;
   position: absolute;
   width: 5px;
   height: 5px;
+  left: 92px;
   top: -5%;
 }
 
 /* 시계열 정상성 검사 및 변환, 오른쪽 내용, 위에 선 */
-#dashboard-5 .three td:nth-child(3) div span:nth-child(4)::before {
+#dashboard-5 .line-third td:nth-child(3) div span:nth-child(4)::before {
   content: "";
   background-color: black;
   position: absolute;
   width: 5px;
   height: 5px;
+  left: 37px;
   top: -5%;
 }
 
 /* 시계열 예측, 제목 */
-#dashboard-5 .three td:nth-child(5) div span:nth-child(1) {
+#dashboard-5 .line-third td:nth-child(5) div span:nth-child(1) {
   position: absolute;
   top: -80px;
   left: -50px;
@@ -293,7 +300,7 @@ three
 }
 
 /* 시계열 예측, 순번 */
-#dashboard-5 .three td:nth-child(5) div span:nth-child(2) {
+#dashboard-5 .line-third td:nth-child(5) div span:nth-child(2) {
   position: absolute;
   top: -25px;
   width: 50px;
@@ -306,7 +313,7 @@ three
 }
 
 /* 시계열 예측, 순번, 시계열 정상성 검사 및 변환과 연결하는 선 */
-#dashboard-5 .three td:nth-child(5) div span:nth-child(2)::before {
+#dashboard-5 .line-third td:nth-child(5) div span:nth-child(2)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -319,11 +326,11 @@ three
 /* ******************************************************************************************** 
 시계열 예측
 ******************************************************************************************** */
-#dashboard-5 .three td:nth-child(4) {
+#dashboard-5 .line-third td:nth-child(4) {
   left: -100px;  
 }
 
-#dashboard-5 .three td:nth-child(4)::after {
+#dashboard-5 .line-third td:nth-child(4)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -333,14 +340,24 @@ three
   top: -1%;
 }
 
-#dashboard-5 .three td:nth-child(5) {
+#dashboard-5 .line-third td:nth-child(4)::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  left: 230px;
+  top: 98.5%;
+  width: 60px;
+  height: 1px;  
+}
+
+#dashboard-5 .line-third td:nth-child(5) {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   border-radius: 0 0 30px 0;
 
   position: relative;
   top: -2px;
-  left: -40px;  
+  left: -40px;    
 }
 
 #dashboard-5 #forecating {
@@ -351,6 +368,7 @@ three
   left: -182px;
   width: 872px;
   height: 150px;
+  border-radius: 0 30px 0 0;
 }
 
 #dashboard-5 #forecating div:first-child {
@@ -413,7 +431,7 @@ three
 /* ******************************************************************************************** 
 four
 ******************************************************************************************** */
-#dashboard-5 .four td:first-child div {
+#dashboard-5 .line-fourth td:first-child div {
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
