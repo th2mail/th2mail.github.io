@@ -4,7 +4,7 @@
 $("#navigation").load("/WEB-INF/views/ScreenLayout/Navigation.html");
 
 // 헤더
-$("#header").load("/WEB-INF/views/ScreenLayout/Header.html");
+$("header").load("/WEB-INF/views/ScreenLayout/Header.html");
 
 // 대쉬보드
 $("#dashboard-1").load("/WEB-INF/views/Dashboard/Dashboard-1.html");

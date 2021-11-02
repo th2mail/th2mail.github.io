@@ -136,10 +136,10 @@
                                         Universal tags
 
 ======================================================================================================*/
-* {
-  box-sizing: border-box;
+* {  
   margin: 0;
   padding: 0; 
+  box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
   /* font-family: 'IBM Plex Sans KR', sans-serif; */
@@ -196,7 +196,8 @@ section>p {
 ======================================================================================================*/
 .main-content {
   transition: all 300ms;
-  margin-left: 345px;
+  /* margin-left: 345px; */
+  margin-left: 78px;
 }
 
 /*=============== main ===============*/

@@ -1,356 +1,426 @@
-/*======================================================================================================
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-                                        네비게이션
-
-======================================================================================================*/
-#navigation {}
+/* body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+} */
 
 .sidebar {
-  width: 345px;
   position: fixed;
+  /* top: 0; */
+  top: 82px;
   left: 0;
-  top: 0;
   height: 100%;
-  background-color: rgb(34, 36, 41);
-  border-right: 1px dashed var(--color-white);
-  transition: all 300ms;
-  z-index: 1000;
+  width: 78px;
+  background:rgb(14,19,24);
+  padding: 6px 14px;  
+  /* transition: all 0.5s ease; */
+  z-index: 100;
 }
 
-/*=============== .sidebar-brand ===============*/
-.sidebar-brand {
-  height: 90px;
-  padding: 1rem 0rem 1rem 2rem;
-  color: var(--color-white);
+/* ******************************************************************************************** 
+
+      .logo_content
+
+******************************************************************************************** */
+
+.sidebar .logo_content .logo {
+  color: #fff;  
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;  
+  /* opacity: 0; */
+  /* pointer-events: none; */
+  /* transition: all 0.5s ease; */
+}
+/* 
+.sidebar.active .logo_content .logo {
+  opacity: 1;
+  pointer-events: none;
+}
+*/
+
+.logo_content .logo i {
+  font-size: 3rem;
+  /* margin-right: 5px; */
+}
+
+/* .logo_content .logo .logo_name {
+  font-size: 20px;
+  font-weight: 400;
+} */
+
+/* .sidebar #btn {
+  position: absolute;
+  color: green;
+  top: 6px;
+  left: 50%;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+} */
+/*
+.sidebar.active #btn {
+  left: 90%;
+}
+*/
+
+/* ******************************************************************************************** 
+
+      .nav_list
+
+******************************************************************************************** */
+
+.sidebar ul {
+  margin-top: 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.sidebar-brand span {
-  padding-right: 1rem;
-}
-
-.sidebar-brand span:first-child {
-  font-size: 50px;
-}
-
-/*=============== .sidebar-scroll ===============*/
-.sidebar-scroll {
-  /* 스크롤바 모양을 이쁜 것으로 바꿔줘야 함 */
-  overflow: auto;
-  height: 100vh;
-}
-
-.sidebar-scroll::-webkit-scrollbar {
-  width: 5px;
-  /*스크롤바의 너비*/
-}
-
-.sidebar-scroll::-webkit-scrollbar-thumb {
-  /*스크롤바의 색상*/
-  background-color: var(--color-text);
-}
-
-.sidebar-scroll::-webkit-scrollbar-track {
-  /*스크롤바 트랙 색상*/
-  background-color: var(--color-white);
-}
-
-/*=============== .sidebar-menu ===============*/
-.sidebar-menu {
-  margin-top: 1rem;
-  font-family: 'IBM Plex Sans KR', sans-serif;
-  font-size: .9rem;
-  font-weight: 800;  
-}
-
-.sidebar-menu li {
-  margin-bottom: 5px;
-  padding-left: 1rem;
-  transition: all 100ms ease-in 0s;
-}
-
-.sidebar-menu a {
-  padding-left: 1rem;
-  display: block;
-  color: #41C7C7;
-  height: 45px;
-  line-height: 45px;
-  transition: all 300ms ease-in 0s;
-}
-
-.sidebar-menu a.active,
-.sidebar-menu li:hover {
-  text-shadow: rgb(65 199 199 / 90%) 0px 2px 7px;
-}
-
-.sidebar-menu a span:first-child {
-  padding-right: 1rem;
-}
-
-/* .sidebar-menu a span:nth-child(even) {  
-  display: none;
-} */
-
-.sidebar-menu a span:nth-child(odd) {
-  display: none;
-}
-
-/* .sidebar-menu a {
-  text-decoration: none;
-  transition: all 300ms ease-in 0s;
-}
-
-.sidebar-menu a:hover {
-  text-decoration: underline;
-  color: red;
-} */
-
-.sidebar-menu a span:last-child:hover {
-  /* color: #8fd3f4; */
-}
-
-.to-right-underline {
+.sidebar ul li {
   position: relative;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;  
+  text-align: center;
+  margin: 3px 5px;    
 }
 
 
 
-
-.to-right-underline:after {
-  content: "";
+.sidebar ul li .tooltip {
   position: absolute;
-  left: 0;
-  /* bottom: -10px; */
-  bottom: -2px;
-  width: 0px;
-  height: 2px;
-  margin: 2px 0 0;
-  /* transition: all 0.2s ease-in-out;
-  transition-duration: 0.3s; */
-  transition: all 0.2s ease-in-out;
-  transition-duration: 0.3s;
+  left: 75px;
+  top: -10px;
+  border-radius: 10px;
+  height: 35px;
+  background:
+  #11101d;
+  color: #fff;;
+  line-height: 35px;
+  text-align: center;
+  /* box-shadow: 5px 5px 20px rgba(59, 58, 58, 0.794);  */
+  transition: 0s;
   opacity: 0;
-  /* background-color: #8fd3f4; */
-  background-color: #41C7C7;
+  pointer-events: none;
+  white-space: nowrap;  
+  z-index: 99;
+}
+
+/* 사이드바 메뉴리스트의 툴팁 가로 사이즈 */
+.sidebar ul li:nth-child(1) .tooltip,
+.sidebar ul li:nth-child(4) .tooltip,
+.sidebar ul li:nth-child(10) .tooltip,
+.sidebar ul li:nth-child(11) .tooltip {
+  width: 100px;
+}
+.sidebar ul li:nth-child(7) .tooltip {
+  width: 110px;
+}
+.sidebar ul li:nth-child(2) .tooltip,
+.sidebar ul li:nth-child(3) .tooltip,
+.sidebar ul li:nth-child(6) .tooltip {
+  width: 130px;
+}
+.sidebar ul li:nth-child(8) .tooltip {
+  width: 140px;
+}
+.sidebar ul li:nth-child(5) .tooltip {
+  width: 160px;
+}
+.sidebar ul li:nth-child(13) .tooltip {
+  width: 170px;
+}
+.sidebar ul li:nth-child(9) .tooltip {
+  width: 190px;
+}
+.sidebar ul li:nth-child(12) .tooltip {
+  width: 220px;
+}
+
+/*
+.sidebar.active ul li .tooltip {
+  display: none;
+}
+*/
+
+.sidebar ul li:hover .tooltip {
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 8px;     
+}
+
+.sidebar ul li a {
+  /* color: #fff; */
+  color: rgb(129, 132, 135);
+  /* color: rgb(62,64,66); */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s ease;
+  border-radius: 12px;  
+  /* color: #fff; */
+}
+
+.sidebar ul li a:hover {
+  color: #11101d;
+  font-weight: 900;
+  background: #fff;
+  width: 50px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.sidebar ul li.active {
+  background: rgb(41, 48, 57);
+  /* background: rgb(34, 36, 41); */
+  width: 78px;
   
 }
 
-.to-right-underline:hover:after {
+.sidebar ul li.active a:hover {
+  background: rgb(41, 48, 57);
+  width: 78px;
+  color: #fff;
+}
+
+/* .sidebar ul li.active a:hover .tooltip,
+.sidebar ul li.active:hover .tooltip,
+*/
+/* .sidebar ul li:hover.active .tooltip, */
+.sidebar ul li.active .tooltip {
+  display: none;
+}
+
+
+.sidebar ul li.open:hover .tooltip {
+  display: none;
+}
+
+/*
+.sidebar ul li input {
+  position: absolute;
+  height: 100%;
   width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #1d1b31;
+  padding-left: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar ul li .bx-search {
+  position: absolute;
+  z-index: 99;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.5 ease;
+}
+
+.sidebar ul li .bx-search:hover {
+  background: #fff;
+  color: #1d1b31;
+}
+*/
+
+
+/*
+.sidebar ul li i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar .links_name {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.sidebar .profile_content {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sidebar .profile_content .profile {
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background: none;
+  transition: all 0.4s ease;
+}
+
+.sidebar.active .profile_content .profile {
+  background: #1d1b31;
+}
+
+.profile_content .profile .profile_details {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.sidebar.active .profile .profile_details {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.profile .profile_details img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.profile .profile_details .name_job {
+  padding-left: 10px;
+}
+
+.profile .profile_details .name {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.profile .profile_details .job {
+  font-size: 12px;
+}
+
+.profile #log_out {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background: #1d1b31;
+}
+
+.sidebar.active .profile #log_out {
+  left: 88%;
+}
+
+.sidebar.active .profile #log_out {
+  background: none;
+}
+
+.home_content {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 78px);
+  left: 78px;
+  transition: all 0.5s ease;
+}
+
+.home_content .text {
+  font-size: 25px;
+  font-weight: 500;
+  color: #1d1b31;
+  margin: 12px;
+}
+
+.sidebar.active~.home_content {
+  width: calc(100% - 240px);
+  left: 240px;
+} 
+*/
+
+.sidebar .rightbar {
+  position: absolute;
+  top: 0;
+  left: -265px;
+  height: 100%;
+  width: 265px;
+  /* transition: all 150ms ease; */
+  /* z-index: -1; */padding: 1rem 1rem;
+}
+
+.rightbar .title-wrapper {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.sidebar .rightbar input.title {
+  margin-top: 1.5rem;
+  color: #FEC1A9;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;  
+  text-align: center;
+  width: 230px;
+
+  
+}
+
+.sidebar .rightbar.active {
+  /* position: absolute; */
+  top: 0px;
+  left: 78px;
+  height: 100%;
+  width: 265px; 
+  /* background: #27343F; */
+  /* background: rgb(34, 36, 41); */
+  background: rgb(41, 48, 57);
+
+  /* z-index: 200; */
+}
+
+.sidebar .rightbar.active .close {
   opacity: 1;
 }
 
-/************************************************************************************/
-
-.sidebar-menu a {
-  position: relative;
-}
-
-.sidebar-menu li a .svg-wrapper div {
-  width: 100%;
-  height: 100%;
+.rightbar .close {
   position: absolute;
-  /* top: 0; */
-  top: -7px;
+  width: 30px;
+  height: 30px;
+  /* background: #27343F; */
+  background: rgb(34, 36, 41);
+
+
+  top: 500px;
+  left: 255px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+  border-radius: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
-  /* z-index: 1000; */
-  /* left: -10px; */
-  left: 15px;
-}
+  padding-right: 3px;
+  opacity: 0;
+  /* z-index: -1; */
 
-.sidebar-menu .svg-wrapper {
-  position: relative;
-  /* top: 20%; */
-  /* transform: translateX(-100%); */
-  /* transform: translateY(-30%); */
-  margin: 0 auto;
-  width: 40px;
-  /* right: 0; */
-  margin-right: 25px;
-}
-
-.sidebar-menu li a .svg-wrapper .shape {
-  stroke-dasharray: 140 540;
-  stroke-dashoffset: -510;
-  stroke-width: 0;
-  fill: transparent;
-  stroke: #19f6e8;
-  border-bottom: 5px solid black;
-  transition: stroke-width 300ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
-}
-
-.sidebar-menu .svg-wrapper:hover .shape {
-  stroke-width: 2px;
-  stroke-dashoffset: 0;
-  stroke-dasharray: 760;
-}
-
-.sidebar-menu li a .svg-wrapper svg div {
-  position: relative;
-  top: -5px;
-}
-
-/*=============== #nav-toggle ===============*/
-/* 
-    + 연산자 
-
-      예) A + B
-      뜻) A 태그 옆에 있는 B 태그를 선택하라는 선택자이다.
-
-      기능 설명 : 
-        아이디가 nav-toggle인 체크박스가 check 되면,
-        nav-toggle 과 같은 레벨에 있는 
-        클래스 이름이 sidebar 인 태그에 아래 속성과 값을 적용해라!!!
- */
-#nav-toggle:checked+.sidebar {
-  width: 70px;
-}
-
-#nav-toggle:checked+.sidebar .sidebar-brand,
-#nav-toggle:checked+.sidebar li {
-  /* padding-left: 1rem; */
-  padding-left: .7rem;
-  text-align: center;
-}
-
-#nav-toggle:checked+.sidebar li a {
-  padding-left: 0rem;
-}
-
-#nav-toggle:checked+.sidebar .sidebar-brand span:last-child,
-#nav-toggle:checked+.sidebar li a span:last-child
-
-/* #nav-toggle:checked+.sidebar .sidebar-menu a span:first-child { */
-  {
-  display: none;
-}
-
-
-#nav-toggle:checked+.sidebar .sidebar-menu a span:first-child {
-  display: inline;
-}
-
-
-/* #nav-toggle:checked+.sidebar .sidebar-menu a span:nth-child(even) {
-  display: inline;
-} */
-
-#nav-toggle:checked~.main-content {
-  margin-left: 70px;
-}
-
-#nav-toggle:checked~.main-content header {
-  width: calc(100% - 70px);
-  /* left: 70px; */
-}
-
-/************************************************************************************/
-
-.sidebar-menu a {
-  position: relative;
-}
-
-.sidebar-menu li a .svg-wrapper div {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  /* top: 0; */
-  top: -7px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* z-index: 1000; */
-  /* left: -10px; */
-  left: 15px;
-}
-
-.sidebar-menu .svg-wrapper {
-  position: relative;
-  /* top: 20%; */
-  /* transform: translateX(-100%); */
-  /* transform: translateY(-30%); */
-  margin: 0 auto;
-  width: 40px;
-  /* right: 0; */
-  margin-right: 25px;
-}
-
-.sidebar-menu li a .svg-wrapper .shape {
-  stroke-dasharray: 140 540;
-  stroke-dashoffset: -510;
-  stroke-width: 0;
-  fill: transparent;
-  stroke: #19f6e8;
-  border-bottom: 5px solid black;
-  transition: stroke-width 300ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
-}
-
-.sidebar-menu .svg-wrapper:hover .shape {
-  stroke-width: 2px;
-  stroke-dashoffset: 0;
-  stroke-dasharray: 760;
-}
-
-.sidebar-menu li a .svg-wrapper svg div {
-  position: relative;
-  top: -5px;
-}
-
-/*=============== #nav-toggle ===============*/
-/* 
-    + 연산자 
-
-      예) A + B
-      뜻) A 태그 옆에 있는 B 태그를 선택하라는 선택자이다.
-
-      기능 설명 : 
-        아이디가 nav-toggle인 체크박스가 check 되면,
-        nav-toggle 과 같은 레벨에 있는 
-        클래스 이름이 sidebar 인 태그에 아래 속성과 값을 적용해라!!!
- */
-#nav-toggle:checked+.sidebar {
-  width: 70px;
-}
-
-#nav-toggle:checked+.sidebar .sidebar-brand,
-#nav-toggle:checked+.sidebar li {
-  /* padding-left: 1rem; */
-  padding-left: .7rem;
-  text-align: center;
-}
-
-#nav-toggle:checked+.sidebar li a {
-  padding-left: 0rem;
-}
-
-#nav-toggle:checked+.sidebar .sidebar-brand span:last-child,
-#nav-toggle:checked+.sidebar li a span:last-child
-
-/* #nav-toggle:checked+.sidebar .sidebar-menu a span:first-child { */
-  {
-  display: none;
-}
-
-
-#nav-toggle:checked+.sidebar .sidebar-menu a span:first-child {
-  display: inline;
-}
-
-
-/* #nav-toggle:checked+.sidebar .sidebar-menu a span:nth-child(even) {
-  display: inline;
-} */
-
-/* #nav-toggle:checked~.main-content { */
-#nav-toggle:checked .main-content {
-  margin-left: 70px;
-}
-
-/* #nav-toggle:checked~.main-content header { */
-#nav-toggle:checked .main-content header {
-  width: calc(100% - 70px);
-  /* left: 70px; */
+  
 }
