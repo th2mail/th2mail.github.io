@@ -647,6 +647,11 @@
   height: 110px;
 }
 
+#dashboard-5 .cards.fourth .card .item {
+  width: 90px;
+  height: 110px;
+}
+
 #dashboard-5 .cards.fourth .card.seven {
   border-top: none;
 }
@@ -694,6 +699,10 @@
   position: absolute;
   left: 96px;
   width: 5px;
+  background-color: black;
+  position: absolute;
+  left: 96px;
+  width: 1px;
   height: 111px;
   top: -25px;
 }
@@ -705,6 +714,8 @@
   position: absolute;
   left: 100px;
   width: 200px;
+  left: 97px;
+  width: 160px;
   height: 15px;
   top: 20px;
 }
@@ -729,6 +740,11 @@
   left: -19px;
   width: 18px;
   height: 5px;
+  background-color: var(--color-black);
+  position: absolute;
+  left: -19px;
+  width: 18px;
+  height: 1px;
   top: 25px;
 }
 
@@ -740,6 +756,11 @@
   left: 49px;
   width: 25px;
   height: 5px;
+  background-color: var(--color-black);
+  position: absolute;
+  left: 49px;
+  width: 25px;
+  height: 1px;
   top: 25px;
 }
 
@@ -763,6 +784,11 @@
   left: -19px;
   width: 18px;
   height: 5px;
+  background-color: var(--color-black);
+  position: absolute;
+  left: -19px;
+  width: 18px;
+  height: 1px;
   top: 25px;
 }
 
@@ -774,6 +800,11 @@
   left: 49px;
   width: 25px;
   height: 5px;
+  background-color: var(--color-black);
+  position: absolute;
+  left: 49px;
+  width: 25px;
+  height: 1px;
   top: 25px;
 }
 
