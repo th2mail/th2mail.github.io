@@ -207,7 +207,8 @@ section>p {
 main {
   overflow-y: scroll;
   height: calc(100vh - 85px);
-  margin-top: 85px;
+  /* margin-top: 85px; */
+  margin-top: 82px;
   background: var(--color-background);
   color: var(--color-text);
 }

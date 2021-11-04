@@ -7,19 +7,13 @@
  * ---------  -----------------------------------------------------------------
  * 
  */
-
-#dashboard-5 * {
-  margin: 0;
-  padding: 0;
-  color: black;  
-}
-
 #dashboard-5 {
+  margin: 0;
   padding: 100px 50px 50px 80px;
-  background: var(--color-white);
-  color: var(--color-black);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  outline: none;
   z-index: 2;
-  margin-top: 0;
 }
 
 #dashboard-5 table {
@@ -38,44 +32,22 @@
   height: 140px;
 }
 
-/* 타이틀 폰트 크기 */
-#dashboard-5 .cards .card .item .title {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
 /* ******************************************************************************************** 
 
       .cards.first
 
 ******************************************************************************************** */
 
-#dashboard-5 .cards.first .card {
-  border-top: 5px solid #FEC1A9;  
-}
-
-#dashboard-5 .cards.first .card.four,
-#dashboard-5 .cards.first .card.five,
-#dashboard-5 .cards.first .card.six {
-  border-bottom: 5px solid #FEC1A9;
-}
-
-#dashboard-5 .cards.first .card.seven {
-  border-right: 5px solid #FEC1A9;
-  border-bottom: 5px solid #FEC1A9;
-  border-radius: 0 50% 50% 0;    
-}
-
-/* 타이틀 */
-#dashboard-5 .cards.first .card .item .title {
+/* 데이터 준비 - 타이틀 */
+/* #dashboard-5 .cards.first .card .item .title {
   position: absolute;
   width: 200px;
   height: 50px;
   top: -65px;
   left: -75px;  
-}
+} */
 
-/* 순번 */
+/* 데이터 준비 - 순번 */
 #dashboard-5 .cards.first .card .item .no {
   position: absolute;    
   border-radius: 50%;
@@ -84,6 +56,21 @@
   height: 50px;
   line-height: 50px;  
   top: -25px;
+}
+
+/* 데이터 준비 - 순번 */
+#dashboard-5 .cards.first .card .item .no.subject {
+  width: 150px;
+  height: 150px;
+  top: -80px;
+  left: -10px;
+  border: 10px solid rgb(189, 0, 255);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 /* 데이터 탐험 - 아이템 */
@@ -112,26 +99,16 @@
   top: -22%;
 }
 
+#dashboard-5 .cards.third .card {
+  border-top: 5px solid rgb(126, 0, 255);
+  top: -10px;
+}
+
 /* ******************************************************************************************** 
 
       .cards.second
 
 ******************************************************************************************** */
-
-#dashboard-5 .cards.second .card {
-  border-top: 5px solid #FEC1A9;
-  top: -5px;
-}
-
-#dashboard-5 .cards.second .card.one {
-  border-left: 5px solid #FEC1A9;
-  border-bottom: 5px solid #FEC1A9;
-  border-radius: 50% 0 0 50%;  
-}
-
-#dashboard-5 .cards.second .card.four {
-  border-top: none;
-}
 
 /* 순번 */
 #dashboard-5 .cards.second .card .item .no {
@@ -158,6 +135,21 @@
 #dashboard-5 .cards.second .card.one .item .no {
   top: 110px;
   left: 50px;  
+}
+
+/* 시계열 준비 - 순번 */
+#dashboard-5 .cards.second .card.one .item .no.subject {
+  width: 150px;
+  height: 150px;
+  top: 60px;
+  left: -10px;
+  border: 10px solid rgb(126, 0, 255);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 /* -------------------------------------------------
@@ -187,7 +179,7 @@
   left: -89px;
   width: 130px;
   height: 70px;
-  border: 1px solid black;
+  border: 5px solid rgb(126, 0, 255);
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -198,12 +190,12 @@
 /* 연결선 */
 #dashboard-5 .cards.second .card.two .item .desc::before {
   content: "";
-  background-color: black;
+  background-color: rgb(126, 0, 255);
   position: absolute;
   width: 5px;
   height: 11px;
-  top: -11px;
-  left: 61px;
+  top: -16px;
+  left: 55px;
 }
 
 /* -------------------------------------------------
@@ -232,7 +224,7 @@
   left: -151px;
   width: 155px;
   height: 70px;
-  border: 1px solid black;
+  border: 5px solid rgb(126, 0, 255);
   border-radius: 10px;
   text-align: left;
   padding: 10px;
@@ -257,7 +249,7 @@
   left: 15px;
   width: 100px;
   height: 70px;
-  border: 1px solid black;
+  border: 5px solid rgb(126, 0, 255);
   border-radius: 10px;
   text-align: left;
   padding: 10px;
@@ -278,7 +270,7 @@
 /* 시계열 정상성 검사 및 변환, 순번, 세로 선 */
 #dashboard-5 .cards.second .card.three .item .no::before {
   content: "";
-  background-color: black;
+  background-color: rgb(126, 0, 255);
   position: absolute;
   width: 5px;
   height: 6px;
@@ -323,6 +315,21 @@
   시계열 예측
    ------------------------------------------------- */
 
+/* 시계열 예측 - 순번 */
+#dashboard-5 .cards.second .card.four .item .no.subject {
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -132px;
+  border: 10px solid rgb(0, 186, 255);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
 /* 타이틀 */
 #dashboard-5 .cards.second .card.four .item div:nth-child(1) {
   position: absolute;
@@ -343,19 +350,19 @@
   단변수 예측
    ------------------------------------------------- */
 
-/* 타이틀 */
+/* 단변수 예측 - 타이틀 */
 #dashboard-5 .cards.second .card.four .item div:nth-child(3) {
   position: absolute;
   top: -55px;
-  left: -65px;
+  left: -48px;
   width: 200px;
   height: 50px;
 }
 
-/* 순번 */
+/* 단변수 예측 - 순번 */
 #dashboard-5 .cards.second .card.four .item div:nth-child(4) {
   top: -25px;
-  left: 10px;
+  left: 30px;
   z-index: 1;
 }
 
@@ -379,26 +386,19 @@
   다변수 예측
    ------------------------------------------------- */
 
-#dashboard-5 .cards.second .card.four .item {
-  border: 5px solid #FEC1A9;
-  border-radius: 0 80px 0 0;
-  position: absolute;
-  top: 75px;
-}
-
-/* 타이틀 */
+/* 다변수 예측 - 타이틀 */
 #dashboard-5 .cards.second .card.four .item div:nth-child(6) {
   position: absolute;
-  top: 180px;
-  left: -70px;
+  top: 170px;
+  left: -48px;
   width: 200px;
   height: 50px;
 }
 
-/* 순번 */
+/* 다변수 예측 - 순번 */
 #dashboard-5 .cards.second .card.four .item div:nth-child(7) {
-  top: 115px;
-  left: 10px;
+  top: 110px;
+  left: 30px;
   z-index: 1;
 }
 
@@ -608,11 +608,6 @@
   height: 200px;
 }
 
-#dashboard-5 .cards.third .card {
-  border-top: 5px solid #FEC1A9;
-  top: -10px;
-}
-
 #dashboard-5 .cards.third .card.one {
   border-top: none;
   top: -2px;
@@ -625,23 +620,12 @@
   border-top: none;
 }
 
-#dashboard-5 .cards.third .card.seven {
-  border-right: 5px solid #FEC1A9;
-  border-bottom: 5px solid #FEC1A9;
-  border-radius: 0 0 50% 0;
-}
-
 /* ******************************************************************************************** 
 
       .cards.fourth
 
 ******************************************************************************************** */
 
-#dashboard-5 .cards.fourth .card {
-  border-top: 5px solid #FEC1A9;
-  top: -15px;
-}
-
 #dashboard-5 .cards.fourth .card .item {
   width: 90px;
   height: 110px;
@@ -650,16 +634,6 @@
 #dashboard-5 .cards.fourth .card .item {
   width: 90px;
   height: 110px;
-}
-
-#dashboard-5 .cards.fourth .card.seven {
-  border-top: none;
-}
-
-#dashboard-5 .cards.fourth .card.one {
-  border-left: 5px solid #FEC1A9;
-  border-bottom: 5px solid #FEC1A9;
-  border-radius: 50% 0 0 50%;
 }
 
 #dashboard-5 .cards.fourth .card .item .title {
@@ -686,38 +660,20 @@
   left: -25px;
 }
 
-/* 순번 : 성능 분석 */
+/* 성능 분석 - 번호 */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(2) {
-  top: 85px;
-  left: 50px;
-}
-
-/* 순번 : 성능 분석 - before */
-#dashboard-5 .cards.fourth .card.one .item .no:nth-child(2)::before {
-  content: "";
-  background-color: #FEC1A9;
-  position: absolute;
-  left: 96px;
-  width: 5px;
-  background-color: black;
-  position: absolute;
-  left: 96px;
-  width: 1px;
-  height: 111px;
-  top: -25px;
-}
-
-/* 순번 : 성능 분석 - after */
-#dashboard-5 .cards.fourth .card.one .item .no:nth-child(2)::after {
-  content: "";
-  background-color: var(--color-white);
-  position: absolute;
-  left: 100px;
-  width: 200px;
-  left: 97px;
-  width: 160px;
-  height: 15px;
-  top: 20px;
+  width: 150px;
+  height: 150px;
+  top: 40px;
+  left: 0px;
+  border: 10px solid rgb(56, 0, 137);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 타이틀 : 시계열 예측 분석(수치메트릭) */
@@ -732,38 +688,6 @@
   left: 165px;
 }
 
-/* 순번 : 시계열 예측 분석(수치메트릭) - before */
-#dashboard-5 .cards.fourth .card.one .item .no:nth-child(4)::before {
-  content: "";
-  background-color: #FEC1A9;
-  position: absolute;
-  left: -19px;
-  width: 18px;
-  height: 5px;
-  background-color: var(--color-black);
-  position: absolute;
-  left: -19px;
-  width: 18px;
-  height: 1px;
-  top: 25px;
-}
-
-/* 순번 : 시계열 예측 분석(수치메트릭) - after */
-#dashboard-5 .cards.fourth .card.one .item .no:nth-child(4)::after {
-  content: "";
-  background-color: #FEC1A9;
-  position: absolute;
-  left: 49px;
-  width: 25px;
-  height: 5px;
-  background-color: var(--color-black);
-  position: absolute;
-  left: 49px;
-  width: 25px;
-  height: 1px;
-  top: 25px;
-}
-
 /* 타이틀 : 시계열 예측 분석(차트) */
 #dashboard-5 .cards.fourth .card.one .item .title:nth-child(5) {
   top: 200px;
@@ -776,42 +700,10 @@
   left: 165px;
 }
 
-/* 순번 : 시계열 예측 분석(차트) - before */
-#dashboard-5 .cards.fourth .card.one .item .no:nth-child(6)::before {
-  content: "";
-  background-color: #FEC1A9;;
-  position: absolute;
-  left: -19px;
-  width: 18px;
-  height: 5px;
-  background-color: var(--color-black);
-  position: absolute;
-  left: -19px;
-  width: 18px;
-  height: 1px;
-  top: 25px;
-}
-
-/* 순번 : 시계열 예측 분석(차트) - after */
-#dashboard-5 .cards.fourth .card.one .item .no:nth-child(6)::after {
-  content: "";
-  background-color: #FEC1A9;
-  position: absolute;
-  left: 49px;
-  width: 25px;
-  height: 5px;
-  background-color: var(--color-black);
-  position: absolute;
-  left: 49px;
-  width: 25px;
-  height: 1px;
-  top: 25px;
-}
-
 /* 수치 메트릭 */
 #dashboard-5 .cards.fourth .card.one .item div:nth-child(7) {
   position: absolute;
-  border: 1px solid black;
+  border: 5px solid rgb(56, 0, 137);
   width: 580%;
   height: 100px;
   left: 238px;
@@ -823,7 +715,7 @@
 /* 차트 */
 #dashboard-5 .cards.fourth .card.one .item div:nth-child(8) {
   position: absolute;
-  border: 1px solid black;
+  border: 5px solid rgb(56, 0, 137);
   width: 580%;
   height: 100px;
   left: 238px;
@@ -837,17 +729,149 @@
 */
 #dashboard-5 .cards .card .item .no {
   font-size: 1.8rem;
-  /* font-weight: 900;   */
   font-weight: bold;
   border: none;
-  box-shadow: 2px 2px 15px rgb(27, 165, 165);
+  color:#4d4d4d;
+  ;
+  background: rgba(1, 3, 3, 0.075);
 }
 
 /* 
   설 명 : 대제목의 배경색을 000으로 바꾼다. 
   메뉴 항목 : 데이터 준비, 시계열 준비, 시계열 예측, 성능 분석
 */
-#dashboard-5 .cards .card .item .no.subject {
+/* #dashboard-5 .cards .card .item .no.subject {
   background-color: #4d4d4d;
   box-shadow: none;
+} */
+
+/* ******************************************************************************************** 
+
+      line
+
+******************************************************************************************** */
+#dashboard-5 .cards.first .card {
+  border-top: 5px solid rgb(189, 0, 255);
+}
+
+#dashboard-5 .cards.first .card.four,
+#dashboard-5 .cards.first .card.five,
+#dashboard-5 .cards.first .card.six {
+  border-bottom: 5px solid rgb(189, 0, 255);
+}
+
+#dashboard-5 .cards.first .card.seven {
+  border-right: 5px solid rgb(189, 0, 255);
+  border-bottom: 5px solid rgb(189, 0, 255);
+  border-radius: 0 50% 50% 0;
+}
+
+#dashboard-5 .cards.second .card {
+  border-top: 5px solid rgb(189, 0, 255);
+  top: -5px;
+}
+
+#dashboard-5 .cards.second .card.one {
+  border-left: 5px solid rgb(189, 0, 255);
+  border-bottom: 5px solid rgb(126, 0, 255);
+  border-radius: 50% 0 0 50%;
+}
+
+#dashboard-5 .cards.second .card.four {
+  border-top: none;
+}
+
+/* 시계열 예측 : 가장 큰 네모 상자 */
+#dashboard-5 .cards.second .card.four .item {
+  border: 5px solid rgb(0, 186, 255);
+  border-radius: 50px 80px 0 50px;
+  position: absolute;
+  top: 75px;
+}
+
+#dashboard-5 .cards.third .card.seven {
+  border-right: 5px solid rgb(0, 186, 255);
+  border-bottom: 5px solid rgb(0, 186, 255);
+  border-radius: 0 0 50% 0;
+}
+
+#dashboard-5 .cards.fourth .card {
+  border-top: 5px solid rgb(0, 186, 255);
+  top: -15px;
+}
+
+#dashboard-5 .cards.fourth .card.seven {
+  border-top: none;
+}
+
+#dashboard-5 .cards.fourth .card.one {
+  border-left: 5px solid rgb(0, 186, 255);
+  border-bottom: 5px solid rgb(56, 0, 137);
+  border-radius: 50% 0 0 50%;
+}
+
+/* 순번 : 성능 분석 - before */
+#dashboard-5 .cards.fourth .card.one .item .no:nth-child(2)::before {
+  content: "";
+  background-color: rgb(56, 0, 137);
+  position: absolute;
+  width: 5px;
+  height: 115px;
+  top: 10px;
+  left: 136px;
+}
+
+/* 순번 : 성능 분석 - after */
+#dashboard-5 .cards.fourth .card.one .item .no:nth-child(2)::after {
+  content: "";
+  background-color: var(--color-white);
+  position: absolute;
+  width: 200px;
+  height: 15px;
+  top: 50px;
+  left: 141px;
+}
+
+/* 순번 : 시계열 예측 분석(수치메트릭) - before */
+#dashboard-5 .cards.fourth .card.one .item .no:nth-child(4)::before {
+  content: "";
+  background-color: rgb(56, 0, 137);
+  position: absolute;
+  top: 25px;
+  left: -19px;
+  width: 18px;
+  height: 5px;
+}
+
+/* 순번 : 시계열 예측 분석(수치메트릭) - after */
+#dashboard-5 .cards.fourth .card.one .item .no:nth-child(4)::after {
+  content: "";
+  background-color: rgb(56, 0, 137);
+  position: absolute;
+  top: 25px;
+  left: 49px;
+  width: 25px;
+  height: 5px;
+}
+
+/* 순번 : 시계열 예측 분석(차트) - before */
+#dashboard-5 .cards.fourth .card.one .item .no:nth-child(6)::before {
+  content: "";
+  background-color: rgb(56, 0, 137);
+  position: absolute;
+  width: 18px;
+  height: 5px;
+  top: 25px;
+  left: -19px;
+}
+
+/* 순번 : 시계열 예측 분석(차트) - after */
+#dashboard-5 .cards.fourth .card.one .item .no:nth-child(6)::after {
+  content: "";
+  background-color: rgb(56, 0, 137);
+  position: absolute;
+  top: 25px;
+  left: 49px;
+  width: 25px;
+  height: 5px;
 }

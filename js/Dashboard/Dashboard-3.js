@@ -63,5 +63,3 @@ canvas4.forEach((canvas) => {
   draw.strokeStyle = "rgb(251, 243, 76)";
   draw.stroke();
 });
-
-

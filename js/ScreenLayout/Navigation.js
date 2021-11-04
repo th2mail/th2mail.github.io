@@ -44,7 +44,7 @@ nav_list.addEventListener('click', (event) => {
   target.children[0].style.color = "#fff";
 
   // 메인화면의 너비를 줄인다.
-  document.querySelector('.main-content').style.marginLeft = "345px";  
+  document.querySelector('.main-content').style.marginLeft = "344px";
 
   // 타이틀을 선택한 메뉴 이름으로 바꾼다.
   document.querySelector('.sidebar .rightbar input.title').value = target.dataset.title;
