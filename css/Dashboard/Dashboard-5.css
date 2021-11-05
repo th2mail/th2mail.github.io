@@ -58,7 +58,7 @@
   top: -25px;
 }
 
-/* 데이터 준비 - 순번 */
+/* 번호 - 데이터 준비 */
 #dashboard-5 .cards.first .card .item .no.subject {
   width: 150px;
   height: 150px;
@@ -676,25 +676,25 @@
   align-items: center;
 }
 
-/* 타이틀 : 시계열 예측 분석(수치메트릭) */
+/* 제목 : 시계열 예측 분석(수치메트릭) */
 #dashboard-5 .cards.fourth .card.one .item .title:nth-child(3) {
-  top: -15px;
+  top: 5px;
   left: 90px;
 }
 
-/* 순번 : 시계열 예측 분석(수치메트릭) */
+/* 번호 : 시계열 예측 분석(수치메트릭) */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(4) {
   top: 35px;
   left: 165px;
 }
 
-/* 타이틀 : 시계열 예측 분석(차트) */
+/* 제목 : 시계열 예측 분석(차트) */
 #dashboard-5 .cards.fourth .card.one .item .title:nth-child(5) {
-  top: 200px;
+  top: 115px;
   left: 90px;
 }
 
-/* 순번 : 시계열 예측 분석(차트) */
+/* 번호 : 시계열 예측 분석(차트) */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(6) {
   top: 145px;
   left: 165px;
@@ -708,7 +708,7 @@
   height: 100px;
   left: 238px;
   top: 15px;
-  border-radius: 50px;
+  border-radius: 10px;
   line-height: 100px;
 }
 
@@ -720,7 +720,7 @@
   height: 100px;
   left: 238px;
   top: 120px;
-  border-radius: 50px;
+  border-radius: 10px;
   line-height: 100px;
 }
 
@@ -812,16 +812,18 @@
 
 /* 순번 : 성능 분석 - before */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(2)::before {
-  content: "";
-  background-color: rgb(56, 0, 137);
+  content: "시계열 예측 분석";
+  background-color: transparent;
+  font-size: var(--font-small);
+  font-weight: 400;
   position: absolute;
-  width: 5px;
+  width: 125px;
   height: 115px;
-  top: 10px;
-  left: 136px;
+  top: 130px;
+  left: 0px;
 }
 
-/* 순번 : 성능 분석 - after */
+/* 성능 분석(번호) - after */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(2)::after {
   content: "";
   background-color: var(--color-white);
@@ -829,21 +831,26 @@
   width: 200px;
   height: 15px;
   top: 50px;
-  left: 141px;
+  left: 140px;
 }
 
-/* 순번 : 시계열 예측 분석(수치메트릭) - before */
+/* 시계열 예측 분석(수치메트릭)(번호) - before */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(4)::before {
-  content: "";
-  background-color: rgb(56, 0, 137);
+  content: "";  
   position: absolute;
   top: 25px;
-  left: -19px;
-  width: 18px;
-  height: 5px;
+  left: -28px;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: 5px solid rgb(56, 0, 137);
+  border-right: none;
+  border-bottom: none;  
+  border-radius: 100% 0 0 0;  
 }
 
-/* 순번 : 시계열 예측 분석(수치메트릭) - after */
+
+/* 시계열 예측 분석(수치메트릭)(번호) - after */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(4)::after {
   content: "";
   background-color: rgb(56, 0, 137);
@@ -854,18 +861,22 @@
   height: 5px;
 }
 
-/* 순번 : 시계열 예측 분석(차트) - before */
+/* 시계열 예측 분석(차트)(번호) - before */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(6)::before {
   content: "";
-  background-color: rgb(56, 0, 137);
   position: absolute;
-  width: 18px;
-  height: 5px;
-  top: 25px;
-  left: -19px;
+  top: -4px;
+  left: -28px;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: 5px solid rgb(56, 0, 137);
+  border-top: none;
+  border-right: none;  
+  border-radius: 0 0 0 100%;
 }
 
-/* 순번 : 시계열 예측 분석(차트) - after */
+/* 시계열 예측 분석(차트)(번호) - after */
 #dashboard-5 .cards.fourth .card.one .item .no:nth-child(6)::after {
   content: "";
   background-color: rgb(56, 0, 137);
