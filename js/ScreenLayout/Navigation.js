@@ -52,28 +52,28 @@ nav_list.addEventListener('click', (event) => {
   document.querySelector('.sidebar .rightbar input.title').value = target.dataset.title;
 
   // // $('.sidebar .rightbar .item').css({ "display": "none" });
-  // const subItems = document.querySelectorAll('.sidebar .rightbar .item');
-  // subItems.forEach((subItem) => {
-  //   // subItem.style.visibility = "hidden";
-  //   subItem.style.display = "none";
-  // });
+  const subItems = document.querySelectorAll('.sidebar .rightbar .item');
+  subItems.forEach((subItem) => {
+    // subItem.style.visibility = "hidden";
+    subItem.style.display = "none";
+  });
 
-  // let subItem;
-  // if (target.dataset.title == `데이터 탐험`) {
-  //   subItem = document.querySelector('.sidebar .rightbar .item.three');
-  // } else if (target.dataset.title == `시계열 데이터 분해`) {
-  //   subItem = document.querySelector('.sidebar .rightbar .item.seven');
-  // } else if (target.dataset.title == `시계열 정상성 검사 및 변환`) {
-  //   subItem = document.querySelector('.sidebar .rightbar .item.eight');
-  // } else if (target.dataset.title == `단변수 예측`) {
-  //   subItem = document.querySelector('.sidebar .rightbar .item.nine');
-  // } else if (target.dataset.title == `다변수 예측`) {
-  //   subItem = document.querySelector('.sidebar .rightbar .item.ten');
-  // } else if (target.dataset.title == `시계열 예측 분석 (차트)`) {
-  //   subItem = document.querySelector('.sidebar .rightbar .item.twelve');    
-  // }
-  // // subItem.style.visibility = "visible";
-  // subItem.style.display = "block";
+  let subItem;
+  if (target.dataset.title == `데이터 탐험`) {
+    subItem = document.querySelector('.sidebar .rightbar .item.three');
+  } else if (target.dataset.title == `시계열 데이터 분해`) {
+    subItem = document.querySelector('.sidebar .rightbar .item.seven');
+  } else if (target.dataset.title == `시계열 정상성 검사 및 변환`) {
+    subItem = document.querySelector('.sidebar .rightbar .item.eight');
+  } else if (target.dataset.title == `단변수 예측`) {
+    subItem = document.querySelector('.sidebar .rightbar .item.nine');
+  } else if (target.dataset.title == `다변수 예측`) {
+    subItem = document.querySelector('.sidebar .rightbar .item.ten');
+  } else if (target.dataset.title == `시계열 예측 분석 (차트)`) {
+    subItem = document.querySelector('.sidebar .rightbar .item.twelve');    
+  }
+  // subItem.style.visibility = "visible";
+  subItem.style.display = "block";
 });
 
 /**
