@@ -7,7 +7,6 @@
  * ---------  -----------------------------------------------------------------
  * 
  */
-
 const nav_list = document.querySelector('.nav_list');
 const rightbar = document.querySelector('.rightbar');
 const menus = document.querySelectorAll('.menu');

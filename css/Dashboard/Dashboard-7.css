@@ -76,6 +76,7 @@
   width: 25px;
   height: 25px;
   top: -15px;
+  transition: all var(--animation-duration) ease;
 }
 
 /* 번호 : 데이터 준비 START */
@@ -92,6 +93,17 @@
   display: flex;  
   align-items: center;
   justify-content: center; 
+  /* '데이터 준비' hover transition */
+  transition: all var(--animation-duration) ease;
+}
+
+/**
+ * 주제 '데이터 준비' hover event
+ */
+#dashboard-7 .cards.first .card .item .no.subject:hover {
+  transform: scale(1.1) rotate(-45deg);
+  background: rgb(189, 0, 255);
+  color: var(--color-white);
 }
 
 /* 아이템 - 내용 : 데이터 탐험 */
@@ -126,6 +138,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
+  transition: all var(--animation-duration) ease;
 }
 
 /* 번호 : 시계열 준비 START */
@@ -135,13 +148,25 @@
   top: 60px;
   left: -80px;
   border: 8px solid rgb(126, 0, 255);
-  background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 1.4rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* '시계열 준비' hover transition */
+  transition: all var(--animation-duration) ease; 
+  /* '시계열 준비' hover 시 event가 적용되지 않아서 z-index를 100으로 줌 */
+  z-index: 1;
+}
+
+/**
+ * 주제 '시계열 준비' hover event
+ */
+#dashboard-7 .cards.second .card.one:hover .item .no.subject:hover {
+  transform: scale(1.1) rotate(45deg);
+  background: rgb(126, 0, 255);
+  color: var(--color-white);
 }
 
 /* -------------------------------------------------
@@ -1039,18 +1064,19 @@
 
 ******************************************************************************************** */
 #dashboard-7 .cards.first .card {
-  border-top: 5px solid  rgb(189, 0, 255);
+  border-top: 5px solid rgb(189, 0, 255);
 }
 
 #dashboard-7 .cards.first .card.four,
 #dashboard-7 .cards.first .card.five,
-#dashboard-7 .cards.first .card.six {
+#dashboard-7 .cards.first .card.six,
+#dashboard-7 .cards.first .card.seven {
   border-bottom: 5px solid rgb(189, 0, 255);
 }
 
 #dashboard-7 .cards.first .card.seven {
   border-right: 5px solid rgb(189, 0, 255);
-  border-bottom: 5px solid rgb(189, 0, 255);
+  /* border-bottom: 5px solid rgb(189, 0, 255); */
   border-radius: 0 20px 20px 0;
 }
 
