@@ -56,7 +56,7 @@
   height: 150px;
   top: -80px;
   left: -10px;
-  border: 10px solid rgb(189, 0, 255);
+  border: 10px solid var(--color-wine);
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 2rem;
@@ -92,7 +92,7 @@
 }
 
 #dashboard-6 .cards.third .card {
-  border-top: 5px solid rgb(126, 0, 255);
+  border-top: 5px solid var(--color-purple);
   top: -10px;
 }
 
@@ -135,7 +135,7 @@
   height: 150px;
   top: 60px;
   left: -10px;
-  border: 10px solid rgb(126, 0, 255);
+  border: 10px solid var(--color-purple);
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 2rem;
@@ -171,7 +171,7 @@
   left: -89px;
   width: 130px;
   height: 70px;
-  border: 5px solid rgb(126, 0, 255);
+  border: 5px solid var(--color-purple);
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -182,7 +182,7 @@
 /* 연결선 */
 #dashboard-6 .cards.second .card.two .item .desc::before {
   content: "";
-  background-color: rgb(126, 0, 255);
+  background-color: var(--color-purple);
   position: absolute;
   width: 5px;
   height: 11px;
@@ -216,7 +216,7 @@
   left: -151px;
   width: 155px;
   height: 70px;
-  border: 5px solid rgb(126, 0, 255);
+  border: 5px solid var(--color-purple);
   border-radius: 10px;
   text-align: left;
   padding: 10px;
@@ -241,7 +241,7 @@
   left: 15px;
   width: 100px;
   height: 70px;
-  border: 5px solid rgb(126, 0, 255);
+  border: 5px solid var(--color-purple);
   border-radius: 10px;
   text-align: left;
   padding: 10px;
@@ -262,7 +262,7 @@
 /* 시계열 정상성 검사 및 변환, 순번, 세로 선 */
 #dashboard-6 .cards.second .card.three .item .no::before {
   content: "";
-  background-color: rgb(126, 0, 255);
+  background-color: var(--color-purple);
   position: absolute;
   width: 5px;
   height: 6px;
@@ -734,29 +734,29 @@
 
 ******************************************************************************************** */
 #dashboard-6 .cards.first .card {
-  border-top: 5px solid rgb(189, 0, 255);
+  border-top: 5px solid var(--color-wine);
 }
 
 #dashboard-6 .cards.first .card.four,
 #dashboard-6 .cards.first .card.five,
 #dashboard-6 .cards.first .card.six {
-  border-bottom: 5px solid rgb(189, 0, 255);
+  border-bottom: 5px solid var(--color-wine);
 }
 
 #dashboard-6 .cards.first .card.seven {
-  border-right: 5px solid rgb(189, 0, 255);
-  border-bottom: 5px solid rgb(189, 0, 255);
+  border-right: 5px solid var(--color-wine);
+  border-bottom: 5px solid var(--color-wine);
   border-radius: 0 50% 50% 0;
 }
 
 #dashboard-6 .cards.second .card {
-  border-top: 5px solid rgb(189, 0, 255);
+  border-top: 5px solid var(--color-wine);
   top: -5px;
 }
 
 #dashboard-6 .cards.second .card.one {
-  border-left: 5px solid rgb(189, 0, 255);
-  border-bottom: 5px solid rgb(126, 0, 255);
+  border-left: 5px solid var(--color-wine);
+  border-bottom: 5px solid var(--color-purple);
   border-radius: 50% 0 0 50%;
 }
 

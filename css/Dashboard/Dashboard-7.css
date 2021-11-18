@@ -1,7 +1,7 @@
 
 /**
  * 파일명 : dashboard-7.css
- * 설 명 : 대쉬보드 5번 화면
+ * 설 명 : 대쉬보드 7번 화면
  * 최초 생성일 : 
  *     
  * 수정일			수정내역 
@@ -9,11 +9,11 @@
  * 
  */
 #dashboard-7 {
-  margin: 0;
+  background: var(--color-white);
+  color: var(--color-black);
+  margin: 0;  
   padding: 100px 50px 50px 80px;
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  outline: none;
+  outline: none;    
 }
 
 #dashboard-7 table {
@@ -42,33 +42,31 @@
   데이터 준비
 ------------------------------------------------- */
 
-/* 타이틀 : 데이터 준비 공통 */
+/* title 공통 */
 #dashboard-7 .cards.first .card .item .title {
-  font-size: .9rem;
   position: absolute;
   width: 160px;  
-  border-left: 2px solid black;
-  text-align: left;
+  height: 90px;
+  left: 11px;
+  border-left: 2px solid black;  
   padding-left: 4px;
+  text-align: left;
+  font-size: .9rem;
   font-weight: 900;
 }
-/* 타이틀 : 데이터 준비 홀수 */
-#dashboard-7 .cards.first .card:nth-child(even) .item .title {
-  height: 90px;
+/* title 홀수 */
+#dashboard-7 .cards.first .card:nth-child(even) .item .title {  
   top: -85px;
-  left: 11px;
 }
-/* 타이틀 : 데이터 준비 짝수 */
+/* title 짝수 */
 #dashboard-7 .cards.first .card:nth-child(odd) .item .title {
-  height: 90px;
   top: 5px;
-  left: 11px;
   display: flex;
   align-items: flex-end;
 }
 
-/* 번호 : 데이터 준비 공통 */
-#dashboard-7 .cards.first .card .item .no {  
+/* circle 공통 */
+#dashboard-7 .cards.first .card .item .circle {
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   border-radius: 50%;  
@@ -79,35 +77,30 @@
   transition: all var(--animation-duration) ease;
 }
 
-/* 번호 : 데이터 준비 START */
-#dashboard-7 .cards.first .card .item .no.subject {
+/* circle 큰동그라미 */
+#dashboard-7 .cards.first .card.one .item .circle {
+  border: 8px solid var(--color-wine);
   width: 150px;
   height: 150px;
   top: -80px;
-  left: -10px;
-  border: 8px solid rgb(189, 0, 255);
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  left: -10px;  
   font-size: 1.4rem;
   font-weight: bold;
   display: flex;  
   align-items: center;
   justify-content: center; 
-  /* '데이터 준비' hover transition */
   transition: all var(--animation-duration) ease;
 }
 
-/**
- * 주제 '데이터 준비' hover event
- */
-#dashboard-7 .cards.first .card .item .no.subject:hover {
+/* circle 큰동그라미 (hover) */
+#dashboard-7 .cards.first .card.one .item .circle:hover {
   transform: scale(1.1) rotate(-45deg);
-  background: rgb(189, 0, 255);
+  background: var(--color-wine);
   color: var(--color-white);
 }
 
-/* 아이템 - 내용 : 데이터 탐험 */
-#dashboard-7 .cards.first .card.four .item .desc {
+/* content 데이터 탐험  */
+#dashboard-7 .cards.first .card.four .item .content {
   font-size: var(--font-small);
   position: absolute;
   width: 130px;
@@ -130,8 +123,8 @@
   시계열 준비
 ------------------------------------------------- */
 
-/* 번호 : 시계열 준비 공통 */
-#dashboard-7 .cards.second .card .item .no {
+/* circle 공통 */
+#dashboard-7 .cards.second .card .item .circle {
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   border-radius: 50%;
@@ -141,31 +134,26 @@
   transition: all var(--animation-duration) ease;
 }
 
-/* 번호 : 시계열 준비 START */
-#dashboard-7 .cards.second .card.one .item .no.subject {
+/* circle 큰동그라미 */
+#dashboard-7 .cards.second .card.one .item .circle {
+  border: 8px solid var(--color-purple);
   width: 150px;
   height: 150px;
   top: 60px;
   left: -80px;
-  border: 8px solid rgb(126, 0, 255);
-  color: rgb(0, 0, 0);
   font-size: 1.4rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* '시계열 준비' hover transition */
   transition: all var(--animation-duration) ease; 
-  /* '시계열 준비' hover 시 event가 적용되지 않아서 z-index를 100으로 줌 */
   z-index: 1;
 }
 
-/**
- * 주제 '시계열 준비' hover event
- */
-#dashboard-7 .cards.second .card.one:hover .item .no.subject:hover {
+/* circle 큰동그라미 (hover) */
+#dashboard-7 .cards.second .card.one .item .circle:hover {
   transform: scale(1.1) rotate(45deg);
-  background: rgb(126, 0, 255);
+  background: var(--color-purple);
   color: var(--color-white);
 }
 
@@ -173,34 +161,34 @@
   시계열 데이터 분해
 ------------------------------------------------- */
 
-/* 번호 : 시계열 데이터 분해 */
-#dashboard-7 .cards.second .card.two .item .no {
+/* circle 시계열 데이터 분해 */
+#dashboard-7 .cards.second .card.two .item .circle {
   top: 130px;
   left: -40px;
 }
 
-/* 타이틀 : 시계열 데이터 분해 */
+/* title 시계열 데이터 분해 */
 #dashboard-7 .cards.second .card.two .item .title {
-  font-size: .9rem;
   position: absolute;
   width: 160px;
-  border-left: 2px solid black;
-  text-align: left;
-  padding-left: 4px;
-  font-weight: 900;
   height: 90px;
   top: 49px;
   left: -28px;
+  border-left: 2px solid black;
+  padding-left: 4px;
+  text-align: left;
+  font-size: .9rem;
+  font-weight: 900;
 }
 
-/* 아이템 : 시계열 데이터 분해 */
-#dashboard-7 .cards.second .card.two .item .desc {
-  font-size: var(--font-small);
+/* content 시계열 데이터 분해 */
+#dashboard-7 .cards.second .card.two .item .content {
   position: absolute;
-  top: 70px;
-  left: 0px;
+  font-size: var(--font-small);
   width: 130px;
   height: 70px;
+  top: 70px;
+  left: 0px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -209,11 +197,11 @@
 } 
 
 /* -------------------------------------------------
-  시계열 정상성 검사 및 변환
+  시계열 정상성 검사 및 변환 - 여기서부터...
 ------------------------------------------------- */
 
 /* 번호 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .no {
+#dashboard-7 .cards.second .card.three .item .circle {
   top: 130px;
   left: -91px;
   background-color:rgb(255, 255, 255);
@@ -235,7 +223,7 @@
 }
 
 /* 아이템(1) - 타이틀 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .desc.one .subTitle {
+#dashboard-7 .cards.second .card.three .item .content.one .subTitle {
   position: absolute;
   top: 160px;
   left: -215px;
@@ -244,7 +232,7 @@
 }
 
 /* 아이템(1) - 내용 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .desc.one .subDesc {
+#dashboard-7 .cards.second .card.three .item .content.one .subDesc {
   font-size: var(--font-small);
   position: absolute; 
   width: 225px;
@@ -256,7 +244,7 @@
 }
 
 /* 아이템(2) - 타이틀 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .desc.two .subTitle {
+#dashboard-7 .cards.second .card.three .item .content.two .subTitle {
   position: absolute;
   top: 160px;
   left: -15px;
@@ -265,7 +253,7 @@
 }
 
 /* 아이템(2) - 내용 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .desc.two .subDesc {
+#dashboard-7 .cards.second .card.three .item .content.two .subDesc {
   font-size: var(--font-small);
   position: absolute;
   width: 225px;
@@ -277,7 +265,7 @@
 }
 
 /* 순번 - 세로 선 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .no::before {
+#dashboard-7 .cards.second .card.three .item .circle::before {
   content: "";
   background-color: var(--color-black);
   position: absolute;
@@ -292,7 +280,7 @@
 ------------------------------------------------- */
 
 /* 번호 : 시계열 예측 START */
-#dashboard-7 .cards.second .card.four .item .no.subject {
+#dashboard-7 .cards.second .card.four .item .circle:nth-child(2) {
   width: 150px;
   height: 150px;
   top: -30px;
@@ -934,7 +922,7 @@
 }
 
 /* 순번 : fourth 공통 */
-#dashboard-7 .cards.fourth .card .item .no {
+#dashboard-7 .cards.fourth .card .item .circle {
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   border-radius: 50%;
@@ -1064,30 +1052,30 @@
 
 ******************************************************************************************** */
 #dashboard-7 .cards.first .card {
-  border-top: 5px solid rgb(189, 0, 255);
+  border-top: 5px solid var(--color-wine);
 }
 
 #dashboard-7 .cards.first .card.four,
 #dashboard-7 .cards.first .card.five,
 #dashboard-7 .cards.first .card.six,
 #dashboard-7 .cards.first .card.seven {
-  border-bottom: 5px solid rgb(189, 0, 255);
+  border-bottom: 5px solid var(--color-wine);
 }
 
 #dashboard-7 .cards.first .card.seven {
-  border-right: 5px solid rgb(189, 0, 255);
-  /* border-bottom: 5px solid rgb(189, 0, 255); */
+  border-right: 5px solid var(--color-wine);
+  /* border-bottom: 5px solid var(--color-wine); */
   border-radius: 0 20px 20px 0;
 }
 
 #dashboard-7 .cards.second .card {
-  border-top: 5px solid rgb(189, 0, 255);
+  border-top: 5px solid var(--color-wine);
   top: -5px;
 }
 
 #dashboard-7 .cards.second .card.one {
-  border-left: 5px solid rgb(189, 0, 255);
-  border-bottom: 5px solid rgb(126, 0, 255);
+  border-left: 5px solid var(--color-wine);
+  border-bottom: 5px solid var(--color-purple);
   border-radius: 20px 0 0 20px;
   top: -5px;
   left: 60px;
@@ -1107,7 +1095,7 @@
 }
 
 #dashboard-7 .cards.third .card {
-  border-top: 5px solid rgb(126, 0, 255);
+  border-top: 5px solid var(--color-purple);
   top: -10px;
 }
 
