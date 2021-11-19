@@ -85,15 +85,14 @@
 ======================================================================================================*/
 :root {
   /* Color */
+  --color-white: #fff;
+  --color-black: #222;
+
   --color-wine: rgb(189, 0, 255);
   --color-purple: rgb(126, 0, 255);
   --color-green: rgb(0, 168, 45);
 
-
-
-
-
-
+  
 
   
 
@@ -108,7 +107,7 @@
   /* 청회색 */
   --color-gunmetal: #C6D6F7;
 
-  --color-white: #fff;
+  
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-smoke-white: whitesmoke;
