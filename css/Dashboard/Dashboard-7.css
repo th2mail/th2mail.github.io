@@ -92,8 +92,8 @@
   transition: all var(--animation-duration) ease;
 }
 
-/* circle 큰동그라미 (hover) */
-#dashboard-7 .cards.first .card.one .item .circle:hover {
+/* circle 큰동그라미 hover */
+#dashboard-7 .cards.first > .card.one > .item > .circle:hover {
   transform: scale(1.1) rotate(-45deg);
   background: var(--color-wine);
   color: var(--color-white);
@@ -150,7 +150,7 @@
   z-index: 1;
 }
 
-/* circle 큰동그라미 (hover) */
+/* circle 큰동그라미 hover */
 #dashboard-7 .cards.second .card.one .item .circle:hover {
   transform: scale(1.1) rotate(45deg);
   background: var(--color-purple);
@@ -161,13 +161,13 @@
   시계열 데이터 분해
 ------------------------------------------------- */
 
-/* circle 시계열 데이터 분해 */
+/* circle */
 #dashboard-7 .cards.second .card.two .item .circle {
   top: 130px;
   left: -40px;
 }
 
-/* title 시계열 데이터 분해 */
+/* title */
 #dashboard-7 .cards.second .card.two .item .title {
   position: absolute;
   width: 160px;
@@ -181,7 +181,7 @@
   font-weight: 900;
 }
 
-/* content 시계열 데이터 분해 */
+/* content */
 #dashboard-7 .cards.second .card.two .item .content {
   position: absolute;
   font-size: var(--font-small);
@@ -197,33 +197,33 @@
 } 
 
 /* -------------------------------------------------
-  시계열 정상성 검사 및 변환 - 여기서부터...
+  시계열 정상성 검사 및 변환
 ------------------------------------------------- */
 
-/* 번호 : 시계열 정상성 검사 및 변환 */
+/* circle */
 #dashboard-7 .cards.second .card.three .item .circle {
   top: 130px;
   left: -91px;
   background-color:rgb(255, 255, 255);
-  z-index: 100;
+  z-index: 1;
 }
 
-/* 타이틀 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .title {
-  font-size: .9rem;
+/* title */
+#dashboard-7 .cards.second > .card.three > .item > .title {
   position: absolute;
   width: 200px;
-  border-left: 2px solid black;
-  text-align: left;
-  padding-left: 4px;
-  font-weight: 900;
   height: 90px;
   top: 49px;
   left: -80px;
+  border-left: 2px solid black;
+  padding-left: 4px;
+  text-align: left;
+  font-size: .9rem;
+  font-weight: 900;
 }
 
-/* 아이템(1) - 타이틀 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .content.one .subTitle {
+/* content(1) > title */
+#dashboard-7 .cards.second > .card.three > .item > .content.one > .title {
   position: absolute;
   top: 160px;
   left: -215px;
@@ -231,8 +231,8 @@
   font-weight: var(--weight-bold);
 }
 
-/* 아이템(1) - 내용 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .content.one .subDesc {
+/* content(1) > desc */
+#dashboard-7 .cards.second .card.three .item .content.one .desc {
   font-size: var(--font-small);
   position: absolute; 
   width: 225px;
@@ -243,8 +243,8 @@
   padding: 10px;
 }
 
-/* 아이템(2) - 타이틀 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .content.two .subTitle {
+/* content(2) > title */
+#dashboard-7 .cards.second > .card.three > .item > .content.two > .title {
   position: absolute;
   top: 160px;
   left: -15px;
@@ -252,8 +252,8 @@
   font-weight: var(--weight-bold);
 }
 
-/* 아이템(2) - 내용 : 시계열 정상성 검사 및 변환 */
-#dashboard-7 .cards.second .card.three .item .content.two .subDesc {
+/* content(2) > desc */
+#dashboard-7 .cards.second .card.three .item .content.two .desc {
   font-size: var(--font-small);
   position: absolute;
   width: 225px;
@@ -264,7 +264,7 @@
   padding: 10px;
 }
 
-/* 순번 - 세로 선 : 시계열 정상성 검사 및 변환 */
+/* content 1과 2를 나누는 세로 선 */
 #dashboard-7 .cards.second .card.three .item .circle::before {
   content: "";
   background-color: var(--color-black);
@@ -279,66 +279,58 @@
   시계열 예측
 ------------------------------------------------- */
 
-/* 번호 : 시계열 예측 START */
-#dashboard-7 .cards.second .card.four .item .circle:nth-child(2) {
+/* circle 큰동그라미 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(1) {
   width: 150px;
   height: 150px;
   top: -30px;
   left: -132px;
-  border: 8px solid rgb(0, 168, 45);
+  border: 8px solid var(--color-green);
   background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
   font-size: 1.4rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* 타이틀 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(1) {
-  position: absolute;
-  top: 10px;
-  left: -152px;
-  width: 200px;
-  height: 50px;
-}
-
-/* 순번 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(2) {
-  top: 40px;
-  left: -75px;
+  transition: all var(--animation-duration) ease;
   z-index: 1;
+}
+
+/* circle 큰동그라미 hover */
+#dashboard-7 .cards.second .card.four .item div:nth-child(1):hover {
+  transform: scale(1.1) rotate(45deg);
+  background: var(--color-green);
+  color: var(--color-white);
 }
 
 /* -------------------------------------------------
   단변수 예측
 ------------------------------------------------- */
 
-/* 타이틀 : 단변수 예측 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(3) {
-  font-size: .9rem;
+/* title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(2) {
   position: absolute;
   width: 110px;
+  height: 75px;
+  top: -90px;
+  left: -48px;
   border-right: 2px solid black;
   border-top: 2px solid black;
   text-align: right;
   padding-right: 4px;
   padding-top: 4px;
-  font-weight: 900;
-  height: 75px;
-  top: -90px;
-  left: -48px;;
+  font-size: .9rem;
+  font-weight: 900;  
 }
 
-/* 번호 : 단변수 예측 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(4) {
+/* circle */
+#dashboard-7 .cards.second .card.four .item div:nth-child(3) {
   top: -15px;
   left: 48px;
 }
 
-/* 내용 : 단변수 예측 : Navie Mean (Yesterday, Value) */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(1) {
+/* content 내용 : 단변수 예측 : Navie Mean (Yesterday, Value) */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1) {
   font-size: 11px;
   font-weight: var(--weight-regular);
   position: absolute;
@@ -348,7 +340,7 @@
 }
 
 /* 내용 : 단변수 예측 : Navie Mean (Yesterday, Value) : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(1)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -360,7 +352,7 @@
 }
 
 /* 내용 : 단변수 예측 : Navie Mean (Yesterday, Value) : 선 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(1)::after {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::after {
   content: "";
   position: absolute;
   width: 95px;
@@ -374,7 +366,7 @@
 }
 
 /* 내용 : 단변수 예측 : SES */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(2) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -384,7 +376,7 @@
 }
 
 /* 내용 : 단변수 예측 : SES : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(2)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -398,7 +390,7 @@
 }
 
 /* 내용 : 단변수 예측 : SES : 선 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(2)::after {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -414,7 +406,7 @@
 }
 
 /* 내용 : 단변수 예측 : HWES */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(3) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(3) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -424,7 +416,7 @@
 }
 
 /* 내용 : 단변수 예측 : HWES : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(3)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(3)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -436,7 +428,7 @@
 }
 
 /* 내용 : 단변수 예측 : AR */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(4) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(4) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -446,7 +438,7 @@
 }
 
 /* 내용 : 단변수 예측 : AR : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(4)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(4)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -458,7 +450,7 @@
 }
 
 /* 내용 : 단변수 예측 : MA */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(5) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(5) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -468,7 +460,7 @@
 }
 
 /* 내용 : 단변수 예측 : MA : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(5)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(5)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -480,7 +472,7 @@
 }
 
 /* 내용 : 단변수 예측 : ARMA */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(6) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(6) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -490,7 +482,7 @@
 }
 
 /* 내용 : 단변수 예측 : ARMA : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(6)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(6)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -502,7 +494,7 @@
 }
 
 /* 내용 : 단변수 예측 : ARIMA */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(7) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(7) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -512,7 +504,7 @@
 }
 
 /* 내용 : 단변수 예측 : ARIMA : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(7)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(7)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -524,7 +516,7 @@
 }
 
 /* 내용 : 단변수 예측 : Auto ARIMA */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(8) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(8) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -534,7 +526,7 @@
 }
 
 /* 내용 : 단변수 예측 : Auto ARIMA : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(8)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(8)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -546,7 +538,7 @@
 }
 
 /* 내용 : 단변수 예측 : Seasonal ARIMA */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(9) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(9) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -556,7 +548,7 @@
 }
 
 /* 내용 : 단변수 예측 : Seasonal ARIMA : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(9)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(9)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -568,7 +560,7 @@
 }
 
 /* 내용 : 단변수 예측 : Auto SARIA */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(10) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(10) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -578,7 +570,7 @@
 }
 
 /* 내용 : 단변수 예측 : Auto SARIA : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(10)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(10)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -590,7 +582,7 @@
 }
 
 /* 내용 : 단변수 예측 : Prophet */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(11) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(11) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -600,7 +592,7 @@
 }
 
 /* 내용 : 단변수 예측 : Prophet : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(5) a:nth-child(11)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(11)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -616,7 +608,7 @@
 ------------------------------------------------- */
 
 /* 타이틀 : 다변수 예측 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(6) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(5) {
   font-size: .9rem;
   position: absolute;
   width: 110px;
@@ -634,7 +626,7 @@
 }
 
 /* 순번 : 다변수 예측 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(7) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(6) {
   top: 60px;
   left: 48px;
 }
@@ -648,7 +640,7 @@
 }
 
 /* 다변수 예측, Linear Models : 내용  */
-#dashboard-7 .cards.second .card.four .item div:nth-child(8) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(7) {
   position: absolute;
   top: 19px;
   left: 13%;
@@ -668,7 +660,7 @@
 }
 
 /* 다변수 예측, Linear Models : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(8)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(7)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -680,7 +672,7 @@
 }
 
 /* 다변수 예측, Linear Models : 타이틀 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(8)::after {
+#dashboard-7 .cards.second .card.four .item div:nth-child(7)::after {
   content: "Linear Models";
   position: absolute;
   width: 100px;
@@ -692,7 +684,7 @@
 }
 
 /* 다변수 예측, Tree Model : 내용 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(9) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(8) {
   position: absolute;
   top: 78px;
   left: 12%;
@@ -712,7 +704,7 @@
 }
 
 /* 다변수 예측, Tree Model : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(9)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(8)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -724,7 +716,7 @@
 }
 
 /* 다변수 예측, Tree Model : 타이틀 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(9)::after {
+#dashboard-7 .cards.second .card.four .item div:nth-child(8)::after {
   content: "Tree Model";
   position: absolute;
   width: 100px;
@@ -736,7 +728,7 @@
 }
 
 /* 다변수 예측, Deep Learning : 내용 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(10) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(9) {
   position: absolute;
   top: 19px;
   left: 45%;
@@ -756,7 +748,7 @@
 }
 
 /* 다변수 예측, Deep Learning : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(10)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(9)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -768,7 +760,7 @@
 }
 
 /* 다변수 예측, Deep Learning : 타이틀 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(10)::after {
+#dashboard-7 .cards.second .card.four .item div:nth-child(9)::after {
   content: "Deep Learning";
   position: absolute;
   width: 110px;
@@ -780,7 +772,7 @@
 }
 
 /* 다변수 예측, Hyperparameter Optimization : 내용 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(11) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(10) {
   position: absolute;
   top: 19px;
   left: 68%;
@@ -799,7 +791,7 @@
 }
 
 /* 다변수 예측, Hyperparameter Optimization : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(11)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(10)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -811,7 +803,7 @@
 }
 
 /* 다변수 예측, Hyperparameter Optimization : 타이틀 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(11)::after {
+#dashboard-7 .cards.second .card.four .item div:nth-child(10)::after {
   content: "Hyperparameter Optimization";
   position: absolute;
   width: 220px;
@@ -823,7 +815,7 @@
 }
 
 /* 다변수 예측, Hyperparameter Optimization : border-top 남는선 지우기 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(11) a:last-child::after {
+#dashboard-7 .cards.second .card.four .item div:nth-child(10) a:last-child::after {
   content: "";
   position: absolute;
   width: 65px;
@@ -836,7 +828,7 @@
 }
 
 /* 다변수 예측, Ensenbling : 내용 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(12) {
+#dashboard-7 .cards.second .card.four .item div:nth-child(11) {
   position: absolute;
   top: 78px;
   left: 70%;
@@ -857,7 +849,7 @@
 }
 
 /* 다변수 예측, Ensenbling : 점 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(12)::before {
+#dashboard-7 .cards.second .card.four .item div:nth-child(11)::before {
   content: "";
   background-color: black;
   position: absolute;
@@ -869,7 +861,7 @@
 }
 
 /* 다변수 예측, Ensenbling : 타이틀 */
-#dashboard-7 .cards.second .card.four .item div:nth-child(12)::after {
+#dashboard-7 .cards.second .card.four .item div:nth-child(11)::after {
   content: "Ensenbling";
   position: absolute;
   width: 100px;
@@ -1087,7 +1079,7 @@
 
 /* 시계열 예측 : 가장 큰 네모 상자 */
 #dashboard-7 .cards.second .card.four .item {
-  border: 5px solid rgb(0, 168, 45);
+  border: 5px solid var(--color-green);
   border-radius: 50px 20px 0 50px;
   position: absolute;
   height: 80px;
@@ -1100,13 +1092,13 @@
 }
 
 #dashboard-7 .cards.third .card.seven {
-  border-right: 5px solid rgb(0, 168, 45);
-  border-bottom: 5px solid rgb(0, 168, 45);
+  border-right: 5px solid var(--color-green);
+  border-bottom: 5px solid var(--color-green);
   border-radius: 0 0 20px 0;
 }
 
 #dashboard-7 .cards.fourth .card {
-  border-top: 5px solid rgb(0, 168, 45);
+  border-top: 5px solid var(--color-green);
   top: -15px;
 }
 
@@ -1115,7 +1107,7 @@
 }
 
 #dashboard-7 .cards.fourth .card.one {
-  border-left: 5px solid rgb(0, 168, 45);
+  border-left: 5px solid var(--color-green);
   border-radius: 20px 0 0 20px;
   left: 60px;
 }
