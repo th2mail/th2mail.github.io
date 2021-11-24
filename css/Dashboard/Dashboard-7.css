@@ -348,7 +348,7 @@
   right: 94px;
   bottom: -15px;
   background-color: var(--color-white);
-  border: 1px solid black;
+  border: 1px solid var(--color-black);
   border-radius: 50%;  
 }
 
@@ -614,68 +614,61 @@
   다변수 예측
 ------------------------------------------------- */
 
-/* 타이틀 : 다변수 예측 */
+/* title */
 #dashboard-7 .cards.second .card.four .item div:nth-child(5) {
-  font-size: .9rem;
   position: absolute;
   width: 110px;
+  height: 75px;
+  top: 85px;
+  left: -48px;
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   text-align: right;
   padding-right: 4px;
   padding-bottom: 4px;
+  font-size: .9rem;
   font-weight: 900;
-  height: 75px;
-  top: 85px;
-  left: -48px;
   display: flex;
   align-items: flex-end;
 }
 
-/* 순번 : 다변수 예측 */
+/* circle */
 #dashboard-7 .cards.second .card.four .item div:nth-child(6) {
   top: 60px;
   left: 48px;
 }
 
-/* 타이틀 */
-#dashboard-7 .cards.second .card.five .item .title {
-  position: absolute;
-  top: 20px;
-  left: -220px;
-  width: 100px;
-}
-
-/* 다변수 예측, Linear Models : 내용  */
+/* 다변수 예측, Linear Models : content */
 #dashboard-7 .cards.second .card.four .item div:nth-child(7) {
   position: absolute;
-  top: 19px;
-  left: 13%;
   width: 150px;
   height: 50px;
-  font-size: var(--font-small);
+  top: 19px;
+  left: 13%;
   border: 2px solid black;
   border-right: 0;
-  border-bottom: 0;
-  background: transparent;  
+  border-bottom: 0;  
+  padding-top: 5px;
+  padding-left: 10px;
+  background: transparent;
+  font-size: var(--font-small);    
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding-top: 5px;
-  padding-left: 10px;
+  align-items: flex-start;  
 }
 
 /* 다변수 예측, Linear Models : 점 */
 #dashboard-7 .cards.second .card.four .item div:nth-child(7)::before {
   content: "";
-  background-color: black;
   position: absolute;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   top: 47px;
   left: -6px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);  
+  border-radius: 50%;  
 }
 
 /* 다변수 예측, Linear Models : 타이틀 */
@@ -690,39 +683,40 @@
   font-weight: var(--weight-regular);
 }
 
-/* 다변수 예측, Tree Model : 내용 */
+/* 다변수 예측, Tree Model : content */
 #dashboard-7 .cards.second .card.four .item div:nth-child(8) {
   position: absolute;
-  top: 78px;
-  left: 12%;
   width: 205px;
   height: 145px;
-  font-size: var(--font-small);
+  top: 78px;
+  left: 12%;
   border: 2px solid black;
   border-top: 0;
   border-left: 0;
   border-bottom: 0;
+  padding-right: 5px;
   background: transparent;
+  font-size: var(--font-small);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
-  padding-right: 5px;
+  align-items: flex-end;  
 }
 
 /* 다변수 예측, Tree Model : 점 */
 #dashboard-7 .cards.second .card.four .item div:nth-child(8)::before {
   content: "";
-  background-color: black;
   position: absolute;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   top: -10px;
   left: 199px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
 }
 
-/* 다변수 예측, Tree Model : 타이틀 */
+/* 다변수 예측, Tree Model : title */
 #dashboard-7 .cards.second .card.four .item div:nth-child(8)::after {
   content: "Tree Model";
   position: absolute;
@@ -734,39 +728,40 @@
   font-weight: var(--weight-regular);
 }
 
-/* 다변수 예측, Deep Learning : 내용 */
+/* 다변수 예측, Deep Learning : content */
 #dashboard-7 .cards.second .card.four .item div:nth-child(9) {
   position: absolute;
-  top: 19px;
-  left: 45%;
   width: 125px;
   height: 50px;
-  font-size: var(--font-small);
+  top: 19px;
+  left: 45%;
   border: 2px solid black;
   border-right: 0;
   border-bottom: 0;
+  padding-top: 5px;
+  padding-left: 10px;
   background: transparent;
+  font-size: var(--font-small);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding-top: 5px;
-  padding-left: 10px;
 }
 
 /* 다변수 예측, Deep Learning : 점 */
 #dashboard-7 .cards.second .card.four .item div:nth-child(9)::before {
   content: "";
-  background-color: black;
   position: absolute;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   top: 47px;
   left: -6px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
 }
 
-/* 다변수 예측, Deep Learning : 타이틀 */
+/* 다변수 예측, Deep Learning : title */
 #dashboard-7 .cards.second .card.four .item div:nth-child(9)::after {
   content: "Deep Learning";
   position: absolute;
@@ -778,18 +773,18 @@
   font-weight: var(--weight-regular);
 }
 
-/* 다변수 예측, Hyperparameter Optimization : 내용 */
+/* 다변수 예측, Hyperparameter Optimization : content */
 #dashboard-7 .cards.second .card.four .item div:nth-child(10) {
   position: absolute;
-  top: 19px;
-  left: 68%;
   width: 255px;
   height: 50px;
-  font-size: var(--font-small);
+  top: 19px;
+  left: 68%;
   border: 2px solid black;
   border-right: 0;
   border-bottom: 0;
   background: transparent;
+  font-size: var(--font-small);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   text-align: left;
@@ -800,16 +795,17 @@
 /* 다변수 예측, Hyperparameter Optimization : 점 */
 #dashboard-7 .cards.second .card.four .item div:nth-child(10)::before {
   content: "";
-  background-color: black;
   position: absolute;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   top: 47px;
   left: -6px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
 }
 
-/* 다변수 예측, Hyperparameter Optimization : 타이틀 */
+/* 다변수 예측, Hyperparameter Optimization : title */
 #dashboard-7 .cards.second .card.four .item div:nth-child(10)::after {
   content: "Hyperparameter Optimization";
   position: absolute;
@@ -821,50 +817,49 @@
   font-weight: var(--weight-regular);
 }
 
-/* 다변수 예측, Hyperparameter Optimization : border-top 남는선 지우기 */
+/* 다변수 예측, Hyperparameter Optimization : content 남는선 지우기 */
 #dashboard-7 .cards.second .card.four .item div:nth-child(10) a:last-child::after {
   content: "";
   position: absolute;
   width: 65px;
   height: 10px;
   top: -10px;
-  left: 192px;
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
+  left: 192px;  
   background: var(--color-white);
 }
 
 /* 다변수 예측, Ensenbling : 내용 */
 #dashboard-7 .cards.second .card.four .item div:nth-child(11) {
   position: absolute;
-  top: 78px;
-  left: 70%;
   width: 245px;
   height: 130px;
-  font-size: var(--font-small);
+  top: 78px;
+  left: 70%;
   border: 2px solid black;
   border-top: 0;
   border-left: 0;
   border-bottom: 0;
+  padding-top: 5px;
+  padding-right: 5px;
   background: transparent;
+  font-size: var(--font-small);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-top: 5px;
-  padding-right: 5px;
 }
 
 /* 다변수 예측, Ensenbling : 점 */
 #dashboard-7 .cards.second .card.four .item div:nth-child(11)::before {
   content: "";
-  background-color: black;
   position: absolute;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   top: -10px;
   left: 239px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
 }
 
 /* 다변수 예측, Ensenbling : 타이틀 */

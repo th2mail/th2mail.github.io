@@ -160,10 +160,41 @@ $(document).ready(function () {
       '#dashboard-7 .cards.second .card.four .item div:nth-child(3)',
       'background: var(--color-green) !important;'
     );
+
     document.styleSheets[0].addRule(
       '#dashboard-7 .cards.second .card.four .item div:nth-child(4) a::before',
       'background: var(--color-green) !important;'
     );
+
+    $('#dashboard-7 .cards.second .card.four div:nth-child(6)').css({
+      'background': 'var(--color-green)'
+    });
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(7)::before',
+      'background: var(--color-green) !important;'
+    );
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(8)::before',
+      'background: var(--color-green) !important;'
+    );
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(9)::before',
+      'background: var(--color-green) !important;'
+    );
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(10)::before',
+      'background: var(--color-green) !important;'
+    );
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(11)::before',
+      'background: var(--color-green) !important;'
+    );
+
   }, function () {
 
     // "시계열 예측"에 선을 점선(dashed)에서 실선(solid)으로 바꾼다.
@@ -198,6 +229,36 @@ $(document).ready(function () {
       '#dashboard-7 .cards.second .card.four .item div:nth-child(4) a::before',
       'background: var(--color-white) !important;'
     );
+
+    $('#dashboard-7 .cards.second .card.four div:nth-child(6)').css({
+      'background': 'var(--color-white)'
+    });
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(7)::before',
+      'background: var(--color-white) !important;'
+    );
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(8)::before',
+      'background: var(--color-white) !important;'
+    );
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(9)::before',
+      'background: var(--color-white) !important;'
+    );
+
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(10)::before',
+      'background: var(--color-white) !important;'
+    );
+    
+    document.styleSheets[0].addRule(
+      '#dashboard-7 .cards.second .card.four .item div:nth-child(11)::before',
+      'background: var(--color-white) !important;'
+    );
+
   });
 
 }); // End of document.ready
