@@ -313,7 +313,7 @@
   height: 150px;
   top: -10px;
   left: -132px;
-  border: 10px solid rgb(0, 186, 255);
+  border: 10px solid var(--color-skyblue);
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 2rem;
@@ -766,20 +766,20 @@
 
 /* 시계열 예측 : 가장 큰 네모 상자 */
 #dashboard-6 .cards.second .card.four .item {
-  border: 5px solid rgb(0, 186, 255);
+  border: 5px solid var(--color-skyblue);
   border-radius: 50px 80px 0 50px;
   position: absolute;
   top: 75px;
 }
 
 #dashboard-6 .cards.third .card.seven {
-  border-right: 5px solid rgb(0, 186, 255);
-  border-bottom: 5px solid rgb(0, 186, 255);
+  border-right: 5px solid var(--color-skyblue);
+  border-bottom: 5px solid var(--color-skyblue);
   border-radius: 0 0 50% 0;
 }
 
 #dashboard-6 .cards.fourth .card {
-  border-top: 5px solid rgb(0, 186, 255);
+  border-top: 5px solid var(--color-skyblue);
   top: -15px;
 }
 
@@ -788,7 +788,7 @@
 }
 
 #dashboard-6 .cards.fourth .card.one {
-  border-left: 5px solid rgb(0, 186, 255);
+  border-left: 5px solid var(--color-skyblue);
   border-bottom: 5px solid rgb(56, 0, 137);
   border-radius: 50% 0 0 50%;
 }
