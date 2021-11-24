@@ -53,6 +53,7 @@
   text-align: left;
   font-size: .9rem;
   font-weight: 900;
+  transition: all var(--animation-duration) ease;
 }
 /* title, 홀수 */
 #dashboard-7 .cards.first .card:nth-child(even) .item .title {  
@@ -75,6 +76,7 @@
   height: 25px;
   top: -15px;
   transition: all var(--animation-duration) ease;
+  z-index: 1;
 }
 
 /* circle, 큰동그라미 */
@@ -111,6 +113,44 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  transition: all var(--animation-duration) ease;
+}
+
+#dashboard-7 .cards.first .card .item .circle:hover {
+  transform: scale(1.5);
+  background-color: var(--color-wine);
+  border: 2px dashed var(--color-wine);
+}
+
+#dashboard-7 .cards.first .card:nth-child(even) .item .circle:hover+.title {
+  width: 210px;
+  height: 50px;
+  top: -50px;
+  left: 10px;
+  border-left: .5rem solid var(--color-wine);
+  padding-left: 20px;
+  font-size: var(--font-regular);
+  color: var(--color-wine);
+}
+
+#dashboard-7 .cards.first .card:nth-child(even) .item .circle:hover~.content,
+#dashboard-7 .cards.first .card:nth-child(even) .item .circle:hover~.content > a {
+  top: 20px;
+  left: 71px;
+  color: var(--color-wine);
+  font-weight: var(--weight-regular);
+  gap: 20px;
+}
+
+#dashboard-7 .cards.first .card:nth-child(odd) .item .circle:hover+.title {
+  width: 250px;
+  height: 50px;
+  top: 5px;
+  left: 10px;
+  border-left: .5rem solid var(--color-wine);
+  padding-left: 20px;
+  font-size: var(--font-regular);
+  color: var(--color-wine);
 }
 
 /* ******************************************************************************************** 
