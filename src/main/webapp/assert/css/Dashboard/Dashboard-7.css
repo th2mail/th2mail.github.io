@@ -1,4 +1,3 @@
-
 /**
  * 파일명 : dashboard-7.css
  * 설 명 : 대쉬보드 7번 화면
@@ -96,7 +95,7 @@
 
 /* circle, 큰동그라미, hover */
 #dashboard-7 .cards.first > .card.one > .item > .circle:hover {
-  transform: scale(1.5) rotate(-45deg);
+  transform: scale(1.2) rotate(-45deg);
   background: var(--color-wine);
   color: var(--color-white);
 }
@@ -195,7 +194,7 @@
 
 /* circle, 큰동그라미, hover */
 #dashboard-7 .cards.second .card.one .item .circle:hover {
-  transform: scale(1.5) rotate(45deg);
+  transform: scale(1.2) rotate(45deg);
   background: var(--color-purple);
   color: var(--color-white);
 }
@@ -392,7 +391,7 @@
 
 /* circle, 큰동그라미, hover */
 #dashboard-7 .cards.second .card.four .item div:nth-child(1):hover {
-  transform: scale(1.5) rotate(45deg);
+  transform: scale(1.2) rotate(45deg);
   background: var(--color-green);
   color: var(--color-white);
 }
@@ -712,7 +711,7 @@
 #dashboard-7 .cards.second .card.four .item div:nth-child(5) {
   position: absolute;
   width: 110px;
-  height: 75px;
+  height: 95px;
   top: 85px;
   left: -48px;
   border-right: 2px solid black;
@@ -1042,7 +1041,7 @@
  * start
  */
 #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover {
-  transform: scale(1.5) rotate(-45deg);
+  transform: scale(1.2) rotate(-45deg);
   background: var(--color-skyblue);
   color: var(--color-white);
 }
