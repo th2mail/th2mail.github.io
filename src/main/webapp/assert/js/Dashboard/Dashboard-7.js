@@ -261,5 +261,19 @@ $(document).ready(function () {
 
   });
 
+  // 7. 시계열 데이터 분해의 circle을 hover했을 때 실행되는 이벤트
+  $('#dashboard-7 .cards.second .card.two .item .circle').hover(function () {
+    $("#dashboard-7 .cards.second .card.three > .item").hide("fast");
+  }, function () {
+    $("#dashboard-7 .cards.second .card.three > .item").show("slow");
+  });
+
+  // 8. 시계열 정상성 검사 및 변환의 circle을 hover했을 때 실행되는 이벤트
+  $('#dashboard-7 .cards.second .card.three .item .circle').hover(function () {
+    $("#dashboard-7 .cards.second .card.two > .item").hide("fast");
+  }, function () {
+    $("#dashboard-7 .cards.second .card.two > .item").show("slow");
+  });
+
 }); // End of document.ready
 

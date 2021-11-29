@@ -96,7 +96,7 @@
 
 /* circle, 큰동그라미, hover */
 #dashboard-7 .cards.first > .card.one > .item > .circle:hover {
-  transform: scale(1.1) rotate(-45deg);
+  transform: scale(1.5) rotate(-45deg);
   background: var(--color-wine);
   color: var(--color-white);
 }
@@ -195,7 +195,7 @@
 
 /* circle, 큰동그라미, hover */
 #dashboard-7 .cards.second .card.one .item .circle:hover {
-  transform: scale(1.1) rotate(45deg);
+  transform: scale(1.5) rotate(45deg);
   background: var(--color-purple);
   color: var(--color-white);
 }
@@ -208,6 +208,14 @@
 #dashboard-7 .cards.second .card.two .item .circle {
   top: 130px;
   left: -40px;
+  transition: all var(--animation-duration) ease;
+  z-index: 2;
+}
+
+#dashboard-7 .cards.second .card.two .item .circle:hover {
+  transform: scale(1.5);
+  background-color: var(--color-purple) !important;
+  border: 2px dashed var(--color-purple);
 }
 
 /* title */
@@ -215,13 +223,27 @@
   position: absolute;
   width: 160px;
   height: 90px;
-  top: 49px;
+  top: 43px;
   left: -28px;
   border-left: 2px solid black;
   padding-left: 4px;
   text-align: left;
   font-size: .9rem;
   font-weight: 900;
+  transition: all var(--animation-duration) ease;
+}
+
+#dashboard-7 .cards.second .card.two .item .circle:hover+.title {
+  width: 230px;
+  height: 50px;
+  top: 90px;
+  left: -32px;
+  border-left: .5rem solid var(--color-purple);
+  padding-left: 20px;
+  background-color: var(--color-white);
+  font-size: var(--font-regular);
+  color: var(--color-purple);
+  z-index: 1;
 }
 
 /* content */
@@ -237,7 +259,20 @@
   grid-gap: 10px;
   align-content: center;
   text-align: left;
+  transition: all var(--animation-duration) ease;
 } 
+
+#dashboard-7 .cards.second .card.two .item .circle:hover~.content,
+#dashboard-7 .cards.second .card.two .item .circle:hover~.content>a {
+  top: 200px;
+  left: 31px;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-purple);
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  z-index: 1;
+}
 
 /* -------------------------------------------------
   시계열 정상성 검사 및 변환
@@ -248,7 +283,8 @@
   top: 130px;
   left: -91px;
   background-color:rgb(255, 255, 255);
-  z-index: 1;
+  transition: all var(--animation-duration) ease;
+  z-index: 2 !important;
 }
 
 /* title */
@@ -263,6 +299,21 @@
   text-align: left;
   font-size: .9rem;
   font-weight: 900;
+  transition: all var(--animation-duration) ease;
+}
+
+/* 여기서부터... */
+#dashboard-7 .cards.second .card.three .item .circle:hover+.title {
+  width: 300px;
+  height: 50px;
+  top: 90px;
+  left: -82px;
+  border-left: .5rem solid var(--color-purple);
+  padding-left: 20px;
+  background-color: var(--color-white);
+  font-size: var(--font-regular);
+  color: var(--color-purple);
+  z-index: 2;
 }
 
 /* content(1), title */
@@ -341,7 +392,7 @@
 
 /* circle, 큰동그라미, hover */
 #dashboard-7 .cards.second .card.four .item div:nth-child(1):hover {
-  transform: scale(1.1) rotate(45deg);
+  transform: scale(1.5) rotate(45deg);
   background: var(--color-green);
   color: var(--color-white);
 }
@@ -991,7 +1042,7 @@
  * start
  */
 #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover {
-  transform: scale(1.1) rotate(-45deg);
+  transform: scale(1.5) rotate(-45deg);
   background: var(--color-skyblue);
   color: var(--color-white);
 }
