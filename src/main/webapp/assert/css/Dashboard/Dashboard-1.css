@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 파일명 : Dashboard-1.css
  * 설 명 : 대쉬보드 1번 화면
@@ -7,7 +8,6 @@
  * ---------  -----------------------------------------------------------------
  * 
  */
-
 #dashboard-1 {
   margin-top: 0;
   margin-bottom: 0;
@@ -16,8 +16,10 @@
 
 #dashboard-1 .cards {
   height: 90%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
 }
 
@@ -30,7 +32,8 @@
 #dashboard-1 .card .svg-wrapper {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   margin: 0 auto;
   width: 320px;
 }
@@ -42,6 +45,7 @@
   fill: transparent;
   stroke: #19f6e8;
   border-bottom: 5px solid black;
+  -webkit-transition: stroke-width 300ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
   transition: stroke-width 300ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
 }
 
@@ -53,7 +57,6 @@
 
 #dashboard-1 .card .svg-wrapper:hover .item {
   color: #41C7C7;
-  text-shadow: rgb(65 199 199 / 90%) 0px 2px 7px;
 }
 
 #dashboard-1 .card .svg-wrapper:hover .item .font {
@@ -66,9 +69,16 @@
   padding: 20px;
   position: absolute;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 150ms ease-in 0s;
   transition: all 150ms ease-in 0s;
 }
 
@@ -79,3 +89,4 @@
 #dashboard-1 .card .item .font {
   font-size: 2rem;
 }
+/*# sourceMappingURL=Dashboard-1.css.map */

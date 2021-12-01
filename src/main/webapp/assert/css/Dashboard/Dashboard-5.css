@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #dashboard-5 * {
   margin: 0;
   padding: 0;
@@ -13,12 +14,12 @@
 
 #dashboard-5 table {
   width: 100%;
-  border-spacing: 0px;    
+  border-spacing: 0px;
   text-align: center;
 }
 
 #dashboard-5 .cards .card {
-  position: relative;        
+  position: relative;
 }
 
 /* 아이템의 기본 크기 */
@@ -32,7 +33,6 @@
       .cards.first
 
 ******************************************************************************************** */
-
 #dashboard-5 .cards.first .card {
   border-top: 1px solid black;
 }
@@ -46,7 +46,7 @@
 #dashboard-5 .cards.first .card.seven {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-  border-radius: 0 50% 50% 0;    
+  border-radius: 0 50% 50% 0;
 }
 
 /* 타이틀 */
@@ -55,18 +55,18 @@
   width: 200px;
   height: 50px;
   top: -65px;
-  left: -75px;  
+  left: -75px;
 }
 
 /* 순번 */
 #dashboard-5 .cards.first .card .item .no {
-  position: absolute;  
+  position: absolute;
   border: 1px solid black;
   border-radius: 50%;
   background-color: var(--color-turquoise);
   width: 50px;
   height: 50px;
-  line-height: 50px;  
+  line-height: 50px;
   top: -25px;
 }
 
@@ -79,18 +79,27 @@
   border: 1px solid black;
   border-radius: 10px;
   top: 37px;
-  left: -41px;  
+  left: -41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* 데이터 탐험 - 아이템 - 연결선 */
 #dashboard-5 .cards.first .card.four .item .desc::before {
   position: absolute;
-  content: "";  
-  background-color: black;  
+  content: "";
+  background-color: black;
   width: 5px;
   height: 15px;
   top: -22%;
@@ -101,7 +110,6 @@
       .cards.second
 
 ******************************************************************************************** */
-
 #dashboard-5 .cards.second .card {
   border-top: 1px solid black;
   top: -1px;
@@ -110,7 +118,7 @@
 #dashboard-5 .cards.second .card.one {
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-  border-radius: 50% 0 0 50%;  
+  border-radius: 50% 0 0 50%;
 }
 
 #dashboard-5 .cards.second .card.four {
@@ -131,7 +139,6 @@
 /* -------------------------------------------------
   시계열 준비
    ------------------------------------------------- */
-
 /* 타이틀 */
 #dashboard-5 .cards.second .card.one .item .title {
   position: absolute;
@@ -142,13 +149,12 @@
 /* 시계열 준비 - 순번 */
 #dashboard-5 .cards.second .card.one .item .no {
   top: 110px;
-  left: 50px;  
+  left: 50px;
 }
 
 /* -------------------------------------------------
   시계열 데이터 분해
    ------------------------------------------------- */
-
 /* 타이틀 */
 #dashboard-5 .cards.second .card.two .item .title {
   position: absolute;
@@ -174,11 +180,14 @@
   height: 70px;
   border: 1px solid black;
   border-radius: 10px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
-  align-content: center;
-} 
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
 
 /* 연결선 */
 #dashboard-5 .cards.second .card.two .item .desc::before {
@@ -194,7 +203,6 @@
 /* -------------------------------------------------
   시계열 정상성 검사 및 변환
    ------------------------------------------------- */
-
 /* 타이틀 */
 #dashboard-5 .cards.second .card.three .item .title {
   position: absolute;
@@ -212,7 +220,7 @@
 /* 아이템(1) */
 #dashboard-5 .cards.second .card.three .item .desc.one .subDesc {
   font-size: 12px;
-  position: absolute; 
+  position: absolute;
   top: 173px;
   left: -151px;
   width: 155px;
@@ -221,9 +229,12 @@
   border-radius: 10px;
   text-align: left;
   padding: 10px;
-  display: grid;  
-  grid-template-columns: 1fr;
-  align-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 /* 아이템(1) - 타이틀 */
@@ -246,9 +257,12 @@
   border-radius: 10px;
   text-align: left;
   padding: 10px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
-  align-content: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 /* 아이템(2) - 타이틀 */
@@ -302,12 +316,11 @@
   height: 5px;
   left: 47px;
   top: -5px;
-} 
+}
 
 /* -------------------------------------------------
   시계열 예측
    ------------------------------------------------- */
-
 /* 타이틀 */
 #dashboard-5 .cards.second .card.four .item div:nth-child(1) {
   position: absolute;
@@ -327,7 +340,6 @@
 /* -------------------------------------------------
   단변수 예측
    ------------------------------------------------- */
-
 /* 타이틀 */
 #dashboard-5 .cards.second .card.four .item div:nth-child(3) {
   position: absolute;
@@ -354,8 +366,10 @@
   left: 100px;
   background-color: var(--color-white);
   border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   place-items: center;
   grid-gap: 1px;
 }
@@ -363,7 +377,6 @@
 /* -------------------------------------------------
   다변수 예측
    ------------------------------------------------- */
-
 #dashboard-5 .cards.second .card.four .item {
   border: 1px solid black;
   border-radius: 0 80px 0 0;
@@ -407,8 +420,10 @@
   top: 105px;
   left: 100px;
   z-index: 1;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   place-items: center;
   grid-gap: 1px;
   background-color: white;
@@ -426,8 +441,10 @@
   z-index: 1;
   border: 1px solid black;
   border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   place-items: center;
   grid-gap: 1px;
   background-color: white;
@@ -453,8 +470,10 @@
   top: 105px;
   left: 280px;
   z-index: 1;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   place-items: center;
   grid-gap: 1px;
   background-color: white;
@@ -472,8 +491,10 @@
   z-index: 1;
   border: 1px solid black;
   border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   place-items: center;
   background-color: white;
   font-size: 11px;
@@ -498,8 +519,10 @@
   top: 105px;
   left: 440px;
   z-index: 1;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   place-items: center;
   grid-gap: 1px;
   background-color: white;
@@ -517,8 +540,10 @@
   z-index: 1;
   border: 1px solid black;
   border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   place-items: center;
   background-color: white;
   font-size: 11px;
@@ -543,8 +568,10 @@
   top: 105px;
   left: 550px;
   z-index: 1;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   place-items: center;
   grid-gap: 1px;
   background-color: white;
@@ -562,8 +589,10 @@
   z-index: 1;
   border: 1px solid black;
   border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   place-items: center;
   /* grid-gap: 1px; */
   background-color: white;
@@ -588,7 +617,6 @@
       .cards.third
 
 ******************************************************************************************** */
-
 #dashboard-5 .cards.third .card.seven .item {
   height: 200px;
 }
@@ -620,7 +648,6 @@
       .cards.fourth
 
 ******************************************************************************************** */
-
 #dashboard-5 .cards.fourth .card {
   border-top: 1px solid black;
   top: -1px;
@@ -657,7 +684,7 @@
   background-color: var(--color-turquoise);
   width: 50px;
   height: 50px;
-  line-height: 50px;  
+  line-height: 50px;
 }
 
 /* 타이틀 : 성능 분석 */
@@ -785,3 +812,4 @@
   border-radius: 50px;
   line-height: 100px;
 }
+/*# sourceMappingURL=Dashboard-5.css.map */
