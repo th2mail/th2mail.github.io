@@ -88,29 +88,60 @@ header .search-wrapper input {
   color: #ccc;
 }
 
+header {
+  z-index: 1000;
+}
+
 header .user-wrapper {
+  font-size: 2.2rem;
+  color: var(--color-grey);
+}
+
+header .user-wrapper div {
+  margin-left: .5rem;
+}
+
+header .user-wrapper .find-wrapper {
+  position: absolute;
+  top: 103%;
+  right: 4rem;
+  width: 20rem;
+  height: 50px;
+  background: var(--color-white);
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 
-header .user-wrapper span {
-  color: #1ba5a5;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border: 1px solid #1ba5a5;
-  border-radius: 50%;
+header .user-wrapper .find-wrapper.active {
+  top: 103%;
+}
+
+header .user-wrapper .find-wrapper input {
+  height: 100%;
+  width: 100%;
+  padding: 0 0 0 1.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+header .user-wrapper .find-wrapper label {
+  font-size: 2rem;
   margin-right: 1rem;
-  -webkit-box-shadow: 1px 1px 1px 1px;
-          box-shadow: 1px 1px 1px 1px;
+  cursor: pointer;
+  color: var(--color-black);
 }
 
-header .user-wrapper small {
-  color: var(--color-grey);
+header .user-wrapper .find-wrapper label:hover {
+  color: #1ba5a5;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=Header.css.map */

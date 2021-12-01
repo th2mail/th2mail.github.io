@@ -7,3 +7,11 @@
  * ---------  -----------------------------------------------------------------
  * 
  */
+
+const searchBtn = document.querySelector('#search-btn');
+const findWrapper = document.querySelector('.find-wrapper');
+
+searchBtn.addEventListener('click', (event) => {
+  alert('111');
+  // findWrapper.classList.toggle('active');
+});
