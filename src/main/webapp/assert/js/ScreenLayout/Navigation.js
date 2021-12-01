@@ -96,3 +96,16 @@ close_item.addEventListener('click', (event) => {
   // 메인화면의 너비를 넓힌다.
   document.querySelector('.main-content').style.marginLeft = "78px";
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

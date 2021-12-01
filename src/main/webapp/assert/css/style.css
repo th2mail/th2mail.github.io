@@ -68,15 +68,13 @@
   /* Color */
   --color-white: #fff;
   --color-black: #222;
+  --color-dark: #1D2231;
+  --color-text: rgb(224, 228, 228);
+  --color-background: rgb(34, 36, 41);
   --color-wine: rgb(189, 0, 255);
   --color-purple: rgb(126, 0, 255);
   --color-green: rgb(0, 168, 45);
-  --color-skyblue: rgb(0, 186, 255);
-  --color-text: rgb(224, 228, 228);
-  --color-background: rgb(34, 36, 41);
   --color-turquoise: #41C7C7;
-  /* 청회색 */
-  --color-gunmetal: #C6D6F7;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-smoke-white: whitesmoke;
@@ -85,11 +83,11 @@
   --color-grey: #8390A2;
   --color-light-grey: #7c7979;
   --color-dark-grey: #4d4d4d;
+  --color-gunmetal: #C6D6F7;
   --color-blue: #73aace;
+  --color-skyblue: rgb(0, 186, 255);
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
-  --color-black: #222;
-  --color-dark: #1D2231;
   /* Font size */
   --font-large: 38px;
   --font-medium: 28px;

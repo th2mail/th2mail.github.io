@@ -8,10 +8,18 @@
  * 
  */
 
-const searchBtn = document.querySelector('#search-btn');
+const searchBtn = document.querySelector('header .user-wrapper #search-btn');
 const findWrapper = document.querySelector('.find-wrapper');
 
+const loginBtn = document.querySelector('#login-btn');
+const loginWrapper = document.querySelector('.login-wrapper');
+
 searchBtn.addEventListener('click', (event) => {
-  alert('111');
-  // findWrapper.classList.toggle('active');
+  findWrapper.classList.toggle('active');
+  loginWrapper.classList.remove('active');
+});
+
+loginBtn.addEventListener('click', (event) => {
+  findWrapper.classList.remove('active');
+  loginWrapper.classList.toggle('active');
 });
