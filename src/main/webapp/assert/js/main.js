@@ -64,3 +64,12 @@ $("#predict-multi-variable").load("/src/main/webapp/view/TimeSeriesForecasting/P
 
 // 시계열 결과 분석
 $("#predict-result-analysis").load("/src/main/webapp/view/PerformanceAnalysis/PredictResultAnalysis.html");
+
+
+
+const loginCloseBtn = document.querySelector('.la-times');
+
+loginCloseBtn.addEventListener('click', (event) => {
+  dimmed.classList.remove('active');
+  loginFrm.classList.remove('active');  
+});

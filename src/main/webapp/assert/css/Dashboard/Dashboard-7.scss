@@ -8,8 +8,8 @@
  * 
  */
 #dashboard-7 {
-  background: var(--color-white);
-  color: var(--color-black);
+  // background: var(--color-white);
+  // color: var(--color-black);
   margin: 0;  
   padding: 100px 50px 50px 80px;
   outline: none;    
@@ -53,6 +53,8 @@
   font-size: .9rem;
   font-weight: 900;
   transition: all var(--animation-duration) ease;
+
+
 }
 /* title, 홀수 */
 #dashboard-7 .cards.first .card:nth-child(even) .item .title {  

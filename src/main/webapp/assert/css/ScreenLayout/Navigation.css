@@ -9,18 +9,19 @@
  * 
  */
 .sidebar {
+  border-top-left-radius: var(--size-border-large-radius);
+  border-bottom-left-radius: var(--size-border-large-radius);
+  border-right: 3px solid var(--color-border);
   position: fixed;
-  top: 82px;
-  left: 0;
-  height: 100%;
+  top: 1rem;
+  left: 1rem;
+  bottom: 1rem;
   width: 78px;
-  background: #0e1318;
   padding: 6px 14px;
-  z-index: 100;
 }
 
 .sidebar a {
-  color: var(--color-white);
+  color: var(--color-icon);
 }
 
 /* ******************************************************************************************** 
@@ -135,7 +136,6 @@
 }
 
 .sidebar ul li a {
-  color: #818487;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,9 +149,9 @@
 }
 
 .sidebar ul li a:hover {
-  color: #11101d;
+  color: #832aff;
   font-weight: 900;
-  background: #fff;
+  background: white;
   width: 50px;
 }
 
@@ -182,6 +182,7 @@
   height: 100%;
   width: 265px;
   padding: 1rem 1rem;
+  background: pink;
 }
 
 .sidebar .rightbar input.title {
