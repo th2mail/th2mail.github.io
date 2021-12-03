@@ -28,19 +28,19 @@ header {
   padding: 2rem;
 }
 
-header .user {
+header .account {
   font-size: var(--font-medium);
   color: #7185ab;
 }
 
-header .user > div {
+header .account > div {
   margin-right: 1rem;
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
   cursor: pointer;
 }
 
-header .user > div:hover {
+header .account > div:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: #ff6633;

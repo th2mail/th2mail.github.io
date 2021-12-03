@@ -36,11 +36,9 @@
                                             Import - Font
 
 ======================================================================================================*/
-/* line-awesome CDN Link */
-@import url('https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css');
-
-/* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css');                            // Font Awesome CDN Link
+@import url('https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css'); // line-awesome CDN Link
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');                // Google Font CDN Link
 
 /*======================================================================================================
 
@@ -49,7 +47,7 @@
 ======================================================================================================*/
 :root {
   /* Color */
-  --color-background: rgb(247, 248, 250);
+  --color-background: rgba(247, 248, 250, .9);
   --color-border: rgb(238, 240, 243);
   --color-icon: rgb(195, 202, 217);
   --color-content: rgb(255, 255, 255);  
@@ -57,37 +55,36 @@
   --color-white: #fff;
   --color-black: #222;
 
-
-  --color-dark: #1D2231;
+  // --color-dark: #1D2231;
   
-  --color-light-white: #eeeeee;
-  --color-dark-white: #bdbdbd;
-  --color-smoke-white: whitesmoke;
+  // --color-light-white: #eeeeee;
+  // --color-dark-white: #bdbdbd;
+  // --color-smoke-white: whitesmoke;
 
-  --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
+  // --color-pink: #fe918d;
+  // --color-dark-pink: #ff6863;
 
-  --color-grey: #8390A2;
-  --color-light-grey: #7c7979;
-  --color-dark-grey: #4d4d4d;  
+  // --color-grey: #8390A2;
+  // --color-light-grey: #7c7979;
+  // --color-dark-grey: #4d4d4d;  
 
-  --color-blue: #73aace;
-  --color-skyblue: rgb(0, 186, 255);
+  // --color-blue: #73aace;
+  // --color-skyblue: rgb(0, 186, 255);
 
-  --color-wine: rgb(189, 0, 255);
-  --color-purple: rgb(126, 0, 255);
-  --color-green: rgb(0, 168, 45);
-  --color-turquoise: #41C7C7;
-  --color-gunmetal: #C6D6F7; // 청회색
-  --color-yellow: #fff7d1;
-  --color-orange: #feb546;  
+  // --color-wine: rgb(189, 0, 255);
+  // --color-purple: rgb(126, 0, 255);
+  // --color-green: rgb(0, 168, 45);
+  // --color-turquoise: #41C7C7;
+  // --color-gunmetal: #C6D6F7; // 청회색
+  // --color-yellow: #fff7d1;
+  // --color-orange: #feb546;  
 
   // Font size
   --font-large: 2rem;
   --font-medium: 1.5rem;
   --font-regular: 1rem;
-  --font-small: .5px;
-  // --font-micro: .5rem;
+  --font-small: .75rem;
+  --font-micro: .5rem;
 
   // Font weight
   --weight-bold: 700;
@@ -125,13 +122,14 @@
   list-style: none;
   text-decoration: none;
   transition: var(--animation-short-duration) linear;
-  background: var(--color-background);
+  background: var(--color-background);  
 }
 
 html {
   background: rgb(228,230,235);  
   width: 100vw;
   height: 100vh;
+  
 }
 
 /*======================================================================================================
@@ -245,7 +243,8 @@ p {
   border-radius: var(--size-border-large-radius);
   opacity: 0; // 안보이게 설정
   pointer-events: none; // 클릭이 안되게 설정
-  
+  z-index: 99;
+
   &.active {
     opacity: .8;  // 보이게 설정
     pointer-events: auto; // 클릭 가능하게 설정
@@ -265,6 +264,7 @@ p {
   text-align: center;
   opacity: 0; // 안보이게 설정
   pointer-events: none; // 클릭이 안되게 설정  
+  z-index: 100;
   
   &.active {
     top: calc(50% - 10rem);
@@ -353,14 +353,14 @@ p {
 ======================================================================================================*/
 main {
   border-bottom-right-radius: var(--size-border-large-radius);
-
   position: fixed;
   top: calc(1rem + 85px);
   left: calc(1rem + 78px);
   right: 1rem;
   bottom: 1rem;
   overflow-y: scroll;
-
+  transition: 1s linear;
+  scroll-behavior: smooth;
 
   // width: 0vw;
   // height: calc(100vh - .5rem - 85px);
@@ -369,6 +369,20 @@ main {
   // margin-top: 85px;
   // background: var(--color-background);
   // color: var(--color-text);
+
+  section {
+    min-height: 500px;
+    border-bottom: 3px solid var(--color-border);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    // height: calc(100% -2rem - 85px);
+    // width: 100%;
+    // min-height: calc(100vh -2rem - 85px);
+    
+    // width: 300px;
+    // padding: 2rem 1.5rem;
+    // margin: 1rem 0;
+    // border-bottom: 1px dashed white;
+  }
 }
 
 /*======================================================================================================
@@ -376,14 +390,7 @@ main {
                                         section
 
 ======================================================================================================*/
-section {
-  // width: 100%;
-  // min-height: calc(100vh - 85px);
-  // width: 300px;
-  // padding: 2rem 1.5rem;
-  // margin: 1rem 0;
-  // border-bottom: 1px dashed white;
-}
+
 
 // section>h1,
 // h2,

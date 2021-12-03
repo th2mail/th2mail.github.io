@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * 파일명 : Navigation.css
+ * 파일명 : navigation.css
  * 설 명 : 네비게이션
  * 최초 생성일 : 
  *
@@ -8,7 +8,7 @@
  * ---------  -----------------------------------------------------------------
  * 
  */
-.sidebar {
+nav {
   border-top-left-radius: var(--size-border-large-radius);
   border-bottom-left-radius: var(--size-border-large-radius);
   border-right: 3px solid var(--color-border);
@@ -17,37 +17,21 @@
   left: 1rem;
   bottom: 1rem;
   width: 78px;
-  padding: 6px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 98;
 }
 
-.sidebar a {
-  color: var(--color-icon);
-}
-
-/* ******************************************************************************************** 
-
-      .logo_content
-
-******************************************************************************************** */
-.sidebar .logo_content .logo {
-  color: #fff;
+nav ul.nav_list {
   width: 100%;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-}
-
-.logo_content .logo i {
-  font-size: 3rem;
-}
-
-/* ******************************************************************************************** 
-
-      .nav_list
-
-******************************************************************************************** */
-.sidebar ul {
-  margin-top: 20px;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,209 +47,128 @@
           align-items: center;
 }
 
-.sidebar ul li {
-  position: relative;
+nav ul.nav_list li {
   width: 100%;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  margin: 3px 5px;
-}
-
-.sidebar ul li .tooltip {
-  position: absolute;
-  left: 75px;
-  top: -10px;
-  border-radius: 10px;
-  height: 35px;
-  background: #11101d;
-  color: #fff;
-  line-height: 35px;
-  text-align: center;
-  -webkit-transition: 0s;
-  transition: 0s;
-  opacity: 0;
-  pointer-events: none;
-  white-space: nowrap;
-  z-index: 99;
-}
-
-/* 사이드바 메뉴리스트의 툴팁 가로 사이즈 */
-.sidebar ul li:nth-child(1) .tooltip,
-.sidebar ul li:nth-child(4) .tooltip,
-.sidebar ul li:nth-child(10) .tooltip,
-.sidebar ul li:nth-child(11) .tooltip {
-  width: 110px;
-}
-
-.sidebar ul li:nth-child(7) .tooltip {
-  width: 120px;
-}
-
-.sidebar ul li:nth-child(2) .tooltip,
-.sidebar ul li:nth-child(3) .tooltip,
-.sidebar ul li:nth-child(6) .tooltip {
-  width: 140px;
-}
-
-.sidebar ul li:nth-child(8) .tooltip {
-  width: 160px;
-}
-
-.sidebar ul li:nth-child(5) .tooltip {
-  width: 170px;
-}
-
-.sidebar ul li:nth-child(13) .tooltip {
-  width: 190px;
-}
-
-.sidebar ul li:nth-child(9) .tooltip {
-  width: 210px;
-}
-
-.sidebar ul li:nth-child(12) .tooltip {
-  width: 240px;
-}
-
-.sidebar ul li:hover .tooltip {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  opacity: 1;
-  top: 8px;
-}
-
-.sidebar ul li a {
-  font-weight: bold;
+  height: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  border-radius: 12px;
-}
-
-.sidebar ul li a:hover {
-  color: #832aff;
-  font-weight: 900;
-  background: white;
-  width: 50px;
-}
-
-.sidebar ul li.active,
-.sidebar ul li.active a {
-  background: #293039;
-  width: 78px;
-}
-
-.sidebar ul li.active a:hover {
-  background: #293039;
-  width: 78px;
-  color: #fff;
-}
-
-.sidebar ul li.active .tooltip {
-  display: none;
-}
-
-.sidebar ul li.open:hover .tooltip {
-  display: none;
-}
-
-.sidebar .rightbar {
-  position: absolute;
-  top: 0;
-  left: -265px;
-  height: 100%;
-  width: 265px;
-  padding: 1rem 1rem;
-  background: pink;
-}
-
-.sidebar .rightbar input.title {
-  margin-top: 1.5rem;
-  color: #FEC1A9;
-  background: none;
-  border: none;
-  outline: none;
-  font-size: 1.1rem;
-  text-align: center;
-  width: 230px;
-}
-
-.sidebar .rightbar.active {
-  top: 0px;
-  left: 78px;
-  height: 100%;
-  width: 265px;
-  background: #293039;
-}
-
-.sidebar .rightbar.active .close {
-  opacity: 1;
-}
-
-.rightbar .close {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: #222429;
-  top: 50%;
-  left: 255px;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 900;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 3px;
-  opacity: 0;
 }
 
+nav ul.nav_list li a {
+  position: relative;
+}
+
+nav ul.nav_list li a,
+nav ul.nav_list li a > span {
+  background: none;
+  color: var(--color-icon);
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: var(--size-border-medium-radius);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+nav ul.nav_list li a .tooltip,
+nav ul.nav_list li a > span .tooltip {
+  position: absolute;
+  height: 3rem;
+  line-height: 3rem;
+  left: 2.5rem;
+  top: -1rem;
+  text-align: left;
+  border-radius: 0 var(--size-border-medium-radius) var(--size-border-medium-radius) 0;
+  background: var(--color-white);
+  color: #ff6633;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+
+nav ul.nav_list li:nth-child(1) a .tooltip {
+  left: 1.9rem;
+}
+
+nav ul.nav_list li:hover a,
+nav ul.nav_list li:hover a > span:nth-child(1) {
+  background: var(--color-white);
+  color: #ff6633;
+  font-weight: 700;
+}
+
+nav ul.nav_list li:hover .tooltip {
+  opacity: 1;
+  top: 0rem;
+  pointer-events: auto;
+}
+
+nav ul.nav_list li:nth-child(1) .tooltip {
+  width: 95px;
+}
+
+nav ul.nav_list li:nth-child(4) .tooltip,
+nav ul.nav_list li:nth-child(10) .tooltip,
+nav ul.nav_list li:nth-child(11) .tooltip {
+  width: 110px;
+}
+
+nav ul.nav_list li:nth-child(7) .tooltip {
+  width: 120px;
+}
+
+nav ul.nav_list li:nth-child(2) .tooltip,
+nav ul.nav_list li:nth-child(3) .tooltip,
+nav ul.nav_list li:nth-child(6) .tooltip {
+  width: 140px;
+}
+
+nav ul.nav_list li:nth-child(8) .tooltip {
+  width: 160px;
+}
+
+nav ul.nav_list li:nth-child(5) .tooltip {
+  width: 170px;
+}
+
+nav ul.nav_list li:nth-child(13) .tooltip {
+  width: 190px;
+}
+
+nav ul.nav_list li:nth-child(9) .tooltip {
+  width: 210px;
+}
+
+nav ul.nav_list li:nth-child(12) .tooltip {
+  width: 240px;
+}
+
+/* ******************************************************************************************** 
+
+      .logo_content
+
+******************************************************************************************** */
+/* ******************************************************************************************** 
+
+      .nav_list
+
+******************************************************************************************** */
 /* ******************************************************************************************** 
 
       네비게이션 상세 화면
 
 ******************************************************************************************** */
-.rightbar .title-wrapper {
-  margin-bottom: 5rem;
-}
-
-.rightbar .title-wrapper::after {
-  content: "";
-  position: absolute;
-  background-color: #FEC1A9;
-  width: 265px;
-  height: 1px;
-  top: 100px;
-  left: 0;
-}
-
-.rightbar .item {
-  color: white;
-  /* font-size: 1rem; */
-}
-
-.rightbar .item .title {
-  font-size: var(--font-regular);
-  margin: 1rem 0 5px 0;
-  display: inline-block;
-  border-bottom: 2px solid var(--color-white);
-}
-
-.rightbar .item .desc {
-  font-size: var(--font-small);
-  display: block;
-  margin: 1rem 0;
-}
 /*# sourceMappingURL=Navigation.css.map */

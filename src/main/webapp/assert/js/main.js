@@ -7,12 +7,11 @@
  * ---------  -----------------------------------------------------------------
  * 
  */
-
-// 네비게이션
-$("#navigation").load("/src/main/webapp/view/ScreenLayout/Navigation.html");
-
 // 헤더
 $("header").load("/src/main/webapp/view/ScreenLayout/Header.html");
+
+// 네비게이션
+$("nav").load("/src/main/webapp/view/ScreenLayout/Navigation.html");
 
 // 대쉬보드
 $("#dashboard-1").load("/src/main/webapp/view/Dashboard/Dashboard-1.html");
