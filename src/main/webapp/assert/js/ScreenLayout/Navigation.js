@@ -10,7 +10,7 @@
 const nav_list = document.querySelector('.nav_list');
 const rightbar = document.querySelector('.rightbar');
 const menus = document.querySelectorAll('.menu');
-const close_item = document.querySelector('.rightbar .close');
+// const close_item = document.querySelector('.rightbar .close');
 const txt_list = document.querySelectorAll('.sidebar ul li a');
 
 /**
@@ -78,24 +78,24 @@ nav_list.addEventListener('click', (event) => {
 /**
  * 네비게이션의 닫기(<) 버튼을 클릭했을 때 실행되는 이벤트 함수
  */ 
-close_item.addEventListener('click', (event) => {
+// close_item.addEventListener('click', (event) => {
   
-  // 네비게이션을 닫는다(Close).
-  rightbar.classList.remove('active');
+//   // 네비게이션을 닫는다(Close).
+//   rightbar.classList.remove('active');
 
-  // 메뉴가 선택됐다는 표시를 지운다.
-  menus.forEach((menu) => {
-    menu.classList.remove('active');
-    menu.classList.remove('open');
-  });
+//   // 메뉴가 선택됐다는 표시를 지운다.
+//   menus.forEach((menu) => {
+//     menu.classList.remove('active');
+//     menu.classList.remove('open');
+//   });
 
-  txt_list.forEach((txt) => {
-    txt.style.color = "#818487";
-  });
+//   txt_list.forEach((txt) => {
+//     txt.style.color = "#818487";
+//   });
   
-  // 메인화면의 너비를 넓힌다.
-  document.querySelector('.main-content').style.marginLeft = "78px";
-});
+//   // 메인화면의 너비를 넓힌다.
+//   document.querySelector('.main-content').style.marginLeft = "78px";
+// });
 
 
 
