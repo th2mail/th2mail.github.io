@@ -14,13 +14,7 @@ $("header").load("/src/main/webapp/view/ScreenLayout/Header.html");
 $("nav").load("/src/main/webapp/view/ScreenLayout/Navigation.html");
 
 // 대쉬보드
-$("#dashboard-1").load("/src/main/webapp/view/Dashboard/Dashboard-1.html");
-$("#dashboard-2").load("/src/main/webapp/view/Dashboard/Dashboard-2.html");
-$("#dashboard-3").load("/src/main/webapp/view/Dashboard/Dashboard-3.html");
-$("#dashboard-4").load("/src/main/webapp/view/Dashboard/Dashboard-4.html");
-$("#dashboard-5").load("/src/main/webapp/view/Dashboard/Dashboard-5.html");
-$("#dashboard-6").load("/src/main/webapp/view/Dashboard/Dashboard-6.html");
-$("#dashboard-7").load("/src/main/webapp/view/Dashboard/Dashboard-7.html");
+$("#dashboard").load("/src/main/webapp/view/Dashboard/Dashboard.html");
 
 // 센서 데이터 현황
 $("#data-status").load("/src/main/webapp/view/DataPreparation/DataStatus.html");

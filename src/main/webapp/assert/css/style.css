@@ -10,13 +10,7 @@
  */
 @import url("/src/main/webapp/assert/css/ScreenLayout/Navigation.css");
 @import url("/src/main/webapp/assert/css/ScreenLayout/Header.css");
-@import url("/src/main/webapp/assert/css/Dashboard/Dashboard-1.css");
-@import url("/src/main/webapp/assert/css/Dashboard/Dashboard-2.css");
-@import url("/src/main/webapp/assert/css/Dashboard/Dashboard-3.css");
-@import url("/src/main/webapp/assert/css/Dashboard/Dashboard-4.css");
-@import url("/src/main/webapp/assert/css/Dashboard/Dashboard-5.css");
-@import url("/src/main/webapp/assert/css/Dashboard/Dashboard-6.css");
-@import url("/src/main/webapp/assert/css/Dashboard/Dashboard-7.css");
+@import url("/src/main/webapp/assert/css/Dashboard/Dashboard.css");
 @import url("/src/main/webapp/assert/css/DataPreparation/DataStatus.css");
 @import url("/src/main/webapp/assert/css/DataPreparation/DataSelect.css");
 @import url("/src/main/webapp/assert/css/DataPreparation/ExplorePandasProfiler.css");

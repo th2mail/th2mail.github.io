@@ -9,26 +9,20 @@
  */
 @import url('/src/main/webapp/assert/css/ScreenLayout/Navigation.css');                     // 사이드바
 @import url('/src/main/webapp/assert/css/ScreenLayout/Header.css');                         // 헤더
-@import url('/src/main/webapp/assert/css/Dashboard/Dashboard-1.css');                       // 대쉬보드 (1)
-@import url('/src/main/webapp/assert/css/Dashboard/Dashboard-2.css');                       // 대쉬보드 (2)
-@import url('/src/main/webapp/assert/css/Dashboard/Dashboard-3.css');                       // 대쉬보드 (3)
-@import url('/src/main/webapp/assert/css/Dashboard/Dashboard-4.css');                       // 대쉬보드 (4)
-@import url('/src/main/webapp/assert/css/Dashboard/Dashboard-5.css');                       // 대쉬보드 (5)
-@import url('/src/main/webapp/assert/css/Dashboard/Dashboard-6.css');                       // 대쉬보드 (6)
-@import url('/src/main/webapp/assert/css/Dashboard/Dashboard-7.css');                       // 대쉬보드 (7)
-@import url('/src/main/webapp/assert/css/DataPreparation/DataStatus.css');                  // 센서 데이터 현황 */
-@import url('/src/main/webapp/assert/css/DataPreparation/DataSelect.css');                  // 센서 데이터 선택 */
-@import url('/src/main/webapp/assert/css/DataPreparation/ExplorePandasProfiler.css');       // 시계열 데이터 탐험 - Pandas Profiler */
-@import url('/src/main/webapp/assert/css/DataPreparation/ExploreSweetviz.css');             // 시계열 데이터 탐험 - Sweetviz */
-@import url('/src/main/webapp/assert/css/DataPreparation/LoadingPreview.css');              // 센서 데이터 로딩 & 프리뷰 */
-@import url('/src/main/webapp/assert/css/DataPreparation/CorrelateGraph.css');              // 센서 데이터 상관관계 그래프 */
+@import url('/src/main/webapp/assert/css/Dashboard/Dashboard.css');                         // 대쉬보드
+@import url('/src/main/webapp/assert/css/DataPreparation/DataStatus.css');                  // 센서 데이터 현황 
+@import url('/src/main/webapp/assert/css/DataPreparation/DataSelect.css');                  // 센서 데이터 선택 
+@import url('/src/main/webapp/assert/css/DataPreparation/ExplorePandasProfiler.css');       // 시계열 데이터 탐험 - Pandas Profiler
+@import url('/src/main/webapp/assert/css/DataPreparation/ExploreSweetviz.css');             // 시계열 데이터 탐험 - Sweetviz
+@import url('/src/main/webapp/assert/css/DataPreparation/LoadingPreview.css');              // 센서 데이터 로딩 & 프리뷰
+@import url('/src/main/webapp/assert/css/DataPreparation/CorrelateGraph.css');              // 센서 데이터 상관관계 그래프
 @import url('/src/main/webapp/assert/css/DataPreparation/VisualProcessMissValue.css');      // 결측치 시각화 및 처리 */
 @import url('/src/main/webapp/assert/css/DataPreparation/VisualProcessOutValue.css');       // 이상치 시각화 및 처리 */
 @import url('/src/main/webapp/assert/css/DataPreparation/ResampleNormalize.css');           // 리셈플링 및 정규화 */
 @import url('/src/main/webapp/assert/css/TimeSeriesPreparation/Decompose.css');             // 시계열 데이터 분해 */
-@import url('/src/main/webapp/assert/css/TimeSeriesPreparation/SanityCheckTransform.css');  // 시계열 정상성 검사 및 변환 */
-@import url('/src/main/webapp/assert/css/TimeSeriesForecasting/PredictSingleVariable.css'); // 시계열 예측 with 단일 변수 */
-@import url('/src/main/webapp/assert/css/TimeSeriesForecasting/PredictMultiVariable.css');  // 시계열 예측 with 다중 변수 */
+@import url('/src/main/webapp/assert/css/TimeSeriesPreparation/SanityCheckTransform.css');  // 시계열 정상성 검사 및 변환
+@import url('/src/main/webapp/assert/css/TimeSeriesForecasting/PredictSingleVariable.css'); // 시계열 예측 with 단일 변수
+@import url('/src/main/webapp/assert/css/TimeSeriesForecasting/PredictMultiVariable.css');  // 시계열 예측 with 다중 변수
 @import url('/src/main/webapp/assert/css/PerformanceAnalysis/PredictResultAnalysis.css');   // 시계열 결과 분석 */
 
 /*======================================================================================================
