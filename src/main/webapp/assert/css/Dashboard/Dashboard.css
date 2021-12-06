@@ -79,92 +79,7 @@
       //   }
       // }
       ////////////////////////////////////////////////////////*/
-  /* title */
-  /* 여기서부터... */
-  /* content(1), title */
-  /* content(1), desc */
-  /* content(2), title */
-  /* content(2), desc */
-  /* content (1)과 (2)를 나누는 세로 선 */
-  /* -------------------------------------------------
-  시계열 예측
-------------------------------------------------- */
   /* circle, 큰동그라미 */
-  /* circle, 큰동그라미, hover */
-  /* -------------------------------------------------
-  단변수 예측
-------------------------------------------------- */
-  /* title */
-  /* circle */
-  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : title */
-  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : 점 */
-  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : 선 */
-  /* content, 단변수 예측, SES : title */
-  /* content, 단변수 예측, SES : 점 */
-  /* content, 단변수 예측, SES : 선 */
-  /* content, 단변수 예측, HWES : title */
-  /* content, 단변수 예측, HWES : 점 */
-  /* content, 단변수 예측, AR : title */
-  /* content, 단변수 예측, AR : 점 */
-  /* content, 단변수 예측, MA : title */
-  /* content, 단변수 예측, MA : 점 */
-  /* content, 단변수 예측, ARMA : title */
-  /* content, 단변수 예측, ARMA : 점 */
-  /* content, 단변수 예측, ARIMA : title */
-  /* content, 단변수 예측, ARIMA : 점 */
-  /* content, 단변수 예측, Auto ARIMA : title */
-  /* content, 단변수 예측, Auto ARIMA : 점 */
-  /* content, 단변수 예측, Seasonal ARIMA : title */
-  /* content, 단변수 예측, Seasonal ARIMA : 점 */
-  /* content, 단변수 예측, Auto SARIA : title */
-  /* content, 단변수 예측, Auto SARIA : 점 */
-  /* content, 단변수 예측, Prophet : title */
-  /* content, 단변수 예측, Prophet : 점 */
-  /* -------------------------------------------------
-  다변수 예측
-------------------------------------------------- */
-  /* title */
-  /* circle */
-  /* 다변수 예측, Linear Models : content */
-  /* 다변수 예측, Linear Models : 점 */
-  /* 다변수 예측, Linear Models : 타이틀 */
-  /* 다변수 예측, Tree Model : content */
-  /* 다변수 예측, Tree Model : 점 */
-  /* 다변수 예측, Tree Model : title */
-  /* 다변수 예측, Deep Learning : content */
-  /* 다변수 예측, Deep Learning : 점 */
-  /* 다변수 예측, Deep Learning : title */
-  /* 다변수 예측, Hyperparameter Optimization : content */
-  /* 다변수 예측, Hyperparameter Optimization : 점 */
-  /* 다변수 예측, Hyperparameter Optimization : title */
-  /* 다변수 예측, Hyperparameter Optimization : content 남는선 지우기 */
-  /* 다변수 예측, Ensenbling : content */
-  /* 다변수 예측, Ensenbling : 점 */
-  /* 다변수 예측, Ensenbling : title */
-  /* ******************************************************************************************** 
-
-      .cards.third
-
-******************************************************************************************** */
-  /* ******************************************************************************************** 
-
-      .cards.fourth
-
-******************************************************************************************** */
-  /* circle, 공통 */
-  /* circle, 큰동그라미 */
-  /* 
- * circle, 큰동그라미, hover 
- * 설명 : 성능 분석 큰 동그라미에 마우스를 올려놨을 때의 이벤트 처리
- * start
- */
-  /* end */
-  /* title : 시계열 예측 분석(수치메트릭) */
-  /* circle : 시계열 예측 분석(수치메트릭) */
-  /* title : 시계열 예측 분석(차트) */
-  /* circle : 시계열 예측 분석(차트) */
-  /* 수치 메트릭 */
-  /* 차트 */
 }
 
 #dashboard .body table .cards .card {
@@ -439,7 +354,30 @@
   z-index: 2 !important;
 }
 
-#dashboard .body table #dashboard-7 .cards.second > .card.three > .item > .title {
+#dashboard .body table .cards.second .card.three .item .circle:hover + .title {
+  width: 300px;
+  height: 50px;
+  top: 90px;
+  left: -82px;
+  border-left: 0.5rem solid var(--color-purple);
+  padding-left: 20px;
+  background-color: var(--color-white);
+  font-size: var(--font-regular);
+  color: var(--color-purple);
+  z-index: 2;
+}
+
+#dashboard .body table .cards.second .card.three .item .circle::before {
+  content: "";
+  background-color: var(--color-black);
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  top: 22px;
+  left: 10px;
+}
+
+#dashboard .body table .cards.second .card.three .item > .title {
   position: absolute;
   width: 200px;
   height: 90px;
@@ -454,20 +392,7 @@
   transition: all var(--animation-duration) ease;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.three .item .circle:hover + .title {
-  width: 300px;
-  height: 50px;
-  top: 90px;
-  left: -82px;
-  border-left: 0.5rem solid var(--color-purple);
-  padding-left: 20px;
-  background-color: var(--color-white);
-  font-size: var(--font-regular);
-  color: var(--color-purple);
-  z-index: 2;
-}
-
-#dashboard .body table #dashboard-7 .cards.second > .card.three > .item > .content.one > .title {
+#dashboard .body table .cards.second .card.three .item > .content.one > .title {
   position: absolute;
   top: 160px;
   left: -215px;
@@ -475,7 +400,7 @@
   font-weight: var(--weight-bold);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.three .item .content.one .desc {
+#dashboard .body table .cards.second .card.three .item > .content.one .desc {
   font-size: var(--font-small);
   position: absolute;
   width: 225px;
@@ -486,7 +411,7 @@
   padding: 10px;
 }
 
-#dashboard .body table #dashboard-7 .cards.second > .card.three > .item > .content.two > .title {
+#dashboard .body table .cards.second .card.three .item > .content.two > .title {
   position: absolute;
   top: 160px;
   left: -15px;
@@ -494,7 +419,7 @@
   font-weight: var(--weight-bold);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.three .item .content.two .desc {
+#dashboard .body table .cards.second .card.three .item > .content.two .desc {
   font-size: var(--font-small);
   position: absolute;
   width: 225px;
@@ -505,17 +430,11 @@
   padding: 10px;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.three .item .circle::before {
-  content: "";
-  background-color: var(--color-black);
-  position: absolute;
-  width: 2px;
-  height: 100px;
-  top: 22px;
-  left: 10px;
+#dashboard .body table .cards.second .card.four .item {
+  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : title */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(1) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(1) {
   width: 150px;
   height: 150px;
   top: -30px;
@@ -536,16 +455,17 @@
   -webkit-transition: all var(--animation-duration) ease;
   transition: all var(--animation-duration) ease;
   z-index: 1;
+  /* circle, 큰동그라미, hover */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(1):hover {
+#dashboard .body table .cards.second .card.four .item div:nth-child(1):hover {
   -webkit-transform: scale(1.2) rotate(45deg);
           transform: scale(1.2) rotate(45deg);
   background: var(--color-green);
   color: var(--color-white);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(2) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(2) {
   position: absolute;
   width: 110px;
   height: 75px;
@@ -560,12 +480,26 @@
   font-weight: 900;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(3) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(3) {
   top: -15px;
   left: 48px;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) {
+  /* content, 단변수 예측, SES : title */
+  /* content, 단변수 예측, HWES : title */
+  /* content, 단변수 예측, AR : title */
+  /* content, 단변수 예측, MA : title */
+  /* content, 단변수 예측, ARMA : title */
+  /* content, 단변수 예측, ARIMA : title */
+  /* content, 단변수 예측, Auto ARIMA : title */
+  /* content, 단변수 예측, Seasonal ARIMA : title */
+  /* content, 단변수 예측, Auto SARIA : title */
+  /* content, 단변수 예측, Prophet : title */
+  /* content, 단변수 예측, Prophet : 점 */
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1) {
   font-size: 11px;
   font-weight: var(--weight-regular);
   position: absolute;
@@ -573,9 +507,11 @@
   left: 8%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : 점 */
+  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : 선 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -587,7 +523,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::after {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::after {
   content: "";
   position: absolute;
   width: 95px;
@@ -600,7 +536,7 @@
   border-left: 0;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -608,9 +544,11 @@
   left: 20%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, SES : 점 */
+  /* content, 단변수 예측, SES : 선 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -622,7 +560,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::after {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -635,7 +573,7 @@
   border-left: 0;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(3) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(3) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -643,9 +581,10 @@
   left: 28%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, HWES : 점 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(3)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(3)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -657,7 +596,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(4) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(4) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -665,9 +604,10 @@
   left: 36%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, AR : 점 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(4)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(4)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -679,7 +619,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(5) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(5) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -687,9 +627,10 @@
   left: 44%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, MA : 점 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(5)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(5)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -701,7 +642,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(6) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(6) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -709,9 +650,10 @@
   left: 50%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, ARMA : 점 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(6)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(6)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -723,7 +665,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(7) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(7) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -731,9 +673,10 @@
   left: 58%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, ARIMA : 점 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(7)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(7)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -745,7 +688,7 @@
   border: 1px solid var(--color-black);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(8) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(8) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -753,9 +696,10 @@
   left: 64%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, Auto ARIMA : 점 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(8)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(8)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -767,7 +711,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(9) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(9) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -775,9 +719,10 @@
   left: 72%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, Seasonal ARIMA : 점 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(9)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(9)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -789,7 +734,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(10) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(10) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -797,9 +742,10 @@
   left: 80%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+  /* content, 단변수 예측, Auto SARIA : 점 */
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(10)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(10)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -811,7 +757,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(11) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(11) {
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   position: absolute;
@@ -821,7 +767,7 @@
           transform: rotate(-55deg);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(11)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -833,7 +779,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(5) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(5) {
   position: absolute;
   width: 110px;
   height: 95px;
@@ -854,12 +800,12 @@
           align-items: flex-end;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(6) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(6) {
   top: 60px;
   left: 48px;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(7) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(7) {
   position: absolute;
   width: 150px;
   height: 50px;
@@ -887,7 +833,7 @@
           align-items: flex-start;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(7)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(7)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -899,7 +845,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(7)::after {
+#dashboard .body table .cards.second .card.four .item div:nth-child(7)::after {
   content: "Linear Models";
   position: absolute;
   width: 100px;
@@ -910,7 +856,7 @@
   font-weight: var(--weight-regular);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(8) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(8) {
   position: absolute;
   width: 205px;
   height: 145px;
@@ -938,7 +884,7 @@
           align-items: flex-end;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(8)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(8)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -950,7 +896,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(8)::after {
+#dashboard .body table .cards.second .card.four .item div:nth-child(8)::after {
   content: "Tree Model";
   position: absolute;
   width: 100px;
@@ -961,7 +907,7 @@
   font-weight: var(--weight-regular);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(9) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(9) {
   position: absolute;
   width: 125px;
   height: 50px;
@@ -989,7 +935,7 @@
           align-items: flex-start;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(9)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(9)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -1001,7 +947,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(9)::after {
+#dashboard .body table .cards.second .card.four .item div:nth-child(9)::after {
   content: "Deep Learning";
   position: absolute;
   width: 110px;
@@ -1012,7 +958,7 @@
   font-weight: var(--weight-regular);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(10) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(10) {
   position: absolute;
   width: 255px;
   height: 50px;
@@ -1032,7 +978,7 @@
   padding-left: 10px;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(10)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(10)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -1044,7 +990,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(10)::after {
+#dashboard .body table .cards.second .card.four .item div:nth-child(10)::after {
   content: "Hyperparameter Optimization";
   position: absolute;
   width: 220px;
@@ -1055,7 +1001,7 @@
   font-weight: var(--weight-regular);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(10) a:last-child::after {
+#dashboard .body table .cards.second .card.four .item div:nth-child(10) a:last-child::after {
   content: "";
   position: absolute;
   width: 65px;
@@ -1065,7 +1011,7 @@
   background: var(--color-white);
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(11) {
+#dashboard .body table .cards.second .card.four .item div:nth-child(11) {
   position: absolute;
   width: 245px;
   height: 130px;
@@ -1094,7 +1040,7 @@
           align-items: flex-end;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(11)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(11)::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -1106,7 +1052,7 @@
   border-radius: 50%;
 }
 
-#dashboard .body table #dashboard-7 .cards.second .card.four .item div:nth-child(11)::after {
+#dashboard .body table .cards.second .card.four .item div:nth-child(11)::after {
   content: "Ensenbling";
   position: absolute;
   width: 100px;
@@ -1117,28 +1063,26 @@
   font-weight: var(--weight-regular);
 }
 
-#dashboard .body table #dashboard-7 .cards.third .card.seven .item {
-  height: 200px;
-}
-
-#dashboard .body table #dashboard-7 .cards.third .card.one {
+#dashboard .body table .cards.third .card.one {
   border-top: none;
   top: -2px;
 }
 
-#dashboard .body table #dashboard-7 .cards.third .card.four,
-#dashboard .body table #dashboard-7 .cards.third .card.five,
-#dashboard .body table #dashboard-7 .cards.third .card.six,
-#dashboard .body table #dashboard-7 .cards.third .card.seven {
+#dashboard .body table .cards.third .card.seven .item {
+  height: 200px;
+}
+
+#dashboard .body table .cards.third .card.four, #dashboard .body table .cards.third .card.five, #dashboard .body table .cards.third .card.six, #dashboard .body table .cards.third .card.seven {
   border-top: none;
 }
 
-#dashboard .body table #dashboard-7 .cards.fourth .card .item {
+#dashboard .body table .cards.fourth .card .item {
   width: 90px;
   height: 110px;
+  /* circle, 공통 */
 }
 
-#dashboard .body table #dashboard-7 .cards.fourth .card .item .title {
+#dashboard .body table .cards.fourth .card .item .title {
   position: absolute;
   width: 200px;
   height: 50px;
@@ -1146,144 +1090,13 @@
   left: -75px;
 }
 
-#dashboard .body table #dashboard-7 .cards.fourth .card .item .circle {
+#dashboard .body table .cards.fourth .card .item .circle {
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   border-radius: 50%;
   position: absolute;
   width: 25px;
   height: 25px;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(1) {
-  width: 150px;
-  height: 150px;
-  top: 70px;
-  left: -80px;
-  border: 8px solid var(--color-skyblue);
-  background: white;
-  color: black;
-  font-size: 1.4rem;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover {
-  -webkit-transform: scale(1.2) rotate(-45deg);
-          transform: scale(1.2) rotate(-45deg);
-  background: var(--color-skyblue);
-  color: var(--color-white);
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover ~ div.circle {
-  background: var(--color-skyblue);
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover ~ div.square,
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover ~ div > a {
-  border: 5px dashed var(--color-skyblue);
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover + div.square {
-  border: 5px dashed var(--color-skyblue);
-  border-right: none;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item .square {
-  position: absolute;
-  width: 600%;
-  height: 120px;
-  top: 80px;
-  left: 63px;
-  background: transparent;
-  border: 5px solid var(--color-skyblue);
-  border-right: none;
-  border-radius: 200px 0 0 200px;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(3) {
-  font-size: .9rem;
-  position: absolute;
-  width: 160px;
-  border-left: 2px solid black;
-  text-align: left;
-  padding-left: 4px;
-  font-weight: 900;
-  height: 60px;
-  top: 10px;
-  left: 126px;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(4) {
-  top: 70px;
-  left: 115px;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(5) {
-  font-size: .9rem;
-  position: absolute;
-  width: 160px;
-  border-left: 2px solid black;
-  text-align: left;
-  padding-left: 4px;
-  font-weight: 900;
-  height: 60px;
-  top: 125px;
-  left: 126px;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(6) {
-  top: 185px;
-  left: 115px;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(7) {
-  position: absolute;
-  background: var(--color-white);
-  border: 5px solid var(--color-skyblue);
-  width: 580%;
-  height: 100px;
-  left: 95%;
-  top: 30px;
-  border-radius: 10px;
-  line-height: 100px;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a {
-  position: absolute;
-  background: var(--color-white);
-  border: 5px solid var(--color-skyblue);
-  width: 125%;
-  height: 100px;
-  top: 150px;
-  border-radius: 10px;
-  line-height: 100px;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(1) {
-  left: 95%;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(2) {
-  left: 250%;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(3) {
-  left: 400%;
-}
-
-#dashboard .body table #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(4) {
-  left: 550%;
 }
 
 #dashboard .body table .cards.first .card {
