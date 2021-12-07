@@ -391,8 +391,6 @@
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) {
-  /* content, 단변수 예측, MA : title */
-  /* content, 단변수 예측, ARMA : title */
   /* content, 단변수 예측, Auto ARIMA : title */
   /* content, 단변수 예측, Seasonal ARIMA : title */
   /* content, 단변수 예측, Auto SARIA : title */
@@ -491,7 +489,6 @@
   font-weight: var(--weight-medium);
   color: var(--color-sub-title);
   text-align: center;
-  /* content, 단변수 예측, MA : 점 */
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(5)::before {

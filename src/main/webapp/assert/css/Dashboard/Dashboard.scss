@@ -26,7 +26,7 @@
     h3 {
       color: var(--color-section-title);
     }
-  }//End Of .head
+  }
 
   .body * {
     background: none;
@@ -56,7 +56,7 @@
           width: 11vw;
           height: 13vh;
         }
-      }//End of .cards .card
+      }
 
       //-----------------------------------------------------------------
       // 데이터 준비 - starts
@@ -89,7 +89,7 @@
               transform: scale(1.1) rotate(-45deg);
               transition: all var(--animation-middle-duration) ease;
             }
-          }//End of .cards.first .card .item .circle     
+          }
 
           .square {
             position: absolute;
@@ -104,7 +104,7 @@
             font-size: var(--font-small);
             font-weight: var(--weight-semi-bold);
             text-align: center;
-          }//End of .cards.first .card .item .square
+          }
 
           .title { 
             position: absolute;
@@ -118,10 +118,10 @@
             font-size: var(--font-small);
             font-weight: var(--weight-semi-bold);
             text-align: center;
-          }//End of .cards.first .card .item .title
-        }//End of .cards.first .card .item
+          }
+        }
 
-        // content, 데이터 탐험
+        // 데이터 탐험
         &.four .item .content {          
           position: absolute;
           width: 150px;
@@ -180,8 +180,8 @@
               transform: scale(1.1) rotate(45deg);
               transition: all var(--animation-middle-duration) ease;
             }
-          }//End of .cards.second .card .item .circle
-        }//End of .cards.second .card .item
+          }
+        }
 
         //-----------------------------------------------------------------
         // 시계열 데이터 분해 - starts
@@ -239,7 +239,7 @@
               color: var(--color-sub-title);
             }
           }
-        }//End of .cards.second .card.two .item
+        }
         //-----------------------------------------------------------------
         // 시계열 데이터 분해 - ends
         //-----------------------------------------------------------------
@@ -334,8 +334,8 @@
                 }
               }
             }
-          }//End Of .cards.second .card.three .item .content
-        }//End Of .cards.second .card.three .item
+          }
+        }
         //-----------------------------------------------------------------
         // 시계열 정상성 검사 및 변환 - ends
         //-----------------------------------------------------------------
@@ -369,7 +369,7 @@
               transform: scale(1.1) rotate(-45deg);
               transition: all var(--animation-middle-duration) ease;
             }
-          }//End Of .cards.second .card.four .item div:nth-child(1)
+          }
         
           //-----------------------------------------------------------------
           // 단변수 예측 - starts
@@ -405,7 +405,7 @@
             text-align: center;
           }
 
-          // content, 단변수 예측, Navie Mean (Yesterday, Value) : title
+          // 단변수 예측 - Navie Mean (Yesterday, Value)
           div:nth-child(4) {
             a:nth-child(1) {
               position: absolute;
@@ -417,7 +417,6 @@
               color: var(--color-sub-title);
               text-align: center;
 
-              // content, 단변수 예측, Navie Mean (Yesterday, Value) : 점
               &::before {
                 content: "";
                 position: absolute;
@@ -430,7 +429,7 @@
               }
             }
 
-            // content, 단변수 예측, SES : title
+            // 단변수 예측 - SES
             a:nth-child(2) {
               position: absolute;
               top: -36px;
@@ -502,7 +501,7 @@
               }
             }
 
-            /* content, 단변수 예측, MA : title */
+            // content, 단변수 예측, MA : title
             a:nth-child(5) {
               position: absolute;
               top: -36px;
@@ -513,7 +512,7 @@
               color: var(--color-sub-title);
               text-align: center;
 
-              /* content, 단변수 예측, MA : 점 */
+              // content, 단변수 예측, MA : 점
               &::before {
                 content: "";
                 position: absolute;
@@ -526,7 +525,7 @@
               }
             }
 
-            /* content, 단변수 예측, ARMA : title */
+            // content, 단변수 예측, ARMA : title
             a:nth-child(6) {
               position: absolute;
               top: -36px;
