@@ -42,11 +42,19 @@
   /* Color */
   --color-background: rgba(247, 248, 250, .9);
   --color-border: rgb(238, 240, 243);
-  --color-icon: rgb(195, 202, 217);
-  --color-content: rgb(255, 255, 255);
+  --color-menu-icon: rgb(113, 133, 171);
+  --color-navigation-icon: rgb(195, 202, 217);
+  --color-section-icon: rgb(195, 202, 217);
+  --color-hover-icon: rgb(255, 102, 51);
+  --color-section-title: rgb(98, 114, 147);
+  --color-top-title: rgb(62, 81, 117);
+  --color-major-title: rgb(94, 110,140);
+  --color-sub-title: rgb(114, 128, 157);
+  --color-minor-title: rgb(160, 173, 199);
   --color-white: #fff;
   --color-black: #222;
   --color-yellow: rgb(255,203,51);
+  --color-green: rgb(41,204,57);
   --font-large: 2rem;
   --font-medium: 1.5rem;
   --font-regular: 1rem;
@@ -112,7 +120,7 @@ h2 {
 
 h3 {
   font-size: var(--font-regular);
-  color: #3e5175;
+  color: var(--color-top-title);
 }
 
 h4 {

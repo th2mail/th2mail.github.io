@@ -9,14 +9,14 @@
  * 
  */
 nav {
-  border-top-left-radius: var(--size-border-large-radius);
-  border-bottom-left-radius: var(--size-border-large-radius);
-  border-right: 3px solid var(--color-border);
   position: fixed;
   top: 1rem;
   left: 1rem;
   bottom: 1rem;
   width: 78px;
+  border-top-left-radius: var(--size-border-large-radius);
+  border-bottom-left-radius: var(--size-border-large-radius);
+  border-right: 3px solid var(--color-border);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,12 +71,12 @@ nav ul.nav_list li a {
 
 nav ul.nav_list li a,
 nav ul.nav_list li a > span {
-  background: none;
-  color: var(--color-icon);
   width: 3rem;
   height: 3rem;
   line-height: 3rem;
   text-align: center;
+  background: none;
+  color: var(--color-navigation-icon);
   border-radius: var(--size-border-medium-radius);
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -92,7 +92,7 @@ nav ul.nav_list li a > span .tooltip {
   text-align: left;
   border-radius: 0 var(--size-border-medium-radius) var(--size-border-medium-radius) 0;
   background: var(--color-white);
-  color: #ff6633;
+  color: var(--color-hover-icon);
   font-weight: 700;
   white-space: nowrap;
   opacity: 0;
@@ -106,8 +106,8 @@ nav ul.nav_list li:nth-child(1) a .tooltip {
 nav ul.nav_list li:hover a,
 nav ul.nav_list li:hover a > span:nth-child(1) {
   background: var(--color-white);
-  color: #ff6633;
-  font-weight: 700;
+  color: var(--color-hover-icon);
+  font-weight: var(--weight-bold);
 }
 
 nav ul.nav_list li:hover .tooltip {

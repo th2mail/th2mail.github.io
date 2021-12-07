@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
  * 파일명 : dashboard.css
- * 설 명 : 대쉬보드 7번 화면
+ * 설 명 : 대쉬보드 화면
  * 최초 생성일 : 
  *     
  * 수정일			수정내역 
@@ -21,17 +21,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: var(--font-regular);
 }
 
 #dashboard .head i {
-  font-size: 1.4rem;
+  font-size: var(--font-medium);
   margin-right: 2rem;
-  color: #c3cad9;
+  color: var(--color-section-icon);
 }
 
 #dashboard .head h3 {
-  color: #627293;
+  color: var(--color-section-title);
 }
 
 #dashboard .body * {
@@ -54,31 +53,9 @@
           align-items: center;
 }
 
-#dashboard .body tr {
-  border: 1px solid blue;
-}
-
-#dashboard .body tr td {
-  border: 1px solid blue;
-}
-
 #dashboard .body table {
   width: 90%;
-  height: 20%;
   border-spacing: 0px;
-  /*////////////////////////////////////////////////////////
-      // .cards.first .card {
-      //   background: yellow;
-
-      //   &.one:hover {
-      //     background: blue;
-      //   }
-
-      //   &.two:hover {
-      //     background: red;
-      //   }
-      // }
-      ////////////////////////////////////////////////////////*/
 }
 
 #dashboard .body table .cards .card {
@@ -90,84 +67,21 @@
   height: 13vh;
 }
 
+#dashboard .body table .cards.first .card .item {
+  height: 8vh;
+}
+
 #dashboard .body table .cards.first .card .item .circle {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: #f2f3f5;
-  color: #637394;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  top: -15px;
-}
-
-#dashboard .body table .cards.first .card .item .title {
-  position: absolute;
-  width: 160px;
-  height: 90px;
-  left: 11px;
-  border-left: 2px solid black;
-  padding-left: 4px;
-  text-align: left;
-  font-size: .9rem;
-  font-weight: 900;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
-}
-
-#dashboard .body table .cards.first .card:nth-child(even) .item .title {
-  top: -85px;
-}
-
-#dashboard .body table .cards.first .card:nth-child(even) .item .circle:hover + .title {
-  width: 210px;
-  height: 50px;
-  top: -50px;
-  left: 10px;
-  border-left: 0.5rem solid var(--color-wine);
-  padding-left: 20px;
-  font-size: var(--font-regular);
-  color: var(--color-wine);
-}
-
-#dashboard .body table .cards.first .card:nth-child(even) .item .circle:hover ~ .content,
-#dashboard .body table .cards.first .card:nth-child(even) .item .circle:hover ~ .content > a {
-  top: 20px;
-  left: 71px;
-  color: var(--color-wine);
-  font-weight: var(--weight-regular);
-  gap: 20px;
-}
-
-#dashboard .body table .cards.first .card:nth-child(odd) .item .title {
-  top: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#dashboard .body table .cards.first .card:nth-child(odd) .item .circle:hover + .title {
-  width: 250px;
-  height: 50px;
-  top: 5px;
-  left: 10px;
-  border-left: 0.5rem solid var(--color-wine);
-  padding-left: 20px;
-  font-size: var(--font-regular);
-  color: var(--color-wine);
-}
-
-#dashboard .body table .cards.first .card.one .item .circle {
   width: 100px;
   height: 100px;
-  top: -52px;
+  top: -60px;
   left: -48px;
+  background: var(--color-border);
+  border-radius: 50%;
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
+  color: var(--color-major-title);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,29 +91,47 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
-#dashboard .body table .cards.first .card.one .item .circle:hover {
-  -webkit-transform: scale(1.2) rotate(-45deg);
-          transform: scale(1.2) rotate(-45deg);
+#dashboard .body table .cards.first .card .item .circle:hover {
+  -webkit-transform: scale(1.1) rotate(-45deg);
+          transform: scale(1.1) rotate(-45deg);
   -webkit-transition: all var(--animation-middle-duration) ease;
   transition: all var(--animation-middle-duration) ease;
 }
 
-#dashboard .body table .cards.first .card.two:hover, #dashboard .body table .cards.first .card.three:hover, #dashboard .body table .cards.first .card.four:hover, #dashboard .body table .cards.first .card.five:hover, #dashboard .body table .cards.first .card.six:hover, #dashboard .body table .cards.first .card.seven .item .circle:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  background-color: var(--color-wine) !important;
-  border: 2px dashed var(--color-wine);
+#dashboard .body table .cards.first .card .item .square {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: -16px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.first .card .item .title {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  top: -55px;
+  left: -68px;
+  color: var(--color-sub-title);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
 #dashboard .body table .cards.first .card.four .item .content {
-  font-size: var(--font-small);
   position: absolute;
-  width: 130px;
+  width: 150px;
   height: 70px;
-  top: -70px;
-  left: 41px;
+  top: -15px;
+  left: 11px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,8 +145,15 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
+  gap: 5px;
+}
+
+#dashboard .body table .cards.first .card.four .item .content a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
 }
 
 #dashboard .body table .cards.second .card {
@@ -225,44 +164,25 @@
 }
 
 #dashboard .body table .cards.second .card .item .circle {
-  background-color: var(--color-white);
-  border: 2px solid var(--color-black);
-  border-radius: 50%;
   position: absolute;
-  width: 25px;
-  height: 25px;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
-}
-
-#dashboard .body table .cards.second .card.one .item .circle {
-  border: 8px solid var(--color-purple);
-  width: 150px;
-  height: 150px;
-  top: 60px;
-  left: -80px;
-  font-size: 1.4rem;
-  font-weight: bold;
+  width: 100px;
+  height: 100px;
+  top: 48px;
+  left: -48px;
+  background: var(--color-border);
+  border-radius: 50%;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-major-title);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
-  z-index: 1;
-}
-
-#dashboard .body table .cards.second .card.one .item .circle:hover {
-  -webkit-transform: scale(1.2) rotate(45deg);
-          transform: scale(1.2) rotate(45deg);
-  background: var(--color-purple);
-  color: var(--color-white);
-  color: blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #dashboard .body table .cards.second .card.two .item {
@@ -1098,6 +1018,18 @@
   height: 25px;
 }
 
+#dashboard .body table .cards.fourth .card.one .item .square {
+  position: absolute;
+  width: 600%;
+  height: 120px;
+  top: 80px;
+  left: 63px;
+  background: transparent;
+  border: 5px solid var(--color-skyblue);
+  border-right: none;
+  border-radius: 200px 0 0 200px;
+}
+
 #dashboard .body table .cards.fourth .card.one .item div:nth-child(1) {
   width: 150px;
   height: 150px;
@@ -1128,28 +1060,123 @@
   color: var(--color-white);
 }
 
-#dashboard .body table .cards.first .card {
-  border-top: 5px solid var(--color-border);
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover ~ div.circle {
+  background: var(--color-skyblue);
 }
 
-#dashboard .body table .cards.first .card.four, #dashboard .body table .cards.first .card.five, #dashboard .body table .cards.first .card.six, #dashboard .body table .cards.first .card.seven {
-  border-bottom: 5px solid var(--color-border);
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover ~ div.square,
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover ~ div > a {
+  border: 5px dashed var(--color-skyblue);
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover + div.square {
+  border: 5px dashed var(--color-skyblue);
+  border-right: none;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(3) {
+  font-size: .9rem;
+  position: absolute;
+  width: 160px;
+  border-left: 2px solid black;
+  text-align: left;
+  padding-left: 4px;
+  font-weight: 900;
+  height: 60px;
+  top: 10px;
+  left: 126px;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(4) {
+  top: 70px;
+  left: 115px;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(5) {
+  font-size: .9rem;
+  position: absolute;
+  width: 160px;
+  border-left: 2px solid black;
+  text-align: left;
+  padding-left: 4px;
+  font-weight: 900;
+  height: 60px;
+  top: 125px;
+  left: 126px;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(6) {
+  top: 185px;
+  left: 115px;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(7) {
+  position: absolute;
+  background: var(--color-white);
+  border: 5px solid var(--color-skyblue);
+  width: 580%;
+  height: 100px;
+  left: 95%;
+  top: 30px;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(8) a {
+  position: absolute;
+  background: var(--color-white);
+  border: 5px solid var(--color-skyblue);
+  width: 125%;
+  height: 100px;
+  top: 150px;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(8) a:nth-child(1) {
+  left: 95%;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(8) a:nth-child(2) {
+  left: 250%;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(8) a:nth-child(3) {
+  left: 400%;
+}
+
+#dashboard .body table .cards.fourth .card div:nth-child(8) a:nth-child(4) {
+  left: 550%;
+}
+
+#dashboard .body table .cards.first .card {
+  top: 85px;
+  left: 20px;
+  border-top: 1rem solid var(--color-border);
+}
+
+#dashboard .body table .cards.first .card.three, #dashboard .body table .cards.first .card.four, #dashboard .body table .cards.first .card.five, #dashboard .body table .cards.first .card.six, #dashboard .body table .cards.first .card.seven {
+  border-bottom: 1rem solid var(--color-border);
 }
 
 #dashboard .body table .cards.first .card.seven {
-  border-right: 5px solid var(--color-border);
+  border-right: 1rem solid var(--color-border);
   border-radius: 0 20px 20px 0;
 }
 
 #dashboard .body table .cards.second .card {
-  border-top: 5px solid var(--color-border);
-  top: -5px;
+  top: 70px;
+  border-top: 1rem solid var(--color-border);
 }
 
 #dashboard .body table .cards.second .card.one {
-  border-left: 5px solid var(--color-border);
-  border-bottom: 5px solid var(--color-border);
+  border-left: 1rem solid var(--color-border);
+  border-bottom: 1rem solid var(--color-border);
   border-radius: 20px 0 0 20px;
+}
+
+#dashboard .body table .cards.second .card.two {
+  border-bottom: 1rem solid var(--color-border);
 }
 
 #dashboard .body table .cards.second .card.four {
@@ -1157,15 +1184,15 @@
 }
 
 #dashboard .body table .cards.second .card.four .item {
-  border: 5px solid var(--color-border);
+  width: 100%;
+  border: 1rem solid var(--color-border);
   border-radius: 50px 20px 0 50px;
   position: absolute;
   height: 80px;
-  top: 105px;
+  top: 135px;
 }
 
 #dashboard .body table .cards.third .card {
-  border-top: 5px solid var(--color-border);
   top: -10px;
 }
 
@@ -1173,20 +1200,37 @@
   border-top: none;
 }
 
+#dashboard .body table .cards.third .card.three {
+  border-top: 1rem solid red;
+  top: -20px;
+}
+
 #dashboard .body table .cards.third .card.seven {
-  border-right: 5px solid var(--color-border);
-  border-bottom: 5px solid var(--color-border);
+  border-right: 1rem solid var(--color-border);
+  border-bottom: 1rem solid var(--color-border);
   border-radius: 0 0 20px 0;
 }
 
 #dashboard .body table .cards.fourth .card {
-  border-top: 5px solid var(--color-border);
-  top: -15px;
+  border-top: 1rem solid var(--color-border);
+  top: -20px;
 }
 
 #dashboard .body table .cards.fourth .card.one {
-  border-left: 5px solid var(--color-border);
+  border-left: 1rem solid var(--color-border);
   border-radius: 20px 0 0 20px;
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(1)::before {
+  content: "시계열 예측 분석";
+  background-color: transparent;
+  font-size: var(--font-small);
+  font-weight: 400;
+  position: absolute;
+  width: 125px;
+  height: 15px;
+  top: 80px;
+  left: 4px;
 }
 
 #dashboard .body table .cards.fourth .card.seven {

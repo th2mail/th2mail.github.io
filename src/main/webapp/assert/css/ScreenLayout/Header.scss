@@ -7,32 +7,34 @@
  * ---------  -----------------------------------------------------------------
  * 
  */
-
 header {
   position: fixed;
   top: 1rem; 
   left: calc(1rem + 78px); 
   right: 1rem;
   height: 85px;
+
   border-top-right-radius : var(--size-border-large-radius);
   border-bottom: 3px solid var(--color-border);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 2rem;
   
   .account {
     font-size: var(--font-medium);
-    color: rgb(113,133,171);
+    color: var(--color-menu-icon);
 
     > div {
       margin-right: 1rem;
-      transition: 300ms ease;
+      transition: var(--animation-middle-duration) ease;
       cursor: pointer;
 
       &:hover {
         transform: scale(1.2);
-        color: rgb(255,102,51);
+        color: var(--color-hover-icon);
       }
     }  
   }

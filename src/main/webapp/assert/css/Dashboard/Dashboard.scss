@@ -1,6 +1,6 @@
 /*
  * 파일명 : dashboard.css
- * 설 명 : 대쉬보드 7번 화면
+ * 설 명 : 대쉬보드 화면
  * 최초 생성일 : 
  *     
  * 수정일			수정내역 
@@ -13,18 +13,18 @@
   
   .head {
     padding: 2rem;
+
     display: flex;
     align-items: center;
-    line-height: var(--font-regular);
 
     i {
-      font-size: 1.4rem;
+      font-size: var(--font-medium);
       margin-right: 2rem;
-      color: rgb(195,202,217);
+      color: var(--color-section-icon);
     }
 
     h3 {
-      color: rgb(98,114,147);
+      color: var(--color-section-title);
     }
   }//End Of .head
 
@@ -34,173 +34,116 @@
 
   .body {
     margin: 0 2rem;
+
     height: 85%;
+
     background: var(--color-white);
     border-radius: var(--size-border-large-radius);
+
     display: flex;
     justify-content: center;
     align-items: center;
-
-    // 임시 start ======================================================
-    tr {
-      border: 1px solid blue;
-
-      td {
-        border: 1px solid blue;
-      }
-    }
-    // 임시 end ========================================================
     
     table {
       width: 90%;
-      height: 20%;
       border-spacing: 0px;
       
-      .cards .card{
+      .cards .card {
         position: relative;
         
         // 아이템의 기본 크기 
         .item {            
-          width: 11vw;  // 200px;
-          height: 13vh; // 140px;
+          width: 11vw;
+          height: 13vh;
         }
       }//End of .cards .card
-
-      /*////////////////////////////////////////////////////////
-      // .cards.first .card {
-      //   background: yellow;
-
-      //   &.one:hover {
-      //     background: blue;
-      //   }
-
-      //   &.two:hover {
-      //     background: red;
-      //   }
-      // }
-      ////////////////////////////////////////////////////////*/
 
       //---------------------------------------------------------------------------------------------------
       // 데이터 준비 - starts
       //---------------------------------------------------------------------------------------------------
       .cards.first .card {  
         .item {
-          .circle { //공통
+          height: 8vh;
+
+          .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: -60px;
+            left: -48px;
+
+            background: var(--color-border);
+            border-radius: 50%;
+
+            font-size: var(--font-regular);
+            font-weight: var(--weight-bold);
+            color: var(--color-major-title);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 1;
+                
+            &:hover {
+              transform: scale(1.1) rotate(-45deg);
+              transition: all var(--animation-middle-duration) ease;
+            }
+          }//End of .cards.first .card .item .circle     
+
+          .square {
             position: absolute;
             width: 25px;
-            height: 25px;
-            background-color: rgb(242,243,245);
-            color: rgb(99,115,148);
-            border-radius: 50%;
-            border: none;
-            outline: none;
-            top: -15px;
-            // transition: all var(--animation-duration) ease;
-            // z-index: 1;
-          }//End of .cards.first .card .item .circle
+            height: .6rem;
+            line-height: .6rem;
+            top: -16px;  
 
-          .title {  //공통
+            background: var(--color-white);
+            color: var(--color-minor-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }//End of .cards.first .card .item .square
+
+          .title { 
             position: absolute;
             width: 160px;
-            height: 90px;
-            left: 11px;
-            border-left: 2px solid black;
-            padding-left: 4px;
-            text-align: left;
-            font-size: .9rem;
-            font-weight: 900;
-            transition: all var(--animation-duration) ease;
+            height: 20px;
+            top: -55px;
+            left: -68px;
+
+            color: var(--color-sub-title);
+
+            font-size: var(--font-regular);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
           }//End of .cards.first .card .item .title
         }//End of .cards.first .card .item
 
-        &:nth-child(even) .item {            
-          .title {
-            top: -85px;
-          }//End of .cards.first .card .item(홀수) .title
-
-          .circle:hover + .title {
-            width: 210px;
-            height: 50px;
-            top: -50px;
-            left: 10px;
-            border-left: .5rem solid var(--color-wine);
-            padding-left: 20px;
-            font-size: var(--font-regular);
-            color: var(--color-wine);
-          }//End of .cards.first .card .item(홀수) .circle:hover + .title
-
-          .circle:hover ~ .content,
-          .circle:hover ~ .content > a {
-            top: 20px;
-            left: 71px;
-            color: var(--color-wine);
-            font-weight: var(--weight-regular);
-            gap: 20px;
-          }//End of .cards.first .card .item(홀수) .circle:hover ~ (.content 와 a)
-        }//End of .cards.first .card .item(홀수)
-
-        // title, 짝수
-        &:nth-child(odd) .item  {
-          .title {
-            top: 5px;
-            display: flex;
-            align-items: flex-end;
-          }//End of .cards.first .card .item(짝수) .title
-
-          .circle:hover + .title {
-            width: 250px;
-            height: 50px;
-            top: 5px;
-            left: 10px;
-            border-left: .5rem solid var(--color-wine);
-            padding-left: 20px;
-            font-size: var(--font-regular);
-            color: var(--color-wine);
-          }//End of .cards.first .card .item(짝수) .circle:hover + .title
-        }//End of .cards.first .card .item(짝수)
-
-        // circle, 큰동그라미
-        &.one .item .circle {
-          // border: 8px solid var(--color-border);
-          width: 100px;
-          height: 100px;
-          top: -52px;
-          left: -48px;
-          font-size: var(--font-regular);
-          font-weight: var(--weight-bold);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          // circle, 큰동그라미, hover
-          &:hover {
-            transform: scale(1.2) rotate(-45deg);
-            transition: all var(--animation-middle-duration) ease;
-          }//End of .cards.first .card.one .item .circle:hover
-        }//End of .cards.first .card.one .item .circle
-
-        &.two,&.three,&.four,&.five,&.six,&.seven .item .circle {
-          &:hover {
-            transform: scale(1.5);
-            background-color: var(--color-wine) !important;
-            border: 2px dashed var(--color-wine);
-          }
-        }
-
         // content, 데이터 탐험
-        &.four .item .content {
-          font-size: var(--font-small);
+        &.four .item .content {          
           position: absolute;
-          width: 130px;
+          width: 150px;
           height: 70px;
-          top: -70px;
-          left: 41px;
+          top: -15px;
+          left: 11px;
+
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: flex-start;
-          transition: all var(--animation-duration) ease;
-        }
+          align-items: flex-start;      
+          gap: 5px;
+          
+          a {
+            border-left: .25rem solid var(--color-border);
+            padding-left: .5rem;
+
+            font-size: var(--font-micro);
+            font-weight: var(--weight-medium);
+            color: var(--color-sub-title);
+          }
+        }//End of .cards.first .card.four .item .content
       }// End of .cards.first .card
       //---------------------------------------------------------------------------------------------------
       // 데이터 준비 - ends
@@ -210,39 +153,59 @@
       // 시계열 준비 - starts
       //---------------------------------------------------------------------------------------------------
       .cards.second .card {
-        .item .circle {
-          background-color: var(--color-white);
-          border: 2px solid var(--color-black);
-          border-radius: 50%;
-          position: absolute;
-          width: 25px;
-          height: 25px;
-          transition: all var(--animation-duration) ease;
-        }//End Of .cards.second .card .item .circle
-        
-        ///* circle, 큰동그라미 */
-        &.one .item .circle {
-          border: 8px solid var(--color-purple);
-          width: 150px;
-          height: 150px;
-          top: 60px;
-          left: -80px;
-          font-size: 1.4rem;
-          font-weight: bold;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: all var(--animation-duration) ease;
-          z-index: 1;
+        .item {
+          
+          
+          .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 48px;
+            left: -48px;
 
-          ///* circle, 큰동그라미, hover */
-          &:hover {
-            transform: scale(1.2) rotate(45deg);
-            background: var(--color-purple);
-            color: var(--color-white);
-            color: blue;
+            background: var(--color-border);
+            border-radius: 50%;
+
+            font-size: var(--font-regular);
+            font-weight: var(--weight-bold);
+            color: var(--color-major-title);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        //     // border: 2px solid var(--color-black);
+            
+        //     // transition: all var(--animation-duration) ease;
+        //   }//End Of .cards.second .card .item .circle
+        // }
+        // ///* circle, 큰동그라미 */
+        // &.one .item .circle {
+        //   position: absolute;
+        //   border: 8px solid var(--color-purple);
+        //   width: 150px;
+        //   height: 150px;
+        //   top: 60px;
+        //   left: -80px;
+        //   font-size: 1.4rem;
+        //   font-weight: bold;
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        //   transition: all var(--animation-duration) ease;
+        //   z-index: 1;
+
+        //   ///* circle, 큰동그라미, hover */
+        //   &:hover {
+        //     transform: scale(1.2) rotate(45deg);
+        //     background: var(--color-purple);
+        //     color: var(--color-white);
+        //     color: blue;
+        //   }
+        // }//End Of .cards.second .card.one .item .circle
           }
-        }//End Of .cards.second .card.one .item .circle
+
+        }
 
         //---------------------------------------------------------------------------------------------------
         //  시계열 데이터 분해 - starts
@@ -1018,6 +981,8 @@
       }//End Of .cards.second .card
 
       .cards.third .card {
+
+
         &.one {
           border-top: none;
           top: -2px;
@@ -1036,6 +1001,7 @@
       }//End Of .cards.third .card
 
       .cards.fourth .card {
+
         .item {
           width: 90px;
           height: 110px;
@@ -1203,66 +1169,80 @@
       //---------------------------------------------------------------------------------------------------
       .cards {        
         &.first .card {
-          border-top: 5px solid var(--color-border);
+          top: 85px;
+          left: 20px;
+          border-top: 1rem solid var(--color-border);
 
+          &.three,
           &.four,
           &.five,
           &.six,
           &.seven {
-            border-bottom: 5px solid var(--color-border);
+            border-bottom: 1rem solid var(--color-border);
           }
 
           &.seven {
-            border-right: 5px solid var(--color-border);
+            border-right: 1rem solid var(--color-border);
             border-radius: 0 20px 20px 0;
           }
-        } // end of .cards.first .card
+        } 
 
         &.second .card {
-          border-top: 5px solid var(--color-border);
-          top: -5px;
-
+          top: 70px;
+          border-top: 1rem solid var(--color-border);
+          
           &.one {
-            border-left: 5px solid var(--color-border);
-            border-bottom: 5px solid var(--color-border);
+            border-left: 1rem solid var(--color-border);
+            border-bottom: 1rem solid var(--color-border);
             border-radius: 20px 0 0 20px;
+          }
+
+          &.two {
+            border-bottom: 1rem solid var(--color-border);
           }
         
           &.four {
-            border-top: none;
-
+            border-top: none;                        
+                        
             // 시계열 예측 : 가장 큰 네모 상자
             .item {
-              border: 5px solid var(--color-border);
+              width: 100%;
+              border: 1rem solid var(--color-border);
               border-radius: 50px 20px 0 50px;
               position: absolute;
               height: 80px;
-              top: 105px;
+              top: 135px;
             }
           }
-        } // end of .cards.second .card
+        }
 
         &.third .card {
-          border-top: 5px solid var(--color-border);
+          // border-top: 1rem solid var(--color-green);
           top: -10px;
 
           &.one, &.four, &.five, &.six, &.seven {
             border-top: none;
           }
 
+          &.three {
+            border-top: 1rem solid red;
+            // position: absolute;
+            top: -20px;
+          }
+
           &.seven {
-            border-right: 5px solid var(--color-border);
-            border-bottom: 5px solid var(--color-border);
+            border-right: 1rem solid var(--color-border);
+            border-bottom: 1rem solid var(--color-border);
             border-radius: 0 0 20px 0;
           }
         } // end of .cards.third .card
 
         &.fourth .card {
-          border-top: 5px solid var(--color-border);
-          top: -15px;
+          border-top: 1rem solid var(--color-border);
+          top: -20px;
 
           &.one {
-            border-left: 5px solid var(--color-border);
+            border-left: 1rem solid var(--color-border);
             border-radius: 20px 0 0 20px;
 
             // 순번 : 성능 분석 - before

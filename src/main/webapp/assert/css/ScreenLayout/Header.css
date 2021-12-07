@@ -30,19 +30,19 @@ header {
 
 header .account {
   font-size: var(--font-medium);
-  color: #7185ab;
+  color: var(--color-menu-icon);
 }
 
 header .account > div {
   margin-right: 1rem;
-  -webkit-transition: 300ms ease;
-  transition: 300ms ease;
+  -webkit-transition: var(--animation-middle-duration) ease;
+  transition: var(--animation-middle-duration) ease;
   cursor: pointer;
 }
 
 header .account > div:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  color: #ff6633;
+  color: var(--color-hover-icon);
 }
 /*# sourceMappingURL=Header.css.map */
