@@ -1059,147 +1059,144 @@
           }
         }
 
+        // circle, 큰동그라미
+        &.one .item {
+          .square {
+            position: absolute;
+            width: 600%;
+            height: 120px;
+            top: 80px;
+            left: 63px;
+            background: transparent;
+            border: 5px solid var(--color-skyblue);
+            border-right: none;
+            border-radius: 200px 0 0 200px;
+          }//End of  .cards.fourth .card.one .item .square
+
+          div:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            top: 70px;
+            left: -80px;
+            border: 8px solid var(--color-skyblue);
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-size: 1.4rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all var(--animation-duration) ease;
+
+            // circle, 큰동그라미, hover 
+            // 설명 : 성능 분석 큰 동그라미에 마우스를 올려놨을 때의 이벤트 처리
+            &:hover {
+              transform: scale(1.2) rotate(-45deg);
+              background: var(--color-skyblue);
+              color: var(--color-white);
+            }
+
+            &:hover~div.circle {
+              background: var(--color-skyblue);
+            }
+
+            &:hover~div.square,
+            &:hover~div>a {
+              border: 5px dashed var(--color-skyblue);
+            }
+
+            &:hover+div.square {
+              border: 5px dashed var(--color-skyblue);
+              border-right: none;
+            }
+          }//End of  .cards.fourth .card.one .item div:nth-child(1)
+
+
+        }//End Of .cards.fourth .card.one .item
+
+        // title : 시계열 예측 분석(수치메트릭)
+        div:nth-child(3) {
+          font-size: .9rem;
+          position: absolute;
+          width: 160px;
+          border-left: 2px solid black;
+          text-align: left;
+          padding-left: 4px;
+          font-weight: 900;
+          height: 60px;
+          top: 10px;
+          left: 126px;
+        }
+
+        // circle : 시계열 예측 분석(수치메트릭)
+        div:nth-child(4) {
+          top: 70px;
+          left: 115px;
+        }
+
+        // title : 시계열 예측 분석(차트)
+        div:nth-child(5) {
+          font-size: .9rem;
+          position: absolute;
+          width: 160px;
+          border-left: 2px solid black;
+          text-align: left;
+          padding-left: 4px;
+          font-weight: 900;
+          height: 60px;
+          top: 125px;
+          left: 126px;
+        }
+
+        // circle : 시계열 예측 분석(차트)
+        div:nth-child(6) {
+          top: 185px;
+          left: 115px;
+        }
+
+        // 수치 메트릭
+        div:nth-child(7) {
+          position: absolute;
+          background: var(--color-white);
+          border: 5px solid var(--color-skyblue);
+          width: 580%;
+          height: 100px;
+          left: 95%;
+          top: 30px;
+          border-radius: 10px;
+          line-height: 100px;
+        }
+
+        // 차트
+        div:nth-child(8) {
+          a {
+            position: absolute;
+            background: var(--color-white);
+            border: 5px solid var(--color-skyblue);
+            width: 125%;
+            height: 100px;
+            top: 150px;
+            border-radius: 10px;
+            line-height: 100px;
+          }
+
+          a:nth-child(1) {
+            left: 95%;
+          }
+
+          a:nth-child(2) {
+            left: 250%;
+          }
+
+          a:nth-child(3) {
+            left: 400%;
+          }
+
+          a:nth-child(4) {
+            left: 550%;
+          }
+        }
       }//End Of .cards.fourth .card
-
-
-      
-      //여기서부터여기서부터...
-      /* circle, 큰동그라미 */
-//       .cards.fourth .card.one .item div:nth-child(1) {
-//         width: 150px;
-//         height: 150px;
-//         top: 70px;
-//         left: -80px;
-//         border: 8px solid var(--color-skyblue);
-//         background: rgb(255, 255, 255);
-//         color: rgb(0, 0, 0);
-//         font-size: 1.4rem;
-//         font-weight: bold;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         transition: all var(--animation-duration) ease;
-//       }
-
-//       /* 
-//  * circle, 큰동그라미, hover 
-//  * 설명 : 성능 분석 큰 동그라미에 마우스를 올려놨을 때의 이벤트 처리
-//  * start
-//  */
-//       .cards.fourth .card.one .item div:nth-child(1):hover {
-//         transform: scale(1.2) rotate(-45deg);
-//         background: var(--color-skyblue);
-//         color: var(--color-white);
-//       }
-
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover~div.circle {
-//         background: var(--color-skyblue);
-//       }
-
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover~div.square,
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover~div>a {
-//         border: 5px dashed var(--color-skyblue);
-//       }
-
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover+div.square {
-//         border: 5px dashed var(--color-skyblue);
-//         border-right: none;
-//       }
-
-//       /* end */
-
-//       #dashboard-7 .cards.fourth .card.one .item .square {
-//         position: absolute;
-//         width: 600%;
-//         height: 120px;
-//         top: 80px;
-//         left: 63px;
-//         background: transparent;
-//         border: 5px solid var(--color-skyblue);
-//         border-right: none;
-//         border-radius: 200px 0 0 200px;
-//       }
-
-//       /* title : 시계열 예측 분석(수치메트릭) */
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(3) {
-//         font-size: .9rem;
-//         position: absolute;
-//         width: 160px;
-//         border-left: 2px solid black;
-//         text-align: left;
-//         padding-left: 4px;
-//         font-weight: 900;
-//         height: 60px;
-//         top: 10px;
-//         left: 126px;
-//       }
-
-//       /* circle : 시계열 예측 분석(수치메트릭) */
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(4) {
-//         top: 70px;
-//         left: 115px;
-//       }
-
-//       /* title : 시계열 예측 분석(차트) */
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(5) {
-//         font-size: .9rem;
-//         position: absolute;
-//         width: 160px;
-//         border-left: 2px solid black;
-//         text-align: left;
-//         padding-left: 4px;
-//         font-weight: 900;
-//         height: 60px;
-//         top: 125px;
-//         left: 126px;
-//       }
-
-//       /* circle : 시계열 예측 분석(차트) */
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(6) {
-//         top: 185px;
-//         left: 115px;
-//       }
-
-//       /* 수치 메트릭 */
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(7) {
-//         position: absolute;
-//         background: var(--color-white);
-//         border: 5px solid var(--color-skyblue);
-//         width: 580%;
-//         height: 100px;
-//         left: 95%;
-//         top: 30px;
-//         border-radius: 10px;
-//         line-height: 100px;
-//       }
-
-//       /* 차트 */
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a {
-//         position: absolute;
-//         background: var(--color-white);
-//         border: 5px solid var(--color-skyblue);
-//         width: 125%;
-//         height: 100px;
-//         top: 150px;
-//         border-radius: 10px;
-//         line-height: 100px;
-//       }
-
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(1) {
-//         left: 95%;
-//       }
-
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(2) {
-//         left: 250%;
-//       }
-
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(3) {
-//         left: 400%;
-//       }
-
-//       #dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(4) {
-//         left: 550%;
-//       }
 
       //---------------------------------------------------------------------------------------------------
       // line - starts
@@ -1270,15 +1267,15 @@
 
             // 순번 : 성능 분석 - before
             .item div:nth-child(1)::before {
-              // content: "시계열 예측 분석";
-              // background-color: transparent;
-              // font-size: var(--font-small);
-              // font-weight: 400;
-              // position: absolute;
-              // width: 125px;
-              // height: 15px;
-              // top: 80px;
-              // left: 4px;
+              content: "시계열 예측 분석";
+              background-color: transparent;
+              font-size: var(--font-small);
+              font-weight: 400;
+              position: absolute;
+              width: 125px;
+              height: 15px;
+              top: 80px;
+              left: 4px;
             }
           }
 

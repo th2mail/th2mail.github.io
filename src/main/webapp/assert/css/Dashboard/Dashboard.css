@@ -79,7 +79,6 @@
       //   }
       // }
       ////////////////////////////////////////////////////////*/
-  /* circle, 큰동그라미 */
 }
 
 #dashboard .body table .cards .card {
@@ -1097,6 +1096,36 @@
   position: absolute;
   width: 25px;
   height: 25px;
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(1) {
+  width: 150px;
+  height: 150px;
+  top: 70px;
+  left: -80px;
+  border: 8px solid var(--color-skyblue);
+  background: white;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all var(--animation-duration) ease;
+  transition: all var(--animation-duration) ease;
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover {
+  -webkit-transform: scale(1.2) rotate(-45deg);
+          transform: scale(1.2) rotate(-45deg);
+  background: var(--color-skyblue);
+  color: var(--color-white);
 }
 
 #dashboard .body table .cards.first .card {
