@@ -76,7 +76,7 @@
   width: 100px;
   height: 100px;
   top: -60px;
-  left: -48px;
+  left: -58px;
   background: var(--color-border);
   border-radius: 50%;
   font-size: var(--font-regular);
@@ -118,10 +118,10 @@
   position: absolute;
   width: 160px;
   height: 20px;
-  top: -55px;
+  top: -45px;
   left: -68px;
   color: var(--color-sub-title);
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
   text-align: center;
 }
@@ -156,19 +156,16 @@
   color: var(--color-sub-title);
 }
 
-#dashboard .body table .cards.second .card {
-  /* -------------------------------------------------
-          시계열 정상성 검사 및 변환
-        ------------------------------------------------- */
-  /* circle */
+#dashboard .body table .cards.second .card .item {
+  height: 9vh;
 }
 
 #dashboard .body table .cards.second .card .item .circle {
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 48px;
-  left: -48px;
+  top: 33px;
+  left: -58px;
   background: var(--color-border);
   border-radius: 50%;
   font-size: var(--font-regular);
@@ -183,185 +180,168 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#dashboard .body table .cards.second .card.two .item {
-  /* content */
-}
-
-#dashboard .body table .cards.second .card.two .item .circle {
-  top: 130px;
-  left: -40px;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
-  z-index: 2;
-}
-
-#dashboard .body table .cards.second .card.two .item .circle:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  background-color: var(--color-purple) !important;
-  border: 2px dashed var(--color-purple);
-}
-
-#dashboard .body table .cards.second .card.two .item .circle:hover + .title {
-  width: 230px;
-  height: 50px;
-  top: 90px;
-  left: -32px;
-  border-left: 0.5rem solid var(--color-purple);
-  padding-left: 20px;
-  background-color: var(--color-white);
-  font-size: var(--font-regular);
-  color: var(--color-purple);
   z-index: 1;
 }
 
-#dashboard .body table .cards.second .card.two .item .circle:hover ~ .content,
-#dashboard .body table .cards.second .card.two .item .circle:hover ~ .content > a {
-  top: 200px;
-  left: 31px;
-  font-size: 1rem;
-  font-weight: var(--weight-bold);
-  color: var(--color-purple);
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
-  gap: 1rem;
-  z-index: 1;
+#dashboard .body table .cards.second .card .item .circle:hover {
+  -webkit-transform: scale(1.1) rotate(45deg);
+          transform: scale(1.1) rotate(45deg);
+  -webkit-transition: all var(--animation-middle-duration) ease;
+  transition: all var(--animation-middle-duration) ease;
+}
+
+#dashboard .body table .cards.second .card.two .item .square {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 100%;
+  left: -40%;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.two .item .title {
   position: absolute;
   width: 160px;
   height: 90px;
-  top: 43px;
-  left: -28px;
-  border-left: 2px solid black;
-  padding-left: 4px;
-  text-align: left;
-  font-size: .9rem;
-  font-weight: 900;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
+  top: 55px;
+  left: -74%;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.two .item .content {
   position: absolute;
-  font-size: var(--font-small);
   width: 130px;
   height: 70px;
-  top: 70px;
-  left: 0px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: left;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
+  top: 110px;
+  left: -75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
 }
 
-#dashboard .body table .cards.second .card.three .item .circle {
-  top: 130px;
-  left: -91px;
-  background-color: white;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
-  z-index: 2 !important;
+#dashboard .body table .cards.second .card.two .item .content a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
 }
 
-#dashboard .body table .cards.second .card.three .item .circle:hover + .title {
-  width: 300px;
-  height: 50px;
-  top: 90px;
-  left: -82px;
-  border-left: 0.5rem solid var(--color-purple);
-  padding-left: 20px;
-  background-color: var(--color-white);
-  font-size: var(--font-regular);
-  color: var(--color-purple);
-  z-index: 2;
-}
-
-#dashboard .body table .cards.second .card.three .item .circle::before {
-  content: "";
-  background-color: var(--color-black);
+#dashboard .body table .cards.second .card.three .item .square {
   position: absolute;
-  width: 2px;
-  height: 100px;
-  top: 22px;
-  left: 10px;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 83px;
+  left: -75px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.three .item > .title {
   position: absolute;
-  width: 200px;
-  height: 90px;
-  top: 49px;
-  left: -80px;
-  border-left: 2px solid black;
-  padding-left: 4px;
-  text-align: left;
-  font-size: .9rem;
-  font-weight: 900;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
-}
-
-#dashboard .body table .cards.second .card.three .item > .content.one > .title {
-  position: absolute;
-  top: 160px;
-  left: -215px;
-  font-size: 1rem;
-  font-weight: var(--weight-bold);
-}
-
-#dashboard .body table .cards.second .card.three .item > .content.one .desc {
+  width: 160px;
+  height: 20px;
+  top: 55px;
+  left: -150px;
+  color: var(--color-sub-title);
   font-size: var(--font-small);
-  position: absolute;
-  width: 225px;
-  height: 70px;
-  top: 185px;
-  left: -311px;
-  text-align: right;
-  padding: 10px;
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
-#dashboard .body table .cards.second .card.three .item > .content.two > .title {
-  position: absolute;
-  top: 160px;
-  left: -15px;
-  font-size: 1rem;
-  font-weight: var(--weight-bold);
-}
-
-#dashboard .body table .cards.second .card.three .item > .content.two .desc {
+#dashboard .body table .cards.second .card.three .item .content {
+  color: var(--color-minor-title);
   font-size: var(--font-small);
-  position: absolute;
-  width: 225px;
-  height: 70px;
-  top: 185px;
-  left: -75px;
-  text-align: left;
-  padding: 10px;
+  font-weight: var(--weight-semi-bold);
 }
 
-#dashboard .body table .cards.second .card.four .item {
-  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : title */
+#dashboard .body table .cards.second .card.three .item .content .first .title {
+  position: absolute;
+  top: 110px;
+  left: -65px;
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+}
+
+#dashboard .body table .cards.second .card.three .item .content .first .desc {
+  position: absolute;
+  top: 135px;
+  left: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#dashboard .body table .cards.second .card.three .item .content .first .desc a {
+  font-size: 1px;
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.three .item .content .second .title {
+  position: absolute;
+  top: 190px;
+  left: -65px;
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+}
+
+#dashboard .body table .cards.second .card.three .item .content .second .desc {
+  position: absolute;
+  top: 215px;
+  left: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#dashboard .body table .cards.second .card.three .item .content .second .desc a {
+  font-size: 1px;
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(1) {
-  width: 150px;
-  height: 150px;
-  top: -30px;
-  left: -132px;
-  border: 8px solid var(--color-green);
-  background: white;
-  font-size: 1.4rem;
-  font-weight: bold;
+  width: 100px;
+  height: 100px;
+  top: -25px;
+  left: -92px;
+  background: var(--color-border);
+  border-radius: 50%;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-major-title);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,56 +358,55 @@
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(1):hover {
-  -webkit-transform: scale(1.2) rotate(45deg);
-          transform: scale(1.2) rotate(45deg);
-  background: var(--color-green);
-  color: var(--color-white);
+  -webkit-transform: scale(1.1) rotate(-45deg);
+          transform: scale(1.1) rotate(-45deg);
+  -webkit-transition: all var(--animation-middle-duration) ease;
+  transition: all var(--animation-middle-duration) ease;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(2) {
   position: absolute;
-  width: 110px;
-  height: 75px;
-  top: -90px;
-  left: -48px;
-  border-right: 2px solid black;
-  border-top: 2px solid black;
-  text-align: right;
-  padding-right: 4px;
-  padding-top: 4px;
-  font-size: .9rem;
-  font-weight: 900;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: -17px;
+  left: 38px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(3) {
-  top: -15px;
-  left: 48px;
+  position: absolute;
+  width: 110px;
+  height: 75px;
+  top: -40px;
+  left: -10px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) {
-  /* content, 단변수 예측, SES : title */
-  /* content, 단변수 예측, HWES : title */
-  /* content, 단변수 예측, AR : title */
   /* content, 단변수 예측, MA : title */
   /* content, 단변수 예측, ARMA : title */
-  /* content, 단변수 예측, ARIMA : title */
   /* content, 단변수 예측, Auto ARIMA : title */
   /* content, 단변수 예측, Seasonal ARIMA : title */
   /* content, 단변수 예측, Auto SARIA : title */
   /* content, 단변수 예측, Prophet : title */
-  /* content, 단변수 예측, Prophet : 점 */
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1) {
-  font-size: 11px;
-  font-weight: var(--weight-regular);
   position: absolute;
-  top: -73px;
-  left: 8%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
-  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : 점 */
-  /* content, 단변수 예측, Navie Mean (Yesterday, Value) : 선 */
+  top: -53px;
+  left: 100px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::before {
@@ -435,36 +414,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  right: 94px;
-  bottom: -15px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  top: 33px;
+  left: 40px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::after {
-  content: "";
-  position: absolute;
-  width: 95px;
-  right: 1px;
-  bottom: -10px;
-  border: 1px dashed black;
-  border-top: 1px dashed black;
-  border-right: 0;
-  border-bottom: 0;
-  border-left: 0;
-}
-
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
   top: -36px;
-  left: 20%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
-  /* content, 단변수 예측, SES : 점 */
-  /* content, 단변수 예측, SES : 선 */
+  left: 220px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::before {
@@ -472,35 +435,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: -4px;
-  right: 29px;
-  background-color: var(--color-white);
-  border: 1px solid black;
+  top: 15px;
+  left: 4px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  right: 0px;
-  bottom: 1px;
-  border: 1px dashed black;
-  border-top: 1px dashed black;
-  border-right: 0;
-  border-bottom: 0;
-  border-left: 0;
-}
-
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(3) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
-  top: -40px;
-  left: 28%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
-  /* content, 단변수 예측, HWES : 점 */
+  top: -36px;
+  left: 280px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(3)::before {
@@ -508,22 +456,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 5px;
-  right: 48px;
-  background-color: var(--color-white);
-  border: 1px solid black;
+  top: 15px;
+  left: 8px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(4) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
   top: -36px;
-  left: 36%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
-  /* content, 단변수 예측, AR : 점 */
+  left: 350px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(4)::before {
@@ -531,21 +477,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 5px;
-  right: 33px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  top: 15px;
+  left: 2px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(5) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
   top: -36px;
-  left: 44%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
+  left: 420px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
   /* content, 단변수 예측, MA : 점 */
 }
 
@@ -554,21 +499,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 5px;
-  right: 34px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  top: 15px;
+  left: 2px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(6) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
-  top: -40px;
-  left: 50%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
+  top: -36px;
+  left: 490px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
   /* content, 단변수 예측, ARMA : 점 */
 }
 
@@ -577,22 +521,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 5px;
-  right: 48px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  top: 15px;
+  left: 10px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(7) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
-  top: -40px;
-  left: 58%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
-  /* content, 단변수 예측, ARIMA : 점 */
+  top: -36px;
+  left: 560px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(7)::before {
@@ -600,21 +542,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
+  top: 15px;
+  left: 12px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
-  bottom: 5px;
-  right: 49px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(8) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
-  top: -55px;
-  left: 64%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
+  top: -36px;
+  left: 630px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
   /* content, 단변수 예측, Auto ARIMA : 점 */
 }
 
@@ -623,21 +564,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 5px;
-  right: 86px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  top: 15px;
+  left: 20px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(9) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
-  top: -67px;
-  left: 72%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
+  top: -36px;
+  left: 710px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
   /* content, 단변수 예측, Seasonal ARIMA : 점 */
 }
 
@@ -646,21 +586,20 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 5px;
-  right: 117px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  top: 15px;
+  left: 40px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(10) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
-  top: -60px;
-  left: 80%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
+  top: -36px;
+  left: 810px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
   /* content, 단변수 예측, Auto SARIA : 점 */
 }
 
@@ -669,32 +608,31 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 5px;
-  right: 97px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  top: 15px;
+  left: 22px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(11) {
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
   position: absolute;
-  top: -48px;
-  left: 88%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
+  top: -36px;
+  left: 900px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+  /* content, 단변수 예측, Prophet : 점 */
 }
 
-#dashboard .body table .cards.second .card.four .item div:nth-child(4)::before {
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(11)::before {
   content: "";
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 5px;
-  right: 65px;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  top: 15px;
+  left: 14px;
+  background: var(--color-navigation-icon);
   border-radius: 50%;
 }
 
@@ -1150,7 +1088,7 @@
 }
 
 #dashboard .body table .cards.first .card {
-  top: 85px;
+  top: 35px;
   left: 20px;
   border-top: 1rem solid var(--color-border);
 }
@@ -1165,7 +1103,7 @@
 }
 
 #dashboard .body table .cards.second .card {
-  top: 70px;
+  top: 19px;
   border-top: 1rem solid var(--color-border);
 }
 
@@ -1179,30 +1117,28 @@
   border-bottom: 1rem solid var(--color-border);
 }
 
+#dashboard .body table .cards.second .card.three {
+  border-bottom: 1rem solid var(--color-border);
+  top: 18px;
+  left: -77px;
+}
+
 #dashboard .body table .cards.second .card.four {
   border-top: none;
 }
 
 #dashboard .body table .cards.second .card.four .item {
-  width: 100%;
+  position: absolute;
+  width: 1000px;
+  left: -100px;
+  height: 80px;
+  top: 65px;
   border: 1rem solid var(--color-border);
   border-radius: 50px 20px 0 50px;
-  position: absolute;
-  height: 80px;
-  top: 135px;
-}
-
-#dashboard .body table .cards.third .card {
-  top: -10px;
 }
 
 #dashboard .body table .cards.third .card.one, #dashboard .body table .cards.third .card.four, #dashboard .body table .cards.third .card.five, #dashboard .body table .cards.third .card.six, #dashboard .body table .cards.third .card.seven {
   border-top: none;
-}
-
-#dashboard .body table .cards.third .card.three {
-  border-top: 1rem solid red;
-  top: -20px;
 }
 
 #dashboard .body table .cards.third .card.seven {
