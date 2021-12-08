@@ -910,7 +910,7 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 60px;
+  top: 88px;
   left: -58px;
   background: var(--color-border);
   border-radius: 50%;
@@ -941,7 +941,7 @@
   width: 25px;
   height: .6rem;
   line-height: .6rem;
-  top: 50px;
+  top: 64px;
   left: 140px;
   background: var(--color-white);
   color: var(--color-minor-title);
@@ -955,7 +955,7 @@
   position: absolute;
   width: 160px;
   height: 20px;
-  top: 28px;
+  top: 38px;
   left: 72px;
   color: var(--color-sub-title);
   font-size: var(--font-small);
@@ -968,7 +968,7 @@
   width: 25px;
   height: .6rem;
   line-height: .6rem;
-  top: 166px;
+  top: 186px;
   left: 140px;
   background: var(--color-white);
   color: var(--color-minor-title);
@@ -982,7 +982,7 @@
   position: absolute;
   width: 160px;
   height: 20px;
-  top: 180px;
+  top: 205px;
   left: 72px;
   color: var(--color-sub-title);
   font-size: var(--font-small);
@@ -995,7 +995,7 @@
   width: 1350px;
   height: 100px;
   left: 95%;
-  top: 10px;
+  top: 25px;
   border: 1rem solid var(--color-border);
   border-radius: var(--size-border-medium-radius);
   color: var(--color-minor-title);
@@ -1017,7 +1017,7 @@
   position: absolute;
   width: 300px;
   height: 100px;
-  top: 120px;
+  top: 140px;
   border: 1rem solid var(--color-border);
   border-radius: var(--size-border-medium-radius);
   color: var(--color-minor-title);
@@ -1108,13 +1108,13 @@
 #dashboard .body table .cards.third .card.seven {
   border-right: 1rem solid var(--color-border);
   border-radius: 0 0 20px 0;
-  top: -16px;
+  top: -34px;
   left: 13px;
 }
 
 #dashboard .body table .cards.fourth .card {
   border-top: 1rem solid var(--color-border);
-  top: -31px;
+  top: -51px;
 }
 
 #dashboard .body table .cards.fourth .card.one {
@@ -1136,8 +1136,8 @@
   content: "";
   position: absolute;
   width: 1rem;
-  height: 94px;
-  top: 6px;
+  height: 100px;
+  top: -8px;
   left: 150px;
   background: var(--color-border);
 }
@@ -1147,7 +1147,7 @@
   position: absolute;
   width: 116px;
   height: 1rem;
-  top: 50px;
+  top: 64px;
   left: 92px;
   background: var(--color-border);
   border-radius: var(--size-border-large-radius) 0 0 0;
@@ -1158,7 +1158,7 @@
   position: absolute;
   width: 116px;
   height: 1rem;
-  top: 160px;
+  top: 180px;
   left: 92px;
   background: var(--color-border);
   border-radius: 0 0 0 var(--size-border-large-radius);
