@@ -361,7 +361,6 @@
             justify-content: center;
             align-items: center;
             
-            transition: all var(--animation-duration) ease;
             z-index: 1;
 
             &:hover {
@@ -973,7 +972,7 @@
             position: absolute;
             width: 100px;
             height: 100px;
-            top: 88px;
+            top: 83px;
             left: -58px;
 
             background: var(--color-border);
@@ -1209,23 +1208,23 @@
             border-left: 1rem solid var(--color-border);
             border-radius: 20px 0 0 20px;
 
-            .item div:nth-child(1)::before {
+            .item div:nth-child(2)::before {
               content: "";
               position: absolute;
-              width: 50px;
+              width: 51px;
               height: 1rem;
-              top: 42px;
-              left: 100px;
+              top: 62px;
+              left: -99px;
               background: var(--color-border);
             }
 
-            .item div:nth-child(1)::after {
+            .item div:nth-child(4)::after {
               content: "";
               position: absolute;
               width: 1rem;
-              height: 100px;
-              top: -8px;
-              left: 150px;
+              height: 103px;
+              top: -107px;
+              left: -48px;
               background: var(--color-border);
             }
 
@@ -1240,15 +1239,29 @@
               border-radius: var(--size-border-large-radius) 0 0 0;
             }
 
-            .item div:nth-child(7)::before {
-              content: "";
-              position: absolute;
-              width: 116px;
-              height: 1rem;
-              top: 180px;
-              left: 92px;
-              background: var(--color-border);
-              border-radius: 0 0 0 var(--size-border-large-radius);
+            .item div:nth-child(7) {
+              &::before {
+                content: "";
+                position: absolute;
+                width: 116px;
+                height: 1rem;
+                top: 180px;
+                left: 92px;
+                background: var(--color-border);
+                border-radius: 0 0 0 var(--size-border-large-radius);
+              }
+
+              a:nth-child(1)::after,
+              a:nth-child(2)::after,
+              a:nth-child(3)::after {
+                content: "";
+                position: absolute;
+                width: 56px;
+                height: 1rem;
+                top: 24px;
+                left: 284px;
+                background: var(--color-border);
+              }
             }
           }
         }

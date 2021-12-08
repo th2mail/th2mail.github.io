@@ -351,8 +351,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
   z-index: 1;
 }
 
@@ -910,7 +908,7 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 88px;
+  top: 83px;
   left: -58px;
   background: var(--color-border);
   border-radius: 50%;
@@ -1122,23 +1120,23 @@
   border-radius: 20px 0 0 20px;
 }
 
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(1)::before {
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(2)::before {
   content: "";
   position: absolute;
-  width: 50px;
+  width: 51px;
   height: 1rem;
-  top: 42px;
-  left: 100px;
+  top: 62px;
+  left: -99px;
   background: var(--color-border);
 }
 
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(1)::after {
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(4)::after {
   content: "";
   position: absolute;
   width: 1rem;
-  height: 100px;
-  top: -8px;
-  left: 150px;
+  height: 103px;
+  top: -107px;
+  left: -48px;
   background: var(--color-border);
 }
 
@@ -1162,5 +1160,17 @@
   left: 92px;
   background: var(--color-border);
   border-radius: 0 0 0 var(--size-border-large-radius);
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(1)::after,
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(2)::after,
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 1rem;
+  top: 24px;
+  left: 284px;
+  background: var(--color-border);
 }
 /*# sourceMappingURL=Dashboard.css.map */
