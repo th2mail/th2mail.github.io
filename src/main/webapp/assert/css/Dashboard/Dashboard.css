@@ -68,7 +68,7 @@
 }
 
 #dashboard .body table .cards.first .card .item {
-  height: 8vh;
+  height: 6vh;
 }
 
 #dashboard .body table .cards.first .card .item .circle {
@@ -354,7 +354,6 @@
   -webkit-transition: all var(--animation-duration) ease;
   transition: all var(--animation-duration) ease;
   z-index: 1;
-  /* circle, 큰동그라미, hover */
 }
 
 #dashboard .body table .cards.second .card.four .item div:nth-child(1):hover {
@@ -895,7 +894,7 @@
 }
 
 #dashboard .body table .cards.third .card.seven .item {
-  height: 200px;
+  height: 175px;
 }
 
 #dashboard .body table .cards.third .card.four, #dashboard .body table .cards.third .card.five, #dashboard .body table .cards.third .card.six, #dashboard .body table .cards.third .card.seven {
@@ -905,48 +904,104 @@
 #dashboard .body table .cards.fourth .card .item {
   width: 90px;
   height: 110px;
-  /* circle, 공통 */
-}
-
-#dashboard .body table .cards.fourth .card .item .title {
-  position: absolute;
-  width: 200px;
-  height: 50px;
-  top: -65px;
-  left: -75px;
 }
 
 #dashboard .body table .cards.fourth .card .item .circle {
-  background-color: var(--color-white);
-  border: 2px solid var(--color-black);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 60px;
+  left: -58px;
+  background: var(--color-border);
   border-radius: 50%;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-major-title);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+#dashboard .body table .cards.fourth .card .item .circle:hover {
+  -webkit-transform: scale(1.1) rotate(-45deg);
+          transform: scale(1.1) rotate(-45deg);
+  -webkit-transition: all var(--animation-middle-duration) ease;
+  transition: all var(--animation-middle-duration) ease;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(2) {
   position: absolute;
   width: 25px;
-  height: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 50px;
+  left: 140px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+  z-index: 1;
 }
 
-#dashboard .body table .cards.fourth .card.one .item .square {
+#dashboard .body table .cards.fourth .card .item div:nth-child(3) {
   position: absolute;
-  width: 600%;
-  height: 120px;
-  top: 80px;
-  left: 63px;
-  background: transparent;
-  border: 5px solid var(--color-skyblue);
-  border-right: none;
-  border-radius: 200px 0 0 200px;
+  width: 160px;
+  height: 20px;
+  top: 28px;
+  left: 72px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
 }
 
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(1) {
-  width: 150px;
-  height: 150px;
-  top: 70px;
-  left: -80px;
-  border: 8px solid var(--color-skyblue);
-  background: white;
-  color: black;
-  font-size: 1.4rem;
-  font-weight: bold;
+#dashboard .body table .cards.fourth .card .item div:nth-child(4) {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 166px;
+  left: 140px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+  z-index: 1;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(5) {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  top: 180px;
+  left: 72px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(6) a {
+  position: absolute;
+  width: 1350px;
+  height: 100px;
+  left: 95%;
+  top: 10px;
+  border: 1rem solid var(--color-border);
+  border-radius: var(--size-border-medium-radius);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -956,108 +1011,48 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all var(--animation-duration) ease;
-  transition: all var(--animation-duration) ease;
 }
 
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover {
-  -webkit-transform: scale(1.2) rotate(-45deg);
-          transform: scale(1.2) rotate(-45deg);
-  background: var(--color-skyblue);
-  color: var(--color-white);
-}
-
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover ~ div.circle {
-  background: var(--color-skyblue);
-}
-
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover ~ div.square,
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover ~ div > a {
-  border: 5px dashed var(--color-skyblue);
-}
-
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(1):hover + div.square {
-  border: 5px dashed var(--color-skyblue);
-  border-right: none;
-}
-
-#dashboard .body table .cards.fourth .card div:nth-child(3) {
-  font-size: .9rem;
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a {
   position: absolute;
-  width: 160px;
-  border-left: 2px solid black;
-  text-align: left;
-  padding-left: 4px;
-  font-weight: 900;
-  height: 60px;
-  top: 10px;
-  left: 126px;
-}
-
-#dashboard .body table .cards.fourth .card div:nth-child(4) {
-  top: 70px;
-  left: 115px;
-}
-
-#dashboard .body table .cards.fourth .card div:nth-child(5) {
-  font-size: .9rem;
-  position: absolute;
-  width: 160px;
-  border-left: 2px solid black;
-  text-align: left;
-  padding-left: 4px;
-  font-weight: 900;
-  height: 60px;
-  top: 125px;
-  left: 126px;
-}
-
-#dashboard .body table .cards.fourth .card div:nth-child(6) {
-  top: 185px;
-  left: 115px;
-}
-
-#dashboard .body table .cards.fourth .card div:nth-child(7) {
-  position: absolute;
-  background: var(--color-white);
-  border: 5px solid var(--color-skyblue);
-  width: 580%;
+  width: 300px;
   height: 100px;
-  left: 95%;
-  top: 30px;
-  border-radius: 10px;
-  line-height: 100px;
+  top: 120px;
+  border: 1rem solid var(--color-border);
+  border-radius: var(--size-border-medium-radius);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#dashboard .body table .cards.fourth .card div:nth-child(8) a {
-  position: absolute;
-  background: var(--color-white);
-  border: 5px solid var(--color-skyblue);
-  width: 125%;
-  height: 100px;
-  top: 150px;
-  border-radius: 10px;
-  line-height: 100px;
-}
-
-#dashboard .body table .cards.fourth .card div:nth-child(8) a:nth-child(1) {
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(1) {
   left: 95%;
 }
 
-#dashboard .body table .cards.fourth .card div:nth-child(8) a:nth-child(2) {
-  left: 250%;
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(2) {
+  left: 258%;
 }
 
-#dashboard .body table .cards.fourth .card div:nth-child(8) a:nth-child(3) {
-  left: 400%;
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(3) {
+  left: 420%;
 }
 
-#dashboard .body table .cards.fourth .card div:nth-child(8) a:nth-child(4) {
-  left: 550%;
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(4) {
+  left: 577%;
 }
 
 #dashboard .body table .cards.first .card {
-  top: 35px;
+  top: -30px;
   left: 20px;
   border-top: 1rem solid var(--color-border);
 }
@@ -1072,7 +1067,7 @@
 }
 
 #dashboard .body table .cards.second .card {
-  top: 19px;
+  top: -45px;
   border-top: 1rem solid var(--color-border);
 }
 
@@ -1088,7 +1083,7 @@
 
 #dashboard .body table .cards.second .card.three {
   border-bottom: 1rem solid var(--color-border);
-  top: 18px;
+  top: -45px;
   left: -77px;
 }
 
@@ -1113,13 +1108,13 @@
 #dashboard .body table .cards.third .card.seven {
   border-right: 1rem solid var(--color-border);
   border-radius: 0 0 20px 0;
-  top: -4px;
+  top: -16px;
   left: 13px;
 }
 
 #dashboard .body table .cards.fourth .card {
   border-top: 1rem solid var(--color-border);
-  top: -20px;
+  top: -31px;
 }
 
 #dashboard .body table .cards.fourth .card.one {
@@ -1128,14 +1123,44 @@
 }
 
 #dashboard .body table .cards.fourth .card.one .item div:nth-child(1)::before {
-  content: "시계열 예측 분석";
-  background-color: transparent;
-  font-size: var(--font-small);
-  font-weight: 400;
+  content: "";
   position: absolute;
-  width: 125px;
-  height: 15px;
-  top: 80px;
-  left: 4px;
+  width: 50px;
+  height: 1rem;
+  top: 42px;
+  left: 100px;
+  background: var(--color-border);
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 94px;
+  top: 6px;
+  left: 150px;
+  background: var(--color-border);
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  width: 116px;
+  height: 1rem;
+  top: 50px;
+  left: 92px;
+  background: var(--color-border);
+  border-radius: var(--size-border-large-radius) 0 0 0;
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(7)::before {
+  content: "";
+  position: absolute;
+  width: 116px;
+  height: 1rem;
+  top: 160px;
+  left: 92px;
+  background: var(--color-border);
+  border-radius: 0 0 0 var(--size-border-large-radius);
 }
 /*# sourceMappingURL=Dashboard.css.map */
