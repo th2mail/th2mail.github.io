@@ -12,7 +12,7 @@
   width: calc(100vw - 3rem - 78px - 1px);
 
   .head {
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     line-height: var(--font-regular);
@@ -52,9 +52,30 @@
 
       .head {
         border-bottom: 1px solid var(--color-white);
+        font-size: 150px;
+
+        i {
+          font-size: 40px;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          // background: blue;
+        }
+      }
+
+      &:nth-child(3) {
+
+        img {
+          width: 130px;
+          height: 130px;
+        }
       }
     }
   }
+
+
 
   
 }
