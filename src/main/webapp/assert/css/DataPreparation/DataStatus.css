@@ -145,7 +145,7 @@
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
   color: var(--color-sub-title);
-}
+}    
 
 #data-status .body .card:nth-child(2) .card__body {
   height: 70%;
