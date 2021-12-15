@@ -25,7 +25,7 @@
 @import url('/src/main/webapp/assert/css/TimeSeriesForecasting/PredictMultiVariable.css');  // 시계열 예측 with 다중 변수
 @import url('/src/main/webapp/assert/css/PerformanceAnalysis/PredictResultAnalysis.css');   // 시계열 결과 분석 */
 
-@import url('/src/main/webapp/assert/fonts/font.css');
+@import url('/src/main/webapp/assert/font/font.css');
 
 /*======================================================================================================
 
@@ -64,24 +64,17 @@
   --color-yellow: rgb(255,203,51);
   --color-green: rgb(41,204,57);
 
-
-
   // --color-dark: #1D2231;
-  
   // --color-light-white: #eeeeee;
   // --color-dark-white: #bdbdbd;
   // --color-smoke-white: whitesmoke;
-
   // --color-pink: #fe918d;
   // --color-dark-pink: #ff6863;
-
   // --color-grey: #8390A2;
   // --color-light-grey: #7c7979;
   // --color-dark-grey: #4d4d4d;  
-
   // --color-blue: #73aace;
   // --color-skyblue: rgb(0, 186, 255);
-
   // --color-wine: rgb(189, 0, 255);
   // --color-purple: rgb(126, 0, 255);
   // --color-green: rgb(0, 168, 45);
