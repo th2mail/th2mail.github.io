@@ -1,0 +1,94 @@
+/**
+ * 파일명 : Header.css
+ * 설 명 : 헤더
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-background);
+  color:rgb(27, 165, 165);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;  
+}
+
+header .title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .title-wrapper:hover,
+.title-wrapper:hover > input {
+  color:rgb(27, 165, 165);
+}
+
+.title-wrapper label span {
+  font-size: 2.5rem;
+  padding-right: 1rem;
+  font-weight: 400;
+}
+
+.title-wrapper > input {
+  width: 360px;
+  font-size: 20px;
+  font-weight: 400;
+  color:rgb(27, 165, 165);
+  background: none;
+  border: none;
+  outline: none;
+}
+
+header .search-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  position: absolute;
+  left: 50%;
+}
+
+header .search-wrapper span {
+  padding: 0rem 1rem;
+  font-size: 1.5rem;
+}
+
+header .search-wrapper input {
+  padding: .5rem;
+  border: none;
+  /* outline을 none으로 설정하지 않으면, text 입력시 테두리가 나타난다. */
+  outline: none;
+  background: rgb(34, 36, 41);
+  color: #ccc;
+}
+
+header .user-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+header .user-wrapper span {
+  color: rgb(27, 165, 165);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid rgb(27, 165, 165);
+  border-radius: 50%;
+  margin-right: 1rem;
+  box-shadow: 1px 1px 1px 1px;
+}
+
+header .user-wrapper small {
+  color: var(--color-grey);
+}

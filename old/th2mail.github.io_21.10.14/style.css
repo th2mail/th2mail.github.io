@@ -1,0 +1,1322 @@
+/*======================================================================================================
+
+                                            Import
+
+======================================================================================================*/
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/*======================================================================================================
+
+                                            Global
+
+======================================================================================================*/
+:root{
+  /* Color */
+  --color-main: #fe918d;  
+  --color-background: #f1f5f9;
+  
+  --color-white: #fff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-smoke-white: whitesmoke;
+
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+
+  --color-grey: #8390A2;
+  --color-light-grey: #7c7979;
+  --color-dark-grey: #4d4d4d;
+
+  --color-blue: #73aace;
+
+  --color-yellow: #fff7d1;
+
+  --color-orange: #feb546;
+
+  --color-black: #222;
+  --color-dark: #1D2231;
+    
+  /* Font size */
+  --font-large: 38px;
+  --font-medium: 28px;
+  --font-regular: 20px;
+  --font-small: 14px;
+  --font-micro: 8px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 500;
+  --weight-semi-regular: 400;
+  --weight-thin: 300;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+
+  --hue: 1;
+  --unit: 1rem;
+  --height: 7rem;
+}
+
+/*======================================================================================================
+
+                                        Universal tags
+
+======================================================================================================*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Poppins',
+  sans-serif;
+}
+
+/*======================================================================================================
+
+                                        Typography
+
+======================================================================================================*/
+
+/* Typograph */
+section > h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: .5rem 0;
+}
+
+section > h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+}
+
+section > h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 1.5rem 0;
+}
+
+section > p {
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-regular);
+  color: var(--color-black);
+  margin: 2rem 0;
+}
+
+section:nth-child(even) {
+  background-color: var(--color-yellow);
+}
+
+/*======================================================================================================
+
+                                        .sidebar
+
+======================================================================================================*/
+.sidebar {
+  width: 345px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--color-main);  
+  transition: all 300ms;  
+  z-index: 1000;
+}
+
+/*=============== .sidebar-brand ===============*/
+.sidebar-brand {
+  height: 90px;
+  padding: 1rem 0rem 1rem 2rem;
+  color: var(--color-white);
+
+  display: flex;
+  align-items: center;  
+}
+
+.sidebar-brand span {
+  padding-right: 1rem;
+}
+
+.sidebar-brand span:first-child {
+  font-size: 50px;
+}
+
+/*=============== .sidebar-scroll ===============*/
+.sidebar-scroll {
+  /* 스크롤바 모양을 이쁜 것으로 바꿔줘야 함 */
+  overflow: auto;
+  height: 100vh;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 5px;
+  /*스크롤바의 너비*/
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  /*스크롤바의 색상*/
+  background-color: var(--color-main);  
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  /*스크롤바 트랙 색상*/
+  background-color: var(--color-white);  
+}
+
+/*=============== .sidebar-menu ===============*/
+.sidebar-menu {
+  margin-top: 1rem;
+}
+
+.sidebar-menu li {
+  margin-bottom: 3px;
+  padding-left: 1rem;
+}
+
+.sidebar-menu a {
+  padding-left: 1rem;
+  display: block;
+  color: var(--color-white);
+  font-size: 1.1rem;
+
+  height: 55pxx;
+  line-height: 55px;
+}
+
+.sidebar-menu a.active,
+.sidebar-menu a:hover {
+  background: var(--color-white);
+  color: var(--color-main);
+  border-radius: 30px 0px 0px 30px;
+}
+
+.sidebar-menu a span:first-child {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+
+.sidebar-menu a span:nth-child(even) {  
+  display: none;
+}
+
+/*=============== #nav-toggle ===============*/
+/* 
+    + 연산자 
+
+      예) A + B
+      뜻) A 태그 옆에 있는 B 태그를 선택하라는 선택자이다.
+
+      기능 설명 : 
+        아이디가 nav-toggle인 체크박스가 check 되면,
+        nav-toggle 과 같은 레벨에 있는 
+        클래스 이름이 sidebar 인 태그에 아래 속성과 값을 적용해라!!!
+ */
+#nav-toggle:checked+.sidebar {
+  width: 70px;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand,
+#nav-toggle:checked+.sidebar li {
+  /* padding-left: 1rem; */
+  padding-left: .7rem;
+  text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li a {
+  padding-left: 0rem;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand span:last-child,
+#nav-toggle:checked+.sidebar li a span:last-child,
+#nav-toggle:checked+.sidebar .sidebar-menu a span:first-child {
+  display: none;
+}
+
+
+#nav-toggle:checked+.sidebar .sidebar-menu a span:nth-child(even) {
+  display: inline;
+}
+
+#nav-toggle:checked~.main-content {
+  margin-left: 70px;
+}
+
+#nav-toggle:checked~.main-content header {
+  width: calc(100% - 70px);
+  /* left: 70px; */
+}
+
+/*======================================================================================================
+
+                                        .main-content
+
+======================================================================================================*/
+.main-content {
+  transition: all 300ms;
+  margin-left: 345px;
+}
+
+/*=============== header ===============*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  position: fixed;
+  width: calc(100% - 345px);
+  top: 0;
+  transition: all 300ms;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+header h2 {
+  color: var(--color-black);
+}
+
+header label span {
+  font-size: 1.7rem;
+  padding-right: 1rem;
+}
+
+.search-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.search-wrapper span {
+  padding: 0rem 1rem;
+  font-size: 1.5rem;
+}
+
+.search-wrapper input {
+  padding: .5rem;
+  border: none;
+  /* outline을 none으로 설정하지 않으면, text 입력시 테두리가 나타난다. */
+  outline: none;
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.user-wrapper span{
+  color: rgb(27, 165, 165);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid rgb(27, 165, 165);
+  border-radius: 50%;
+  margin-right: 1rem;  
+  box-shadow: 1px 1px 1px 1px;
+}
+
+.user-wrapper small {
+  color: var(--color-grey);
+}
+
+/*=============== main ===============*/
+main {
+  overflow-y: scroll; 
+  height: calc(100vh - 85px);
+  margin-top: 85px;
+  background: var(--color-background);
+}
+
+/*======================================================================================================
+
+                                        section
+
+======================================================================================================*/
+section {
+  width: 100%;
+  min-height: calc(100vh - 85px);
+  padding: 2rem 1.5rem;
+  margin: 1rem 0; 
+}
+
+section > h1,h2,p {
+  text-align: center;
+}
+
+section > p.left {
+  padding: 0 10rem;
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+/*======================================================================================================
+
+                                        Dashboard
+
+======================================================================================================*/
+#dashboard {
+  margin-top: 0;
+}
+
+#dash01 .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+#dash01 .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+#dash01 .card div:last-child span {
+  font-size: 3rem;
+  color: var(--color-main);
+}
+
+#dash01 .card div:first-child span {
+  color: var(--color-grey);
+}
+
+#dash01 .card:first-child {
+  background: var(--color-main);
+}
+
+#dash01 .card:first-child h1,
+#dash01 .card:first-child div:first-child span,
+#dash01 .card:first-child div:last-child span {
+  color: var(--color-white);
+}
+
+#dash01 .card div:last-child span {
+  transition: all 300ms ease-in-out;
+}
+
+#dash01 .card:hover {
+  background: var(--color-main);
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+#dash01 .card:hover div:first-child span,
+#dash01 .card:hover div:last-child span {
+  color: var(--color-white);
+  transform: scale(1.5);
+}
+
+/*======================================================================================================
+
+                                        Dashboard-02
+
+======================================================================================================*/
+#dashboard-02 {
+  background: var(--color-background);
+}
+
+#dash02 .cards {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#dash02 .card {
+  background: var(--color-white);
+  border-radius: 20px;  
+}
+
+#dash02 .card-header,
+#dash02 .card-body {
+  padding: 1rem;  
+}
+
+#dash02 .card-header {
+  text-align: center;
+  /* .card-header와 .card-body의 구분선 */
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#dash02 .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem .7rem;
+  margin-bottom: 10px;
+}
+
+#dash02 .info {
+  display: flex;
+  align-items: center;
+}
+
+#dash02 .info img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+#dash02 .info h4 {
+  font-size: .8rem;
+  font-weight: 700;
+  color: #222;
+}
+
+#dash02 .menu {
+  border-radius: 20px;
+  transition: all 300ms ease-in;
+}
+#dash02 .menu:hover {
+  background: var(--color-main);    
+}
+#dash02 .menu:hover .order,
+#dash02 .menu:hover h4,
+#dash02 .menu:hover small,
+#dash02 .menu:hover .contact span {
+  color: var(--color-white);
+  border: none;
+  box-shadow: none;
+}
+
+#dash02 .info small {
+  font-weight: 600;
+  color: var(--color-grey);
+}
+
+#dash02 .info span {
+  color: rgb(27, 165, 165);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid rgb(27, 165, 165);
+  border-radius: 50%;
+  margin-right: 1rem;
+  box-shadow: 1px 1px 1px 1px;
+  font-weight: 400;
+}
+
+#dash02 .contact span {
+  font-size: 1.2rem;
+  margin-left: .5rem;
+  color: var(--color-main);
+  transition: all 300ms ease-in;
+}
+
+#dash02 .contact span.la-comment:hover,
+#dash02 .contact span.la-car-side:hover {
+  transform: scale(1.5);
+}
+
+/*======================================================================================================
+
+                                        Dashboard-03
+
+dash-title        -> title
+dash-description -> description
+
+======================================================================================================*/
+
+#dashboard-03 {
+  background: rgb(34, 36, 41);
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  color: rgb(224, 228, 228);
+}
+
+#dashboard-03 h1 {
+  margin-bottom: 8rem;
+}
+
+#dashboard-03 h1,
+#dashboard-03 div {
+  /* color: var(--color-white); */
+  color: rgb(224, 228, 228);
+}
+
+#dashboard-03 .box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#dashboard-03 .box > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dashboard-03 .box>div:first-child {
+  margin-left: 5rem;
+}
+
+#dashboard-03 .title {
+  /* border-radius: 200px 200px 200px 0; */
+  width: 10rem;
+  margin-right: 5rem;
+  font-size: var(--font-regular);
+}
+
+#dashboard-03 .sub-title {
+  border-radius: 50%;
+}
+
+/* #dashboard-03 .title, */
+#dashboard-03 .sub-title {
+  width: 100px;
+  height: 100px;
+}
+
+/* #dashboard-03 .box1 .title, */
+#dashboard-03 .box1 .sub-title {
+  border: 2px solid rgb(27, 165, 165);
+  box-shadow: 2px 2px 5px rgb(27, 165, 165);
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-03 .box1 .sub-title:hover {
+  transform: scale(1.3);
+  background-color: rgb(27, 165, 165);
+  /* color: var(--color-white); */
+  color: rgb(224, 228, 228);
+  font-weight: var(--weight-bold);
+}
+
+/* #dashboard-03 .box2 .title, */
+#dashboard-03 .box2 .sub-title {
+  border: 2px solid rgb(246, 73, 167);
+  box-shadow: 2px 2px 5px rgb(246, 73, 167);
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-03 .box2 .sub-title:hover {
+  transform: scale(1.3);
+  background-color: rgb(246, 73, 167);
+  /* color: var(--color-white); */
+  color: rgb(224, 228, 228);
+  font-weight: var(--weight-bold);
+}
+
+/* #dashboard-03 .box3 .title, */
+#dashboard-03 .box3 .sub-title {
+  border: 2px solid rgb(254, 106, 106);
+  box-shadow: 2px 2px 5px rgb(254, 106, 106);
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-03 .box3 .sub-title:hover {
+  transform: scale(1.3);
+  background-color: rgb(254, 106, 106);
+  /* color: var(--color-white); */
+  color: rgb(224, 228, 228);
+  font-weight: var(--weight-bold);
+}
+
+/* #dashboard-03 .box4 .title, */
+#dashboard-03 .box4 .sub-title {
+  border: 2px solid rgb(251, 243, 76);
+  box-shadow: 2px 2px 5px rgb(251, 243, 76);
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-03 .box4 .sub-title:hover {
+  transform: scale(1.3);
+  background-color: rgb(251, 243, 76);
+  color: var(--color-dark-white);
+  font-weight: var(--weight-bold);
+}
+
+.canvas {
+  width: 80px;
+  height: 80px;
+}
+
+/*======================================================================================================
+
+                                        Dashboard-04
+
+======================================================================================================*/
+#dashboard-04 {  
+  width: 98%;
+  height: 100%;
+  margin: 0;
+
+  background: rgb(34, 36, 41);
+  color: rgb(224, 228, 228);
+
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+}
+
+#dashboard-04 .header,.footer {
+  color: rgb(65, 199, 199);
+  font-size: 19.89px;
+  font-weight: 800;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#dashboard-04 .header {
+  margin-bottom: 30px;
+}
+
+#dashboard-04 .footer {
+  margin-top: 30px;
+}
+
+#dashboard-04 .centent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   
+  height: 85%;  
+}
+
+#dashboard-04 .cards {
+  display: grid;  
+}
+
+#dashboard-04 .centent .card {  
+  /* margin: 5px; */
+  /* padding: 10px; */
+  /* padding-top: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem; */
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  /* grid-gap: 1rem; */
+  justify-items: center;
+  align-items: center;  
+}
+
+#dashboard-04 .cards.time-series-preparation {
+  display: grid;
+  grid-template-rows: 2fr 8fr;
+}
+
+/* #dashboard-04 .centent .card div:first-child { */
+  /* border: 1px dashed rgb(92, 96, 105); */
+  /* border: none; */
+  /* border-radius: 30px 30px 30px 30px; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center;   */
+  /* margin-left: 5px; */
+/* } */
+
+/* #dashboard-04 .centent .card div:last-child { */
+#dashboard-04 .centent .cards .card .item {
+ border: 1px dashed rgb(92, 96, 105);
+ width: 100%;
+ height: 100%; 
+ border-radius: 10px;
+ display: grid;
+ justify-items: center;
+ align-items: center;
+ /* display: flex; */
+ /* flex-direction: column; */
+ /* justify-content: center; */
+ /* align-items: center;  */
+  font-size :1rem;
+
+}
+
+#dashboard-04 .centent .cards .card .item div:last-child {
+  font-size: 1rem;
+}
+
+#dashboard-04 .centent .cards .card .item .sub-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#dashboard-04 .centent .cards .card {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+#dashboard-04 .centent .cards:nth-child(odd) .card:first-child {
+  margin-top: 1rem;
+}
+
+#dashboard-04 .centent .cards:nth-child(even) .card:first-child {
+  margin-bottom: 1rem;
+}
+
+
+
+#dashboard-04 .cards.data-preparation {
+  border-top: 1px solid rgb(92,96,105);
+  border-right: 1px solid rgb(92, 96, 105);
+}
+
+#dashboard-04 .cards.time-series-preparation {
+  border-bottom: 1px solid rgb(92, 96, 105);
+  border-right: 1px solid rgb(92, 96, 105);
+}
+
+#dashboard-04 .time-series-forecasting {
+  border-top: 1px solid rgb(92, 96, 105);
+  border-right: 1px solid rgb(92, 96, 105);
+}
+
+#dashboard-04 .performance-analysis {
+  border-bottom: 1px solid rgb(92, 96, 105);
+}
+
+/*======================================================================================================
+
+                                        센서 데이터 현황
+
+======================================================================================================*/
+#sensor-data-status {
+  
+}
+
+/*======================================================================================================
+
+                                        센서 데이터 선택
+
+======================================================================================================*/
+#select-sensor-data {
+
+}
+
+/*======================================================================================================
+
+                                        시계열 데이터 탐험 - Pandas Profiler
+
+======================================================================================================*/
+#time-series-data-exploration-pandas-profiler {
+
+}
+
+/*======================================================================================================
+
+                                        시계열 데이터 탐험 - Sweetviz
+
+======================================================================================================*/
+#time-series-data-exploration-sweetviz {
+
+}
+
+/*======================================================================================================
+
+                                        센서 데이터 로딩 & 프리뷰
+
+======================================================================================================*/
+#sensor-data-loading-and-preview {
+
+}
+
+/*======================================================================================================
+
+                                        센서 데이터 상관관계 그래프
+
+======================================================================================================*/
+#sensor-data-correlation-graph {
+
+}
+
+/*======================================================================================================
+
+                                        결측치 시각과 및 처리
+
+======================================================================================================*/
+#missing-value-visualization-and-treatment {
+
+}
+
+/*======================================================================================================
+
+                                        이상치 시각화 및 처리
+
+======================================================================================================*/
+#outlier-visualization-and-processing {
+
+}
+
+/*======================================================================================================
+
+                                        리셈플링 및 정규화
+
+======================================================================================================*/
+#resampling-and-normalization {
+
+}
+
+/*======================================================================================================
+
+                                        시계열 데이터 분해
+
+======================================================================================================*/
+#time-series-data-decomposition {
+
+}
+
+/*======================================================================================================
+
+                                        시계열 정상성 검사 및 변환
+
+======================================================================================================*/
+#time-series-sanity-check-and-transformation {
+
+}
+
+/*======================================================================================================
+
+                                        시계열 예측 with 단일 변수
+
+======================================================================================================*/
+#time-series-prediction-with-single-variable {
+
+}
+
+/*======================================================================================================
+
+                                        시계열 예측 with 다중 변수
+
+======================================================================================================*/
+#time-series-prediction-with-multiple-variables {
+
+}
+
+/*======================================================================================================
+
+                                        시계열 예측 결과 분석
+
+======================================================================================================*/
+#analysis-of-time-series-prediction-results {
+
+}
+
+/*======================================================================================================
+
+                                        @media
+
+======================================================================================================*/
+@media only screen and (max-width: 1700px) {
+  #dashboard-03 .title {
+    /* border-radius: 200px 200px 200px 0; */
+    width: 6em;
+    margin-right: 2rem;
+    font-size: 1rem;
+  }
+
+  #dashboard-03 .sub-title {
+    border-radius: 50%;
+  }
+
+  /* #dashboard-03 .title, */
+  #dashboard-03 .sub-title {
+    width: 70px;
+    height: 70px;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  .sidebar .sidebar-brand,
+  .sidebar li {
+    padding-left: .7rem;
+    text-align: center;
+  }
+
+  .sidebar-menu a span:first-child {
+    display: none;
+  }
+
+  .sidebar-menu a span:nth-child(even) {
+    display: inline;
+  }
+  
+  .sidebar li a {
+    padding-left: 0rem;
+  }
+  
+  .sidebar .sidebar-brand span:last-child,
+  .sidebar li a span:last-child {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 70px;
+  }
+  
+  .main-content header {
+    width: calc(100% - 70px);
+  }
+
+  #nav-toggle:checked+.sidebar {
+    left: 0;
+    width: 345px;
+  }
+
+  #nav-toggle:checked+.sidebar .sidebar-brand,
+  #nav-toggle:checked+.sidebar li {
+    padding-left: 2rem;
+    text-align: left;
+  }
+
+  #nav-toggle:checked+.sidebar li a {
+    padding-left: 1rem;
+  }
+
+  #nav-toggle:checked+.sidebar .sidebar-brand span:last-child,
+  #nav-toggle:checked+.sidebar li a span:last-child,
+    #nav-toggle:checked+.sidebar .sidebar-menu a span:first-child {
+    display: inline;
+  }
+
+  #nav-toggle:checked+.sidebar .sidebar-menu a span:nth-child(even) {
+    display: none;
+  }
+
+  #nav-toggle:checked~.main-content {
+    margin-left: 345px;
+  }
+
+  #nav-toggle:checked~.main-content header {
+    width: 100%;
+  }
+
+  #nav-toggle:checked ~ .main-content #dash01 .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #nav-toggle:checked~.main-content #dash02 .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  /* Typograph */
+  section>h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: .5rem 0;
+  }
+
+  section>h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+  }
+
+  section>h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 1.5rem 0;
+  }
+
+  section>p {
+    font-size: var(--font-small);
+    font-weight: var(--weight-semi-regular);
+    color: var(--color-black);
+    margin: 2rem 0;
+  }
+
+  #dash01 .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #dash02 .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #dashboard-03 .type-01 {
+    display: none;
+  }
+  
+  #dashboard-03 .type-02 {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Typograph */
+  section>h1 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: .5rem 0;
+  }
+
+  section>h2 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+  }
+
+  section>h3 {
+    font-size: var(--font-small);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 1.5rem 0;
+  }
+
+  section>p {
+    font-size: var(--font-thin);
+    font-weight: var(--weight-semi-regular);
+    color: var(--color-black);
+    margin: 2rem 0;
+  }
+
+  section>p {
+    font-size: var(--font-small);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 2rem 0;
+  }
+
+  #dash01 .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #dash02 .cards {
+    grid-template-columns: 100%;
+  }
+
+  .search-wrapper {
+    display: none;
+  }
+
+  .sidebar {
+    left: -100%;
+  }
+
+  header h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+
+  header h2 label {
+    display: inline-block;
+    background: var(--color-main);
+    margin-right: 1rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header h2 span {
+    padding-right: 0rem;
+  }
+
+  .main-content {
+    margin-left: 0rem;
+  }
+
+  .main-content header {
+    width: 100%;
+  }
+
+  #nav-toggle:checked~.main-content #dash01 .cards {
+    grid-template-columns: 100%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  #dash01 .cards {
+    grid-template-columns: 100%;
+  }
+
+  .sidebar .sidebar-brand {
+    background: var(--color-white);
+  }
+
+  #nav-toggle:checked+.sidebar{
+    width: 100%;
+  }
+
+  #nav-toggle:checked+.sidebar .sidebar-brand {
+    /* background: var(--color-white); */
+    background: transparent;
+  }
+
+  #nav-toggle:checked~.main-content {
+    margin-left: 0rem;
+  }
+}
+
+/*======================================================================================================
+
+                                        @media - Dashboard
+
+======================================================================================================*/
+@media (min-width: 550px) and (max-width: 899px) {
+  #dashboard-03 li {
+    margin: 1rem;
+    width: calc(50% - 4rem);
+    float: left;
+    min-height: var(--height);
+  }
+
+  #dashboard-03 li:nth-child(4n+3),
+  #dashboard-03 li:nth-child(4n+4) {
+    float: right;
+  }
+
+  #dashboard-03 li:nth-child(4n+1)::before {
+    top: calc(var(--height)/2 + var(--unit)/2);
+    left: 100%;
+  }
+
+  #dashboard-03 li:nth-child(4n+1)::after {
+    top: calc(var(--height)/2);
+    left: calc(100% + (var(--unit)));
+    border: var(--unit) solid transparent;
+    border-left-color: inherit;
+  }
+
+  #dashboard-03 li:nth-child(4n+3)::before {
+    top: calc(var(--height)/2 + var(--unit)/2);
+    left: -1rem;
+  }
+
+  #dashboard-03 li:nth-child(4n+3)::after {
+    top: calc(var(--height)/2);
+    left: -3rem;
+    border: var(--unit) solid transparent;
+    border-right-color: inherit;
+  }
+
+  /* 내가 추가한 소스 */
+  #dashboard-03 {
+    min-height: 1300px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  #dashboard-03 li {
+    margin: 1rem;
+    width: calc(33.33% - 4rem);
+    float: left;
+    min-height: 7rem;
+  }
+
+  #dashboard-03 li:nth-child(6n+4),
+  #dashboard-03 li:nth-child(6n+5),
+  #dashboard-03 li:nth-child(6n+6) {
+    float: right;
+  }
+
+  #dashboard-03 li:nth-child(6n+1)::before,
+  #dashboard-03 li:nth-child(6n+2)::before {
+    top: calc(var(--height)/2 + var(--unit)/2);
+    left: 100%;
+  }
+
+  #dashboard-03 li:nth-child(6n+1)::after,
+  #dashboard-03 li:nth-child(6n+2)::after {
+    top: 3.5rem;
+    left: calc(100% + (var(--unit)));
+    border: var(--unit) solid transparent;
+    border-left-color: inherit;
+  }
+
+  #dashboard-03 li:nth-child(6n+4)::before,
+  #dashboard-03 li:nth-child(6n+5)::before {
+    top: calc(var(--height)/2 + var(--unit)/2);
+    left: -1rem;
+  }
+
+  #dashboard-03 li:nth-child(6n+4)::after,
+  #dashboard-03 li:nth-child(6n+5)::after {
+    top: calc(var(--height)/2);
+    left: -3rem;
+    border: var(--unit) solid transparent;
+    border-right-color: inherit;
+  }
+}
+
+@media (min-width: 1200px) {
+  #dashboard-03 ol {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  #dashboard-03 li {
+    margin: 1rem;
+    width: calc(25% - 4rem);
+    float: left;
+    min-height: 7rem;
+  }
+
+  #dashboard-03 li:nth-child(8n+5),
+  #dashboard-03 li:nth-child(8n+6),
+  #dashboard-03 li:nth-child(8n+7),
+  #dashboard-03 li:nth-child(8n+8) {
+    float: right;
+  }
+
+  #dashboard-03 li:nth-child(8n+1)::before,
+  #dashboard-03 li:nth-child(8n+2)::before,
+  #dashboard-03 li:nth-child(8n+3)::before {
+    top: calc(var(--height)/2 + var(--unit)/2);
+    left: 100%;
+  }
+
+  #dashboard-03 li:nth-child(8n+1)::after,
+  #dashboard-03 li:nth-child(8n+2)::after,
+  #dashboard-03 li:nth-child(8n+3)::after {
+    top: calc(var(--height)/2);
+    left: calc(100% + (var(--unit)));
+    border: var(--unit) solid transparent;
+    border-left-color: inherit;
+  }
+
+  #dashboard-03 li:nth-child(8n+5)::before,
+  #dashboard-03 li:nth-child(8n+6)::before,
+  #dashboard-03 li:nth-child(8n+7)::before {
+    top: calc(var(--height)/2 + var(--unit)/2);
+    left: -1rem;
+  }
+
+  #dashboard-03 li:nth-child(8n+5)::after,
+  #dashboard-03 li:nth-child(8n+6)::after,
+  #dashboard-03 li:nth-child(8n+7)::after {
+    top: calc(var(--height)/2);
+    left: -3rem;
+    border: var(--unit) solid transparent;
+    border-right-color: inherit;
+  }
+}
+
+
+
