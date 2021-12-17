@@ -1,0 +1,937 @@
+<!-- 
+	파일명 : index.html
+	설 명 : Time Series Sensor Data Forecasting UI	
+	최초 생성일 : 21.09.29
+
+	수정일			수정내역 
+	---------		-----------------------------------------------------------------
+	21.09.29		최초 개발
+	21.09.29		"Time Series Sensor Data Forecasting UI" 전체적인 윤곽 CSS작업
+	21.09.30		Sidenav 영역 css 작업
+								Header 영역 css 작업
+								main 영역 css 작업
+	21.10.01		Dashboard 개발하기 전에 각 화면이 들어갈 Section 영역을 나누는 작업을 하였습니다.
+								.main 영역 layout 작업을 함
+								.main 영역 scrolling 되도록 함
+							Dashboard 화면 개발
+								각 화면의 영역을 나누고, Dashboard 화면 개발에 들어갔습니다.
+	21.10.05 		Dashboard-02 개발
+	21.10.06 		Dashboard-02 개발
+	            메뉴 접고 펼치기 개발
+
+	21.10.08 		Dashboard-03 개발
+							참고 URL : https://2020.stateofjs.com/en-US/technologies/mobile-desktop/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Alian AI/BigData Solution UI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet"
+		href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="main.js" defer></script>
+</head>
+
+<body>
+
+	<input type="checkbox" id="nav-toggle">
+
+	<!-- sidebar -->
+	<div class="sidebar">
+		<!-- sidebar-brand -->
+		<div class="sidebar-brand">
+			<span class="las la-eye"></span>
+			<span>Time Series Sensor Data<br />Forecastin UI</span>
+		</div>
+		<!--// sidebar-brand  -->
+		<div class="sidebar-scroll">
+			<!-- sidebar-menu -->
+			<div class="sidebar-menu">
+				<ul>
+					<li>
+						<a href="" class="active">
+							<span class="las la-check-circle"></span>
+							<span>1</span>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>2</span>
+							<span>센서 데이터 현황</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>3</span>
+							<span>센서 데이터 선택</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>4</span>
+							<span>시계열 데이터 탐험</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>5</span>
+							<span>센터 데이터 로딩 & 프리뷰</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>6</span>
+							<span>센서 데이터 상관관계 그래프</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>7</span>
+							<span>결측치 시각화 및 처리</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>8</span>
+							<span>이상치 시각화 및 처리</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>9</span>
+							<span>리셈플링 및 정규화</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>10</span>
+							<span>시계열 데이터 분해</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>11</span>
+							<span>시계열 정상성 검사 및 변환</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>12</span>
+							<span>시계열 에측 with 단일 변수</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>13</span>
+							<span>시계열 예측 with 다중 변수</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="las la-check-circle"></span>
+							<span>14</span>
+							<span>시계열 에측 결과 분석</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--// sidebar-menu -->
+		</div>
+	</div>
+	<!--// sidebar -->
+
+	<!-- main-content -->
+	<div class="main-content">
+
+		<!-- header -->
+		<header>
+			<!-- menubar -->
+			<h2>
+				<label for="nav-toggle">
+					<span class="las la-bars"></span>
+				</label>
+
+				Dashboard
+			</h2>
+			<!--// menubar -->
+			<!-- searchbar -->
+			<div class="search-wrapper">
+				<span class="las la-search"></span>
+				<input type="search" placeholder="Search here" />
+			</div>
+			<!--// searchbar -->
+			<!-- imgbar -->
+			<div class="user-wrapper">
+				<span>alian</span>
+				<!-- <div>
+					<h4>아리안</h4>
+					<small>Super admin</small>
+				</div> -->
+			</div>
+			<!--// imgbar -->
+		</header>
+		<!--// header -->
+
+		<!-- main -->
+		<main>
+
+			<!-- dashboard-04 -->
+			<section id="dashboard-04">
+				<div class="header">
+					<div class="card">데이터 준비</div>
+					<div class="card"></div>
+					<div class="card">시계열 예측</div>
+					<div class="card"></div>
+				</div>
+				<div class="centent">
+					<div class="cards data-preparation">
+						<div class="card">
+							<div>1</div>
+							<div class="item">
+								센서데이터 현황
+							</div>
+						</div>
+						<div class="card">
+							<div>2</div>
+							<div class="item">
+								센서데이터 선택
+							</div>
+						</div>
+						<div class="card">
+							<div>3</div>
+							<div class="item">
+								<div>데이터 탐험</div>
+								<div class="sub-item">
+									<a>Pandas Profiler</a>
+									<a>SweetViz</a>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div>4</div>
+							<div class="item">
+								데이터 로딩 & 프리뷰
+							</div>
+						</div>
+						<div class="card">
+							<div>5</div>
+							<div class="item">
+								상관관계 시각화
+							</div>
+						</div>
+						<div class="card">
+							<div>6</div>
+							<div class="item">
+								<div>데이터 전처리</div>
+								<div class="sub-item">
+									<a>결측치 시각화 및 처리</a>
+									<a>이상치 시각화 및 처리</a>
+									<a>리셈플링 및 정규화</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cards time-series-preparation">
+						<div class="card">
+							<div>7</div>
+							<div class="item">시계열 데이터 분해</div>
+						</div>
+						<div class="card">
+							<div>8</div>
+							<div class="item">시계열 정상성 검사 및 변환</div>
+						</div>
+					</div>
+					<div class="cards time-series-forecasting">
+						<div class="card">
+							<div>9</div>
+							<div class="item">단변수 예측</div>
+						</div>
+						<div class="card">
+							<div>10</div>
+							<div class="item">다변수 예측</div>
+						</div>
+					</div>
+					<div class="cards performance-analysis">
+						<div class="card">
+							<div>11</div>
+							<div class="item">시계열 예측 분석(수치 메트릭)</div>
+						</div>
+						<div class="card">
+							<div>12</div>
+							<div class="item">시계열 예측 분석(차트)</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="card"></div>
+					<div class="card">시계열 준비</div>
+					<div class="card"></div>
+					<div class="card">성능 분석</div>
+				</div>
+			</section>
+			<!--// dashboard-04 -->
+
+			<!-- dashboard-01 -->
+			<section id="dashboard">
+				<h1 style="color: var(--color-main);">Dashboard-01</h1>
+				<p></p>
+				<div id="dash01">
+
+					<!-- cards -->
+					<div class="cards">
+						<!-- card -->
+						<div class="card">
+							<div>
+								<h1>1</h1>
+								<span>센서 데이터 현황</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>2</h1>
+								<span>센서 데이터 선택</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>3</h1>
+								<span>시계열 데이터 탐험<br />Pandas Profiler</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>4</h1>
+								<span>시계열 데이터 탐험<br />Sweetviz</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>5</h1>
+								<span>센서 데이터 로딩 & 프리뷰</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>6</h1>
+								<span>센서 데이터 상관관계 그래프</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>7</h1>
+								<span>결측치 시각화 및 처리</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>8</h1>
+								<span>이상치 시각화 및 처리</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>9</h1>
+								<span>리셈플링 및 정규화</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>10</h1>
+								<span>시계열 데이터 분해</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>11</h1>
+								<span>시계열 정상성 검사 및 변환</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>12</h1>
+								<span>시계열 예측 with 단일 변수</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>13</h1>
+								<span>시계열 예측 with 다중 변수</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<div class="card">
+							<div>
+								<h1>14</h1>
+								<span>시계열 예측 결과 분석</span>
+							</div>
+							<div>
+								<span class="las la-check-circle"></span>
+							</div>
+						</div>
+						<!-- card -->
+					</div>
+					<!--// cards -->
+
+				</div>
+			</section>
+			<!--// dashboard-01 -->
+
+			<!-- dashboard-02 -->
+			<section id="dashboard-02">
+
+				<h1 style="color: var(--color-main);">Dashboard-02</h1>
+				<p></p>
+				<div id="dash02">
+
+					<!--.cards -->
+					<div class="cards">
+						<!-- 데이터 준비 .card -->
+						<div class="card">
+							<div class="card-header">
+								<h3>데이터 준비</h3>
+							</div>
+							<div class="card-body">
+								<div class="menu">
+									<div class="info">
+										<span class="order">1</span>
+										<div>
+											<h4>센서 데이터 현황</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">2</span>
+										<div>
+											<h4>센서 데이터 선택</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">3</span>
+										<div>
+											<h4>시계열 데이터 탐험</h4>
+											<small>Pandas Profiler</small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">4</span>
+										<div>
+											<h4>시계열 데이터 탐험</h4>
+											<small>Sweetviz</small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">5</span>
+										<div>
+											<h4>센서 데이터 로딩 & 프리뷰</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">6</span>
+										<div>
+											<h4>센서 데이터 상관관계 그래프</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">7</span>
+										<div>
+											<h4>결측치 시각화 및 처리</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">8</span>
+										<div>
+											<h4>이상치 시각화 및 처리</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">9</span>
+										<div>
+											<h4>리셈플링 및 정규화</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 데이터 준비 .ccard -->
+						<!-- 시계열 준비 .card -->
+						<div class="card">
+							<div class="card-header">
+								<h3>시계열 준비</h3>
+							</div>
+							<div class="card-body">
+								<div class="menu">
+									<div class="info">
+										<span class="order">10</span>
+										<div>
+											<h4>시계열 데이터 분해</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">11</span>
+										<div>
+											<h4>시계열 정상성 검사 및 변환</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 시계열 준비 .card -->
+						<!--시계열 예측 card -->
+						<div class="card">
+							<div class="card-header">
+								<h3>시계열 예측</h3>
+							</div>
+							<div class="card-body">
+								<div class="menu">
+									<div class="info">
+										<span class="order">12</span>
+										<div>
+											<h4>시계열 예측 with 단일변수</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+								<div class="menu">
+									<div class="info">
+										<span class="order">13</span>
+										<div>
+											<h4>시계열 예측 with 다중변수</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 시계열 예측 .card  -->
+						<!-- 성능 분석 .card -->
+						<div class="card">
+							<div class="card-header">
+								<h3>성능 분석</h3>
+							</div>
+							<div class="card-body">
+								<div class="menu">
+									<div class="info">
+										<span class="order">14</span>
+										<div>
+											<h4>시계열 예측 결과 분석</h4>
+											<small></small>
+										</div>
+									</div>
+									<div class="contact">
+										<span class="las la-comment"></span>
+										<span class="las la-car-side"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 성능 분석 .card -->
+					</div>
+					<!--// .cards -->
+
+				</div>
+			</section>
+			<!--// dashboard-02  -->
+
+			<!-- dashboard-03 -->
+			<section id="dashboard-03">
+
+				<h1 style="text-shadow: 1px 1px 4px;">Time Series Sensor Data Forecasting UI</h1>
+
+				<div class="type-01">
+
+					<!-- 데이터 준비 -->
+					<div class="box box1">
+						<div class="title">데이터 준비</div>
+						<!-- <canvas class="canvas canvas1"></canvas> -->
+						<div class="sub-title">센서 데이터 현황</div>
+						<canvas class="canvas canvas1"></canvas>
+						<div class="sub-title">센서 데이터 선택</div>
+						<canvas class="canvas canvas1"></canvas>
+						<div class="sub-title">데이터 탐험</div>
+						<canvas class="canvas canvas1"></canvas>
+						<div class="sub-title" style="word-spacing: -3px;">데이터<br />로딩 & 프리뷰</div>
+						<canvas class="canvas canvas1"></canvas>
+						<div class="sub-title">상관관계<br />시각화</div>
+						<canvas class="canvas canvas1"></canvas>
+						<div class="sub-title">데이터<br />전처리</div>
+					</div>
+					<!--// 데이터 준비 -->
+
+					<!-- 시계열 준비 -->
+					<div class="box box2">
+						<div class="title">시계열 준비</div>
+						<!-- <canvas class="canvas canvas2"></canvas> -->
+						<div class="sub-title">시계열<br />데이터 분해</div>
+						<canvas class="canvas canvas2"></canvas>
+						<div class="sub-title" style="word-spacing: -2px;">시계열 정상성<br /> 검사 및 변환</div>
+					</div>
+					<!--// 시계열 준비  -->
+
+					<!-- 시계열 예측 -->
+					<div class="box box3">
+						<div class="title">시계열 예측</div>
+						<!-- <canvas class="canvas canvas3"></canvas> -->
+						<div class="sub-title">단변수 예측</div>
+						<canvas class="canvas canvas3"></canvas>
+						<div class="sub-title">다변수 예측</div>
+					</div>
+					<!--// 시계열 예측  -->
+
+					<!-- 성능 분석 -->
+					<div class="box box4">
+						<div class="title">성능 분석</div>
+						<!-- <canvas class="canvas canvas4"></canvas>-->
+						<div class="sub-title">시계열<br />예측 분석<br />수치 메트릭</div>
+						<canvas class="canvas canvas4"></canvas>
+						<div class="sub-title">시계열<br />예측 분석<br />차트</div>
+					</div>
+					<!--// 성능 분석  -->
+				</div>
+
+				<!-- <div class="type-02">
+					<ol>
+						<li>
+							<p class="dash-title">센서 데이터 현황</p>
+							<p class="dash-description">센서 데이터 현황에 대해 설명합니다.</p>
+						</li>
+						<li>
+							<p class="dash-title">센서 데이터 선택</p>
+							<p class="dash-description">센서 데이터 선택에 대해 설명합니다.</p>
+						</li>
+						<li>
+							<p class="dash-title">시계열 데이터 탐험</p>
+							<p class="dash-description">Pandas Profiler</p>
+						</li>
+						<li>
+							<p class="dash-title">시계열 데이터 탐험</p>
+							<p class="dash-description">Sweetviz</p>
+						</li>
+						<li>
+							<p class="dash-title">센서 데이터 로딩 & 프리뷰</p>
+							<p class="dash-description">센서 데이터 로딩 & 프리뷰에 대해 설명합니다.</p>
+						</li>
+						<li>
+							<p class="dash-title">결측치 시각화 및 처리</p>
+							<p class="dash-description">결측치 시각화 및 처리에 대해 설명합니다.</p>
+						</li>
+						<li>
+							<p class="dash-title">이상치 시각화 및 처리</p>
+							<p class="dash-description">이상치 시각화 및 처리에 대해 설명합니다.</p>
+						</li>
+						<li>
+							<p class="dash-title">리셈플링 및 정규화</p>
+							<p class="dash-description">시계열 데이터 분해</p>
+						</li>
+						<li>
+							<p class="dash-title">시계열 정상성 검사 및 변환</p>
+							<p class="dash-description">시계열 정상성 검사 및 변환에 대해 설명합니다.</p>
+						</li>
+						<li>
+							<p class="dash-title">시계열 예측 with 단일 변수</p>
+							<p class="dash-description">시계열 예측 with 단일 변수에 대해 설명합니다.</p>
+						</li>
+						<li>
+							<p class="dash-title">시계열 예측 with 다중 변수</p>
+							<p class="dash-description">시계열 예측 with 다중 변수에 대해 설명합니다.</p>
+						</li>
+						<li>
+							<p class="dash-title">시계열 예측 결과 분석</p>
+							<p class="dash-description">시계열 예측 결과 분석에 대해 설명합니다.</p>
+						</li>
+					</ol>
+				</div> -->
+
+			</section>
+			<!--// dashboard-03 -->
+
+			<!-- 센서 데이터 현황 -->
+			<section id="sensor-data-status">
+
+				<h1>센서 데이터 현황</h1>
+				<p>센서 데이터 현황 화면에 대한 간략한 설명</p>
+
+			</section>
+			<!--// 센서 데이터 현황  -->
+
+			<!-- 센서 데이터 선택 -->
+			<section id="select-sensor-data">
+				<h1>센서 데이터 선택</h1>
+				<p>센서 데이터 선택 화면에 대한 간략한 설명</p>
+			</section>
+			<!--// 센서 데이터 선택  -->
+
+			<!-- 시계열 데이터 탐험 - Pandas Profiler -->
+			<section id="time-series-data-exploration-pandas-profiler">
+				<h1>시계열 데이터 탐험</h1>
+				<h2>Pandas Profiler</h2>
+				<p class="left">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nulla quidem accusantium dolore, et laudantium
+					dicta laborum assumenda. Error inventore aut soluta, necessitatibus dolore non doloremque! Asperiores quae
+					quaerat itaque!
+				</p>
+			</section>
+			<!--// 시계열 데이터 탐험 - Pandas Profiler -->
+
+			<!-- 시계열 데이터 탐험 - Sweetviz -->
+			<section id="time-series-data-exploration-sweetviz">
+				<h1>시계열 데이터 탐험</h1>
+				<h2>Sweetviz</h2>
+				<p class="left">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi optio explicabo vel at recusandae
+					voluptate voluptatum error fugit, quam ipsam eaque, accusantium eum necessitatibus dolorum! Dolorem rerum
+					labore minima.
+				</p>
+			</section>
+			<!--// 시계열 데이터 탐험 - Sweetviz -->
+
+			<!-- 센서 데이터 로딩 & 프리뷰 -->
+			<section id="sensor-data-loading-and-preview">
+				<h1>센서 데이터 로딩 & 프리뷰</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 센서 데이터 로딩 & 프리뷰 -->
+
+			<!-- 센서 데이터 상관관계 그래프 -->
+			<section id="sensor-data-correlation-graph">
+				<h1>센서 데이터 상관관계 그래프</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 센서 데이터 상관관계 그래프 -->
+
+			<!-- 결측치 시각화 및 처리 -->
+			<section id="missing-value-visualization-and-treatment">
+				<h1>결측치 시각화 및 처리</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 결측치 시각화 및 처리 -->
+
+			<!-- 이상치 시각화 및 처리 -->
+			<section id="outlier-visualization-and-processing">
+				<h1>이상치 시각화 및 처리</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 이상치 시각화 및 처리 -->
+
+			<!-- 리셈플링 및 정규화 -->
+			<section id="resampling-and-normalization">
+				<h1>리셈플링 및 정규화</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 리셈플링 및 정규화 -->
+
+			<!-- 시계열 데이터 분해 -->
+			<section id="time-series-data-decomposition">
+				<h1>시계열 데이터 분해</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 시계열 데이터 분해 -->
+
+			<!-- 시계열 정상성 검사 및 변환 -->
+			<section id="time-series-sanity-check-and-transformation">
+				<h1>시계열 정상성 검사 및 변환</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 시계열 정상성 검사 및 변환 -->
+
+			<!-- 시계열 예측 with 단일 변수 -->
+			<section id="time-series-prediction-with-single-variable">
+				<h1>시계열 예측 with 단일 변수</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 시계열 예측 with 단일 변수 -->
+
+			<!-- 시계열 예측 with 다중 변수 -->
+			<section id="time-series-prediction-with-multiple-variables">
+				<h1>시계열 예측 with 다중 변수</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 시계열 예측 with 다중 변수 -->
+
+			<!-- 시계열 예측 결과 분석 -->
+			<section id="analysis-of-time-series-prediction-results">
+				<h1>시계열 예측 결과 분석</h1>
+				<p class="left">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi, incidunt nisi adipisci ducimus error
+					aspernatur facilis laboriosam quae dolores vitae repellendus unde cumque corporis porro quaerat omnis esse
+					quisquam.
+				</p>
+			</section>
+			<!--// 시계열 예측 결과 분석 -->
+
+		</main>
+		<!--// main -->
+
+	</div>
+	<!--// main-content -->
+
+</body>
+
+</html>

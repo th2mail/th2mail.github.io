@@ -1,0 +1,234 @@
+/*======================================================================================================
+
+                                        Dashboard-1
+
+======================================================================================================*/
+
+#dashboard-1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+#dashboard-1 .cards {
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+#dashboard-1 .card {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+#dashboard-1 .card .svg-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 320px;
+}
+
+#dashboard-1 .card .svg-wrapper .shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -510;
+  /* stroke-width: 8px; */
+  stroke-width: 0;
+  fill: transparent;
+  stroke: #19f6e8;
+  border-bottom: 5px solid black;
+  /* transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;   */
+  transition: stroke-width 300ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
+}
+
+#dashboard-1 .card .svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  /* stroke-dasharray: 760; */
+  stroke-dasharray: 840;
+}
+
+#dashboard-1 .card .svg-wrapper:hover .item {
+  color: #41C7C7;
+  text-shadow: rgb(65 199 199 / 90%) 0px 2px 7px;
+}
+
+#dashboard-1 .card .svg-wrapper:hover .item .font {
+  font-size: 3rem;
+}
+
+#dashboard-1 .card .item {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 150ms ease-in 0s;
+}
+
+#dashboard-1 .card .item .text {
+  letter-spacing: 2.5px;
+}
+
+#dashboard-1 .card .item .font {
+  font-size: 2rem;
+}
+
+
+
+
+
+
+/* *********************************** */
+
+
+
+
+/* #dash01 .card:hover .left_top { */
+/* height: 60%; */
+/* height: 2rem; */
+/* } */
+
+/* #dash01 .card:hover .right_top { */
+/* width: 100%; */
+/* } */
+
+/* #dash01 .card:hover .right_bottom { */
+/* height: 100%; */
+/* } */
+
+/* #dash01 .card:hover .left_bottom { */
+/* width: 100%; */
+/* } */
+
+/* .left_top { */
+/* position: absolute; */
+/* left: 0; */
+/* top: 29px; */
+/* width: 2px; */
+/* height: 0; */
+/* transition: 0.5s all; */
+/* background: rgb(27, 165, 165); */
+/* padding: 2rem; */
+/* } */
+
+/* .right_top { */
+/* position: absolute; */
+/* right: 0; */
+/* top: 0; */
+/* width: 0; */
+/* height: 2px; */
+/* transition: 0.5s all; */
+/* background: rgb(27, 165, 165); */
+/* } */
+
+/* .right_bottom { */
+/* position: absolute; */
+/* right: 0; */
+/* bottom: 0; */
+/* width: 2px; */
+/* height: 0; */
+/* transition: 0.5s all; */
+/* background: rgb(27, 165, 165); */
+/* } */
+
+/* .left_bottom { */
+/* position: absolute; */
+/* left: 0; */
+/* bottom: 0; */
+/* width: 0px; */
+/* height: 2px; */
+/* transition: 0.5s all; */
+/* background: rgb(27, 165, 165); */
+/* } */
+
+/* #dash01 .card div:last-child span {
+  font-size: 3rem;
+  color: var(--color-white);
+} */
+
+/* #dash01 .card .svg-wrapper .item .la-check-circle { */
+/* font-size: 3rem; */
+/* color: var(--color-white); */
+/* } */
+
+/* #dash01 .card div:first-child span { */
+/* color: var(--color-grey); */
+/* } */
+
+/* #dash01 .card:first-child { */
+/* background: var(--color-white); */
+/* } */
+
+/* #dash01 .card:first-child h1, */
+/* #dash01 .card:first-child div:first-child span, */
+/* #dash01 .card:first-child div:last-child span { */
+/* color: var(--color-white); */
+/* } */
+
+/* #dash01 .card div:last-child span { */
+/* transition: all 300ms ease-in-out; */
+
+/* } */
+
+/* #dash01 .card:hover { */
+/* background: var(--color-white); */
+/* border: 1px solid rgb(27, 165, 165); */
+/* color: var(--color-white); */
+/* color: rgb(27, 165, 165); */
+/* font-weight: 700; */
+/* } */
+
+/* #dash01 .card .to-right-underline:after { */
+/* content: ""; */
+/* position: absolute; */
+/* left: 0; */
+/* bottom: -2px; */
+/* width: 0px; */
+/* height: 2px; */
+/* margin: 2px 0 0; */
+/* transition: all 0.2s ease-in-out; */
+/* transition-duration: 0.3s; */
+/* opacity: 0; */
+/* background-color: #41C7C7; */
+/* } */
+
+/* #dash01 .card:hover .to-right-underline:after { */
+/* width: 100%; */
+/* opacity: 1; */
+/* } */
+
+/* .to-right-underline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0px;
+  height: 2px;
+  margin: 2px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.3s;
+  opacity: 0;
+  background-color: #41C7C7;
+
+
+}
+
+.to-right-underline:hover:after {
+  width: 100%;
+  opacity: 1;
+
+
+} */
+
+/* #dash01 .card:hover div:first-child span, */
+/* #dash01 .card:hover div:last-child span { */
+/* color: var(--color-white); */
+/* color: rgb(27, 165, 165); */
+/* transform: scale(1.5); */
+/* } */
