@@ -10,6 +10,7 @@
  */
 @import url("/src/main/webapp/assert/css/ScreenLayout/Navigation.css");
 @import url("/src/main/webapp/assert/css/ScreenLayout/Header.css");
+@import url("/src/main/webapp/assert/css/Dashboard/Introduce.css");
 @import url("/src/main/webapp/assert/css/Dashboard/Dashboard.css");
 @import url("/src/main/webapp/assert/css/DataPreparation/DataStatus.css");
 @import url("/src/main/webapp/assert/css/DataPreparation/DataSelect.css");

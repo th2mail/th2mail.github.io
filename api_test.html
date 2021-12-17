@@ -1,0 +1,76 @@
+<!--
+  api address : 192.168.10.61:39003
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/src/main/webapp/assert/lib/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/webapp/assert/lib/jquery.ajax-cross-origin.min.js"></script>
+  <script type="text/javascript" charset="UTF-8">
+    $(document).ready(function () {
+
+      // $.ajax({
+      //   crossOrigin: true,
+      //   url: `http://192.168.10.61:39003`,
+      //   data: {
+      //     url: "m01_data_prepare",
+      //     cmd: "req_customer_num",
+      //     opt: {
+      //       "파일이름": "건축물_흥해초등학교_20190402_20201103_10S_6컬럼_82545.csv",
+      //       "사용자명": "alian77",
+      //       "facility_type": "건축물"
+      //     }
+      //   },
+      //   success: function (data) {
+      //     console.log(data);
+      //   },
+      //   error: function (data) {
+      //     console.log("에러발생");
+      //     console.log(data);
+      //   }
+      // });
+
+      $.ajax({
+        crossOrigin: true,
+        type: 'post',
+        url: `http://192.168.10.61:39003`,
+        contentType: 'application/json; charset=utf-8',
+        data: {
+          "url": "/m01_data_prepare",
+          "cmd": "req_facility_num",
+          "opt": {
+            "파일이름": "건축물_흥해초등학교_20190402_20201103_10S_6컬럼_82545.csv",
+            "사용자명": "alian77",
+            "facility_type": "건축물"
+          }
+        },
+        // dataType: 'json',
+        cache: false,
+        success: function (data, status) {
+          console.log("성공");
+          // console.log(data);
+        },
+        error: function (request, status, error) {
+          console.log("에러발생");
+          console.log(
+            `request.status = ${request.status}, request.statusText = ${request.statusText}, status = ${status}`
+          );
+        }
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <input type="text" id="text" />
+
+</body>
+
+</html>

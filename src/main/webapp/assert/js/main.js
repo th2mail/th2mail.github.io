@@ -13,6 +13,9 @@ $("header").load("/src/main/webapp/view/ScreenLayout/Header.html");
 // 네비게이션
 $("nav").load("/src/main/webapp/view/ScreenLayout/Navigation.html");
 
+// 소개
+$("#introduce").load("/src/main/webapp/view/Dashboard/Introduce.html");
+
 // 대쉬보드
 $("#dashboard").load("/src/main/webapp/view/Dashboard/Dashboard.html");
 
