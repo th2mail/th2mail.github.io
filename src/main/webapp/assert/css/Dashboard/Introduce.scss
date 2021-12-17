@@ -35,10 +35,99 @@
   .body {
     margin: 0 2rem;
     height: 85%;
-    background: var(--color-white);
+    // background: var(--color-white);
     border-radius: var(--size-border-large-radius);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+
+      position: relative;
+
+      .card {
+        background: var(--color-white);
+        height: 37vh;        
+      }
+
+      .circle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 250px;
+        height: 250px;
+        border: 5px solid black;
+        border-radius: 50%;
+
+        text-align: center;
+        line-height: 250px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+
+        font-size: 50px;
+
+        background: blue;
+
+        .squars {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: .5rem;
+          
+          position: absolute;
+          top: -5%;
+          left: -5%;
+
+          .square {
+            width: 125px;
+            height: 125px;
+
+            background: transparent;
+            
+            &:nth-child(1) {
+              border-radius: 200px 0 0 0;
+
+              &:hover {
+                background: red;
+              }
+            }
+
+            &:nth-child(2) {
+              border-radius: 0 200px 0 0;
+
+              &:hover {
+                background: orange;
+              }
+            }
+
+            &:nth-child(3) {
+              border-radius: 0 0 0 200px;
+
+              &:hover {
+                background: purple;
+              }
+            }
+
+            &:nth-child(4) {
+              border-radius: 0 0 200px 0;
+
+              &:hover {
+                background: palegreen;
+              }
+            }
+
+          }
+        }
+      }
+    }
+
   }
 }

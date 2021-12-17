@@ -41,16 +41,85 @@
 #introduce .body {
   margin: 0 2rem;
   height: 85%;
-  background: var(--color-white);
   border-radius: var(--size-border-large-radius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+#introduce .body .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  position: relative;
+}
+
+#introduce .body .cards .card {
+  background: var(--color-white);
+  height: 37vh;
+}
+
+#introduce .body .cards .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border: 5px solid black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 250px;
+  font-size: 50px;
+  background: blue;
+}
+
+#introduce .body .cards .circle .squars {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: .5rem;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+}
+
+#introduce .body .cards .circle .squars .square {
+  width: 125px;
+  height: 125px;
+  background: transparent;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(1) {
+  border-radius: 200px 0 0 0;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(1):hover {
+  background: red;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(2) {
+  border-radius: 0 200px 0 0;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(2):hover {
+  background: orange;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(3) {
+  border-radius: 0 0 0 200px;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(3):hover {
+  background: purple;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(4) {
+  border-radius: 0 0 200px 0;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(4):hover {
+  background: palegreen;
 }
 /*# sourceMappingURL=Introduce.css.map */
