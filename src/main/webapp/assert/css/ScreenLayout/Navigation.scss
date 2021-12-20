@@ -37,7 +37,7 @@ nav {
 
     li {
       width: 100%;
-      height: 7%;
+      height: 6.2%;
 
       display: flex;
       flex-direction: column;
@@ -58,6 +58,8 @@ nav {
         background: none;
         color: var(--color-navigation-icon);
 
+        font-style: oblique;
+
         border-radius: var(--size-border-medium-radius);
 
         transition: .2s linear;
@@ -73,9 +75,10 @@ nav {
           border-radius: 0 var(--size-border-medium-radius) var(--size-border-medium-radius) 0;
 
           background: var(--color-white);
+          background: yellow;
           color: var(--color-hover-icon);
 
-          font-weight: 700;
+          font-weight: 700;          
           white-space: nowrap;
 
           opacity: 0;
@@ -83,8 +86,15 @@ nav {
         }
       }
 
+      // Introduce 툴팁
       &:nth-child(1) a .tooltip {
+        left: 1.7rem;
+      }
+
+      // 대쉬보드 툴팁
+      &:nth-child(2) a .tooltip {
         left: 1.9rem;
+        font-style: oblique;
       }
 
       &:hover a,
@@ -102,37 +112,43 @@ nav {
 
       // 사이드바 메뉴리스트의 툴팁 가로 사이즈 
       &:nth-child(1) .tooltip {
-        width: 95px;
+        width: 85px;
       }
-      &:nth-child(4) .tooltip,
-      &:nth-child(10) .tooltip,
+      &:nth-child(2) .tooltip,
+      &:nth-child(14) .tooltip,
+      &:nth-child(15) .tooltip {
+        width: 90px;
+      }
       &:nth-child(11) .tooltip {
         width: 110px;
       }
-      &:nth-child(7) .tooltip {
-        width: 120px;
-      }
-      &:nth-child(2) .tooltip,
-      &:nth-child(3) .tooltip,
-      &:nth-child(6) .tooltip {
-        width: 140px;
-      }
       &:nth-child(8) .tooltip {
-        width: 160px;
+        width: 125px;
       }
-      &:nth-child(5) .tooltip {
-        width: 170px;
-      }
-      &:nth-child(13) .tooltip {
-        width: 190px;
-      }
-      &:nth-child(9) .tooltip {
-        width: 210px;
+      &:nth-child(3) .tooltip,
+      &:nth-child(4) .tooltip,
+      &:nth-child(16) .tooltip {
+        width: 130px;
       }
       &:nth-child(12) .tooltip {
-        width: 240px;
+        width: 145px;
       }
-
+      &:nth-child(7) .tooltip {
+        width: 160px;
+      }
+      &:nth-child(9) .tooltip,
+      &:nth-child(10) .tooltip {
+        width: 165px;
+      }
+      &:nth-child(6) .tooltip {
+        width: 185px;
+      }
+      &:nth-child(13) .tooltip {
+        width: 200px;
+      }
+      &:nth-child(5) .tooltip {
+        width: 235px;
+      }    
     } // end of li
 
   } // end of ul.nav_list
