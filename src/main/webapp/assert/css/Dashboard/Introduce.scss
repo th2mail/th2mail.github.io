@@ -60,7 +60,6 @@
           position: absolute;
           color: var(--color-white);
           font-weight: bolder;
-<<<<<<< Updated upstream
 
           &:hover~.detail {
             transition: all 1.5s ease;
@@ -69,8 +68,6 @@
             pointer-events: auto;            
             background: rgba(247, 248, 250, .9);
           }
-=======
->>>>>>> Stashed changes
         }
 
         .title {
@@ -82,37 +79,22 @@
           letter-spacing: 15px;
           word-spacing: 5px;
           color: var(--color-top-title);
-<<<<<<< Updated upstream
         }
 
         .desc {
-=======
-          //  text-shadow : 0 2px 2px var(--color-top-title);
-        }
-
-        .description {
->>>>>>> Stashed changes
           margin: 2rem 1rem 1rem .1rem;
           text-align: center;
           text-align: justify;
           font-size: 20px;
         }
 
-<<<<<<< Updated upstream
         .item {
-=======
-        .content {
->>>>>>> Stashed changes
           position: absolute;
           display: flex;
           bottom: 10px;
           left: 250px;
 
-<<<<<<< Updated upstream
           .content {            
-=======
-          .item {            
->>>>>>> Stashed changes
             width: 120px;
             height: 120px;
             line-height: 120px;
@@ -130,7 +112,6 @@
           }
         }
 
-<<<<<<< Updated upstream
         .detail {
           position: fixed;
           left: 51.8%;
@@ -158,92 +139,11 @@
         }
 
         // 데이터 준비
-=======
-        &:nth-child(3) {
-          .item {
-            &:hover {
-              transform: scale(1.1);
-              background: rgba(51, 99, 255, .6);
-              color: var(--color-white);
-              transition: all 300ms ease;              
-            }
-          }
-        }
-
-        &:nth-child(4) {
-          .item {
-            &:hover {
-              transform: scale(1.1);
-              background: rgba(255, 102, 51, .6);
-              color: var(--color-white);
-              transition: all 300ms ease;
-            }
-          }
-        }
-
-        /*
-        &:nth-child(1), 
-        &:nth-child(3) {
-          .order {
-            top: -16px;
-            left: -17px;
-            border-radius: 50px 0 200px 0;            
-            
-            .alpha {
-              position: absolute;
-              top: 15px;
-              left: 30px;
-            }
-          }
-        }
-        &:nth-child(2),
-        &:nth-child(4) {
-          .order {
-            top: -16px;
-            left: 740px;
-            border-radius: 0 50px 0 200px;
-
-            .alpha {
-              position: absolute;
-              top: 15px;
-              left: 50px;
-            }
-          }
-        }
-        &:nth-child(1) {
-          .order {
-            // background: rgb(229, 235, 252);
-            background: rgb(41, 204, 57);
-          }          
-        }
-        &:nth-child(2) {
-          .order {
-            // background: rgb(228, 245, 232);
-            background: rgb(136, 51, 255);
-          }
-        }
-        &:nth-child(3) {
-          .order {
-            // background: rgb(210, 238, 252);
-            background: rgb(51, 97, 255);
-          }
-        }
-        &:nth-child(4) {
-          .order {
-            // background: rgb(218, 222, 230);
-            background: rgb(255, 102, 51);
-          }
-        }
-        */
->>>>>>> Stashed changes
         &:nth-child(1) {
           .order {
             top: -4px;
             left: -4px;
-<<<<<<< Updated upstream
             background: rgb(41, 204, 57);
-=======
->>>>>>> Stashed changes
             border-radius: 50px 0 200px 0;
 
             .alpha {
@@ -251,7 +151,6 @@
               top: 15px;
               left: 30px;
             }
-<<<<<<< Updated upstream
 
             &:hover {
               transition: all 200ms ease;
@@ -268,19 +167,11 @@
         }
 
         // 시계열 준비
-=======
-          }
-        }
-
->>>>>>> Stashed changes
         &:nth-child(2) {
           .order {
             top: -2px;
             left: 755px;
-<<<<<<< Updated upstream
             background: rgb(136, 51, 255);
-=======
->>>>>>> Stashed changes
             border-radius: 0 50px 0 200px;
 
             .alpha {
@@ -288,7 +179,6 @@
               top: 15px;
               left: 50px;
             }
-<<<<<<< Updated upstream
 
             &:hover {
               transition: all 200ms ease;
@@ -306,19 +196,11 @@
         }
 
         // 시계열 예측
-=======
-          }
-        }
-
->>>>>>> Stashed changes
         &:nth-child(3) {
           .order {
             top: 246px;
             left: -0px;
-<<<<<<< Updated upstream
             background: rgb(51, 97, 255);
-=======
->>>>>>> Stashed changes
             border-radius: 0 200px 0 50px;
 
             .alpha {
@@ -326,7 +208,6 @@
               top: 30px;
               left: 30px;
             }
-<<<<<<< Updated upstream
 
             &:hover {
               transition: all 200ms ease;
@@ -405,19 +286,11 @@
         }
 
         // 성능 분석
-=======
-          }
-        }
-
->>>>>>> Stashed changes
         &:nth-child(4) {
           .order {
             top: 246px;
             left: 755px;
-<<<<<<< Updated upstream
             background: rgb(255, 102, 51);
-=======
->>>>>>> Stashed changes
             border-radius: 200px 0 50px 0;
 
             .alpha {
@@ -425,7 +298,6 @@
               top: 30px;
               left: 50px;
             }
-<<<<<<< Updated upstream
 
             &:hover {
               transition: all 200ms ease;
@@ -498,37 +370,6 @@
               transition: all 300ms ease;
             }
           }  
-=======
-          }
-        }
-
-        &:nth-child(1) {
-          .order {
-            // background: rgb(229, 235, 252);
-            background: rgb(41, 204, 57);
-          }
-        }
-
-        &:nth-child(2) {
-          .order {
-            // background: rgb(228, 245, 232);
-            background: rgb(136, 51, 255);
-          }
-        }
-
-        &:nth-child(3) {
-          .order {
-            // background: rgb(210, 238, 252);
-            background: rgb(51, 97, 255);
-          }
-        }
-
-        &:nth-child(4) {
-          .order {
-            // background: rgb(218, 222, 230);
-            background: rgb(255, 102, 51);
-          }
->>>>>>> Stashed changes
         }
       }
       //END OF .card
@@ -628,10 +469,7 @@
       }
       //END OF .circle     
     }
-<<<<<<< Updated upstream
     //END OF .cards
-=======
->>>>>>> Stashed changes
   }
   //END OF .body
 }
