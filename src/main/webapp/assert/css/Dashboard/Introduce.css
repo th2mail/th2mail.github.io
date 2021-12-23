@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
  * 파일명 : Introduce.scss
- * 설 명 : 센서 데이터 상관관계 그래프
+ * 설 명 : TimeSeries Sensor Data Forecasting UI 소개 화면
  * 최초 생성일 : 
  *
  * 수정일			수정내역 
@@ -34,14 +34,14 @@
   color: #627293;
 }
 
-#introduce .body * {
-  background: none;
-}
-
 #introduce .body {
   margin: 0 2rem;
   height: 85%;
   border-radius: var(--size-border-large-radius);
+}
+
+#introduce .body * {
+  background: none;
 }
 
 #introduce .body .cards {
@@ -76,6 +76,7 @@
   height: 100px;
   position: absolute;
   color: var(--color-white);
+  background: #a9a9a9;
   font-weight: bolder;
 }
 
@@ -96,7 +97,7 @@
   font-style: oblique;
   letter-spacing: 15px;
   word-spacing: 5px;
-  color: var(--color-top-title);
+  color: var(--color-title);
 }
 
 #introduce .body .cards .card .desc {
@@ -104,6 +105,7 @@
   text-align: center;
   text-align: justify;
   font-size: 20px;
+  color: var(--color-desc);
 }
 
 #introduce .body .cards .card .item {
@@ -111,25 +113,25 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 10px;
-  left: 250px;
+  bottom: 25px;
+  left: 280px;
 }
 
 #introduce .body .cards .card .item .content {
-  width: 120px;
-  height: 120px;
-  line-height: 120px;
-  font-size: 20px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
   font-weight: var(--weight-bold);
   font-style: oblique;
   text-align: center;
-  color: #3e5175;
   border-radius: 50%;
-  background: rgba(195, 202, 217, 0.178);
+  background: #a9a9a93f;
+  color: var(--color-icon);
+  margin-right: 7rem;
 }
 
-#introduce .body .cards .card .item .content:nth-child(1) {
-  margin-right: 7rem;
+#introduce .body .cards .card .item .content i {
+  font-size: 45px;
 }
 
 #introduce .body .cards .card .detail {
@@ -168,7 +170,6 @@
 #introduce .body .cards .card:nth-child(1) .order {
   top: -4px;
   left: -4px;
-  background: #29cc39;
   border-radius: 50px 0 200px 0;
 }
 
@@ -183,7 +184,7 @@
   transition: all 200ms ease;
   width: 120px;
   height: 120px;
-  background: rgba(41, 204, 57, 0.6);
+  background: #bdbebd;
 }
 
 #introduce .body .cards .card:nth-child(1) .order:hover .alpha {
@@ -195,7 +196,6 @@
 #introduce .body .cards .card:nth-child(2) .order {
   top: -2px;
   left: 755px;
-  background: #8833ff;
   border-radius: 0 50px 0 200px;
 }
 
@@ -211,7 +211,7 @@
   left: 735px;
   width: 120px;
   height: 120px;
-  background: rgba(136, 51, 255, 0.6);
+  background: #bdbebd;
 }
 
 #introduce .body .cards .card:nth-child(2) .order:hover .alpha {
@@ -223,7 +223,6 @@
 #introduce .body .cards .card:nth-child(3) .order {
   top: 246px;
   left: -0px;
-  background: #3361ff;
   border-radius: 0 200px 0 50px;
 }
 
@@ -239,7 +238,7 @@
   top: 226px;
   width: 120px;
   height: 120px;
-  background: rgba(51, 97, 255, 0.6);
+  background: #bdbebd;
 }
 
 #introduce .body .cards .card:nth-child(3) .order:hover .alpha {
@@ -249,7 +248,6 @@
 }
 
 #introduce .body .cards .card:nth-child(3) .content {
-  font-size: 85px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,64 +258,49 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+}
+
+#introduce .body .cards .card:nth-child(3) .content:nth-child(1)::before {
+  content: "다변수 예측";
+}
+
+#introduce .body .cards .card:nth-child(3) .content:nth-child(2)::before {
+  content: "단변수 예측";
+}
+
+#introduce .body .cards .card:nth-child(3) .content:nth-child(1), #introduce .body .cards .card:nth-child(3) .content:nth-child(2) {
+  margin-right: 8.5rem;
+}
+
+#introduce .body .cards .card:nth-child(3) .content:nth-child(1)::before, #introduce .body .cards .card:nth-child(3) .content:nth-child(2)::before {
+  width: 110px;
+  position: absolute;
+  left: 40px;
+  top: -70px;
+  opacity: 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 #introduce .body .cards .card:nth-child(3) .content:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  background: rgba(51, 97, 255, 0.6);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 #introduce .body .cards .card:nth-child(3) .content:hover i {
-  color: var(--color-white);
+  font-size: 3rem;
+  color: white;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
-#introduce .body .cards .card:nth-child(3) .content:hover:nth-child(1)::before {
-  top: 5px;
+#introduce .body .cards .card:nth-child(3) .content:hover:nth-child(1)::before, #introduce .body .cards .card:nth-child(3) .content:hover:nth-child(2)::before {
+  top: -30px;
   opacity: 1;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-#introduce .body .cards .card:nth-child(3) .content:hover:nth-child(2)::before {
-  position: absolute;
-  left: -115px;
-  top: 3px;
-  opacity: 1;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-#introduce .body .cards .card:nth-child(3) .content:nth-child(1) {
-  margin-right: 8.5rem;
-}
-
-#introduce .body .cards .card:nth-child(3) .content:nth-child(1)::before {
-  content: "다변수 예측";
-  width: 110px;
-  font-size: 1.2rem;
-  color: rgba(51, 97, 255, 0.6);
-  position: absolute;
-  left: -120px;
-  top: -50px;
-  opacity: 0;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-#introduce .body .cards .card:nth-child(3) .content:nth-child(2)::before {
-  content: "단변수 예측";
-  width: 110px;
-  font-size: 1.2rem;
-  color: rgba(51, 97, 255, 0.6);
-  position: absolute;
-  left: -115px;
-  top: -50px;
-  opacity: 0;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -325,7 +308,6 @@
 #introduce .body .cards .card:nth-child(4) .order {
   top: 246px;
   left: 755px;
-  background: #ff6633;
   border-radius: 200px 0 50px 0;
 }
 
@@ -342,7 +324,7 @@
   left: 735px;
   width: 120px;
   height: 120px;
-  background: rgba(255, 102, 51, 0.6);
+  background: #bdbebd;
 }
 
 #introduce .body .cards .card:nth-child(4) .order:hover .alpha {
@@ -352,7 +334,6 @@
 }
 
 #introduce .body .cards .card:nth-child(4) .content {
-  font-size: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,60 +344,46 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+}
+
+#introduce .body .cards .card:nth-child(4) .content:nth-child(1)::before {
+  content: "수치매트릭";
+  left: 40px;
+}
+
+#introduce .body .cards .card:nth-child(4) .content:nth-child(2)::before {
+  content: "차트";
+  left: 15px;
+}
+
+#introduce .body .cards .card:nth-child(4) .content:nth-child(1)::before, #introduce .body .cards .card:nth-child(4) .content:nth-child(2)::before {
+  width: 100px;
+  position: absolute;
+  top: -70px;
+  opacity: 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 #introduce .body .cards .card:nth-child(4) .content:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  background: rgba(255, 102, 51, 0.6);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 #introduce .body .cards .card:nth-child(4) .content:hover i {
-  color: var(--color-white);
+  font-size: 2.5rem;
+  color: white;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
-#introduce .body .cards .card:nth-child(4) .content:hover:nth-child(1)::before {
-  top: 5px;
+#introduce .body .cards .card:nth-child(4) .content:hover:nth-child(1)::before, #introduce .body .cards .card:nth-child(4) .content:hover:nth-child(2)::before {
+  top: -30px;
   opacity: 1;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-#introduce .body .cards .card:nth-child(4) .content:hover:nth-child(2)::before {
-  position: absolute;
-  left: -80px;
-  top: 3px;
-  opacity: 1;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-#introduce .body .cards .card:nth-child(4) .content:nth-child(1)::before {
-  content: "수치매트릭";
-  width: 100px;
-  font-size: 1.2rem;
-  color: rgba(255, 102, 51, 0.6);
-  position: absolute;
-  left: -110px;
-  top: -50px;
-  opacity: 0;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-#introduce .body .cards .card:nth-child(4) .content:nth-child(2)::before {
-  content: "차트";
-  width: 100px;
-  font-size: 1.2rem;
-  color: rgba(255, 102, 51, 0.6);
-  position: absolute;
-  left: -80px;
-  top: -50px;
-  opacity: 0;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -485,35 +452,23 @@
   background: transparent;
 }
 
-#introduce .body .cards .circle .squars .square:nth-child(1) {
-  border-radius: 200px 0 0 0;
+#introduce .body .cards .circle .squars .square:nth-child(1):hover, #introduce .body .cards .circle .squars .square:nth-child(2):hover, #introduce .body .cards .circle .squars .square:nth-child(3):hover, #introduce .body .cards .circle .squars .square:nth-child(4):hover {
+  background: rgba(25, 164, 164, 0.4);
 }
 
-#introduce .body .cards .circle .squars .square:nth-child(1):hover {
-  background: rgba(169, 169, 169, 0.123);
+#introduce .body .cards .circle .squars .square:nth-child(1) {
+  border-radius: 200px 0 0 0;
 }
 
 #introduce .body .cards .circle .squars .square:nth-child(2) {
   border-radius: 0 200px 0 0;
 }
 
-#introduce .body .cards .circle .squars .square:nth-child(2):hover {
-  background: rgba(169, 169, 169, 0.123);
-}
-
 #introduce .body .cards .circle .squars .square:nth-child(3) {
   border-radius: 0 0 0 200px;
 }
 
-#introduce .body .cards .circle .squars .square:nth-child(3):hover {
-  background: rgba(169, 169, 169, 0.123);
-}
-
 #introduce .body .cards .circle .squars .square:nth-child(4) {
   border-radius: 0 0 200px 0;
-}
-
-#introduce .body .cards .circle .squars .square:nth-child(4):hover {
-  background: rgba(169, 169, 169, 0.123);
 }
 /*# sourceMappingURL=Introduce.css.map */

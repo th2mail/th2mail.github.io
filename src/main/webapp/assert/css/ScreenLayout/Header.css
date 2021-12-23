@@ -30,7 +30,7 @@ header {
 
 header .account {
   font-size: var(--font-medium);
-  color: var(--color-menu-icon);
+  color: var(--color-header-icon);
 }
 
 header .account > div {
