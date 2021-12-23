@@ -59,6 +59,63 @@
   height: 37vh;
   padding: 1rem;
   position: relative;
+<<<<<<< Updated upstream
+=======
+  /*
+        &:nth-child(1), 
+        &:nth-child(3) {
+          .order {
+            top: -16px;
+            left: -17px;
+            border-radius: 50px 0 200px 0;            
+            
+            .alpha {
+              position: absolute;
+              top: 15px;
+              left: 30px;
+            }
+          }
+        }
+        &:nth-child(2),
+        &:nth-child(4) {
+          .order {
+            top: -16px;
+            left: 740px;
+            border-radius: 0 50px 0 200px;
+
+            .alpha {
+              position: absolute;
+              top: 15px;
+              left: 50px;
+            }
+          }
+        }
+        &:nth-child(1) {
+          .order {
+            // background: rgb(229, 235, 252);
+            background: rgb(41, 204, 57);
+          }          
+        }
+        &:nth-child(2) {
+          .order {
+            // background: rgb(228, 245, 232);
+            background: rgb(136, 51, 255);
+          }
+        }
+        &:nth-child(3) {
+          .order {
+            // background: rgb(210, 238, 252);
+            background: rgb(51, 97, 255);
+          }
+        }
+        &:nth-child(4) {
+          .order {
+            // background: rgb(218, 222, 230);
+            background: rgb(255, 102, 51);
+          }
+        }
+        */
+>>>>>>> Stashed changes
 }
 
 #introduce .body .cards .card .order {
@@ -77,6 +134,7 @@
   position: absolute;
   color: var(--color-white);
   font-weight: bolder;
+<<<<<<< Updated upstream
 }
 
 #introduce .body .cards .card .order:hover ~ .detail {
@@ -86,12 +144,15 @@
   z-index: 1;
   pointer-events: auto;
   background: rgba(247, 248, 250, 0.9);
+=======
+>>>>>>> Stashed changes
 }
 
 #introduce .body .cards .card .title {
   margin: 1rem 0;
   text-align: center;
   font-size: 30px;
+<<<<<<< Updated upstream
   font-weight: bold;
   font-style: oblique;
   letter-spacing: 15px;
@@ -163,12 +224,73 @@
   z-index: 1;
   pointer-events: auto;
   background: rgba(247, 248, 250, 0.9);
+=======
+  font-weight: bold;
+  font-style: oblique;
+  letter-spacing: 15px;
+  word-spacing: 5px;
+  color: var(--color-top-title);
+}
+
+#introduce .body .cards .card .description {
+  margin: 2rem 1rem 1rem .1rem;
+  text-align: center;
+  text-align: justify;
+  font-size: 20px;
+}
+
+#introduce .body .cards .card .content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 10px;
+  left: 250px;
+}
+
+#introduce .body .cards .card .content .item {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+  font-style: oblique;
+  text-align: center;
+  color: #3e5175;
+  border-radius: 50%;
+  background: rgba(195, 202, 217, 0.178);
+}
+
+#introduce .body .cards .card .content .item:nth-child(1) {
+  margin-right: 7rem;
+}
+
+#introduce .body .cards .card:nth-child(3) .item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background: rgba(51, 99, 255, 0.6);
+  color: var(--color-white);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .card:nth-child(4) .item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background: rgba(255, 102, 51, 0.6);
+  color: var(--color-white);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+>>>>>>> Stashed changes
 }
 
 #introduce .body .cards .card:nth-child(1) .order {
   top: -4px;
   left: -4px;
+<<<<<<< Updated upstream
   background: #29cc39;
+=======
+>>>>>>> Stashed changes
   border-radius: 50px 0 200px 0;
 }
 
@@ -178,6 +300,7 @@
   left: 30px;
 }
 
+<<<<<<< Updated upstream
 #introduce .body .cards .card:nth-child(1) .order:hover {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
@@ -196,6 +319,11 @@
   top: -2px;
   left: 755px;
   background: #8833ff;
+=======
+#introduce .body .cards .card:nth-child(2) .order {
+  top: -2px;
+  left: 755px;
+>>>>>>> Stashed changes
   border-radius: 0 50px 0 200px;
 }
 
@@ -205,6 +333,7 @@
   left: 50px;
 }
 
+<<<<<<< Updated upstream
 #introduce .body .cards .card:nth-child(2) .order:hover {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
@@ -224,6 +353,11 @@
   top: 246px;
   left: -0px;
   background: #3361ff;
+=======
+#introduce .body .cards .card:nth-child(3) .order {
+  top: 246px;
+  left: -0px;
+>>>>>>> Stashed changes
   border-radius: 0 200px 0 50px;
 }
 
@@ -233,6 +367,7 @@
   left: 30px;
 }
 
+<<<<<<< Updated upstream
 #introduce .body .cards .card:nth-child(3) .order:hover {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
@@ -326,6 +461,11 @@
   top: 246px;
   left: 755px;
   background: #ff6633;
+=======
+#introduce .body .cards .card:nth-child(4) .order {
+  top: 246px;
+  left: 755px;
+>>>>>>> Stashed changes
   border-radius: 200px 0 50px 0;
 }
 
@@ -335,6 +475,7 @@
   left: 50px;
 }
 
+<<<<<<< Updated upstream
 #introduce .body .cards .card:nth-child(4) .order:hover {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
@@ -419,6 +560,22 @@
   opacity: 0;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+=======
+#introduce .body .cards .card:nth-child(1) .order {
+  background: #29cc39;
+}
+
+#introduce .body .cards .card:nth-child(2) .order {
+  background: #8833ff;
+}
+
+#introduce .body .cards .card:nth-child(3) .order {
+  background: #3361ff;
+}
+
+#introduce .body .cards .card:nth-child(4) .order {
+  background: #ff6633;
+>>>>>>> Stashed changes
 }
 
 #introduce .body .cards .circle {
