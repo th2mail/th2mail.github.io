@@ -60,6 +60,14 @@
           position: absolute;
           color: var(--color-white);
           font-weight: bolder;
+
+          &:hover~.detail {
+            transition: all 1.5s ease;
+            opacity: 1;
+            z-index: 1;
+            pointer-events: auto;            
+            background: rgba(247, 248, 250, .9);
+          }
         }
 
         .title {
@@ -71,23 +79,22 @@
           letter-spacing: 15px;
           word-spacing: 5px;
           color: var(--color-top-title);
-          //  text-shadow : 0 2px 2px var(--color-top-title);
         }
 
-        .description {
+        .desc {
           margin: 2rem 1rem 1rem .1rem;
           text-align: center;
           text-align: justify;
           font-size: 20px;
         }
 
-        .content {
+        .item {
           position: absolute;
           display: flex;
           bottom: 10px;
           left: 250px;
 
-          .item {            
+          .content {            
             width: 120px;
             height: 120px;
             line-height: 120px;
@@ -105,86 +112,38 @@
           }
         }
 
-        &:nth-child(3) {
-          .item {
-            &:hover {
-              transform: scale(1.1);
-              background: rgba(51, 99, 255, .6);
-              color: var(--color-white);
-              transition: all 300ms ease;              
-            }
+        .detail {
+          position: fixed;
+          left: 51.8%;
+          top: 58.5%;
+          transform: translate(-50%, -50%);
+          width: 1600px;
+          height: 660px;
+          border-radius: 30px;          
+          background: rgb(247, 248, 250);                    
+          opacity: 0;
+          pointer-events: none;  
+          display: flex;
+          justify-content: center;        
+          align-items: center;
+          font-size: 50px;
+          font-weight: bold;
+          text-align: center;
+
+          &:hover {
+            opacity: 1;
+            z-index: 1;
+            pointer-events: auto;
+            background: rgba(247, 248, 250, .9);
           }
         }
 
-        &:nth-child(4) {
-          .item {
-            &:hover {
-              transform: scale(1.1);
-              background: rgba(255, 102, 51, .6);
-              color: var(--color-white);
-              transition: all 300ms ease;
-            }
-          }
-        }
-
-        /*
-        &:nth-child(1), 
-        &:nth-child(3) {
-          .order {
-            top: -16px;
-            left: -17px;
-            border-radius: 50px 0 200px 0;            
-            
-            .alpha {
-              position: absolute;
-              top: 15px;
-              left: 30px;
-            }
-          }
-        }
-        &:nth-child(2),
-        &:nth-child(4) {
-          .order {
-            top: -16px;
-            left: 740px;
-            border-radius: 0 50px 0 200px;
-
-            .alpha {
-              position: absolute;
-              top: 15px;
-              left: 50px;
-            }
-          }
-        }
-        &:nth-child(1) {
-          .order {
-            // background: rgb(229, 235, 252);
-            background: rgb(41, 204, 57);
-          }          
-        }
-        &:nth-child(2) {
-          .order {
-            // background: rgb(228, 245, 232);
-            background: rgb(136, 51, 255);
-          }
-        }
-        &:nth-child(3) {
-          .order {
-            // background: rgb(210, 238, 252);
-            background: rgb(51, 97, 255);
-          }
-        }
-        &:nth-child(4) {
-          .order {
-            // background: rgb(218, 222, 230);
-            background: rgb(255, 102, 51);
-          }
-        }
-        */
+        // 데이터 준비
         &:nth-child(1) {
           .order {
             top: -4px;
             left: -4px;
+            background: rgb(41, 204, 57);
             border-radius: 50px 0 200px 0;
 
             .alpha {
@@ -192,13 +151,27 @@
               top: 15px;
               left: 30px;
             }
+
+            &:hover {
+              transition: all 200ms ease;
+              width: 120px;
+              height: 120px;
+              background: rgba(41, 204, 57, .6);
+
+              .alpha {
+                transition: all 200ms ease;
+                font-size: 50px;
+              }
+            }
           }
         }
 
+        // 시계열 준비
         &:nth-child(2) {
           .order {
             top: -2px;
             left: 755px;
+            background: rgb(136, 51, 255);
             border-radius: 0 50px 0 200px;
 
             .alpha {
@@ -206,13 +179,28 @@
               top: 15px;
               left: 50px;
             }
+
+            &:hover {
+              transition: all 200ms ease;
+              left: 735px;
+              width: 120px;
+              height: 120px;
+              background: rgba(136, 51, 255, .6);
+
+              .alpha {
+                transition: all 200ms ease;
+                font-size: 50px;
+              }
+            }
           }
         }
 
+        // 시계열 예측
         &:nth-child(3) {
           .order {
             top: 246px;
             left: -0px;
+            background: rgb(51, 97, 255);
             border-radius: 0 200px 0 50px;
 
             .alpha {
@@ -220,13 +208,89 @@
               top: 30px;
               left: 30px;
             }
+
+            &:hover {
+              transition: all 200ms ease;
+              top: 226px;
+              width: 120px;
+              height: 120px;
+              background: rgba(51, 97, 255, .6);
+
+              .alpha {
+                transition: all 200ms ease;
+                font-size: 50px;
+              }
+            }
+          }
+
+          .content {
+            font-size: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &:hover {
+              transform: scale(1.1);
+              background: rgba(51, 97, 255, .6);
+              transition: all 300ms ease;
+
+              i {
+                color: var(--color-white);
+                transition: all 300ms ease;
+              }
+
+              &:nth-child(1)::before {
+                top: 5px;
+                opacity: 1;
+                transition: all 300ms ease;
+              }
+
+              &:nth-child(2)::before {
+                position: absolute;
+                left: -115px;
+                top: 3px;
+                opacity: 1;
+                transition: all 300ms ease;
+              }
+            }
+
+            &:nth-child(1) {
+              margin-right: 8.5rem;
+
+              &::before {
+                content: "다변수 예측";
+                width: 110px;
+                font-size: 1.2rem;
+                color: rgba(51, 97, 255, .6);
+                position: absolute;
+                left: -120px;
+                top: -50px;
+                opacity: 0;
+                transition: all 300ms ease;
+              }
+            }
+
+            &:nth-child(2)::before {
+              content: "단변수 예측";
+              width: 110px;
+              font-size: 1.2rem;
+              color: rgba(51, 97, 255, .6);
+              position: absolute;
+              left: -115px;
+              top: -50px;
+              opacity: 0;
+              transition: all 300ms ease;
+            }
           }
         }
 
+        // 성능 분석
         &:nth-child(4) {
           .order {
             top: 246px;
             left: 755px;
+            background: rgb(255, 102, 51);
             border-radius: 200px 0 50px 0;
 
             .alpha {
@@ -234,37 +298,81 @@
               top: 30px;
               left: 50px;
             }
-          }
-        }
 
-        &:nth-child(1) {
-          .order {
-            // background: rgb(229, 235, 252);
-            background: rgb(41, 204, 57);
-          }
-        }
+            &:hover {
+              transition: all 200ms ease;
+              top: 226px;
+              left: 735px;
+              width: 120px;
+              height: 120px;
+              background: rgba(255, 102, 51, .6);
 
-        &:nth-child(2) {
-          .order {
-            // background: rgb(228, 245, 232);
-            background: rgb(136, 51, 255);
+              .alpha {
+                transition: all 200ms ease;
+                font-size: 50px;
+              }
+            }
           }
-        }
 
-        &:nth-child(3) {
-          .order {
-            // background: rgb(210, 238, 252);
-            background: rgb(51, 97, 255);
-          }
-        }
+          .content {
+            font-size: 65px;    
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            position: relative;
+            
+            &:hover {
+              transform: scale(1.1);
+              background: rgba(255, 102, 51, .6);
+              transition: all 300ms ease;
 
-        &:nth-child(4) {
-          .order {
-            // background: rgb(218, 222, 230);
-            background: rgb(255, 102, 51);
-          }
+              i {
+                color: var(--color-white);
+                transition: all 300ms ease;
+              }
+
+              &:nth-child(1)::before {
+                top: 5px;
+                opacity: 1;
+                transition: all 300ms ease;
+              }
+
+              &:nth-child(2)::before {
+                position: absolute;
+                left: -80px;
+                top: 3px;
+                opacity: 1;
+                transition: all 300ms ease;
+              }
+            }
+
+            &:nth-child(1)::before {
+              content: "수치매트릭";
+              width: 100px;
+              font-size: 1.2rem;
+              color: rgba(255, 102, 51, .6);
+              position: absolute;
+              left: -110px;
+              top: -50px;
+              opacity: 0;
+              transition: all 300ms ease;
+            }
+
+            &:nth-child(2)::before {
+              content: "차트";
+              width: 100px;
+              font-size: 1.2rem;
+              color: rgba(255, 102, 51, .6);
+              position: absolute;
+              left: -80px;
+              top: -50px;
+              opacity: 0;
+              transition: all 300ms ease;
+            }
+          }  
         }
       }
+      //END OF .card
 
       .circle {
         position: absolute;
@@ -359,6 +467,10 @@
         }
         //END OF .squars
       }
+      //END OF .circle     
     }
+    //END OF .cards
   }
+  //END OF .body
 }
+
