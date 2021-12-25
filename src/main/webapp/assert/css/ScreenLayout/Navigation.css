@@ -76,7 +76,7 @@ nav ul.nav_list li a > span {
   line-height: 3rem;
   text-align: center;
   background: none;
-  color: var(--color-navigation-icon);
+  color: var(--color-side-icon);
   font-style: oblique;
   border-radius: var(--size-border-medium-radius);
   -webkit-transition: .2s linear;
