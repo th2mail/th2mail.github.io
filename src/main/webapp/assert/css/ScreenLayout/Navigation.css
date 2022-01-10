@@ -16,7 +16,7 @@ nav {
   width: 78px;
   border-top-left-radius: var(--size-border-large-radius);
   border-bottom-left-radius: var(--size-border-large-radius);
-  border-right: 3px solid var(--color-border);
+  border-right: 3px solid rgba(34, 34, 34, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,7 +76,8 @@ nav ul.nav_list li a > span {
   line-height: 3rem;
   text-align: center;
   background: none;
-  color: var(--color-side-icon);
+  color: rgba(34, 34, 34, 0.8);
+  font-weight: 400;
   font-style: oblique;
   border-radius: var(--size-border-medium-radius);
   -webkit-transition: .2s linear;

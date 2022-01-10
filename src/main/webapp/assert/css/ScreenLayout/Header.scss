@@ -15,7 +15,9 @@ header {
   height: 85px;
 
   border-top-right-radius : var(--size-border-large-radius);
-  border-bottom: 3px solid var(--color-border);
+  // border-bottom: 3px solid var(--color-border);
+  border-bottom: 3px solid rgba(34, 34, 34, .2);
+
 
   display: flex;
   justify-content: space-between;
@@ -24,7 +26,8 @@ header {
   padding: 2rem;
   
   .account {
-    font-size: var(--font-medium);
+    // font-size: var(--font-medium);
+    font-size: 2rem;
     color: var(--color-header-icon);
 
     > div {
@@ -33,7 +36,7 @@ header {
       cursor: pointer;
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.5);
         color: var(--color-hover-icon);
       }
     }  

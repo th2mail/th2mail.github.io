@@ -13,6 +13,9 @@ $("header").load("/src/main/webapp/view/ScreenLayout/Header.html");
 // 네비게이션
 $("nav").load("/src/main/webapp/view/ScreenLayout/Navigation.html");
 
+// introduceEX
+$("#introduceEX").load("/src/main/webapp/view/Dashboard/IntroduceEX.html");
+
 // 소개
 $("#introduce").load("/src/main/webapp/view/Dashboard/Introduce.html");
 
