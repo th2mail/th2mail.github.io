@@ -1,4 +1,12 @@
-<script src="/src/main/webapp/assert/js/Dashboard/IntroduceEX.js" defer></script>
+<!--    
+  파일명 : IntroduceEX.html
+  설 명 : TimeSeries Sensor Data Forecasting UI 소개 화면
+	최초 생성일 :     
+
+	수정일			수정내역 
+	---------   -----------------------------------------------------------------
+	
+-->
 <div class="head">
   <i class="fab fa-microsoft"></i>
   <h3>Introduce</h3>
@@ -20,7 +28,6 @@
             </span>
           </div>
           <div class="detail">
-
             <div class="circle">
               <div class="big">
                 <div class="small">
@@ -28,7 +35,6 @@
                 </div>
               </div>
             </div>
-
             <div class="circle">
               <div class="big">
                 <div class="small">
@@ -36,7 +42,6 @@
                 </div>
               </div>
             </div>
-
             <div class="circle">
               <div class="big">
                 <div class="small">
@@ -44,7 +49,6 @@
                 </div>
               </div>
             </div>
-
             <div class="circle">
               <div class="big">
                 <div class="small">
@@ -52,7 +56,6 @@
                 </div>
               </div>
             </div>
-
             <div class="circle">
               <div class="big">
                 <div class="small">
@@ -60,7 +63,6 @@
                 </div>
               </div>
             </div>
-
             <div class="circle">
               <div class="big">
                 <div class="small">
@@ -68,48 +70,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- <div class="e18_28"></div>
-            <div class="e18_29"></div>
-            <div class="e18_30"></div>
-
-            <div class="e18_25"></div>
-
-
-
-            <div class="e18_26"></div>
-            <div>
-
-
-            </div>
-
-
-
-            <div class="e18_31"></div>
-            <div class="e18_32"></div>
- -->
-
-
-
-
-            <!-- <div class="e18_41"></div><span class="e18_45">1</span><span class="e18_46">2</span><span
-              class="e18_47">3</span><span class="e18_13">Pandas Profiler</span><span
-              class="e18_75">SweetViz</span><span class="e18_48">4</span><span class="e18_49">5</span><span
-              class="e18_50">6</span>
-            <div class="e18_53"></div>
-            <div class="e18_54"></div>
-            <div class="e18_56"></div>
-            <div class="e18_57"></div>
-            <div class="e18_58"></div>
-            <div class="e18_60"></div>
-            <div class="e18_61"></div>
-            <div class="e18_62"></div>
-            <div class="e18_63"></div>
-            <div class="e18_64"></div>
-            <div class="e18_65"></div>
-            <div class="e18_66"></div><span class="e18_67">센서 데이터 선택</span><span class="e18_69">데이터 로딩 &
-              프리뷰</span><span class="e18_70">데이터 전처리</span><span class="e18_71">상관관계 시각화</span><span class="e18_72">데이터
-              탐험</span><span class="e18_73">센서 데이터 현황</span> -->
           </div> <!-- end of .detail -->
         </div>
       </td>
@@ -170,3 +130,12 @@
     </tr>
   </table>
 </div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#introduceEX .box').hover(function () {
+      $('#introduceEX .item').hide();
+    }, function () {
+      $('#introduceEX .item').show();
+    });
+  });
+</script>
