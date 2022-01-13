@@ -104,7 +104,6 @@ Global
 Universal tags
 ======================================================================================================*/
 * {
-  font-family: 'Poppins', sans-serif;
   padding: 0;
   border: none;
   outline: none;
@@ -114,63 +113,64 @@ Universal tags
   background: var(--color-white);
   list-style: none;
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
   -webkit-transition: var(--animation-short-duration) linear;
   transition: var(--animation-short-duration) linear;
 }
 
 html {
-  background: gray;
   width: 100vw;
   height: 100vh;
+  background: gray;
 }
 
 /*======================================================================================================
 Typography
 ======================================================================================================*/
 h1 {
+  color: #3e5175;
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
-  color: #3e5175;
 }
 
 h2 {
-  font-size: var(--font-medium);
   color: #3e5175;
+  font-size: var(--font-medium);
 }
 
 h3 {
-  font-size: var(--font-regular);
   color: var(--color-header-title);
+  font-size: var(--font-regular);
 }
 
 h4 {
-  font-size: var(--font-small);
   color: #3e5175;
+  font-size: var(--font-small);
 }
 
 p {
-  font-size: var(--font-micro);
   color: #3e5175;
+  font-size: var(--font-micro);
 }
 
 /*======================================================================================================
                                         dimmed
 ======================================================================================================*/
 .search-frm {
-  position: absolute;
-  top: 0;
-  right: 9rem;
-  width: 20rem;
-  height: 50px;
-  background: var(--color-white);
-  border-radius: var(--size-border-large-radius);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  top: 0;
+  right: 9rem;
+  width: 20rem;
+  height: 50px;
+  border-radius: var(--size-border-large-radius);
   overflow-x: hidden;
+  background: var(--color-white);
   opacity: 0;
   pointer-events: none;
 }
@@ -184,23 +184,23 @@ p {
 }
 
 .search-frm .la-search {
-  background: white;
-  font-size: var(--font-regular);
-  color: #c5ccda;
   margin-left: 1.5rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  background: white;
+  color: #c5ccda;
+  font-size: var(--font-regular);
 }
 
 .search-frm #search-box {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  padding: 0 1.5rem 0 1rem;
   border: none;
   outline: none;
   background: white;
-  font-size: var(--font-regular);
   color: #3e5175;
-  padding: 0 1.5rem 0 1rem;
+  font-size: var(--font-regular);
 }
 
 .search-frm #search-box::-webkit-input-placeholder {
@@ -224,16 +224,16 @@ p {
 }
 
 .search-frm .la-arrow-right {
+  margin-right: 1rem;
   background: var(--color-white);
   color: #c5ccda;
   font-size: var(--font-medium);
-  margin-right: 1rem;
 }
 
 .search-frm .la-arrow-right:hover {
+  color: #ff6633;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  color: #ff6633;
 }
 
 .dimmed {
@@ -242,29 +242,29 @@ p {
   right: 1rem;
   bottom: 1rem;
   left: 1rem;
-  background: #d0d4df;
   border-radius: var(--size-border-large-radius);
+  background: #d0d4df;
   opacity: 0;
   pointer-events: none;
   z-index: 99;
 }
 
 .dimmed.active {
-  opacity: .8;
-  pointer-events: auto;
   -webkit-transition: opacity var(--animation-middle-duration) linear;
   transition: opacity var(--animation-middle-duration) linear;
+  opacity: .8;
+  pointer-events: auto;
 }
 
 .login-frm {
   position: absolute;
   top: calc(50% - 20rem);
   left: calc(50% - 15rem);
-  background: var(--color-white);
-  border-radius: var(--size-border-large-radius);
   width: 30rem;
   height: 25rem;
   padding: 1rem 0;
+  border-radius: var(--size-border-large-radius);
+  background: var(--color-white);
   text-align: center;
   opacity: 0;
   pointer-events: none;
@@ -273,14 +273,13 @@ p {
 
 .login-frm.active {
   top: calc(50% - 10rem);
-  opacity: 1;
-  pointer-events: auto;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .login-frm .title {
-  background: var(--color-white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,10 +289,11 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 97%;
+  padding: 1.5rem;
   border-bottom: 2px solid #eef0f3;
   margin: .5rem;
-  padding: 1.5rem;
-  width: 97%;
+  background: var(--color-white);
 }
 
 .login-frm .title h2 {
@@ -302,10 +302,10 @@ p {
 }
 
 .login-frm .title .la-times {
-  background: var(--color-white);
-  font-size: var(--font-regular);
   padding: .5rem;
   border-radius: var(--size-border-circle-radius);
+  background: var(--color-white);
+  font-size: var(--font-regular);
 }
 
 .login-frm .title .la-times:hover {
@@ -313,8 +313,6 @@ p {
 }
 
 .login-frm .box {
-  background: var(--color-white);
-  margin-top: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,14 +324,16 @@ p {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+  margin-top: 2.5rem;
+  background: var(--color-white);
 }
 
 .login-frm .box input {
-  background: #f8f9fd;
   width: 350px;
   height: 60px;
-  border-radius: 10px;
   padding: 1rem;
+  border-radius: 10px;
+  background: #f8f9fd;
   color: #3e5175;
   font-size: var(--font-regular);
 }
@@ -355,39 +355,39 @@ p {
 }
 
 .login-frm .btn {
-  margin-top: 30px;
   width: 150px;
+  padding: 1rem;
   border: 1px solid #b2b2b2;
   border-radius: 60px;
-  padding: 1rem;
+  margin-top: 30px;
   background: var(--color-white);
   color: #b2b2b2;
   font-size: var(--font-regular);
 }
 
 .login-frm .btn:hover {
-  background: #ff6634;
-  color: var(--color-white);
   border: none;
   outline: none;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  background: #ff6634;
+  color: var(--color-white);
 }
 
 /*======================================================================================================
 main
 ======================================================================================================*/
 main {
-  border-bottom-right-radius: var(--size-border-large-radius);
   position: fixed;
   top: calc(1rem + 85px);
   left: calc(1rem + 78px);
   right: 1rem;
   bottom: 1rem;
+  border-bottom-right-radius: var(--size-border-large-radius);
   overflow-y: scroll;
+  scroll-behavior: smooth;
   -webkit-transition: 1s linear;
   transition: 1s linear;
-  scroll-behavior: smooth;
 }
 
 main section {
@@ -410,13 +410,6 @@ section
  * 
  *******************************************************************************************************/
 header {
-  position: fixed;
-  top: 1rem;
-  left: calc(1rem + 78px);
-  right: 1rem;
-  height: 85px;
-  border-top-right-radius: var(--size-border-large-radius);
-  border-bottom: 3px solid rgba(34, 34, 34, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,7 +419,14 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  left: calc(1rem + 78px);
+  height: 85px;
   padding: 2rem;
+  border-bottom: 3px solid rgba(34, 34, 34, 0.2);
+  border-top-right-radius: var(--size-border-large-radius);
 }
 
 header .account {
@@ -617,21 +617,6 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   width: 235px;
 }
 
-/* ******************************************************************************************** 
-
-      .logo_content
-
-******************************************************************************************** */
-/* ******************************************************************************************** 
-
-      .nav_list
-
-******************************************************************************************** */
-/* ******************************************************************************************** 
-
-      네비게이션 상세 화면
-
-******************************************************************************************** */
 /********************************************************************************************************
  * 설 명 : 대쉬보드 화면
  * 관련 화면 : src\main\webapp\view\Dashboard\Dashboard.html
@@ -4054,11 +4039,6 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   }
 }
 
-/*======================================================================================================
-
-                                        @media - Dashboard
-
-======================================================================================================*/
 @media (min-width: 550px) and (max-width: 899px) {
   #dashboard-03 li {
     margin: 1rem;
@@ -4090,7 +4070,6 @@ nav ul.nav_list li:nth-child(5) .tooltip {
     border: var(--unit) solid transparent;
     border-right-color: inherit;
   }
-  /* 내가 추가한 소스 */
   #dashboard-03 {
     min-height: 1300px;
   }
