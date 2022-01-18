@@ -19,8 +19,8 @@ Font
 @font-face {
   font-family: "Cafe24Ssurround";
   src: url("/src/main/webapp/assert/font/Cafe24Ssurround/Cafe24Ssurround.ttf") format("truetype");
-  font-style: normal;
   font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -41,60 +41,60 @@ Font
 Global
 ======================================================================================================*/
 :root {
-  --color-background: rgb(247, 248, 250);
-  --color-border: rgb(238, 240, 243);
-  --color-header-title: rgb(75, 92, 127);
-  --color-header-icon: rgb(113, 133, 171);
-  --color-side-icon: rgb(195, 202, 217);
+  --color-background:    rgb(247, 248, 250);
+  --color-border:        rgb(238, 240, 243);
+  --color-white:         #fff;
+  --color-black:         #222;
+  --color-yellow:        rgb(255, 203, 51);
+  --color-green:         rgb(41, 204, 57);
+  --color-header-title:  rgb(75, 92, 127);
   --color-section-title: rgb(98, 114, 147);
-  --color-section-icon: rgb(195, 202, 217);
-  --color-title: rgb(117, 136, 174);
-  --color-desc: rgb(106, 121, 152);
-  --color-icon: rgb(122, 140, 177);
-  --color-white: #fff;
-  --color-black: #222;
-  --color-yellow: rgb(255, 203, 51);
-  --color-green: rgb(41, 204, 57);
-  --color-top-title: rgb(117, 136, 174);
-  --color-major-title: rgb(94, 110, 140);
-  --color-sub-title: rgb(114, 128, 157);
-  --color-minor-title: rgb(160, 173, 199);
-  --color-hover-icon: rgb(255, 102, 51);
-  --font-large: 2rem;
-  --font-medium: 1.5rem;
+  --color-title:         rgb(117, 136, 174);
+  --color-top-title:     rgb(117, 136, 174);
+  --color-major-title:   rgb(94, 110, 140);
+  --color-sub-title:     rgb(114, 128, 157);
+  --color-minor-title:   rgb(160, 173, 199);
+  --color-header-icon:   rgb(113, 133, 171);
+  --color-side-icon:     rgb(195, 202, 217);
+  --color-section-icon:  rgb(195, 202, 217);
+  --color-icon:          rgb(122, 140, 177);
+  --color-desc:          rgb(106, 121, 152);
+  --color-hover-icon:    rgb(255, 102, 51);
+  --font-large:   2rem;
+  --font-medium:  1.5rem;
   --font-regular: 1rem;
-  --font-small: .75rem;
-  --font-micro: .5rem;
-  --weight-bold: 700;
-  --weight-semi-bold: 600;
-  --weight-medium: 500;
-  --weight-regular: 400;
-  --weight-light: 300;
+  --font-small:   .75rem;
+  --font-micro:   .5rem;
+  --weight-bold:        700;
+  --weight-semi-bold:   600;
+  --weight-medium:      500;
+  --weight-regular:     400;
+  --weight-light:       300;
   --weight-extra-light: 200;
-  --weight-thin: 100;
-  --size-border-large-radius: 30px;
+  --weight-thin:        100;
+  --size-border-large-radius:  30px;
   --size-border-medium-radius: 10px;
-  --size-border-small-radius: 4px;
+  --size-border-small-radius:  4px;
   --size-border-circle-radius: 50%;
-  --animation-long-duration: 350ms;
+  --animation-long-duration:   350ms;
   --animation-middle-duration: 300ms;
-  --animation-short-duration: .2s;
+  --animation-short-duration:  .2s;
 }
 
 /*======================================================================================================
 Universal tags
 ======================================================================================================*/
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   border: none;
   outline: none;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   background: var(--color-white);
+  font-family: 'Poppins', sans-serif;
   list-style: none;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
   -webkit-transition: var(--animation-short-duration) linear;
   transition: var(--animation-short-duration) linear;
 }
@@ -2568,6 +2568,14 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   pointer-events: none;
 }
 
+#introduceEX .container table td .box-wrap .close {
+  position: absolute;
+}
+
+#introduceEX .container table td .box-wrap .arrow {
+  position: absolute;
+}
+
 #introduceEX .container table td .box-wrap.one .box {
   top: -13%;
   border: 5px solid rgba(255, 157, 17, 0.5);
@@ -2629,29 +2637,6 @@ nav ul.nav_list li:nth-child(5) .tooltip {
 
 #introduceEX .container table td .box-wrap.one .detail .detail-description {
   position: absolute;
-}
-
-#introduceEX .container table td .box-wrap.one .detail .end {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: -5%;
-  left: 365%;
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid var(--color-white);
-  border-radius: 50%;
-  color: var(--color-white);
-  font-size: 2.5rem;
-  background: #517782;
-  z-index: 100;
 }
 
 #introduceEX .container table td .box-wrap.one .detail.active {
@@ -2725,7 +2710,7 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   position: absolute;
   top: 48%;
   left: 100%;
-  width: 64rem;
+  width: 1170%;
   height: .3rem;
   background: var(--color-white);
 }
@@ -2748,6 +2733,7 @@ nav ul.nav_list li:nth-child(5) .tooltip {
 
 #introduceEX .container table td .box-wrap.one .detail.active .circle:nth-child(odd) .deatil-description div {
   background: #517782;
+  margin-bottom: .5rem;
 }
 
 #introduceEX .container table td .box-wrap.one .detail.active .circle:nth-child(odd)::before {
@@ -2773,6 +2759,38 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   width: .3rem;
   height: 10rem;
   border-right: 0.3rem dashed #5be6d3;
+}
+
+#introduceEX .container table td .box-wrap.one .detail.active .close {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: -50%;
+  left: -10%;
+}
+
+#introduceEX .container table td .box-wrap.one .detail.active .close i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
+}
+
+#introduceEX .container table td .box-wrap.one .detail.active .arrow {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: 1%;
+  left: -70%;
+}
+
+#introduceEX .container table td .box-wrap.one .detail.active .arrow i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
 }
 
 #introduceEX .container table td .box-wrap.two .box {
@@ -2824,22 +2842,35 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   position: absolute;
   opacity: 0;
   pointer-events: none;
+  background: #517782;
 }
 
 #introduceEX .container table td .box-wrap.two .detail .circle {
   position: relative;
 }
 
-#introduceEX .container table td .box-wrap.two .detail .detail-title, #introduceEX .container table td .box-wrap.two .detail .detail-description {
+#introduceEX .container table td .box-wrap.two .detail .detail-title {
+  position: absolute;
+}
+
+#introduceEX .container table td .box-wrap.two .detail .detail-description {
   position: absolute;
 }
 
 #introduceEX .container table td .box-wrap.two .detail.active {
-  width: 100%;
-  height: 85%;
+  border-radius: 4px;
+  width: 420%;
+  height: 101.6%;
+  top: -12.4%;
+  left: -109.5%;
   z-index: 2;
   opacity: 1;
   pointer-events: auto;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle {
+  left: 15%;
+  background: #517782;
 }
 
 #introduceEX .container table td .box-wrap.two .detail.active .circle .big {
@@ -2876,9 +2907,209 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   font-size: 1.5rem;
 }
 
-#introduceEX .container table td .box-wrap.two .detail.active .detail-title {
-  width: 200%;
-  background: yellow;
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(1) .detail-title {
+  width: 250%;
+  height: 50%;
+  top: -214%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5be6d3;
+  color: #4ea39f;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: Pretendard-Regular;
+  letter-spacing: .2rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(1) .deatil-description {
+  position: absolute;
+  top: -150%;
+  left: 100%;
+  width: 150%;
+  height: 50%;
+  background: #517782;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(1) .deatil-description div {
+  background: #517782;
+  margin-bottom: .5rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: -161%;
+  left: 45%;
+  width: .3rem;
+  height: 10rem;
+  border-right: 0.3rem dashed #5be6d3;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: -150%;
+  width: 1290%;
+  height: .3rem;
+  background: var(--color-white);
+  z-index: -1;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: -161%;
+  left: 45%;
+  width: .3rem;
+  height: 10rem;
+  border-right: 0.3rem dashed #5be6d3;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(2) .detail-title.one {
+  position: absolute;
+  top: -214%;
+  left: 50%;
+  width: 300%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5be6d3;
+  color: #4ea39f;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: Pretendard-Regular;
+  letter-spacing: .2rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(2) .deatil-description.one {
+  position: absolute;
+  top: -150%;
+  left: 100%;
+  width: 300%;
+  height: 50%;
+  background: #517782;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(2) .deatil-description.one div {
+  background: #517782;
+  margin-bottom: .5rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 101%;
+  left: 40%;
+  width: .3rem;
+  height: 10rem;
+  border-right: 0.3rem dashed #5be6d3;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(2) .detail-title.two {
+  position: absolute;
+  top: 265%;
+  left: 45%;
+  width: 150%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5be6d3;
+  color: #4ea39f;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: Pretendard-Regular;
+  letter-spacing: .2rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(2) .deatil-description.two {
+  position: absolute;
+  top: 145%;
+  left: 100%;
+  width: 150%;
+  height: 50%;
+  background: #517782;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .circle:nth-child(2) .deatil-description.two div {
+  background: #517782;
+  margin-bottom: .5rem;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .close {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: -43%;
+  left: 12%;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .close i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .arrow.start {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 47%;
+  left: 5%;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .arrow.start i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .arrow.end {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: .5%;
+  left: -30%;
+}
+
+#introduceEX .container table td .box-wrap.two .detail.active .arrow.end i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
 }
 
 #introduceEX .container table td .box-wrap.three .box {
@@ -2930,22 +3161,45 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   position: absolute;
   opacity: 0;
   pointer-events: none;
+  background: #517782;
 }
 
 #introduceEX .container table td .box-wrap.three .detail .circle {
   position: relative;
 }
 
-#introduceEX .container table td .box-wrap.three .detail .detail-title, #introduceEX .container table td .box-wrap.three .detail .detail-description {
+#introduceEX .container table td .box-wrap.three .detail .detail-title {
+  position: absolute;
+}
+
+#introduceEX .container table td .box-wrap.three .detail .detail-description {
   position: absolute;
 }
 
 #introduceEX .container table td .box-wrap.three .detail.active {
-  width: 100%;
-  height: 85%;
+  border-radius: 4px;
+  width: 420%;
+  height: 101.6%;
+  top: -12.4%;
+  left: -210.5%;
   z-index: 2;
   opacity: 1;
   pointer-events: auto;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .square {
+  top: 38%;
+  left: 10%;
+  width: 80%;
+  height: 25%;
+  border: 0.3rem solid var(--color-white);
+  border-radius: 30px;
+  background: transparent;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle {
+  left: 15%;
+  background: #517782;
 }
 
 #introduceEX .container table td .box-wrap.three .detail.active .circle .big {
@@ -2982,9 +3236,111 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   font-size: 1.5rem;
 }
 
-#introduceEX .container table td .box-wrap.three .detail.active .detail-title {
-  width: 200%;
-  background: yellow;
+#introduceEX .container table td .box-wrap.three .detail.active .circle .detail-title {
+  width: 250%;
+  height: 50%;
+  top: -214%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5be6d3;
+  color: #4ea39f;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: Pretendard-Regular;
+  letter-spacing: .2rem;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle .deatil-description {
+  position: absolute;
+  top: -150%;
+  left: 100%;
+  width: 150%;
+  height: 50%;
+  background: #517782;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle .deatil-description div {
+  background: #517782;
+  margin-bottom: .5rem;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle::before {
+  content: "";
+  position: absolute;
+  top: -161%;
+  left: 45%;
+  width: .3rem;
+  height: 10rem;
+  border-right: 0.3rem dashed #5be6d3;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle::after {
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: -150%;
+  width: 1290%;
+  height: .3rem;
+  background: var(--color-white);
+  z-index: -1;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .close {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: -43%;
+  left: 12%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .close i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .arrow.start {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 47%;
+  left: 5%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .arrow.start i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .arrow.end {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: .5%;
+  left: -30%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .arrow.end i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
 }
 
 #introduceEX .container table td .box-wrap.four .box {
@@ -3023,8 +3379,8 @@ nav ul.nav_list li:nth-child(5) .tooltip {
 }
 
 #introduceEX .container table td .box-wrap.four .detail {
-  left: 27%;
-  top: -5%;
+  left: -311%;
+  top: -12.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3038,22 +3394,32 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   position: absolute;
   opacity: 0;
   pointer-events: none;
+  background: #517782;
 }
 
 #introduceEX .container table td .box-wrap.four .detail .circle {
   position: relative;
 }
 
-#introduceEX .container table td .box-wrap.four .detail .detail-title, #introduceEX .container table td .box-wrap.four .detail .detail-description {
+#introduceEX .container table td .box-wrap.four .detail .detail-title {
+  position: absolute;
+}
+
+#introduceEX .container table td .box-wrap.four .detail .detail-description {
   position: absolute;
 }
 
 #introduceEX .container table td .box-wrap.four .detail.active {
-  width: 100%;
-  height: 85%;
+  width: 420.5%;
+  height: 102%;
   z-index: 2;
   opacity: 1;
   pointer-events: auto;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle {
+  background: #517782;
+  left: 20%;
 }
 
 #introduceEX .container table td .box-wrap.four .detail.active .circle .big {
@@ -3090,9 +3456,129 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   font-size: 1.5rem;
 }
 
-#introduceEX .container table td .box-wrap.four .detail.active .detail-title {
-  width: 200%;
-  background: yellow;
+#introduceEX .container table td .box-wrap.four .detail.active .circle .detail-title {
+  width: 250%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5be6d3;
+  color: #4ea39f;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: Pretendard-Regular;
+  letter-spacing: .2rem;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -155%;
+  width: 800%;
+  height: .3rem;
+  z-index: -1;
+  background: var(--color-white);
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(odd) .detail-title {
+  top: -214%;
+  left: 50%;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(odd) .deatil-description {
+  position: absolute;
+  top: -150%;
+  left: 100%;
+  width: 150%;
+  height: 50%;
+  background: #517782;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(odd) .deatil-description div {
+  background: #517782;
+  margin-bottom: .5rem;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  top: -161%;
+  left: 45%;
+  width: .3rem;
+  height: 10rem;
+  border-right: 0.3rem dashed #5be6d3;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(even) .detail-title {
+  top: 265%;
+  left: 45%;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(even) .deatil-description {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 150%;
+  height: 50%;
+  background: #517782;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(even) .deatil-description div {
+  background: #517782;
+  margin-bottom: .5rem;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  top: 101%;
+  left: 40%;
+  width: .3rem;
+  height: 10rem;
+  border-right: 0.3rem dashed #5be6d3;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .close {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: -45%;
+  left: 13%;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .close i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .arrow {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  top: 1%;
+  left: -115%;
+}
+
+#introduceEX .container table td .box-wrap.four .detail.active .arrow i {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  background: #517782;
 }
 
 /********************************************************************************************************
