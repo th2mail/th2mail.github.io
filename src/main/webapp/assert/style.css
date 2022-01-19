@@ -3239,8 +3239,6 @@ nav ul.nav_list li:nth-child(5) .tooltip {
 #introduceEX .container table td .box-wrap.three .detail.active .circle .detail-title {
   width: 250%;
   height: 50%;
-  top: -214%;
-  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3258,41 +3256,433 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   letter-spacing: .2rem;
 }
 
-#introduceEX .container table td .box-wrap.three .detail.active .circle .deatil-description {
-  position: absolute;
-  top: -150%;
-  left: 100%;
-  width: 150%;
-  height: 50%;
-  background: #517782;
-  color: var(--color-white);
-  font-size: 1.2rem;
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) {
+  top: -11%;
+  z-index: 1;
 }
 
-#introduceEX .container table td .box-wrap.three .detail.active .circle .deatil-description div {
-  background: #517782;
-  margin-bottom: .5rem;
-}
-
-#introduceEX .container table td .box-wrap.three .detail.active .circle::before {
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1)::before {
   content: "";
   position: absolute;
-  top: -161%;
-  left: 45%;
+  top: -160%;
+  left: 40%;
   width: .3rem;
   height: 10rem;
   border-right: 0.3rem dashed #5be6d3;
 }
 
-#introduceEX .container table td .box-wrap.three .detail.active .circle::after {
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .detail-title {
+  position: absolute;
+  top: -160%;
+  left: 46%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description {
+  position: absolute;
+  width: 200%;
+  height: 10%;
+  top: 50%;
+  left: 200%;
+  background: transparent;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div {
+  position: absolute;
+  background: #517782;
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(1) {
+  top: -700%;
+  left: -50%;
+  width: 80%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(1):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 115%;
+  left: 45%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(2) {
+  top: -550%;
+  left: 40%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(2):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 170%;
+  left: 35%;
+  z-index: 10000000;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(3) {
+  top: -550%;
+  left: 80%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(3):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 170%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(4) {
+  top: -550%;
+  left: 120%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(4):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 170%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(5) {
+  top: -550%;
+  left: 160%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(5):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 170%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(6) {
+  top: -550%;
+  left: 200%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(6):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 170%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(7) {
+  top: -550%;
+  left: 240%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(7):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 170%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(8) {
+  top: -700%;
+  left: 280%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(8):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 115%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(9) {
+  top: -700%;
+  left: 320%;
+  width: 35%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(9):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 115%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(10) {
+  top: -700%;
+  left: 360%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(10):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 115%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(11) {
+  top: -550%;
+  left: 400%;
+  width: 30%;
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(1) .deatil-description div:nth-child(11):after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 170%;
+  left: 35%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) {
+  top: 13%;
+  left: -26.5%;
+  z-index: 1;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2)::before {
   content: "";
   position: absolute;
-  top: 48%;
-  left: -150%;
-  width: 1290%;
-  height: .3rem;
+  top: 100%;
+  left: 40%;
+  width: .3rem;
+  height: 10rem;
+  border-right: 0.3rem dashed #5be6d3;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .detail-title {
+  position: absolute;
+  top: 220%;
+  left: 46%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description {
+  position: absolute;
+  width: 200%;
+  height: 10%;
+  top: 50%;
+  left: 200%;
+  background: transparent;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(1) .subject-title {
+  position: absolute;
+  top: -500%;
+  left: -30%;
+  background: #517782;
+  color: var(--color-white);
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(1) .subject-title:after {
+  content: "";
   background: var(--color-white);
-  z-index: -1;
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 160%;
+  left: -0%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(1) .subject-description {
+  position: absolute;
+  top: 200%;
+  left: -30%;
+  width: 150%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(1) .subject-description div {
+  background: #517782;
+  color: var(--color-white);
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(2) .subject-title {
+  position: absolute;
+  top: -500%;
+  left: 60%;
+  width: 50%;
+  background: #517782;
+  color: var(--color-white);
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(2) .subject-title:after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 160%;
+  left: -0%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(2) .subject-description {
+  position: absolute;
+  top: 200%;
+  left: 64%;
+  width: 150%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(2) .subject-description div {
+  background: #517782;
+  color: var(--color-white);
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(3) .subject-title {
+  position: absolute;
+  top: -500%;
+  left: 170%;
+  width: 80%;
+  background: #517782;
+  color: var(--color-white);
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(3) .subject-title:after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 160%;
+  left: 10%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(3) .subject-description {
+  position: absolute;
+  top: 200%;
+  left: 180%;
+  width: 150%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(3) .subject-description div {
+  background: #517782;
+  color: var(--color-white);
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(4) .subject-title {
+  position: absolute;
+  top: -650%;
+  left: 270%;
+  background: #517782;
+  color: var(--color-white);
+  text-align: left;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(4) .subject-title:after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 110%;
+  left: -0%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(4) .subject-description {
+  position: absolute;
+  top: 200%;
+  left: 270%;
+  width: 150%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(4) .subject-description div {
+  background: #517782;
+  color: var(--color-white);
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(5) .subject-title {
+  position: absolute;
+  top: -500%;
+  left: 350%;
+  background: #517782;
+  color: var(--color-white);
+  text-align: center;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(5) .subject-title:after {
+  content: "";
+  background: var(--color-white);
+  border-radius: 50%;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 160%;
+  left: -0%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(5) .subject-description {
+  position: absolute;
+  top: 200%;
+  left: 350%;
+  width: 150%;
+}
+
+#introduceEX .container table td .box-wrap.three .detail.active .circle:nth-child(2) .deatil-description .subject:nth-child(5) .subject-description div {
+  background: #517782;
+  color: var(--color-white);
 }
 
 #introduceEX .container table td .box-wrap.three .detail.active .close {
@@ -3487,12 +3877,12 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   background: var(--color-white);
 }
 
-#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(odd) .detail-title {
+#introduceEX .container table td .box-wrap.four .detail.active .circle .detail-title {
   top: -214%;
   left: 50%;
 }
 
-#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(odd) .deatil-description {
+#introduceEX .container table td .box-wrap.four .detail.active .circle .deatil-description {
   position: absolute;
   top: -150%;
   left: 100%;
@@ -3503,47 +3893,16 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   font-size: 1.2rem;
 }
 
-#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(odd) .deatil-description div {
+#introduceEX .container table td .box-wrap.four .detail.active .circle .deatil-description div {
   background: #517782;
   margin-bottom: .5rem;
 }
 
-#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(odd)::before {
+#introduceEX .container table td .box-wrap.four .detail.active .circle::before {
   content: "";
   position: absolute;
   top: -161%;
   left: 45%;
-  width: .3rem;
-  height: 10rem;
-  border-right: 0.3rem dashed #5be6d3;
-}
-
-#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(even) .detail-title {
-  top: 265%;
-  left: 45%;
-}
-
-#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(even) .deatil-description {
-  position: absolute;
-  top: 100%;
-  left: 100%;
-  width: 150%;
-  height: 50%;
-  background: #517782;
-  color: var(--color-white);
-  font-size: 1.2rem;
-}
-
-#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(even) .deatil-description div {
-  background: #517782;
-  margin-bottom: .5rem;
-}
-
-#introduceEX .container table td .box-wrap.four .detail.active .circle:nth-child(even)::before {
-  content: "";
-  position: absolute;
-  top: 101%;
-  left: 40%;
   width: .3rem;
   height: 10rem;
   border-right: 0.3rem dashed #5be6d3;
