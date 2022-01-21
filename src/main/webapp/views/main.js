@@ -84,6 +84,20 @@ export default class Main {
     new PredictSingleVariable(document.getElementById("predict-single-variable"));    // 시계열 예측 with 단일 변수
     new PredictMultiVariable(document.getElementById("predict-multi-variable"));      // 시계열 예측 with 다중 변수
     new PredictResultAnalysis(document.getElementById("predict-result-analysis"));    // 시계열 예측 결과 분석
+
+    this.initCSS();
+  }
+
+  initCSS() {
+    const loginForm = document.querySelector('.login-frm');    
+    const loginCloseBtn = document.querySelector('.login-frm i');
+    const dimmed = document.querySelector('.dimmed');
+    
+    // 로그인 창의 "X" 버튼을 클릭했을 때 실행되는 이벤트 함수
+    loginCloseBtn.addEventListener('click', (event) => {
+      loginForm.classList.remove('active');
+      dimmed.classList.remove('active');
+    });
   }
 
 }
