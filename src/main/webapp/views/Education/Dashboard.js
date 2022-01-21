@@ -1,3 +1,8 @@
+/********************************************************************************************************
+ * 
+ * 대쉬보드
+ * 
+ *******************************************************************************************************/
 export default class Dashboard {
 
   constructor(root) {
@@ -9,7 +14,6 @@ export default class Dashboard {
       </div>
       <div class="body">
         <table>
-          <!-- .cards.first -->
           <tr class="cards first">
             <td class="card one">
               <div class="item">
@@ -57,8 +61,6 @@ export default class Dashboard {
               </div>
             </td>
           </tr>
-          <!--// .cards.first -->
-          <!-- .cards.second -->
           <tr class="cards second">
             <td class="card one">
               <div class="item">
@@ -103,12 +105,9 @@ export default class Dashboard {
             </td>
             <td class="card four" colspan="4">
               <div class="item">
-                <!-- 1 -->
                 <div class="circle">시계열 예측</div>
-                <!-- 2,3 -->
                 <div class="square">9</div>
                 <div class="title">단변수 예측</div>
-                <!-- 4 -->
                 <div class="content">
                   <a href="">Navie Mean<br>(Yesterday, Value)</a>
                   <a href="">SES</a>
@@ -122,16 +121,13 @@ export default class Dashboard {
                   <a href="">Auto SARIMA</a>
                   <a href="">Prophet</a>
                 </div>
-                <!-- 5,6 -->
                 <div class="square">10</div>
                 <div class="title">다변수 예측</div>
-                <!-- 7 -->
                 <div>
                   <!-- Linear Models -->
                   <a href="">Baysian Regression</a>
                   <a href="">Lasso</a>
                 </div>
-                <!-- 8 -->
                 <div>
                   <!-- Tree Model -->
                   <a href="">Random Forest</a>
@@ -141,13 +137,11 @@ export default class Dashboard {
                   <a href="">Lightgbm</a>
                   <a href="">Prophet multivariate</a>
                 </div>
-                <!-- 9 -->
                 <div>
                   <!-- Deep Learning -->
                   <a href="">Tensorflow LSTM</a>
                   <a href="">DeepAR</a>
                 </div>
-                <!-- 10 -->
                 <div>
                   <!-- Hyperparameter Optimization -->
                   <a href="">Grid Search</a>
@@ -155,7 +149,6 @@ export default class Dashboard {
                   <a href="">Baysian Process</a>
                   <a href="">XGBoost</a>
                 </div>
-                <!-- 11 -->
                 <div>
                   <!-- Ensenbling -->
                   <a href="">XGBoost + Tensorflow</a>
@@ -166,8 +159,6 @@ export default class Dashboard {
               </div>
             </td>
           </tr>
-          <!--// .cards.second -->
-          <!-- .cards.third -->
           <tr class="cards third">
             <td class="card one">
               <div class="item"></div>
@@ -191,8 +182,6 @@ export default class Dashboard {
               <div class="item"></div>
             </td>
           </tr>
-          <!--// .cards.third -->
-          <!-- .cards.fourth -->
           <tr class="cards fourth">
             <td class="card one">
               <div class="item">
@@ -231,10 +220,15 @@ export default class Dashboard {
               <div class="item"></div>
             </td>
           </tr>
-          <!--// .cards.fourth -->
         </table>
       </div>
     `;
+
+    this.initCSS();
+  }
+
+  initCSS() {
+    
   }
 
 }

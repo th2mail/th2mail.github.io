@@ -12,7 +12,7 @@
             "webRoot": "${workspaceFolder}"
 
             // debugging setting sample
-            // "file": "${workspaceFolder}/src/sample/web/css/css_grid_lines_row.html"
+            // "file": "${workspaceFolder}/src/main.index.html"
         }
     ]
 }

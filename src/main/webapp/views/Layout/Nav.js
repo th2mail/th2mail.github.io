@@ -1,108 +1,111 @@
+/********************************************************************************************************
+ * 
+ * 네비게이션
+ * 
+ *******************************************************************************************************/
 export default class Navigation {
 
   constructor(root) {
     this.root = root;
     this.root.innerHTML = `
-      <!-- .nav_list -->
-        <ul class="nav_list">
-          <li class="menu" data-title="소개">
-            <a href="#introduce">
-              <span class="no">I</span>
-              <span class="tooltip">ntroduce</span>
-            </a>
-          </li>
-          <li class="menu" data-title="대쉬보드">
-            <a href="#dashboard">
-              <span class="no">D</span>
-              <span class="tooltip">ashboard</span>
-            </a>
-          </li>
-          <li class="menu" data-title="센서 데이터 현황">
-            <a href="#data-status">
-              <span class="no">1</span>
-              <span class="tooltip">센서 데이터 현황</span>
-            </a>
-          </li>
-          <li class="menu" data-title="센서 데이터 선택">
-            <a href="#data-select">
-              <span class="no">2</span>
-              <span class="tooltip">센서 데이터 선택</span>
-            </a>
-          </li>
-          <li class="menu" data-title="데이터 탐험 (Pandas Profiler)">
-            <a href="#explore-pandas-profiler">
-              <span class="no">3</span>
-              <span class="tooltip">데이터 탐험 (Pandas Profiler)</span>
-            </a>
-          </li>
-          <li class="menu" data-title="데이터 탐험 (Sweetviz)">
-            <a href="#explore-sweetviz">
-              <span class="no">4</span>
-              <span class="tooltip">데이터 탐험 (Sweetviz)</span>
-            </a>
-          </li>
-          <li class="menu" data-title="데이터 로딩 & 프리뷰">
-            <a href="#loading-preview">
-              <span class="no">5</span>
-              <span class="tooltip">데이터 로딩 & 프리뷰</span>
-            </a>
-          </li>
-          <li class="menu" data-title="상관관계 시각화">
-            <a href="#correlate-graph">
-              <span class="no">6</span>
-              <span class="tooltip">상관관계 시각화</span>
-            </a>
-          </li>
-          <li class="menu" data-title="결측치 시각화 및 처리">
-            <a href="#visual-process-miss-value">
-              <span class="no">7</span>
-              <span class="tooltip">결측치 시각화 및 처리</span>
-            </a>
-          </li>
-          <li class="menu" data-title="이상치 시각화 및 처리">
-            <a href="#visual-process-out-value">
-              <span class="no">8</span>
-              <span class="tooltip">이상치 시각화 및 처리</span>
-            </a>
-          </li>
-          <li class="menu" data-title="데이터 전처리">
-            <a href="#resample-normalize">
-              <span class="no">9</span>
-              <span class="tooltip">데이터 전처리</span>
-            </a>
-          </li>
-          <li class="menu" data-title="시계열 데이터 분해">
-            <a href="#decompose">
-              <span class="no">10</span>
-              <span class="tooltip">시계열 데이터 분해</span>
-            </a>
-          </li>
-          <li class="menu" data-title="시계열 정상성 검사 및 변환">
-            <a href="#sanity-check-Transform">
-              <span class="no">11</span>
-              <span class="tooltip">시계열 정상성 검사 및 변환</span>
-            </a>
-          </li>
-          <li class="menu" data-title="단변수 예측">
-            <a href="#predict-single-variable">
-              <span class="no">12</span>
-              <span class="tooltip">단변수 예측</span>
-            </a>
-          </li>
-          <li class="menu" data-title="다변수 예측">
-            <a href="#predict-multi-variable">
-              <span class="no">13</span>
-              <span class="tooltip">다변수 예측</span>
-            </a>
-          </li>
-          <li class="menu" data-title="시계열 예측 분석">
-            <a href="#predict-result-analysis">
-              <span class="no">14</span>
-              <span class="tooltip">시계열 예측 분석</span>
-            </a>
-          </li>
-        </ul>
-        <!--// .nav_list -->
+      <ul class="nav_list">
+        <li class="menu" data-title="소개">
+          <a href="#introduce">
+            <span class="no">I</span>
+            <span class="tooltip">ntroduce</span>
+          </a>
+        </li>
+        <li class="menu" data-title="대쉬보드">
+          <a href="#dashboard">
+            <span class="no">D</span>
+            <span class="tooltip">ashboard</span>
+          </a>
+        </li>
+        <li class="menu" data-title="센서 데이터 현황">
+          <a href="#data-status">
+            <span class="no">1</span>
+            <span class="tooltip">센서 데이터 현황</span>
+          </a>
+        </li>
+        <li class="menu" data-title="센서 데이터 선택">
+          <a href="#data-select">
+            <span class="no">2</span>
+            <span class="tooltip">센서 데이터 선택</span>
+          </a>
+        </li>
+        <li class="menu" data-title="데이터 탐험 (Pandas Profiler)">
+          <a href="#explore-pandas-profiler">
+            <span class="no">3</span>
+            <span class="tooltip">데이터 탐험 (Pandas Profiler)</span>
+          </a>
+        </li>
+        <li class="menu" data-title="데이터 탐험 (Sweetviz)">
+          <a href="#explore-sweetviz">
+            <span class="no">4</span>
+            <span class="tooltip">데이터 탐험 (Sweetviz)</span>
+          </a>
+        </li>
+        <li class="menu" data-title="데이터 로딩 & 프리뷰">
+          <a href="#loading-preview">
+            <span class="no">5</span>
+            <span class="tooltip">데이터 로딩 & 프리뷰</span>
+          </a>
+        </li>
+        <li class="menu" data-title="상관관계 시각화">
+          <a href="#correlate-graph">
+            <span class="no">6</span>
+            <span class="tooltip">상관관계 시각화</span>
+          </a>
+        </li>
+        <li class="menu" data-title="결측치 시각화 및 처리">
+          <a href="#visual-process-miss-value">
+            <span class="no">7</span>
+            <span class="tooltip">결측치 시각화 및 처리</span>
+          </a>
+        </li>
+        <li class="menu" data-title="이상치 시각화 및 처리">
+          <a href="#visual-process-out-value">
+            <span class="no">8</span>
+            <span class="tooltip">이상치 시각화 및 처리</span>
+          </a>
+        </li>
+        <li class="menu" data-title="데이터 전처리">
+          <a href="#resample-normalize">
+            <span class="no">9</span>
+            <span class="tooltip">데이터 전처리</span>
+          </a>
+        </li>
+        <li class="menu" data-title="시계열 데이터 분해">
+          <a href="#decompose">
+            <span class="no">10</span>
+            <span class="tooltip">시계열 데이터 분해</span>
+          </a>
+        </li>
+        <li class="menu" data-title="시계열 정상성 검사 및 변환">
+          <a href="#sanity-check-Transform">
+            <span class="no">11</span>
+            <span class="tooltip">시계열 정상성 검사 및 변환</span>
+          </a>
+        </li>
+        <li class="menu" data-title="단변수 예측">
+          <a href="#predict-single-variable">
+            <span class="no">12</span>
+            <span class="tooltip">단변수 예측</span>
+          </a>
+        </li>
+        <li class="menu" data-title="다변수 예측">
+          <a href="#predict-multi-variable">
+            <span class="no">13</span>
+            <span class="tooltip">다변수 예측</span>
+          </a>
+        </li>
+        <li class="menu" data-title="시계열 예측 분석">
+          <a href="#predict-result-analysis">
+            <span class="no">14</span>
+            <span class="tooltip">시계열 예측 분석</span>
+          </a>
+        </li>
+      </ul>
     `;
 
     this.initCSS();
@@ -114,9 +117,7 @@ export default class Navigation {
     const menus = document.querySelectorAll('.menu');
     const txt_list = document.querySelectorAll('.sidebar ul li a');
 
-    /**
-     * 메뉴를 클릭했을 때 실행되는 이벤트 함수
-     */
+    // 메뉴를 클릭했을 때 실행되는 이벤트 함수
     nav_list.addEventListener('click', (event) => {
 
       // 네비게이션을 연다(Open).
