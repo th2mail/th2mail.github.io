@@ -19,10 +19,10 @@ Font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');                
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans KR&display=swap');
 // Local Font
-@import url('/src/main/webapp/assert/font/font.css');
-@font-face { font-family: "Cafe24Ssurround";    src: url("/src/main/webapp/assert/font/Cafe24Ssurround/Cafe24Ssurround.ttf")                      format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'YdestreetB';         src: url('/src/main/webapp/assert/font/Ydestreet_FONT/YdestreetB.ttf')                            format('truetype'); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'Pretendard-Regular'; src: url('/src/main/webapp/assert/font/Pretendard-1.2.1/web/static/woff/Pretendard-Regular.woff') format('woff');     font-weight: 400;    font-style: normal; }
+@import url('/src/main/webapp/asserts/font/font.css');
+@font-face { font-family: "Cafe24Ssurround";    src: url("/src/main/webapp/asserts/font/Cafe24Ssurround/Cafe24Ssurround.ttf")                      format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'YdestreetB';         src: url('/src/main/webapp/asserts/font/Ydestreet_FONT/YdestreetB.ttf')                            format('truetype'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Pretendard-Regular'; src: url('/src/main/webapp/asserts/font/Pretendard-1.2.1/web/static/woff/Pretendard-Regular.woff') format('woff');     font-weight: 400;    font-style: normal; }
 
 /*======================================================================================================
 Global
@@ -102,7 +102,8 @@ p  { color: rgb(62, 81, 117);        font-size: var(--font-micro); }
                                         dimmed
 ======================================================================================================*/
 .search-frm {
-  display: flex; align-items: center; position: absolute; top: 0; right: 9rem; width: 20rem; height: 50px; border-radius: var(--size-border-large-radius); overflow-x: hidden; background: var(--color-white); opacity: 0; pointer-events: none; // 안보이고, 클릭 안되게 설정
+  display: flex; align-items: center; position: absolute; top: 0; right: 11rem; width: 20rem; height: 50px; border-radius: var(--size-border-large-radius); overflow-x: hidden; background: var(--color-white); opacity: 0; pointer-events: none; // 안보이고, 클릭 안되게 설정
+  border: 2px solid var(--color-header-title);
   
   &.active { top: 2rem; opacity: 1; pointer-events: auto; transition: 300ms ease-in; } // 보이게, 클릭 가능하게 설정    
 
@@ -2668,21 +2669,247 @@ nav {
     }
   }
 
-  .body * {
-    background: none;
-  }
-
   .body {
     margin: 0 2rem;
     height: 85%;
     background: var(--color-white);
     border-radius: var(--size-border-large-radius);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 1rem;
+
+    #select {
+      width: 70%;
+
+      #select-status {
+        display: flex;
+        justify-content: space-evenly;  
+        gap: 1rem;  
+        margin-bottom: 2rem;
+
+        .card {
+          width: 40%;
+          height: 200px;
+          border-radius: var(--size-border-medium-radius);
+
+          .card__head {                
+            height: 50px;
+            line-height: 50px;            
+            margin-bottom: .7rem;            
+            font-size: 2rem;
+            color: var(--color-white);
+          }
+
+          .card__body {
+            height: 60%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: .5rem;
+
+            .item {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: .5rem;
+
+              .circle {
+                width: 70px;
+                height: 70px;              
+                background: rgba(245,124,91,.5);
+                border-radius: var(--size-border-circle-radius);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .circle__count {
+                  background: transparent;
+                  color: var(--color-white);
+                  font-size: 2.5rem;
+                }
+              }
+
+              .title {
+                // font-size: 1rem;
+                color: rgba(0, 0, 0, 0.3);
+                font-size: 1.2rem;
+                font-weight: 600;
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            border: 5px solid rgb(245,124,91);
+
+            .card__head {
+              padding-left: 2.4rem;
+              background: rgb(245,124,91);
+              i { background: transparent;  }
+            }
+
+            .card__body {
+              .item {
+                .circle {
+                  background: rgba(245,124,91,.65);
+                }
+              }
+            }
+          }
+          &:nth-child(2) {
+            border: 5px solid rgb(209,97,151);
+
+            .card__head {
+              padding-left: .9rem;
+              background: rgb(209,97,151);
+              i { background: transparent;  }
+            }
+
+            .card__body {
+              .item {
+                .circle {
+                  background: rgba(209,97,151,.65);
+                }
+              }
+            }
+          }
+          &:nth-child(3) {
+            border: 5px solid rgb(148,122,204);
+
+            .card__head {
+              padding-left: .9rem;
+              background: rgb(148,122,204);
+              i { 
+                background: transparent;  
+                font-size: 2.5rem;
+              }
+            }
+
+            .card__body {
+              .item {
+                .circle {
+                  background: rgba(148,122,204,.65);
+                }
+              }
+            }            
+          }
+        }
+      }
+    }
+
+    #select-list {
+      #search {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        position: relative;
+        margin-bottom: 1rem;
+        
+        select {
+          width: 60%;
+          height: 50px;
+          padding: 10px;
+          border: 2px solid rgb(245,146,141);      
+          border-radius: 10px;          
+          // -webkit-appearance:none; /* for chrome */
+          // -moz-appearance:none; /*for firefox*/
+          appearance:none;
+          font-size: 1rem;
+          font-weight: 600;
+          color: rgb(245,146,141);  
+
+          // height: 220px;
+  //         min-height:250px;// overflow:auto;
+  // overflow:hidden;
+          
+          option {
+            
+          }
+        }
+
+        select::-ms-expand{
+          // display:none;
+        }
+
+        .select__arrow{
+          position: absolute;
+          top: 16px;
+          width :0;
+          height :0;
+          pointer-events: none;
+          border-style :solid;
+          border-width: 20px 15px 0 15px;
+          border-color: rgba(245,146,141,.8) transparent transparent transparent;
+
+          &.one {
+            left: 550px;
+          }
+          &.two {
+            right: 15px;
+          }
+        }
+      }
+
+      #grid {
+        width: 100%;
+        height: 350px;
+        display: flex;     
+        justify-content: flex-start;   
+        flex-wrap: wrap;
+        gap: 1rem;
+        overflow-y: scroll;
+        padding: 1rem;
+        text-align: center;
+
+        div {
+          width: 278px;
+          height: 100px;
+          padding: 1rem;
+          background: rgba(245,146,141,.6);      
+          border-radius: 10px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: .5rem;
+          align-items: center;
+          
+          span {
+            background: transparent;
+            color: var(--color-white);
+            font-size: 14px;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+
+    #regist {
+      flex-grow: 1;
+      border: 5px solid rgb(248,186,85);
+      border-radius: 40px;//var(--size-border-large-radius);
+
+      #regist-title {
+        height: 80px;
+        border-radius: var(--size-border-large-radius) var(--size-border-large-radius) 0 0;
+        background: rgb(248,186,85);
+        
+        i {
+          background: transparent;
+          color: var(--color-white);
+          font-size: 3rem;
+          line-height: 80px;
+          position: relative; left: 30px;
+        }
+      }
+
+      #regist-list {
+        background: blue;
+      }
+
+      #regist-btn {
+
+      }
+    }
   }
 }
-
 /********************************************************************************************************
  * 설 명 : 데이터 탐헙(Pandas Profiler)
  * 관련 화면 : src\main\webapp\view\DataPreparation\ExplorePandasProfiler.html
@@ -3616,4 +3843,3 @@ nav {
     border-right-color: inherit;
   }
 }
-

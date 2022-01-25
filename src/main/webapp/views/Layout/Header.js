@@ -10,9 +10,10 @@ export default class Header {
     this.root.innerHTML = `
       <hgroup>
         <h2>Time Series Sensor Data Forecasting UI</h2>
-      </hgroup>
-      <div class="account">
+      </hgroup>      
+      <div class="account"> 
         <div id="search-btn" class="las la-search"></div>
+        <div id="register-btn" class="las la-registered"></div>       
         <div id="login-btn" class="las la-user-circle"></div>
       </div>
     `;
