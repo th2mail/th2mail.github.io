@@ -801,35 +801,35 @@ export default class DataSelect {
   initControl() {
     var param = {};
 
-    $.ajax({
-      url: "http://192.168.10.26:5000/prepare/orders",
-      data: JSON.stringify(param),
-      method: "POST",
-      dataType: "json"
-    })
-    .done(function(json) {
-      console.log(json);
-      console.log(JSON.parse(json).response.body.orders);
+    // $.ajax({
+    //   url: "http://192.168.10.26:5000/prepare/orders",
+    //   data: JSON.stringify(param),
+    //   method: "POST",
+    //   dataType: "json"
+    // })
+    // .done(function(json) {
+    //   console.log(json);
+    //   console.log(JSON.parse(json).response.body.orders);
 
-      const orders = JSON.parse(json).response.body.orders;      
-      for (let i=0; i<orders.length; i++) {
-        // console.log(orders[i]);
-        var order = orders[i].order_nm;
-        console.log(order);
-      }
+    //   const orders = JSON.parse(json).response.body.orders;      
+    //   for (let i=0; i<orders.length; i++) {
+    //     // console.log(orders[i]);
+    //     var order = orders[i].order_nm;
+    //     console.log(order);
+    //   }
 
-      JSON.parse(json).response.body.orders.forEach(item => { // item 변수는 배열 각각의 요소들을 순환한다.
-        $(`#customerId`).append(`<option value="${item.customer_id}">${item.customer_id}</option>`);
-      });
-    })
-    .fail(function(xhr, status, errorThrown) {
-      console.log("오류가 발생했다.");
-      console.log("오류명: " + errorThrown);
-      console.log("상태: " + status);
-    })
-    .always(function(xhr, status) {
-      console.log("요청이 완료되었습니다");
-    });
+    //   JSON.parse(json).response.body.orders.forEach(item => { // item 변수는 배열 각각의 요소들을 순환한다.
+    //     $(`#customerId`).append(`<option value="${item.customer_id}">${item.customer_id}</option>`);
+    //   });
+    // })
+    // .fail(function(xhr, status, errorThrown) {
+    //   console.log("오류가 발생했다.");
+    //   console.log("오류명: " + errorThrown);
+    //   console.log("상태: " + status);
+    // })
+    // .always(function(xhr, status) {
+    //   console.log("요청이 완료되었습니다");
+    // });
   }
 
 }
