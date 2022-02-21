@@ -1,13 +1,11 @@
-/********************************************************************************************************
- * 
+/***************************************************
  * 헤더
- * 
- *******************************************************************************************************/
+ **************************************************/
 export default class Header {
 
   constructor(root) {
     this.root = root;
-    this.root.innerHTML = `
+    this.root.innerHTML = this.getCSS() + `
       <hgroup>
         <h2>Time Series Sensor Data Forecasting UI</h2>
       </hgroup>      
@@ -41,6 +39,12 @@ export default class Header {
       dimmed.classList.toggle('active');
       loginFrm.classList.toggle('active');
     });
+  }
+
+  getCSS() {
+    return `
+
+    `;
   }
 
 }

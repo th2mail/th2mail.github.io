@@ -1,97 +1,52 @@
 @charset "UTF-8";
-/********************************************************************************************************
- * 설 명 : 공통 CSS
- * 관련 화면 : all
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-/*======================================================================================================
-Font
-======================================================================================================*/
+/**********************************************************
+* 설 명 : 공통 CSS
+* 관련 화면 : all
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
 @import url("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans KR&display=swap");
-@import url("/src/main/webapp/asserts/font/font.css");
-@font-face {
-  font-family: "Cafe24Ssurround";
-  src: url("/src/main/webapp/asserts/font/Cafe24Ssurround/Cafe24Ssurround.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'YdestreetB';
-  src: url("/src/main/webapp/asserts/font/Ydestreet_FONT/YdestreetB.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url("/src/main/webapp/asserts/font/Pretendard-1.2.1/web/static/woff/Pretendard-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-/*======================================================================================================
-Global
-======================================================================================================*/
 :root {
-  --color-background:    rgb(247, 248, 250);
-  --color-border:        rgb(238, 240, 243);
-  --color-white:         #fff;
-  --color-black:         #222;
-  --color-yellow:        rgb(255, 203, 51);
-  --color-green:         rgb(41, 204, 57);
-  --color-header-title:  rgb(75, 92, 127);
-  --color-section-title: rgb(98, 114, 147);
-  --color-title:         rgb(117, 136, 174);
-  --color-top-title:     rgb(117, 136, 174);
-  --color-major-title:   rgb(94, 110, 140);
-  --color-sub-title:     rgb(114, 128, 157);
-  --color-minor-title:   rgb(160, 173, 199);
-  --color-header-icon:   rgb(113, 133, 171);
-  --color-side-icon:     rgb(195, 202, 217);
-  --color-section-icon:  rgb(195, 202, 217);
-  --color-icon:          rgb(122, 140, 177);
-  --color-desc:          rgb(106, 121, 152);
-  --color-hover-icon:    rgb(255, 102, 51);
-  --font-large:   2rem;
-  --font-medium:  1.5rem;
+  --color-background: #f7f7f7;
+  --color-white: #fff;
+  --color-black: #222;
+  --color-text: #999;
+  --color-alian: rgb(62, 164, 164);
+  --font-extra-large: 1.5rem;
+  --font-medium: 1.17rem;
   --font-regular: 1rem;
-  --font-small:   .75rem;
-  --font-micro:   .5rem;
-  --weight-bold:        700;
-  --weight-semi-bold:   600;
-  --weight-medium:      500;
-  --weight-regular:     400;
-  --weight-light:       300;
+  --font-small: .9rem;
+  --font-micro: .5rem;
+  --weight-extra-bold: 800;
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-550: 550;
+  --weight-medium: 500;
+  --weight-regular: 400;
+  --weight-light: 300;
   --weight-extra-light: 200;
-  --weight-thin:        100;
-  --size-border-large-radius:  30px;
+  --weight-thin: 100;
+  --size-border-large-radius: 30px;
   --size-border-medium-radius: 10px;
-  --size-border-small-radius:  4px;
+  --size-border-small-radius: 4px;
   --size-border-circle-radius: 50%;
-  --animation-long-duration:   350ms;
+  --animation-long-duration: 350ms;
   --animation-middle-duration: 300ms;
-  --animation-short-duration:  .2s;
+  --animation-short-duration: 200ms;
 }
 
-/*======================================================================================================
-Universal tags
-======================================================================================================*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
+  margin: 0;
   border: none;
   outline: none;
-  margin: 0;
-  background: var(--color-white);
   font-family: 'Poppins', sans-serif;
   list-style: none;
   text-decoration: none;
@@ -99,44 +54,16 @@ Universal tags
   transition: var(--animation-short-duration) linear;
 }
 
-html {
-  width: 100vw;
-  height: 100vh;
-  background: gray;
-}
-
-/*======================================================================================================
-Typography
-======================================================================================================*/
-h1 {
-  color: #3e5175;
-  font-size: var(--font-large);
-  font-weight: var(--weight-bold);
+html, body {
+  background: var(--color-background);
+  color: var(--color-black);
 }
 
 h2 {
-  color: #3e5175;
-  font-size: var(--font-medium);
-}
-
-h3 {
-  color: var(--color-header-title);
+  color: var(--color-black);
   font-size: var(--font-regular);
 }
 
-h4 {
-  color: #3e5175;
-  font-size: var(--font-small);
-}
-
-p {
-  color: #3e5175;
-  font-size: var(--font-micro);
-}
-
-/*======================================================================================================
-                                        dimmed
-======================================================================================================*/
 .search-frm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,6 +74,7 @@ p {
   position: absolute;
   top: 0;
   right: 11rem;
+  right: 8rem;
   width: 20rem;
   height: 50px;
   border-radius: var(--size-border-large-radius);
@@ -158,7 +86,7 @@ p {
 }
 
 .search-frm.active {
-  top: 2rem;
+  top: 1.4rem;
   opacity: 1;
   pointer-events: auto;
   -webkit-transition: 300ms ease-in;
@@ -356,42 +284,108 @@ p {
   color: var(--color-white);
 }
 
-/*======================================================================================================
-main
-======================================================================================================*/
-main {
-  position: fixed;
-  top: calc(1rem + 85px);
-  left: calc(1rem + 78px);
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 100px;
+}
+
+.spinner::after {
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  margin-left: -32px;
+  border-radius: 50%;
+  border: 5px solid lightgrey;
+  border-top-color: var(--color-alian);
+  -webkit-animation: spinner .8s linear infinite;
+          animation: spinner .8s linear infinite;
+}
+
+#alianMinWidth {
+  min-width: 1300px;
+  height: 1px;
+}
+
+#alianWrap {
+  min-width: calc(1300px - 2rem);
+  position: absolute;
+  top: 1rem;
   right: 1rem;
   bottom: 1rem;
-  border-bottom-right-radius: var(--size-border-large-radius);
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
+  left: 1rem;
+  /**********************************************************
+  * 설 명 : Header
+  * 관련 화면 : src\main\webapp\view\ScreenLayout\Header.html
+  * 최초 생성일 : 
+  *     
+  * 수정일			수정내역 
+  * ---------  ----------------------------------------------
+  * 
+  **********************************************************/
+  /**********************************************************
+  * 설 명 : Navigation
+  * 관련 화면 : src\main\webapp\view\ScreenLayout\Navigation.html
+  * 최초 생성일 : 
+  *     
+  * 수정일			수정내역 
+  * ---------  ----------------------------------------------
+  * 
+  **********************************************************/
+  /**********************************************************
+  * 설 명 : main
+  * 관련 화면 : 
+  * 최초 생성일 : 
+  *     
+  * 수정일			수정내역 
+  * ---------  ----------------------------------------------
+  * 
+  **********************************************************/
 }
 
-main section {
-  min-height: 500px;
-  border-bottom: 3px solid var(--color-border);
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-}
-
-/*======================================================================================================
-section
-======================================================================================================*/
-/********************************************************************************************************
- * 설 명 : Header
- * 관련 화면 : src\main\webapp\view\ScreenLayout\Header.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-header {
+#alianWrap header#alianHeader {
+  background: rgba(27, 165, 165, 0.8);
+  color: var(--color-white);
+  -webkit-box-shadow: 2px 2px 5px rgba(27, 165, 165, 0.8);
+          box-shadow: 2px 2px 5px rgba(27, 165, 165, 0.8);
+  position: relative;
+  top: 0rem;
+  left: 0rem;
+  right: 1rem;
+  height: 60px;
+  padding: 1rem;
+  border-top-left-radius: var(--size-border-large-radius);
+  border-top-right-radius: var(--size-border-large-radius);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,1419 +395,200 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  left: calc(1rem + 78px);
-  height: 85px;
-  padding: 2rem;
-  border-bottom: 3px solid rgba(34, 34, 34, 0.2);
-  border-top-right-radius: var(--size-border-large-radius);
 }
 
-header .account {
-  font-size: 2rem;
-  color: var(--color-header-icon);
+#alianWrap header#alianHeader hgroup h2 {
+  color: var(--color-white);
+  font-size: var(--font-medium);
+  font-weight: var(--weight-regular);
 }
 
-header .account > div {
+#alianWrap header#alianHeader .account {
+  font-size: var(--font-extra-large);
+}
+
+#alianWrap header#alianHeader .account > * {
   margin-right: 1rem;
-  -webkit-transition: var(--animation-middle-duration) ease;
-  transition: var(--animation-middle-duration) ease;
+  -webkit-transition: var(--animation-short-duration) ease;
+  transition: var(--animation-short-duration) ease;
   cursor: pointer;
 }
 
-header .account > div:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  color: var(--color-hover-icon);
+#alianWrap header#alianHeader .account > *:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
-/********************************************************************************************************
- * 설 명 : Navigation
- * 관련 화면 : src\main\webapp\view\ScreenLayout\Navigation.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-nav {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  bottom: 1rem;
-  width: 78px;
-  border-top-left-radius: var(--size-border-large-radius);
+#alianWrap nav#alianNav {
+  background: rgba(27, 165, 165, 0.8);
+  color: var(--color-white);
+  -webkit-box-shadow: 2px 2px 5px rgba(27, 165, 165, 0.8);
+          box-shadow: 2px 2px 5px rgba(27, 165, 165, 0.8);
+  position: absolute;
+  top: 63px;
+  left: 0;
+  bottom: 0;
+  width: 210px;
   border-bottom-left-radius: var(--size-border-large-radius);
-  border-right: 3px solid rgba(34, 34, 34, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 98;
 }
 
-nav ul.nav_list {
+#alianWrap nav#alianNav ul.nav_list {
+  margin-top: 1rem;
   width: 100%;
-  height: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-size: var(--font-small);
 }
 
-nav ul.nav_list li {
+#alianWrap nav#alianNav ul.nav_list li.menu {
+  margin-bottom: 10px;
+}
+
+#alianWrap nav#alianNav ul.nav_list li.menu a {
   width: 100%;
-  height: 6.2%;
+  height: 36px;
+  padding-left: 10px;
+  margin-left: 20px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-nav ul.nav_list li a {
-  position: relative;
+#alianWrap nav#alianNav ul.nav_list li.menu:hover, #alianWrap nav#alianNav ul.nav_list li.menu.active {
+  cursor: pointer;
 }
 
-nav ul.nav_list li a, nav ul.nav_list li a > span {
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
-  text-align: center;
-  background: none;
-  color: rgba(34, 34, 34, 0.8);
-  font-weight: 400;
-  font-style: oblique;
-  border-radius: var(--size-border-medium-radius);
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+#alianWrap nav#alianNav ul.nav_list li.menu:hover a, #alianWrap nav#alianNav ul.nav_list li.menu.active a {
+  background: var(--color-white);
+  color: var(--color-alian);
+  font-weight: 550;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-nav ul.nav_list li a .tooltip, nav ul.nav_list li a > span .tooltip {
+#alianWrap #alianContent {
+  background: #F7F7F7;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: -1rem;
-  left: 2.5rem;
-  text-align: left;
-  height: 3rem;
-  line-height: 3rem;
-  border-radius: 0 var(--size-border-medium-radius) var(--size-border-medium-radius) 0;
-  background: var(--color-white);
-  color: var(--color-hover-icon);
-  font-weight: 700;
-  opacity: 0;
-  pointer-events: none;
-  white-space: nowrap;
+  top: 63px;
+  left: 213px;
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: var(--size-border-large-radius);
 }
 
-nav ul.nav_list li:nth-child(1) a .tooltip {
-  left: 1.7rem;
-}
-
-nav ul.nav_list li:nth-child(2) a .tooltip {
-  left: 1.9rem;
-  font-style: oblique;
-}
-
-nav ul.nav_list li:hover a, nav ul.nav_list li:hover a > span:nth-child(1) {
-  background: var(--color-white);
-  color: var(--color-hover-icon);
-  font-weight: var(--weight-bold);
-}
-
-nav ul.nav_list li:hover .tooltip {
-  top: 0rem;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-nav ul.nav_list li:nth-child(1) .tooltip {
-  width: 85px;
-}
-
-nav ul.nav_list li:nth-child(2) .tooltip,
-nav ul.nav_list li:nth-child(14) .tooltip,
-nav ul.nav_list li:nth-child(15) .tooltip {
-  width: 90px;
-}
-
-nav ul.nav_list li:nth-child(11) .tooltip {
-  width: 110px;
-}
-
-nav ul.nav_list li:nth-child(8) .tooltip {
-  width: 125px;
-}
-
-nav ul.nav_list li:nth-child(3) .tooltip,
-nav ul.nav_list li:nth-child(4) .tooltip,
-nav ul.nav_list li:nth-child(16) .tooltip {
-  width: 130px;
-}
-
-nav ul.nav_list li:nth-child(12) .tooltip {
-  width: 145px;
-}
-
-nav ul.nav_list li:nth-child(7) .tooltip {
-  width: 160px;
-}
-
-nav ul.nav_list li:nth-child(9) .tooltip,
-nav ul.nav_list li:nth-child(10) .tooltip {
-  width: 165px;
-}
-
-nav ul.nav_list li:nth-child(6) .tooltip {
-  width: 185px;
-}
-
-nav ul.nav_list li:nth-child(13) .tooltip {
-  width: 200px;
-}
-
-nav ul.nav_list li:nth-child(5) .tooltip {
-  width: 235px;
-}
-
-/********************************************************************************************************
- * 설 명 : 대쉬보드 화면
- * 관련 화면 : src\main\webapp\view\Dashboard\Dashboard.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#dashboard {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
-#dashboard .head {
-  padding: 2rem;
+#alianWrap #alianContent #alianTitle {
+  background: var(--color-background);
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: .5rem;
 }
 
-#dashboard .head i {
+#alianWrap #alianContent #alianTitle span {
+  margin-left: .5rem;
   font-size: var(--font-medium);
-  margin-right: 2rem;
-  color: var(--color-section-icon);
+  font-weight: var(--weight-bold);
 }
 
-#dashboard .head h3 {
-  color: var(--color-section-title);
+#alianWrap #alianContent #alianMain {
+  position: absolute;
+  top: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: var(--size-border-large-radius);
 }
 
-#dashboard .body * {
-  background: none;
-}
-
-#dashboard .body {
-  margin: 0 2rem;
-  height: 85%;
-  background: var(--color-white);
-  border-radius: var(--size-border-large-radius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#dashboard .body table {
-  width: 90%;
-  border-spacing: 0px;
-}
-
-#dashboard .body table .cards .card {
+#alianWrap #alianContent #alianMain section {
   position: relative;
-}
-
-#dashboard .body table .cards .card .item {
-  width: 11vw;
-  height: 13vh;
-}
-
-#dashboard .body table .cards.first .card .item {
-  height: 6vh;
-}
-
-#dashboard .body table .cards.first .card .item .circle {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: -60px;
-  left: -58px;
-  background: var(--color-border);
-  border-radius: 50%;
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  color: var(--color-major-title);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 1;
-}
-
-#dashboard .body table .cards.first .card .item .circle:hover {
-  -webkit-transform: scale(1.1) rotate(-45deg);
-          transform: scale(1.1) rotate(-45deg);
-  -webkit-transition: all var(--animation-middle-duration) ease;
-  transition: all var(--animation-middle-duration) ease;
-}
-
-#dashboard .body table .cards.first .card .item .square {
-  position: absolute;
-  width: 25px;
-  height: .6rem;
-  line-height: .6rem;
-  top: -16px;
-  background: var(--color-white);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.first .card .item .title {
-  position: absolute;
-  width: 160px;
-  height: 20px;
-  top: -45px;
-  left: -68px;
-  color: var(--color-sub-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.first .card.four .item .content {
-  position: absolute;
-  width: 150px;
-  height: 70px;
-  top: -15px;
-  left: 11px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 5px;
-}
-
-#dashboard .body table .cards.first .card.four .item .content a {
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card .item {
-  height: 9vh;
-}
-
-#dashboard .body table .cards.second .card .item .circle {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 33px;
-  left: -58px;
-  background: var(--color-border);
-  border-radius: 50%;
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  color: var(--color-major-title);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 1;
-}
-
-#dashboard .body table .cards.second .card .item .circle:hover {
-  -webkit-transform: scale(1.1) rotate(45deg);
-          transform: scale(1.1) rotate(45deg);
-  -webkit-transition: all var(--animation-middle-duration) ease;
-  transition: all var(--animation-middle-duration) ease;
-}
-
-#dashboard .body table .cards.second .card.two .item .square {
-  position: absolute;
-  width: 25px;
-  height: .6rem;
-  line-height: .6rem;
-  top: 100%;
-  left: -40%;
-  background: var(--color-white);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.two .item .title {
-  position: absolute;
-  width: 160px;
-  height: 90px;
-  top: 55px;
-  left: -74%;
-  color: var(--color-sub-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.two .item .content {
-  position: absolute;
-  width: 130px;
-  height: 70px;
-  top: 110px;
-  left: -75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 5px;
-}
-
-#dashboard .body table .cards.second .card.two .item .content a {
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card.three .item .square {
-  position: absolute;
-  width: 25px;
-  height: .6rem;
-  line-height: .6rem;
-  top: 83px;
-  left: -75px;
-  background: var(--color-white);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.three .item > .title {
-  position: absolute;
-  width: 160px;
-  height: 20px;
-  top: 55px;
-  left: -150px;
-  color: var(--color-sub-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.three .item .content {
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-}
-
-#dashboard .body table .cards.second .card.three .item .content .first .title {
-  position: absolute;
-  top: 110px;
-  left: -65px;
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-}
-
-#dashboard .body table .cards.second .card.three .item .content .first .desc {
-  position: absolute;
-  top: 135px;
-  left: -50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#dashboard .body table .cards.second .card.three .item .content .first .desc a {
-  font-size: 1px;
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card.three .item .content .second .title {
-  position: absolute;
-  top: 190px;
-  left: -65px;
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-}
-
-#dashboard .body table .cards.second .card.three .item .content .second .desc {
-  position: absolute;
-  top: 215px;
-  left: -50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#dashboard .body table .cards.second .card.three .item .content .second .desc a {
-  font-size: 1px;
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(1) {
-  width: 100px;
-  height: 100px;
-  top: -25px;
-  left: -92px;
-  background: var(--color-border);
-  border-radius: 50%;
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  color: var(--color-major-title);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 1;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(1):hover {
-  -webkit-transform: scale(1.1) rotate(-45deg);
-          transform: scale(1.1) rotate(-45deg);
-  -webkit-transition: all var(--animation-middle-duration) ease;
-  transition: all var(--animation-middle-duration) ease;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(2) {
-  position: absolute;
-  width: 25px;
-  height: .6rem;
-  line-height: .6rem;
-  top: -17px;
-  left: 38px;
-  background: var(--color-white);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(3) {
-  position: absolute;
-  width: 110px;
-  height: 75px;
-  top: -40px;
-  left: -10px;
-  color: var(--color-sub-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1) {
-  position: absolute;
-  top: -53px;
-  left: 100px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 33px;
-  left: 40px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2) {
-  position: absolute;
-  top: -36px;
-  left: 220px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 4px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(3) {
-  position: absolute;
-  top: -36px;
-  left: 280px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(3)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 8px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(4) {
-  position: absolute;
-  top: -36px;
-  left: 350px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(4)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 2px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(5) {
-  position: absolute;
-  top: -36px;
-  left: 420px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(5)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 2px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(6) {
-  position: absolute;
-  top: -36px;
-  left: 490px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(6)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 10px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(7) {
-  position: absolute;
-  top: -36px;
-  left: 560px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(7)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 12px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(8) {
-  position: absolute;
-  top: -36px;
-  left: 630px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(8)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 20px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(9) {
-  position: absolute;
-  top: -36px;
-  left: 710px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(9)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 40px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(10) {
-  position: absolute;
-  top: -36px;
-  left: 810px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(10)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 22px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(11) {
-  position: absolute;
-  top: -36px;
-  left: 900px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(11)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 15px;
-  left: 14px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(5) {
-  top: 60px;
-  left: 48px;
-  position: absolute;
-  width: 25px;
-  height: .6rem;
-  line-height: .6rem;
-  top: 54px;
-  left: 38px;
-  background: var(--color-white);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(6) {
-  position: absolute;
-  width: 110px;
-  height: 75px;
-  top: 30px;
-  left: -10px;
-  color: var(--color-sub-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(7) {
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  top: 70px;
-  left: 142px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5px;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(7) a {
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(7)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: -11px;
-  left: -3px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(7)::after {
-  content: "Linear Models";
-  position: absolute;
-  width: 100px;
-  height: 10px;
-  top: -36px;
-  left: -43px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(8) {
-  position: absolute;
-  width: 205px;
-  height: 145px;
-  top: 70px;
-  left: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5px;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(8) a {
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(8)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: -11px;
-  left: -3px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(8)::after {
-  content: "Tree Model";
-  position: absolute;
-  width: 100px;
-  height: 10px;
-  top: -36px;
-  left: -43px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(9) {
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  top: 70px;
-  left: 480px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5px;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(9) a {
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(9)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: -12px;
-  left: -3px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(9)::after {
-  content: "Deep Learning";
-  position: absolute;
-  width: 100px;
-  height: 10px;
-  top: -36px;
-  left: -43px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(10) {
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  top: 70px;
-  left: 650px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5px;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(10) a {
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(10)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: -11px;
-  left: -3px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(10)::after {
-  content: "Hyperparameter Optimization";
-  position: absolute;
-  width: 200px;
-  height: 10px;
-  top: -36px;
-  left: -105px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(11) {
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  top: 70px;
-  left: 805px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5px;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(11) a {
-  border-left: 0.25rem solid var(--color-border);
-  padding-left: .5rem;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(11)::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: -11px;
-  left: -3px;
-  background: var(--color-side-icon);
-  border-radius: 50%;
-}
-
-#dashboard .body table .cards.second .card.four .item div:nth-child(11)::after {
-  content: "Ensenbling";
-  position: absolute;
-  width: 100px;
-  height: 10px;
-  top: -36px;
-  left: -43px;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-sub-title);
-  text-align: center;
-}
-
-#dashboard .body table .cards.third .card.one {
-  border-top: none;
-  top: -2px;
-}
-
-#dashboard .body table .cards.third .card.seven .item {
-  height: 175px;
-}
-
-#dashboard .body table .cards.third .card.four, #dashboard .body table .cards.third .card.five, #dashboard .body table .cards.third .card.six, #dashboard .body table .cards.third .card.seven {
-  border-top: none;
-}
-
-#dashboard .body table .cards.fourth .card .item {
-  width: 90px;
-  height: 110px;
-}
-
-#dashboard .body table .cards.fourth .card .item .circle {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 83px;
-  left: -58px;
-  background: var(--color-border);
-  border-radius: 50%;
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  color: var(--color-major-title);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 1;
-}
-
-#dashboard .body table .cards.fourth .card .item .circle:hover {
-  -webkit-transform: scale(1.1) rotate(-45deg);
-          transform: scale(1.1) rotate(-45deg);
-  -webkit-transition: all var(--animation-middle-duration) ease;
-  transition: all var(--animation-middle-duration) ease;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(2) {
-  position: absolute;
-  width: 25px;
-  height: .6rem;
-  line-height: .6rem;
-  top: 64px;
-  left: 140px;
-  background: var(--color-white);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-  z-index: 1;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(3) {
-  position: absolute;
-  width: 160px;
-  height: 20px;
-  top: 38px;
-  left: 72px;
-  color: var(--color-sub-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(4) {
-  position: absolute;
-  width: 25px;
-  height: .6rem;
-  line-height: .6rem;
-  top: 186px;
-  left: 140px;
-  background: var(--color-white);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-  z-index: 1;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(5) {
-  position: absolute;
-  width: 160px;
-  height: 20px;
-  top: 205px;
-  left: 72px;
-  color: var(--color-sub-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(6) a {
-  position: absolute;
-  width: 1350px;
-  height: 100px;
-  left: 95%;
-  top: 25px;
-  border: 1rem solid var(--color-border);
-  border-radius: var(--size-border-medium-radius);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(7) a {
-  position: absolute;
-  width: 300px;
-  height: 100px;
-  top: 140px;
-  border: 1rem solid var(--color-border);
-  border-radius: var(--size-border-medium-radius);
-  color: var(--color-minor-title);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(1) {
-  left: 95%;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(2) {
-  left: 258%;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(3) {
-  left: 420%;
-}
-
-#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(4) {
-  left: 577%;
-}
-
-#dashboard .body table .cards.first .card {
-  top: -30px;
-  left: 20px;
-  border-top: 1rem solid var(--color-border);
-}
-
-#dashboard .body table .cards.first .card.three, #dashboard .body table .cards.first .card.four, #dashboard .body table .cards.first .card.five, #dashboard .body table .cards.first .card.six, #dashboard .body table .cards.first .card.seven {
-  border-bottom: 1rem solid var(--color-border);
-}
-
-#dashboard .body table .cards.first .card.seven {
-  border-right: 1rem solid var(--color-border);
-  border-radius: 0 20px 20px 0;
-}
-
-#dashboard .body table .cards.second .card {
-  top: -45px;
-  border-top: 1rem solid var(--color-border);
-}
-
-#dashboard .body table .cards.second .card.one {
-  border-left: 1rem solid var(--color-border);
-  border-bottom: 1rem solid var(--color-border);
-  border-radius: 20px 0 0 20px;
-}
-
-#dashboard .body table .cards.second .card.two {
-  border-bottom: 1rem solid var(--color-border);
-}
-
-#dashboard .body table .cards.second .card.three {
-  border-bottom: 1rem solid var(--color-border);
-  top: -45px;
-  left: -77px;
-}
-
-#dashboard .body table .cards.second .card.four {
-  border-top: none;
-}
-
-#dashboard .body table .cards.second .card.four .item {
-  position: absolute;
-  width: 1000px;
-  left: -100px;
-  height: 80px;
-  top: 65px;
-  border: 1rem solid var(--color-border);
-  border-radius: 50px 20px 0 50px;
-}
-
-#dashboard .body table .cards.third .card.one, #dashboard .body table .cards.third .card.four, #dashboard .body table .cards.third .card.five, #dashboard .body table .cards.third .card.six, #dashboard .body table .cards.third .card.seven {
-  border-top: none;
-}
-
-#dashboard .body table .cards.third .card.seven {
-  border-right: 1rem solid var(--color-border);
-  border-radius: 0 0 20px 0;
-  top: -34px;
-  left: 13px;
-}
-
-#dashboard .body table .cards.fourth .card {
-  border-top: 1rem solid var(--color-border);
-  top: -51px;
-}
-
-#dashboard .body table .cards.fourth .card.one {
-  border-left: 1rem solid var(--color-border);
-  border-radius: 20px 0 0 20px;
-}
-
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  width: 51px;
-  height: 1rem;
-  top: 62px;
-  left: -99px;
-  background: var(--color-border);
-}
-
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(4)::after {
-  content: "";
-  position: absolute;
-  width: 1rem;
-  height: 103px;
-  top: -107px;
-  left: -48px;
-  background: var(--color-border);
-}
-
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(6)::before {
-  content: "";
-  position: absolute;
-  width: 116px;
-  height: 1rem;
-  top: 64px;
-  left: 92px;
-  background: var(--color-border);
-  border-radius: var(--size-border-large-radius) 0 0 0;
-}
-
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(7)::before {
-  content: "";
-  position: absolute;
-  width: 116px;
-  height: 1rem;
-  top: 180px;
-  left: 92px;
-  background: var(--color-border);
-  border-radius: 0 0 0 var(--size-border-large-radius);
-}
-
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(1)::after,
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(2)::after,
-#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(3)::after {
-  content: "";
-  position: absolute;
-  width: 56px;
-  height: 1rem;
-  top: 24px;
-  left: 284px;
-  background: var(--color-border);
-}
-
-/********************************************************************************************************
- * 설 명 : 소개 화면
- * 관련 화면 : src\main\webapp\view\Dashboard\Introduce.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#introduce {
-  width: calc(100vw - 3rem - 78px - 1px);
-  height: calc(100vh - 2rem - 85px);
-  background: var(--color-white);
-}
-
-#introduce .head {
-  padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: var(--font-regular);
-}
-
-#introduce .head i {
-  margin-right: 2rem;
-  color: #222;
-  font-size: 1.4rem;
-}
-
-#introduce .head h3 {
-  color: #222;
-  font-size: 1.2rem;
-}
-
-#introduce .container {
   width: 100%;
   height: 100%;
+  padding: 1rem .8rem;
+  max-width: 1920px;
+  max-width: 2315px;
+  margin: auto;
+}
+
+#alianWrap #alianContent #alianMain section .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 20px;
+  margin-bottom: 1rem;
+}
+
+#alianWrap #alianContent #alianMain section .title i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 5px solid var(--color-alian);
+  border-radius: 50%;
+}
+
+#alianWrap #alianContent #alianMain section .title span {
+  margin-left: .5rem;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+#alianWrap #alianContent #alianMain section #condition {
+  background: var(--color-white);
+  height: 70px;
+  padding: 0 2rem;
+  margin: .5rem 0 1.5rem 0;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#alianWrap #alianContent #alianMain section #result {
+  background: var(--color-white);
+  position: absolute;
+  top: 190px;
+  left: .8rem;
+  right: .8rem;
+  bottom: .8rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: auto;
+}
+
+/**********************************************************
+* 설 명 : 소개 화면
+* 관련 화면 : src\main\webapp\view\Dashboard\Introduce.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
+#introduce .container {
+  margin-top: 100px;
+  height: 90%;
+  border-bottom-right-radius: var(--size-border-large-radius);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1842,6 +617,7 @@ nav ul.nav_list li:nth-child(5) .tooltip {
 }
 
 #introduce .container table td .box-wrap .box {
+  background: var(--color-white);
   position: absolute;
   width: 120%;
   height: 90%;
@@ -3281,20 +2057,1181 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   background: #517782;
 }
 
-/********************************************************************************************************
- * 설 명 : 센서 데이터 현황
- * 관련 화면 : src\main\webapp\view\DataPreparation\DataStatus.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#data-status {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
+/**********************************************************
+* 설 명 : 대쉬보드 화면
+* 관련 화면 : src\main\webapp\view\Dashboard\Dashboard.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
+#dashboard .head {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+#dashboard .head i {
+  font-size: var(--font-medium);
+  margin-right: 2rem;
+  color: var(--color-section-icon);
+}
+
+#dashboard .head h3 {
+  color: var(--color-section-title);
+}
+
+#dashboard .body {
+  margin: 0 2rem;
+  height: 85%;
+  background: var(--color-white);
+  border-radius: var(--size-border-large-radius);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dashboard .body table {
+  width: 90%;
+  border-spacing: 0px;
+}
+
+#dashboard .body table .cards .card {
+  position: relative;
+}
+
+#dashboard .body table .cards .card .item {
+  width: 11vw;
+  height: 13vh;
+}
+
+#dashboard .body table .cards.first .card .item {
+  height: 6vh;
+}
+
+#dashboard .body table .cards.first .card .item .circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -60px;
+  left: -58px;
+  background: var(--color-border);
+  border-radius: 50%;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-major-title);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+#dashboard .body table .cards.first .card .item .circle:hover {
+  -webkit-transform: scale(1.1) rotate(-45deg);
+          transform: scale(1.1) rotate(-45deg);
+  -webkit-transition: all var(--animation-middle-duration) ease;
+  transition: all var(--animation-middle-duration) ease;
+}
+
+#dashboard .body table .cards.first .card .item .square {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: -16px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.first .card .item .title {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  top: -45px;
+  left: -68px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.first .card.four .item .content {
+  position: absolute;
+  width: 150px;
+  height: 70px;
+  top: -15px;
+  left: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
+}
+
+#dashboard .body table .cards.first .card.four .item .content a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card .item {
+  height: 9vh;
+}
+
+#dashboard .body table .cards.second .card .item .circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 33px;
+  left: -58px;
+  background: var(--color-border);
+  border-radius: 50%;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-major-title);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+#dashboard .body table .cards.second .card .item .circle:hover {
+  -webkit-transform: scale(1.1) rotate(45deg);
+          transform: scale(1.1) rotate(45deg);
+  -webkit-transition: all var(--animation-middle-duration) ease;
+  transition: all var(--animation-middle-duration) ease;
+}
+
+#dashboard .body table .cards.second .card.two .item .square {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 100%;
+  left: -40%;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.two .item .title {
+  position: absolute;
+  width: 160px;
+  height: 90px;
+  top: 55px;
+  left: -74%;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.two .item .content {
+  position: absolute;
+  width: 130px;
+  height: 70px;
+  top: 110px;
+  left: -75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
+}
+
+#dashboard .body table .cards.second .card.two .item .content a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.three .item .square {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 83px;
+  left: -75px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.three .item > .title {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  top: 55px;
+  left: -150px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.three .item .content {
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+}
+
+#dashboard .body table .cards.second .card.three .item .content .first .title {
+  position: absolute;
+  top: 110px;
+  left: -65px;
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+}
+
+#dashboard .body table .cards.second .card.three .item .content .first .desc {
+  position: absolute;
+  top: 135px;
+  left: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#dashboard .body table .cards.second .card.three .item .content .first .desc a {
+  font-size: 1px;
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.three .item .content .second .title {
+  position: absolute;
+  top: 190px;
+  left: -65px;
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+}
+
+#dashboard .body table .cards.second .card.three .item .content .second .desc {
+  position: absolute;
+  top: 215px;
+  left: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#dashboard .body table .cards.second .card.three .item .content .second .desc a {
+  font-size: 1px;
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: -25px;
+  left: -92px;
+  background: var(--color-border);
+  border-radius: 50%;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-major-title);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(1):hover {
+  -webkit-transform: scale(1.1) rotate(-45deg);
+          transform: scale(1.1) rotate(-45deg);
+  -webkit-transition: all var(--animation-middle-duration) ease;
+  transition: all var(--animation-middle-duration) ease;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(2) {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: -17px;
+  left: 38px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(3) {
+  position: absolute;
+  width: 110px;
+  height: 75px;
+  top: -40px;
+  left: -10px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1) {
+  position: absolute;
+  top: -53px;
+  left: 100px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 33px;
+  left: 40px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2) {
+  position: absolute;
+  top: -36px;
+  left: 220px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 4px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(3) {
+  position: absolute;
+  top: -36px;
+  left: 280px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 8px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(4) {
+  position: absolute;
+  top: -36px;
+  left: 350px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 2px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(5) {
+  position: absolute;
+  top: -36px;
+  left: 420px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 2px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(6) {
+  position: absolute;
+  top: -36px;
+  left: 490px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 10px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(7) {
+  position: absolute;
+  top: -36px;
+  left: 560px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(7)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 12px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(8) {
+  position: absolute;
+  top: -36px;
+  left: 630px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(8)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 20px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(9) {
+  position: absolute;
+  top: -36px;
+  left: 710px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(9)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 40px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(10) {
+  position: absolute;
+  top: -36px;
+  left: 810px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(10)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 22px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(11) {
+  position: absolute;
+  top: -36px;
+  left: 900px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(4) a:nth-child(11)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 14px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(5) {
+  top: 60px;
+  left: 48px;
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 54px;
+  left: 38px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(6) {
+  position: absolute;
+  width: 110px;
+  height: 75px;
+  top: 30px;
+  left: -10px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(7) {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  top: 70px;
+  left: 142px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(7) a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(7)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -11px;
+  left: -3px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(7)::after {
+  content: "Linear Models";
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  top: -36px;
+  left: -43px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(8) {
+  position: absolute;
+  width: 205px;
+  height: 145px;
+  top: 70px;
+  left: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(8) a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(8)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -11px;
+  left: -3px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(8)::after {
+  content: "Tree Model";
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  top: -36px;
+  left: -43px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(9) {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  top: 70px;
+  left: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(9) a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(9)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -12px;
+  left: -3px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(9)::after {
+  content: "Deep Learning";
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  top: -36px;
+  left: -43px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(10) {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  top: 70px;
+  left: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(10) a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(10)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -11px;
+  left: -3px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(10)::after {
+  content: "Hyperparameter Optimization";
+  position: absolute;
+  width: 200px;
+  height: 10px;
+  top: -36px;
+  left: -105px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(11) {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  top: 70px;
+  left: 805px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(11) a {
+  border-left: 0.25rem solid var(--color-border);
+  padding-left: .5rem;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(11)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -11px;
+  left: -3px;
+  background: var(--color-side-icon);
+  border-radius: 50%;
+}
+
+#dashboard .body table .cards.second .card.four .item div:nth-child(11)::after {
+  content: "Ensenbling";
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  top: -36px;
+  left: -43px;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  color: var(--color-sub-title);
+  text-align: center;
+}
+
+#dashboard .body table .cards.third .card.one {
+  border-top: none;
+  top: -2px;
+}
+
+#dashboard .body table .cards.third .card.seven .item {
+  height: 175px;
+}
+
+#dashboard .body table .cards.third .card.four, #dashboard .body table .cards.third .card.five, #dashboard .body table .cards.third .card.six, #dashboard .body table .cards.third .card.seven {
+  border-top: none;
+}
+
+#dashboard .body table .cards.fourth .card .item {
+  width: 90px;
+  height: 110px;
+}
+
+#dashboard .body table .cards.fourth .card .item .circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 83px;
+  left: -58px;
+  background: var(--color-border);
+  border-radius: 50%;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-major-title);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+#dashboard .body table .cards.fourth .card .item .circle:hover {
+  -webkit-transform: scale(1.1) rotate(-45deg);
+          transform: scale(1.1) rotate(-45deg);
+  -webkit-transition: all var(--animation-middle-duration) ease;
+  transition: all var(--animation-middle-duration) ease;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(2) {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 64px;
+  left: 140px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+  z-index: 1;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(3) {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  top: 38px;
+  left: 72px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(4) {
+  position: absolute;
+  width: 25px;
+  height: .6rem;
+  line-height: .6rem;
+  top: 186px;
+  left: 140px;
+  background: var(--color-white);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+  z-index: 1;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(5) {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  top: 205px;
+  left: 72px;
+  color: var(--color-sub-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(6) a {
+  position: absolute;
+  width: 1350px;
+  height: 100px;
+  left: 95%;
+  top: 25px;
+  border: 1rem solid var(--color-border);
+  border-radius: var(--size-border-medium-radius);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  top: 140px;
+  border: 1rem solid var(--color-border);
+  border-radius: var(--size-border-medium-radius);
+  color: var(--color-minor-title);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(1) {
+  left: 95%;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(2) {
+  left: 258%;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(3) {
+  left: 420%;
+}
+
+#dashboard .body table .cards.fourth .card .item div:nth-child(7) a:nth-child(4) {
+  left: 577%;
+}
+
+#dashboard .body table .cards.first .card {
+  top: -30px;
+  left: 20px;
+  border-top: 1rem solid var(--color-border);
+}
+
+#dashboard .body table .cards.first .card.three, #dashboard .body table .cards.first .card.four, #dashboard .body table .cards.first .card.five, #dashboard .body table .cards.first .card.six, #dashboard .body table .cards.first .card.seven {
+  border-bottom: 1rem solid var(--color-border);
+}
+
+#dashboard .body table .cards.first .card.seven {
+  border-right: 1rem solid var(--color-border);
+  border-radius: 0 20px 20px 0;
+}
+
+#dashboard .body table .cards.second .card {
+  top: -45px;
+  border-top: 1rem solid var(--color-border);
+}
+
+#dashboard .body table .cards.second .card.one {
+  border-left: 1rem solid var(--color-border);
+  border-bottom: 1rem solid var(--color-border);
+  border-radius: 20px 0 0 20px;
+}
+
+#dashboard .body table .cards.second .card.two {
+  border-bottom: 1rem solid var(--color-border);
+}
+
+#dashboard .body table .cards.second .card.three {
+  border-bottom: 1rem solid var(--color-border);
+  top: -45px;
+  left: -77px;
+}
+
+#dashboard .body table .cards.second .card.four {
+  border-top: none;
+}
+
+#dashboard .body table .cards.second .card.four .item {
+  position: absolute;
+  width: 1000px;
+  left: -100px;
+  height: 80px;
+  top: 65px;
+  border: 1rem solid var(--color-border);
+  border-radius: 50px 20px 0 50px;
+}
+
+#dashboard .body table .cards.third .card.one, #dashboard .body table .cards.third .card.four, #dashboard .body table .cards.third .card.five, #dashboard .body table .cards.third .card.six, #dashboard .body table .cards.third .card.seven {
+  border-top: none;
+}
+
+#dashboard .body table .cards.third .card.seven {
+  border-right: 1rem solid var(--color-border);
+  border-radius: 0 0 20px 0;
+  top: -34px;
+  left: 13px;
+}
+
+#dashboard .body table .cards.fourth .card {
+  border-top: 1rem solid var(--color-border);
+  top: -51px;
+}
+
+#dashboard .body table .cards.fourth .card.one {
+  border-left: 1rem solid var(--color-border);
+  border-radius: 20px 0 0 20px;
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 51px;
+  height: 1rem;
+  top: 62px;
+  left: -99px;
+  background: var(--color-border);
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 103px;
+  top: -107px;
+  left: -48px;
+  background: var(--color-border);
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  width: 116px;
+  height: 1rem;
+  top: 64px;
+  left: 92px;
+  background: var(--color-border);
+  border-radius: var(--size-border-large-radius) 0 0 0;
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(7)::before {
+  content: "";
+  position: absolute;
+  width: 116px;
+  height: 1rem;
+  top: 180px;
+  left: 92px;
+  background: var(--color-border);
+  border-radius: 0 0 0 var(--size-border-large-radius);
+}
+
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(1)::after,
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(2)::after,
+#dashboard .body table .cards.fourth .card.one .item div:nth-child(7) a:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 1rem;
+  top: 24px;
+  left: 284px;
+  background: var(--color-border);
+}
+
+/**********************************************************
+* 설 명 : 센서 데이터 현황
+* 관련 화면 : src\main\webapp\view\DataPreparation\DataStatus.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #data-status .head {
   padding: 2rem;
   display: -webkit-box;
@@ -3648,193 +3585,115 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   margin-top: 2px;
 }
 
-/********************************************************************************************************
- * 설 명 : 센서 데이터 선택
- * 관련 화면 : src\main\webapp\view\DataPreparation\DataStatus.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
+/**********************************************************
+* 설 명 : 센서 데이터 선택
+* 관련 화면 : src\main\webapp\view\DataPreparation\DataStatus.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #data-select {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
-#data-select .head {
-  padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: var(--font-regular);
-}
-
-#data-select .head i {
-  font-size: 1.4rem;
-  margin-right: 2rem;
-  color: #c3cad9;
-}
-
-#data-select .head h3 {
-  color: #627293;
-}
-
-#data-select .body {
-  margin: 0 2rem;
-  height: 85%;
-  background: var(--color-white);
-  border-radius: var(--size-border-large-radius);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 16px;
 }
 
-#data-select .body #select {
+#data-select .toolbar {
+  height: 40px;
+  padding: 0 .5rem 0 0;
+}
+
+#data-select .search-condition {
+  margin-bottom: .5rem;
+}
+
+#data-select #selection {
   width: 70%;
+  margin-right: 1rem;
 }
 
-#data-select .body #select #select-status {
+#data-select #selection .toolbar {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-#data-select .body #select #select-status .card {
-  width: 40%;
-  height: 200px;
-  border-radius: var(--size-border-medium-radius);
-}
-
-#data-select .body #select #select-status .card .card__head {
-  height: 50px;
-  line-height: 50px;
-  margin-bottom: .7rem;
-  font-size: 2rem;
-  color: var(--color-white);
-}
-
-#data-select .body #select #select-status .card .card__body {
-  height: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: .5rem;
-}
-
-#data-select .body #select #select-status .card .card__body .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: .5rem;
-}
-
-#data-select .body #select #select-status .card .card__body .item .circle {
-  width: 70px;
-  height: 70px;
-  background: rgba(245, 124, 91, 0.5);
-  border-radius: var(--size-border-circle-radius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#data-select .body #select #select-status .card .card__body .item .circle .circle__count {
-  background: transparent;
-  color: var(--color-white);
-  font-size: 2.5rem;
+#data-select #selection .toolbar span {
+  display: inline-block;
+  padding-right: 1rem;
+  color: #f5928d;
 }
 
-#data-select .body #select #select-status .card .card__body .item .title {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 1.2rem;
-  font-weight: 600;
+#data-select #selection .toolbar span:nth-child(1), #data-select #selection .toolbar span:nth-child(2) {
+  position: absolute;
+  right: 80px;
 }
 
-#data-select .body #select #select-status .card:nth-child(1) {
-  border: 5px solid #f57c5b;
+#data-select #selection .toolbar span:nth-child(3), #data-select #selection .toolbar span:nth-child(4) {
+  position: absolute;
+  right: 40px;
 }
 
-#data-select .body #select #select-status .card:nth-child(1) .card__head {
-  padding-left: 2.4rem;
-  background: #f57c5b;
+#data-select #selection .toolbar span:nth-child(3) i, #data-select #selection .toolbar span:nth-child(4) i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
-#data-select .body #select #select-status .card:nth-child(1) .card__head i {
-  background: transparent;
+#data-select #selection .toolbar span.listStyle-one {
+  opacity: 0;
+  pointer-events: none;
 }
 
-#data-select .body #select #select-status .card:nth-child(1) .card__body .item .circle {
-  background: rgba(245, 124, 91, 0.65);
+#data-select #selection .toolbar span.listStyle-one.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#data-select .body #select #select-status .card:nth-child(2) {
-  border: 5px solid #d16197;
+#data-select #selection .toolbar span.listStyle-other {
+  opacity: 0;
+  pointer-events: none;
 }
 
-#data-select .body #select #select-status .card:nth-child(2) .card__head {
-  padding-left: .9rem;
-  background: #d16197;
+#data-select #selection .toolbar span.listStyle-other.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#data-select .body #select #select-status .card:nth-child(2) .card__head i {
-  background: transparent;
+#data-select #selection .toolbar span.battery-full {
+  opacity: 0;
+  pointer-events: none;
 }
 
-#data-select .body #select #select-status .card:nth-child(2) .card__body .item .circle {
-  background: rgba(209, 97, 151, 0.65);
+#data-select #selection .toolbar span.battery-full.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#data-select .body #select #select-status .card:nth-child(3) {
-  border: 5px solid #947acc;
+#data-select #selection .toolbar span.battery-empty {
+  opacity: 0;
+  pointer-events: none;
 }
 
-#data-select .body #select #select-status .card:nth-child(3) .card__head {
-  padding-left: .9rem;
-  background: #947acc;
+#data-select #selection .toolbar span.battery-empty.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#data-select .body #select #select-status .card:nth-child(3) .card__head i {
-  background: transparent;
-  font-size: 2.5rem;
-}
-
-#data-select .body #select #select-status .card:nth-child(3) .card__body .item .circle {
-  background: rgba(148, 122, 204, 0.65);
-}
-
-#data-select .body #select-list #search {
+#data-select #selection .search-condition {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3842,66 +3701,70 @@ nav ul.nav_list li:nth-child(5) .tooltip {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 1rem;
-  position: relative;
-  margin-bottom: 1rem;
 }
 
-#data-select .body #select-list #search select {
-  width: 60%;
-  height: 50px;
-  padding: 10px;
-  border: 2px solid #f5928d;
-  border-radius: 10px;
+#data-select #selection .search-condition label {
+  line-height: 40px;
+  font-weight: 550;
+}
+
+#data-select #selection .search-condition select {
+  width: 43%;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #f5928d;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f5928d;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #f5928d;
 }
 
-#data-select .body #select-list #search .select__arrow {
+#data-select #selection .search-condition .select-arrow {
   position: absolute;
-  top: 16px;
+  top: 13px;
   width: 0;
   height: 0;
   pointer-events: none;
   border-style: solid;
-  border-width: 20px 15px 0 15px;
+  border-width: 15px 10px 0 10px;
   border-color: rgba(245, 146, 141, 0.8) transparent transparent transparent;
 }
 
-#data-select .body #select-list #search .select__arrow.one {
-  left: 550px;
+#data-select #selection .search-condition .select-arrow.one {
+  left: 46%;
 }
 
-#data-select .body #select-list #search .select__arrow.two {
-  right: 15px;
+#data-select #selection .search-condition .select-arrow.two {
+  left: 97.5%;
 }
 
-#data-select .body #select-list #grid {
+#data-select #selection #selection-result {
   width: 100%;
-  height: 350px;
+  height: 85%;
+  padding: 1rem 1rem 1rem 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   gap: 1rem;
-  overflow-y: scroll;
-  padding: 1rem;
+  overflow-y: auto;
   text-align: center;
+  border: 1px solid #f5928d;
+  border-radius: 10px;
 }
 
-#data-select .body #select-list #grid div {
-  width: 278px;
+#data-select #selection #selection-result .sensor {
+  width: 370px;
   height: 100px;
   padding: 1rem;
-  background: rgba(245, 146, 141, 0.6);
   border-radius: 10px;
+  background: rgba(254, 145, 141, 0.5);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -3910,221 +3773,518 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-#data-select .body #select-list #grid div span {
+#data-select #selection #selection-result .sensor span {
   background: transparent;
-  color: var(--color-white);
+  color: #444;
   font-size: 14px;
+  font-weight: 500;
+}
+
+#data-select #selection #selection-result .sensor span:nth-child(1) {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  left: -8px;
+  font-weight: 600;
+}
+
+#data-select #selection #selection-result .sensor span:nth-child(2) {
+  font-size: 12px;
+}
+
+#data-select #selection #selection-result .sensor.active {
+  background: #fe918d;
   font-weight: 900;
 }
 
-#data-select .body #regist {
+#data-select #selection #selection-result .sensor.change {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: left;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+#data-select #selection #selection-result .sensor.change span {
+  text-align: left;
+}
+
+#data-select #selection #selection-result .sensor.change span:nth-child(1) {
+  left: 10px;
+  text-align: center;
+}
+
+#data-select #selection #selection-result .sensor.change span:nth-child(2) {
+  width: 40%;
+  padding-left: 50px;
+}
+
+#data-select #selection #selection-result .sensor.change span:nth-child(3) {
+  width: 20%;
+}
+
+#data-select #selection #selection-result .sensor.change span:nth-child(4) {
+  width: 20%;
+}
+
+#data-select #selection #selection-result .sensor.change span:nth-child(5) {
+  width: 20%;
+}
+
+#data-select #registration {
+  position: relative;
+  width: 29%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border: 5px solid #f8ba55;
-  border-radius: 40px;
+  color: #3ea4a4;
 }
 
-#data-select .body #regist #regist-title {
-  height: 80px;
-  border-radius: var(--size-border-large-radius) var(--size-border-large-radius) 0 0;
-  background: #f8ba55;
-}
-
-#data-select .body #regist #regist-title i {
-  background: transparent;
-  color: var(--color-white);
-  font-size: 3rem;
-  line-height: 80px;
+#data-select #registration .search-condition {
   position: relative;
-  left: 30px;
 }
 
-#data-select .body #regist #regist-list {
-  background: blue;
+#data-select #registration .search-condition label {
+  margin-right: 1rem;
+  font-weight: 550;
 }
 
-/********************************************************************************************************
- * 설 명 : 데이터 탐헙(Pandas Profiler)
- * 관련 화면 : src\main\webapp\view\DataPreparation\ExplorePandasProfiler.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#explore-pandas-profiler {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
+#data-select #registration .search-condition select {
+  width: 86%;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #3ea4a4;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3ea4a4;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
-#explore-pandas-profiler .head {
-  padding: 2rem;
+#data-select #registration .search-condition .select-arrow {
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 15px 10px 0 10px;
+  border-color: #3ea4a4 transparent transparent transparent;
+  position: absolute;
+  top: 13px;
+}
+
+#data-select #registration .search-condition .select-arrow.three {
+  left: 94%;
+}
+
+#data-select #registration .toolbar {
+  border-radius: 30px 30px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#data-select #registration .toolbar #trash {
+  padding-right: 3px;
+  font-size: 1.3rem;
+}
+
+#data-select #registration #list {
+  height: 72%;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  border: 1px solid #3ea4a4;
+  border-radius: 10px;
+}
+
+#data-select #registration #list .item {
+  margin: .5rem;
+  color: #333;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px 1fr;
+      grid-template-columns: 80px 1fr;
+  position: relative;
+}
+
+#data-select #registration #list .item * {
+  background: rgba(62, 164, 164, 0.5);
+}
+
+#data-select #registration #list .item .garbage {
+  padding-left: 2rem;
+  border: 10px 0 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: var(--font-regular);
+  font-size: 1.5rem;
 }
 
-#explore-pandas-profiler .head i {
-  font-size: 1.4rem;
-  margin-right: 2rem;
-  color: #c3cad9;
+#data-select #registration #list .item .sensor {
+  padding: 1rem;
+  border: 0 10px 10px 0;
+  font-weight: bold;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-items: center;
 }
 
-#explore-pandas-profiler .head h3 {
-  color: #627293;
+#data-select #registration #list .item .sensor > span {
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-#explore-pandas-profiler .body * {
-  background: none;
+#data-select #registration #list .item .sensor > span:nth-child(1) {
+  font-size: 12px;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  left: -10px;
+  text-align: center;
+  font-weight: 600;
 }
 
-#explore-pandas-profiler .body {
-  margin: 0 2rem;
-  height: 85%;
+#data-select #registration #list .item .sensor > span:nth-child(2) {
+  font-size: 12px;
+}
+
+#data-select #registration #register-btn {
+  height: 12%;
+  background: transparent;
+}
+
+#data-select #registration #register-btn .title {
+  margin-bottom: .5rem;
+}
+
+#data-select #registration #register-btn .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#data-select #registration #register-btn .btn label {
+  font-weight: 550;
+  margin-right: 1rem;
+}
+
+#data-select #registration #register-btn .btn #group-title {
+  width: 75%;
+  height: 40px;
+  padding: .5rem 1rem;
+  margin-right: .5rem;
+  border: 1px solid #3ea4a4;
+  border-radius: 10px;
+  color: #3ea4a4;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#data-select #registration #register-btn .btn #btnSave {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #3ea4a4;
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/**********************************************************
+* 설 명 : 데이터 탐헙(Pandas Profiler & SweetViz)
+* 관련 화면 : src/main/webapp/views/DataPreparation/DataExplore.js
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
+#data-explore #condition .article {
+  position: relative;
+}
+
+#data-explore #condition .article:nth-child(1), #data-explore #condition .article:nth-child(2), #data-explore #condition .article:nth-child(3) {
+  width: 30%;
+}
+
+#data-explore #condition .article:nth-child(4) {
+  width: 10%;
+  text-align: right;
+}
+
+#data-explore #condition .article:nth-child(1) *,
+#data-explore #condition .article:nth-child(2) *,
+#data-explore #condition .article:nth-child(3) * {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#data-explore #condition .article:nth-child(1) select,
+#data-explore #condition .article:nth-child(2) select {
+  width: 70%;
+  height: 40px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: 1px solid var(--color-text);
+  border-radius: 4px;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#data-explore #condition .article:nth-child(3) {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#data-explore #condition .article:nth-child(3) #sensorContainer {
+  width: 70%;
+  margin-left: 10px;
+}
+
+#data-explore #condition .article:nth-child(3) #sensorContainer #sensorList {
+  height: 40px;
+  padding: 5px 10px;
+  margin: 0;
+  border: 1px solid var(--color-text);
+  border-radius: 4px;
+  outline: none;
+  background: rgba(153, 153, 153, 0.5);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all var(--animation-short-duration) ease-in;
+  transition: all var(--animation-short-duration) ease-in;
+}
+
+#data-explore #condition .article:nth-child(3) #sensorContainer #sensorList.active {
   background: var(--color-white);
-  border-radius: var(--size-border-large-radius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 데이터 탐헙(SweetViz)
- * 관련 화면 : src\main\webapp\view\DataPreparation\ExploreSweetviz.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#explore-sweetviz {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
+#data-explore #condition .article:nth-child(3) #sensorContainer #sensorItem {
+  width: 70%;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 12px;
+  background: #fff;
 }
 
-#explore-sweetviz .head {
-  padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: var(--font-regular);
+#data-explore #condition .article:nth-child(3) #sensorContainer #sensorItem.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 100;
 }
 
-#explore-sweetviz .head i {
-  font-size: 1.4rem;
-  margin-right: 2rem;
-  color: #c3cad9;
+#data-explore #condition .article:nth-child(3) #sensorContainer #sensorItem ul {
+  border: 1px solid var(--color-text);
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-#explore-sweetviz .head h3 {
-  color: #627293;
+#data-explore #condition .article:nth-child(3) #sensorContainer #sensorItem ul li {
+  padding: 5px;
+  font-size: 15px;
 }
 
-#explore-sweetviz .body * {
+#data-explore #condition .article:nth-child(3) #sensorContainer #sensorItem ul li input {
+  color: #f5928d;
+  margin: 0 .5rem 0 0;
+}
+
+#data-explore #condition .article:nth-child(3) #sensorContainer #sensorItem #sensorBtn {
+  padding-top: 3px;
+  text-align: right;
+}
+
+#data-explore #condition .article .select-arrow {
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 15px 10px 0 10px;
+  border-color: #3ea4a4 transparent transparent transparent;
+  position: absolute;
+  top: 12px;
+  left: 73%;
+}
+
+#data-explore #condition .article .select-arrow.one, #data-explore #condition .article .select-arrow.two, #data-explore #condition .article .select-arrow.three {
+  border-color: var(--color-text) transparent transparent transparent;
+}
+
+#data-explore #condition #btnConfirm, #data-explore #condition #btnRun {
+  width: 70px;
+  height: 40px;
+  border: 1px solid var(--color-text);
+  outline: none;
   background: none;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-transition: all var(--animation-long-duration) ease;
+  transition: all var(--animation-long-duration) ease;
 }
 
-#explore-sweetviz .body {
-  margin: 0 2rem;
-  height: 85%;
-  background: var(--color-white);
-  border-radius: var(--size-border-large-radius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#data-explore #condition #btnConfirm:hover, #data-explore #condition #btnRun:hover {
+  background: var(--color-alian);
+  color: var(--color-white);
+  font-weight: bold;
 }
 
-/********************************************************************************************************
- * 설 명 : 데이터 로딩 & 프리뷰
- * 관련 화면 : src\main\webapp\view\DataPreparation\LoadingPreview.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#loading-preview {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
+#data-explore #condition #btnConfirm {
+  margin-left: 1rem;
 }
 
-#loading-preview .head {
-  padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: var(--font-regular);
+#data-explore .layer-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  border-bottom-right-radius: 30px;
+  opacity: 0;
+  pointer-events: none;
 }
 
-#loading-preview .head i {
-  font-size: 1.4rem;
-  margin-right: 2rem;
-  color: #c3cad9;
+#data-explore .layer-popup.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#loading-preview .head h3 {
-  color: #627293;
+#data-explore .layer-popup .modal-dialog {
+  width: 300px;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 30px;
+  background: var(--color-alian);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-#loading-preview .body * {
-  background: none;
+#data-explore .layer-popup .modal-dialog.show {
+  -webkit-transition: all var(--animation-long-duration) ease;
+  transition: all var(--animation-long-duration) ease;
+  top: 40%;
 }
 
-#loading-preview .body {
-  margin: 0 2rem;
-  height: 85%;
-  background: var(--color-white);
-  border-radius: var(--size-border-large-radius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#data-explore .layer-popup .modal-dialog h1 {
+  padding-bottom: 15px;
+  margin-bottom: 22px;
+  border-bottom: 2px solid var(--color-white);
+  background: transparent;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 상관관계 시각화
- * 관련 화면 : src\main\webapp\view\DataPreparation\CorrelateGraph.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#correlate-graph {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
+#data-explore .layer-popup .modal-dialog .modal-content {
+  line-height: 100px;
 }
 
+#data-explore .layer-popup .modal-dialog .modal-content div {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 60px;
+  color: #fff;
+  font-size: 15px;
+}
+
+#data-explore .layer-popup .modal-dialog .modal-content div span:nth-child(1) {
+  text-align: left;
+  margin-right: 20px;
+}
+
+#data-explore .blocking-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  border-bottom-right-radius: 30px;
+}
+
+#data-explore .blocking-popup.show {
+  display: block;
+}
+
+/**********************************************************
+* 설 명 : 데이터 로딩 & 프리뷰
+* 관련 화면 : src\main\webapp\view\DataPreparation\LoadingPreview.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
+/**********************************************************
+* 설 명 : 상관관계 시각화
+* 관련 화면 : src\main\webapp\view\DataPreparation\CorrelateGraph.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #correlate-graph .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4166,20 +4326,15 @@ nav ul.nav_list li:nth-child(5) .tooltip {
           align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 결측치 시각화 및 처리
- * 관련 화면 : src\main\webapp\view\DataPreparation\VisualProcessMissValue.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#visual-process-miss-value {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
+/**********************************************************
+* 설 명 : 결측치 시각화 및 처리
+* 관련 화면 : src\main\webapp\view\DataPreparation\VisualProcessMissValue.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #visual-process-miss-value .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4221,20 +4376,15 @@ nav ul.nav_list li:nth-child(5) .tooltip {
           align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 이상치 시각화 및 처리
- * 관련 화면 : src\main\webapp\view\DataPreparation\VisualProcessOutValue.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#visual-process-out-value {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
+/**********************************************************
+* 설 명 : 이상치 시각화 및 처리
+* 관련 화면 : src\main\webapp\view\DataPreparation\VisualProcessOutValue.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #visual-process-out-value .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4276,20 +4426,15 @@ nav ul.nav_list li:nth-child(5) .tooltip {
           align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 데이터 전처리
- * 관련 화면 : src\main\webapp\view\DataPreparation\ResampleNormalize.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#resample-normalize {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
+/**********************************************************
+* 설 명 : 데이터 전처리
+* 관련 화면 : src\main\webapp\view\DataPreparation\ResampleNormalize.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #resample-normalize .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4331,20 +4476,15 @@ nav ul.nav_list li:nth-child(5) .tooltip {
           align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 시계열 데이터 분해
- * 관련 화면 : src\main\webapp\view\TimeSeriesPreparation\Decompose.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#decompose {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
+/**********************************************************
+* 설 명 : 시계열 데이터 분해
+* 관련 화면 : src\main\webapp\view\TimeSeriesPreparation\Decompose.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #decompose .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4386,20 +4526,15 @@ nav ul.nav_list li:nth-child(5) .tooltip {
           align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 시계열 정상성 검사 및 변환
- * 관련 화면 : src\main\webapp\view\TimeSeriesPreparation\SanityCheckTransform.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#sanity-check-Transform {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
+/**********************************************************
+* 설 명 : 시계열 정상성 검사 및 변환
+* 관련 화면 : src\main\webapp\view\TimeSeriesPreparation\SanityCheckTransform.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #sanity-check-Transform .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4441,20 +4576,15 @@ nav ul.nav_list li:nth-child(5) .tooltip {
           align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 단변수 예측
- * 관련 화면 : src\main\webapp\view\TimeSeriesForecasting\PredictSingleVariable.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#predict-single-variable {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
+/**********************************************************
+* 설 명 : 단변수 예측
+* 관련 화면 : src\main\webapp\view\TimeSeriesForecasting\PredictSingleVariable.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #predict-single-variable .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4485,31 +4615,17 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   height: 85%;
   background: var(--color-white);
   border-radius: var(--size-border-large-radius);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 다변수 예측
- * 관련 화면 : src\main\webapp\view\TimeSeriesForecasting\PredictSingleVariable.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#predict-multi-variable {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
+/**********************************************************
+* 설 명 : 다변수 예측
+* 관련 화면 : src\main\webapp\view\TimeSeriesForecasting\PredictSingleVariable.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #predict-multi-variable .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4551,20 +4667,15 @@ nav ul.nav_list li:nth-child(5) .tooltip {
           align-items: center;
 }
 
-/********************************************************************************************************
- * 설 명 : 시계열 예측 분석
- * 관련 화면 : src\main\webapp\view\PerformanceAnalysis\PredictResultAnalysis.html
- * 최초 생성일 : 
- *     
- * 수정일			수정내역 
- * ---------  -----------------------------------------------------------------
- * 
- *******************************************************************************************************/
-#predict-result-analysis {
-  height: calc(100vh - 2rem - 85px);
-  width: calc(100vw - 3rem - 78px - 1px);
-}
-
+/**********************************************************
+* 설 명 : 시계열 예측 분석
+* 관련 화면 : src\main\webapp\view\PerformanceAnalysis\PredictResultAnalysis.html
+* 최초 생성일 : 
+*     
+* 수정일			수정내역 
+* ---------  ----------------------------------------------
+* 
+**********************************************************/
 #predict-result-analysis .head {
   padding: 2rem;
   display: -webkit-box;
@@ -4604,356 +4715,6 @@ nav ul.nav_list li:nth-child(5) .tooltip {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-/*======================================================================================================
-@media
-======================================================================================================*/
-@media only screen and (max-width: 1700px) {
-  #dashboard-03 .title {
-    width: 6em;
-    margin-right: 2rem;
-    font-size: 1rem;
-  }
-  #dashboard-03 .sub-title {
-    border-radius: 50%;
-  }
-  /* #dashboard-03 .title, */
-  #dashboard-03 .sub-title {
-    width: 70px;
-    height: 70px;
-    font-size: 11px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .sidebar {
-    width: 70px;
-  }
-  .sidebar .sidebar-brand,
-  .sidebar li {
-    padding-left: .7rem;
-    text-align: center;
-  }
-  .sidebar-menu a span:first-child {
-    display: inline;
-  }
-  .sidebar-menu a span:nth-child(even) {
-    display: none;
-  }
-  .sidebar li a {
-    padding-left: 0rem;
-  }
-  .sidebar .sidebar-brand span:last-child,
-  .sidebar li a span:last-child {
-    display: none;
-  }
-  .main-content {
-    margin-left: 70px;
-  }
-  .main-content header {
-    width: calc(100% - 70px);
-  }
-  #nav-toggle:checked + .sidebar {
-    left: 0;
-    width: 345px;
-  }
-  #nav-toggle:checked + .sidebar .sidebar-brand,
-  #nav-toggle:checked + .sidebar li {
-    padding-left: 2rem;
-    text-align: left;
-  }
-  #nav-toggle:checked + .sidebar li a {
-    padding-left: 1rem;
-  }
-  #nav-toggle:checked + .sidebar .sidebar-brand span:last-child,
-  #nav-toggle:checked + .sidebar li a span:last-child,
-  #nav-toggle:checked + .sidebar .sidebar-menu a span:first-child {
-    display: inline;
-  }
-  #nav-toggle:checked + .sidebar .sidebar-menu a span:nth-child(even) {
-    display: none;
-  }
-  #nav-toggle:checked ~ .main-content {
-    margin-left: 345px;
-  }
-  #nav-toggle:checked ~ .main-content header {
-    width: 100%;
-  }
-  /* #nav-toggle:checked ~ .main-content #dash01 .cards */
-  #nav-toggle:checked ~ .main-content .cards {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
-  #nav-toggle:checked ~ .main-content #dash02 .cards {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (max-width: 960px) {
-  /* Typograph */
-  section > h1 {
-    font-size: var(--font-large);
-    font-weight: var(--weight-semi-bold);
-    color: var(--color-black);
-    margin: .5rem 0;
-  }
-  section > h2 {
-    font-size: var(--font-medium);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-  }
-  section > h3 {
-    font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-    margin: 1.5rem 0;
-  }
-  section > p {
-    font-size: var(--font-small);
-    font-weight: var(--weight-semi-regular);
-    color: var(--color-black);
-    margin: 2rem 0;
-  }
-  #dashboard .cards {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
-  #dashboard-03 .type-01 {
-    display: none;
-  }
-  #dashboard-03 .type-02 {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* Typograph */
-  section > h1 {
-    font-size: var(--font-medium);
-    font-weight: var(--weight-semi-bold);
-    color: var(--color-black);
-    margin: .5rem 0;
-  }
-  section > h2 {
-    font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-  }
-  section > h3 {
-    font-size: var(--font-small);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-    margin: 1.5rem 0;
-  }
-  section > p {
-    font-size: var(--font-thin);
-    font-weight: var(--weight-semi-regular);
-    color: var(--color-black);
-    margin: 2rem 0;
-  }
-  section > p {
-    font-size: var(--font-small);
-    font-weight: var(--weight-regular);
-    color: var(--color-black);
-    margin: 2rem 0;
-  }
-  /* #dash01  */
-  #dashboard .cards {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  #dash02 .cards {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-  }
-  .search-wrapper {
-    display: none;
-  }
-  .sidebar {
-    left: -100%;
-  }
-  header h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 1.1rem;
-  }
-  header h2 label {
-    display: inline-block;
-    background: var(--color-text);
-    margin-right: 1rem;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  header h2 span {
-    padding-right: 0rem;
-  }
-  .main-content {
-    margin-left: 0rem;
-  }
-  .main-content header {
-    width: 100%;
-  }
-  #nav-toggle:checked ~ .main-content #dash01 .cards {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  #dash01 .cards {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-  }
-  .sidebar .sidebar-brand {
-    background: var(--color-white);
-  }
-  #nav-toggle:checked + .sidebar {
-    width: 100%;
-  }
-  #nav-toggle:checked + .sidebar .sidebar-brand {
-    /* background: var(--color-white); */
-    background: transparent;
-  }
-  #nav-toggle:checked ~ .main-content {
-    margin-left: 0rem;
-  }
-}
-
-@media (min-width: 550px) and (max-width: 899px) {
-  #dashboard-03 li {
-    margin: 1rem;
-    width: calc(50% - 4rem);
-    float: left;
-    min-height: var(--height);
-  }
-  #dashboard-03 li:nth-child(4n+3),
-  #dashboard-03 li:nth-child(4n+4) {
-    float: right;
-  }
-  #dashboard-03 li:nth-child(4n+1)::before {
-    top: calc(var(--height)/2 + var(--unit)/2);
-    left: 100%;
-  }
-  #dashboard-03 li:nth-child(4n+1)::after {
-    top: calc(var(--height)/2);
-    left: calc(100% + (var(--unit)));
-    border: var(--unit) solid transparent;
-    border-left-color: inherit;
-  }
-  #dashboard-03 li:nth-child(4n+3)::before {
-    top: calc(var(--height)/2 + var(--unit)/2);
-    left: -1rem;
-  }
-  #dashboard-03 li:nth-child(4n+3)::after {
-    top: calc(var(--height)/2);
-    left: -3rem;
-    border: var(--unit) solid transparent;
-    border-right-color: inherit;
-  }
-  #dashboard-03 {
-    min-height: 1300px;
-  }
-}
-
-@media (min-width: 900px) and (max-width: 1199px) {
-  #dashboard-03 li {
-    margin: 1rem;
-    width: calc(33.33% - 4rem);
-    float: left;
-    min-height: 7rem;
-  }
-  #dashboard-03 li:nth-child(6n+4),
-  #dashboard-03 li:nth-child(6n+5),
-  #dashboard-03 li:nth-child(6n+6) {
-    float: right;
-  }
-  #dashboard-03 li:nth-child(6n+1)::before,
-  #dashboard-03 li:nth-child(6n+2)::before {
-    top: calc(var(--height)/2 + var(--unit)/2);
-    left: 100%;
-  }
-  #dashboard-03 li:nth-child(6n+1)::after,
-  #dashboard-03 li:nth-child(6n+2)::after {
-    top: 3.5rem;
-    left: calc(100% + (var(--unit)));
-    border: var(--unit) solid transparent;
-    border-left-color: inherit;
-  }
-  #dashboard-03 li:nth-child(6n+4)::before,
-  #dashboard-03 li:nth-child(6n+5)::before {
-    top: calc(var(--height)/2 + var(--unit)/2);
-    left: -1rem;
-  }
-  #dashboard-03 li:nth-child(6n+4)::after,
-  #dashboard-03 li:nth-child(6n+5)::after {
-    top: calc(var(--height)/2);
-    left: -3rem;
-    border: var(--unit) solid transparent;
-    border-right-color: inherit;
-  }
-}
-
-@media (min-width: 1200px) {
-  #dashboard-03 ol {
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-  #dashboard-03 li {
-    margin: 1rem;
-    width: calc(25% - 4rem);
-    float: left;
-    min-height: 7rem;
-  }
-  #dashboard-03 li:nth-child(8n+5),
-  #dashboard-03 li:nth-child(8n+6),
-  #dashboard-03 li:nth-child(8n+7),
-  #dashboard-03 li:nth-child(8n+8) {
-    float: right;
-  }
-  #dashboard-03 li:nth-child(8n+1)::before,
-  #dashboard-03 li:nth-child(8n+2)::before,
-  #dashboard-03 li:nth-child(8n+3)::before {
-    top: calc(var(--height)/2 + var(--unit)/2);
-    left: 100%;
-  }
-  #dashboard-03 li:nth-child(8n+1)::after,
-  #dashboard-03 li:nth-child(8n+2)::after,
-  #dashboard-03 li:nth-child(8n+3)::after {
-    top: calc(var(--height)/2);
-    left: calc(100% + (var(--unit)));
-    border: var(--unit) solid transparent;
-    border-left-color: inherit;
-  }
-  #dashboard-03 li:nth-child(8n+5)::before,
-  #dashboard-03 li:nth-child(8n+6)::before,
-  #dashboard-03 li:nth-child(8n+7)::before {
-    top: calc(var(--height)/2 + var(--unit)/2);
-    left: -1rem;
-  }
-  #dashboard-03 li:nth-child(8n+5)::after,
-  #dashboard-03 li:nth-child(8n+6)::after,
-  #dashboard-03 li:nth-child(8n+7)::after {
-    top: calc(var(--height)/2);
-    left: -3rem;
-    border: var(--unit) solid transparent;
-    border-right-color: inherit;
-  }
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */
